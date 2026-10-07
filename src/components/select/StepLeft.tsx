@@ -88,11 +88,11 @@ export function ScentStep({ selection, onToggle }: Props) {
         </span>
         <div className="flex flex-col gap-[5px]">
           <b className="text-sm font-medium text-ink">향기 고르는 팁</b>
-          <p className="text-sm leading-[22.75px] text-ink">
+          <p className="text-[13px] leading-[21px] text-ink">
             향수 이름이 아니라 일상에서 좋았던 향기를 떠올려 보세요. 갓 씻은 머리카락, 베어 문 과일, 비 온 뒤 풀 냄새처럼요. 똑같은 향이 아니어도, 그 향기의 결이 비슷한 향수를 보여 드려요.
           </p>
           {picked.length > 0 && (
-            <ul className="mt-1 flex flex-col gap-1 text-sm leading-[22.75px] text-slate">
+            <ul className="mt-1 flex flex-col gap-1 text-[13px] leading-[21px] text-slate">
               {picked.map((o) => {
                 const f = getFamily(o.family)
                 return (
