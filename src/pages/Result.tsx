@@ -21,7 +21,7 @@ const GUIDE = [
   { icon: tip1, title: '가벼운 향부터 순서대로' },
   { icon: tip2, title: '시향지에 이름 적어두기' },
   { icon: tip3, title: '손목 착향 후 30분 관찰' },
-  { icon: tip4, title: '"잔향 맡고 올게요" 문화' },
+  { icon: tip4, title: '바로 사지 않아도 괜찮아요' },
 ]
 
 /** 고른 칩을 한 줄 문장으로: "차분한, 깨끗한 분위기 · 비누·빨래 향 · 너무 단 향 제외" */
