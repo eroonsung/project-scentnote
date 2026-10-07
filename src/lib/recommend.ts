@@ -26,19 +26,18 @@ function wantedFamilies(chips: Chips, selection: Selection): Set<string> {
 }
 
 /**
- * 지금까지 고른 칩과 조금이라도 맞는 시향 후보 개수 (Select 화면의 실시간 미리보기용).
- * 피하고 싶은 칩과 겹치는 향수는 뺀다.
+ * 지금까지 고른 칩과 맞는 시향 후보 개수 (Select 화면의 "어울리는 향수 약 N종" 숫자).
+ * 분위기를 골랐으면 그 분위기 태그가 직접 붙은 향수만 센다(향 계열만 겹치는 향수는 세지 않는다).
+ * 분위기 없이 향기만 골랐으면 그 향 계열의 향수를 센다. 피하고 싶은 칩과 겹치는 향수는 뺀다.
+ * (실제 추천 3개를 뽑는 점수 계산은 recommend()에서 따로 한다)
  */
 export function countCandidates(perfumes: Perfume[], chips: Chips, selection: Selection): number {
-  const wanted = wantedFamilies(chips, selection)
-  if (selection.unsure) return perfumes.filter((p) => p.polarizing === 'low' && !p.avoidFlags.some((f) => selection.avoids.includes(f))).length
-  if (wanted.size === 0 && selection.moods.length === 0) return 0
-  return perfumes.filter((p) => {
-    if (p.avoidFlags.some((f) => selection.avoids.includes(f))) return false
-    const moodHit = p.moods.some((m) => selection.moods.includes(m))
-    const familyHit = wanted.has(p.family) || p.subFamilies.some((f) => wanted.has(f))
-    return moodHit || familyHit
-  }).length
+  const allowed = perfumes.filter((p) => !p.avoidFlags.some((f) => selection.avoids.includes(f)))
+  if (selection.unsure) return allowed.filter((p) => p.polarizing === 'low').length
+  if (selection.moods.length > 0) return allowed.filter((p) => p.moods.some((m) => selection.moods.includes(m))).length
+  const wanted = wantedFamilies(chips, { ...selection, moods: [] })
+  if (wanted.size === 0) return 0
+  return allowed.filter((p) => wanted.has(p.family) || p.subFamilies.some((f) => wanted.has(f))).length
 }
 
 /** 한 향수가 선택과 얼마나 맞는지 점수와 이유를 계산한다 */

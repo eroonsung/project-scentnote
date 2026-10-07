@@ -3,7 +3,7 @@ import chipsJson from '../data/chips.json'
 import familiesJson from '../data/families.json'
 import perfumesJson from '../data/perfumes.json'
 import type { Chips, Family, Perfume, Selection } from '../types'
-import { recommend } from './recommend'
+import { countCandidates, recommend } from './recommend'
 
 const perfumes = perfumesJson as unknown as Perfume[]
 const chips = chipsJson as unknown as Chips
@@ -56,5 +56,17 @@ describe('recommend', () => {
     const s: Selection = { ...base, moods: ['clean'], objects: ['soap'] }
     const { items } = recommend(perfumes, chips, familiesList, s)
     for (const r of items) expect(r.reasons.length).toBeLessThanOrEqual(2)
+  })
+
+  it('후보 개수는 분위기 태그가 직접 붙은 향수만 센다', () => {
+    const n = countCandidates(perfumes, chips, { ...base, moods: ['calm', 'clean'] })
+    const expected = perfumes.filter((p) => p.moods.includes('calm') || p.moods.includes('clean')).length
+    expect(n).toBe(expected)
+  })
+
+  it('피하고 싶은 칩이 있으면 후보 개수에서 뺀다', () => {
+    const all = countCandidates(perfumes, chips, { ...base, moods: ['sweet'] })
+    const fewer = countCandidates(perfumes, chips, { ...base, moods: ['sweet'], avoids: ['tooSweet'] })
+    expect(fewer).toBeLessThan(all)
   })
 })
