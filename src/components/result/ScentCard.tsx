@@ -51,7 +51,9 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
             <span className="font-mono text-[11px] tracking-[0.55px] text-slate">INDEX {index + 1}/{total}</span>
           </div>
 
-          <div className="flex flex-col items-center pt-3">
+          {/* 가운데 내용 3덩어리는 남는 공간을 똑같이 나눠 가져, 카드마다 간격이 같다 */}
+          <div className="flex flex-1 flex-col justify-evenly">
+          <div className="flex flex-col items-center">
             <div className="flex h-40 w-[120px] items-center justify-center overflow-hidden rounded-xl bg-card shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
               <PerfumeImage perfume={p} />
             </div>
@@ -74,8 +76,8 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
             </h2>
           </div>
 
-          <div className="flex flex-col gap-1.5 pt-1">
-            <div className="flex h-4 overflow-hidden rounded-full bg-line" role="img" aria-label="탑·미들·베이스 노트 색">
+          <div className="flex flex-col gap-2">
+            <div className="flex h-6 overflow-hidden rounded-full bg-line" role="img" aria-label="탑·미들·베이스 노트 색">
               {tiersOf(p).map((t, i) => (
                 <span
                   key={t.key}
@@ -100,8 +102,8 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 pt-4">
-            <p className="text-sm leading-[19.25px] text-ink">"{p.summary}"</p>
+          <div className="flex flex-col gap-3">
+            <p className="min-h-[39px] text-sm leading-[19.25px] text-ink">"{p.summary}"</p>
             {rec.reasons.length > 0 && (
               <p className="rounded-lg bg-paper/70 px-2.5 py-2.5 text-[13px] leading-[21px] tracking-[-0.08px] text-ink">
                 추천 이유 <span className="text-slate">· {rec.reasons.join(' + ')}</span>
@@ -109,7 +111,9 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
             )}
           </div>
 
-          <div className="mt-auto flex flex-col gap-3 pt-4">
+          </div>
+
+          <div className="flex flex-col gap-3 pt-4">
             <div className="flex items-baseline justify-between gap-2 border-t border-line/40 pt-3">
               <span className={`${price.hasPrice ? 'font-mono font-bold' : ''} text-[11px] tracking-[0.55px] text-ink`}>{price.main}</span>
               {price.note && <span className="font-mono text-[10px] text-slate">{price.note}</span>}
