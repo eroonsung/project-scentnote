@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import { SelectionProvider } from './context/SelectionContext'
 import Home from './pages/Home'
+import Result from './pages/Result'
 import Select from './pages/Select'
 
 function Placeholder({ title }: { title: string }) {
@@ -21,7 +22,7 @@ export default function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/select" element={<Select />} />
-            <Route path="/result" element={<Placeholder title="Result" />} />
+            <Route path="/result" element={<Result />} />
             <Route path="/notes" element={<Placeholder title="Notes" />} />
           </Route>
         </Routes>

@@ -1,15 +1,12 @@
-import { useMemo } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useSyncExternalStore } from 'react'
+import { Link } from 'react-router-dom'
 import { useSelection } from '../context/SelectionContext'
-import { loadMemos } from '../lib/storage'
+import { memoCount as readMemoCount, subscribeMemos } from '../lib/storage'
 import logo from '../assets/scentnote-logo.svg'
 
 export default function Header() {
   const { reset } = useSelection()
-  const location = useLocation()
-  // 화면을 옮길 때마다 메모 개수를 다시 읽는다
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const memoCount = useMemo(() => loadMemos().length, [location.pathname])
+  const memoCount = useSyncExternalStore(subscribeMemos, readMemoCount, () => 0)
 
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-paper/90 backdrop-blur-[6px]">

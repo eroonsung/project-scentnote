@@ -27,5 +27,23 @@ export function loadMemos(): Memo[] {
 }
 
 export function saveMemos(memos: Memo[]): boolean {
-  return write(MEMOS_KEY, memos)
+  const ok = write(MEMOS_KEY, memos)
+  if (ok) window.dispatchEvent(new Event(MEMOS_EVENT))
+  return ok
+}
+
+const MEMOS_EVENT = 'scentnote:memos'
+
+/** 메모가 바뀌면 알려 준다 (Header의 메모 개수 배지가 바로 갱신되도록) */
+export function subscribeMemos(onChange: () => void): () => void {
+  window.addEventListener(MEMOS_EVENT, onChange)
+  window.addEventListener('storage', onChange)
+  return () => {
+    window.removeEventListener(MEMOS_EVENT, onChange)
+    window.removeEventListener('storage', onChange)
+  }
+}
+
+export function memoCount(): number {
+  return loadMemos().length
 }
