@@ -14,7 +14,7 @@ import Toast from '../components/Toast'
 import { useSelection } from '../context/SelectionContext'
 import { CHIPS, FAMILIES, PERFUMES, TIPS } from '../lib/perfumes'
 import { recommend } from '../lib/recommend'
-import { loadMemos, saveMemos } from '../lib/storage'
+import { saveMemo, syncMemos, useMemos } from '../lib/storage'
 import type { Memo, Selection } from '../types'
 
 const GUIDE = [
@@ -42,7 +42,7 @@ function summarize(s: Selection): string {
 export default function Result() {
   const { selection, reset, setMode } = useSelection()
   const navigate = useNavigate()
-  const [memos, setMemos] = useState<Memo[]>(() => loadMemos())
+  const memos = useMemos()
   const [memoTarget, setMemoTarget] = useState<number | null>(null)
   const [toast, setToast] = useState<string | null>(null)
   const toastTimer = useRef<number | undefined>(undefined)
@@ -55,6 +55,7 @@ export default function Result() {
 
   useEffect(() => {
     window.scrollTo({ top: 0 })
+    void syncMemos()
     return () => window.clearTimeout(toastTimer.current)
   }, [])
 
@@ -78,9 +79,7 @@ export default function Result() {
     const now = new Date().toISOString()
     const prev = memos.find((m) => m.perfumeId === target.perfume.id)
     const memo: Memo = { id: prev?.id ?? crypto.randomUUID(), perfumeId: target.perfume.id, rating, text, createdAt: prev?.createdAt ?? now }
-    const next = prev ? memos.map((m) => (m.id === prev.id ? memo : m)) : [memo, ...memos]
-    setMemos(next)
-    const ok = saveMemos(next)
+    const ok = saveMemo(memo)
     setMemoTarget(null)
     setToast(ok ? '시향 노트에 저장했어요' : '저장하지 못했어요. 브라우저 저장 공간을 확인해 주세요')
     window.clearTimeout(toastTimer.current)

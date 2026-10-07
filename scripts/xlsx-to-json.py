@@ -79,6 +79,8 @@ for row in ws.iter_rows(min_row=2, values_only=True):
               "checkedAt": str(d["kr_checked_at"]) if not empty(d["kr_checked_at"]) else None,
               "source": d["kr_source_url"]}
     ch = d["channels"]
+    # 앱에는 근거 신뢰도가 '높음/보통'인 채널만 보여준다 (낮음·미확인은 엑셀에만 남김)
+    ch_ok = str(d.get("channels_status") or "").startswith(("높음", "보통"))
     perfumes.append({
         "id": d["id"], "brand": d["brand"], "brandKo": d["brand_ko"], "name": d["name"], "nameKo": d["name_ko"],
         "concentration": d["concentration"] or None, "notes": tiers,
@@ -86,7 +88,7 @@ for row in ws.iter_rows(min_row=2, values_only=True):
         "avoidFlags": split(d["avoid_flags"]), "intensity": d["intensity"], "polarizing": d["polarizing"],
         "seasonOccasion": d["season_occasion"], "summary": d["summary"], "drydown": d["drydown"], "checkPoint": d["check_point"],
         "krPrice": kr, "storeQuery": d["store_query"],
-        "channels": [] if empty(ch) or "확인 필요" in str(ch) else split(ch),
+        "channels": split(ch) if ch_ok and not empty(ch) and "확인 필요" not in str(ch) else [],
         "image": {"file": d["image_file"], "source": d["image_source_url"]} if not empty(d["image_file"]) else None,
         "dataStatus": "verified" if "확인 완료" in str(d["data_status"] or "") else "draft",
     })

@@ -85,8 +85,9 @@ src/lib/perfumes.ts      → 앱에서 쓰는 Perfume[]
 │  │  ├─ recommend.ts       # 추천 점수 계산·상위 3개·시향 순서 정렬
 │  │  ├─ recommend.test.ts
 │  │  ├─ price.ts           # 가격 표시 규칙 (국내 정가·기준일·출처)
-│  │  ├─ supabase.ts        # Supabase 클라이언트 + 익명 로그인
-│  │  ├─ storage.ts         # 메모 저장소: Supabase + localStorage 캐시 (try/catch)
+│  │  ├─ supabase.ts        # Supabase 클라이언트 + 익명 세션 확인
+│  │  ├─ memos-remote.ts    # memos 테이블 읽기·쓰기·삭제 (실패해도 던지지 않음)
+│  │  ├─ storage.ts         # 메모 저장소: localStorage 캐시 + 서버 동기화 (컴포넌트는 이 파일만 사용)
 │  │  └─ links.ts           # 네이버 지도 검색 링크 생성
 │  ├─ types.ts
 │  └─ styles/

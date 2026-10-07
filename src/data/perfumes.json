@@ -168,7 +168,9 @@
     "checkPoint": "시트러스 뒤에 꽃 향이 얼마나 올라오는지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "톰 포드 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -254,7 +256,9 @@
     "checkPoint": "새콤한 첫 향이 얼마나 빨리 가라앉는지 맡아보세요",
     "krPrice": null,
     "storeQuery": "돌체앤가바나 백화점",
-    "channels": [],
+    "channels": [
+      "올리브영"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -414,7 +418,10 @@
     "checkPoint": "배 향이 꽃 향으로 바뀌는 순간을 맡아보세요",
     "krPrice": null,
     "storeQuery": "조말론 런던 백화점",
-    "channels": [],
+    "channels": [
+      "백화점",
+      "브랜드 매장"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -495,7 +502,9 @@
     "checkPoint": "과일 향 뒤에 보송한 느낌이 오는지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "샤넬 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -677,7 +686,9 @@
     "checkPoint": "딸기 향이 꽃 향으로 이어지는 변화를 맡아보세요",
     "krPrice": null,
     "storeQuery": "마크제이콥스 데이지 백화점",
-    "channels": [],
+    "channels": [
+      "올리브영"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -922,7 +933,10 @@
     "checkPoint": "소금과 허브 향이 얼마나 조화로운지 맡아보세요",
     "krPrice": null,
     "storeQuery": "조말론 런던 백화점",
-    "channels": [],
+    "channels": [
+      "백화점",
+      "브랜드 매장"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -1081,7 +1095,9 @@
     "checkPoint": "풀 향과 달콤한 열매 향의 균형을 맡아보세요",
     "krPrice": null,
     "storeQuery": "딥티크 백화점",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -1241,7 +1257,9 @@
     "checkPoint": "차 향이 시트러스 뒤에 얼마나 깔끔하게 나는지 맡아보세요",
     "krPrice": null,
     "storeQuery": "불가리 향수 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -1327,7 +1345,9 @@
     "checkPoint": "첫 향의 후추 느낌이 얼마나 강한지 맡아보세요",
     "krPrice": null,
     "storeQuery": "디올 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -1431,7 +1451,9 @@
     "checkPoint": "첫 향의 자몽이 나무 향으로 바뀌는 흐름을 맡아보세요",
     "krPrice": null,
     "storeQuery": "샤넬 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -1688,7 +1710,9 @@
     "checkPoint": "꽃 향이 가볍게 퍼지는지 손목에 뿌려 맡아보세요",
     "krPrice": null,
     "storeQuery": "디올 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -1757,7 +1781,10 @@
     "checkPoint": "꽃 향 뒤에 스웨이드가 느껴지는지 맡아보세요",
     "krPrice": null,
     "storeQuery": "조말론 런던 백화점",
-    "channels": [],
+    "channels": [
+      "백화점",
+      "브랜드 매장"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -1849,7 +1876,9 @@
     "checkPoint": "시트러스에서 꽃, 나무 향으로 바뀌는 흐름을 맡아보세요",
     "krPrice": null,
     "storeQuery": "샤넬 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -1936,7 +1965,9 @@
     "checkPoint": "꽃 향이 진한 정도를 손목에서 확인해 보세요",
     "krPrice": null,
     "storeQuery": "디올 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -1993,7 +2024,9 @@
     "checkPoint": "꽃 향이 진한 편이라 호불호가 있는지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "구찌 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -2067,7 +2100,9 @@
     "checkPoint": "튜베로즈의 진함이 부담스럽지 않은지 맡아보세요",
     "krPrice": null,
     "storeQuery": "딥티크 백화점",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -2173,7 +2208,9 @@
     "checkPoint": "첫 향의 알데하이드가 낯설지 않은지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "샤넬 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -2343,7 +2380,9 @@
     "checkPoint": "아이리스의 분 느낌과 카카오의 달콤함을 맡아보세요",
     "krPrice": null,
     "storeQuery": "디올 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -2597,7 +2636,9 @@
       "source": "https://www.maisonmargiela.com/ko-kr/%EB%A0%88%ED%94%8C%EB%A6%AC%EC%B9%B4-%EB%A0%88%EC%9D%B4%EC%A7%80-%EC%84%A0%EB%8D%B0%EC%9D%B4-%EB%AA%A8%EB%8B%9D-%EC%98%A4-%EB%93%9C-%EB%9A%9C%EC%99%88%EB%A0%9B-S33YX0018S10932001.html"
     },
     "storeQuery": "메종 마르지엘라 레플리카 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": {
       "file": "maison-margiela-replica-lazy-sunday-morning.jpg",
       "source": "https://www.maisonmargiela.com/ko-kr/%EB%A0%88%ED%94%8C%EB%A6%AC%EC%B9%B4-%EB%A0%88%EC%9D%B4%EC%A7%80-%EC%84%A0%EB%8D%B0%EC%9D%B4-%EB%AA%A8%EB%8B%9D-%EC%98%A4-%EB%93%9C-%EB%9A%9C%EC%99%88%EB%A0%9B-S33YX0018S10932001.html"
@@ -2674,7 +2715,9 @@
     "checkPoint": "머스크가 포근한지 답답한지 손목에서 확인해 보세요",
     "krPrice": null,
     "storeQuery": "나르시소 로드리게즈 백화점",
-    "channels": [],
+    "channels": [
+      "올리브영"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -2747,7 +2790,9 @@
     "checkPoint": "머스크가 깨끗하게 느껴지는지 맡아보세요",
     "krPrice": null,
     "storeQuery": "딥티크 백화점",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -2839,7 +2884,9 @@
     "checkPoint": "첫 향의 시트러스가 코코넛으로 바뀌는 순간을 맡아보세요",
     "krPrice": null,
     "storeQuery": "메종 마르지엘라 레플리카 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -3081,7 +3128,9 @@
       "source": "https://www.lelabofragrances.co.kr/santal-33-987.html"
     },
     "storeQuery": "르 라보 백화점",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": {
       "file": "le-labo-santal-33.jpg",
       "source": "https://www.lelabofragrances.co.kr/santal-33-987.html"
@@ -3151,7 +3200,9 @@
     "checkPoint": "첫 향의 사이프러스가 샌달우드로 바뀌는 흐름을 맡아보세요",
     "krPrice": null,
     "storeQuery": "딥티크 백화점",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -3240,7 +3291,9 @@
     "checkPoint": "우드 향의 진함이 부담스러운지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "톰 포드 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -3423,7 +3476,9 @@
     "checkPoint": "달콤함이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "메종 프란시스 커정 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -3518,7 +3573,9 @@
     "checkPoint": "향이 진하니 잔향까지 충분히 맡아보세요",
     "krPrice": null,
     "storeQuery": "겔랑 향수 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -3604,7 +3661,9 @@
     "checkPoint": "라벤더와 바닐라가 어우러지는 흐름을 맡아보세요",
     "krPrice": null,
     "storeQuery": "입생로랑 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -3694,7 +3753,9 @@
     "checkPoint": "커피와 바닐라의 달콤함이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "입생로랑 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -3789,7 +3850,9 @@
     "checkPoint": "달콤한 첫 향이 프랄린으로 이어지는지 맡아보세요",
     "krPrice": null,
     "storeQuery": "랑콤 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -4051,7 +4114,9 @@
       "source": "https://www.maisonmargiela.com/ko-kr/replica-by-the-fireplace-eau-de-toilette-%7C-maison-margiela-S33YX0024S11331961.html"
     },
     "storeQuery": "메종 마르지엘라 레플리카 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": {
       "file": "maison-margiela-replica-by-the-fireplace.jpg",
       "source": "https://www.maisonmargiela.com/ko-kr/replica-by-the-fireplace-eau-de-toilette-%7C-maison-margiela-S33YX0024S11331961.html"
@@ -4149,7 +4214,9 @@
     "checkPoint": "럼과 담배 잎의 조화를 맡아보세요",
     "krPrice": null,
     "storeQuery": "메종 마르지엘라 레플리카 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -4233,7 +4300,9 @@
     "checkPoint": "향이 매우 진하니 소량만 뿌려 맡아보세요",
     "krPrice": null,
     "storeQuery": "톰 포드 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -4306,7 +4375,9 @@
       "source": "https://www.lelabofragrances.co.kr/another-13-747.html"
     },
     "storeQuery": "르 라보 백화점",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": {
       "file": "le-labo-another-13.jpg",
       "source": "https://www.lelabofragrances.co.kr/another-13-747.html"
@@ -4399,7 +4470,9 @@
       "source": "https://www.lelabofragrances.co.kr/rose-31-962.html"
     },
     "storeQuery": "르 라보 백화점",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": {
       "file": "le-labo-rose-31.jpg",
       "source": "https://www.lelabofragrances.co.kr/rose-31-962.html"
@@ -4487,7 +4560,9 @@
       "source": "https://www.lelabofragrances.co.kr/th-noir-29-1003.html"
     },
     "storeQuery": "르 라보 백화점",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": {
       "file": "le-labo-the-noir-29.jpg",
       "source": "https://www.lelabofragrances.co.kr/th-noir-29-1003.html"
@@ -4568,7 +4643,9 @@
       "source": "https://www.lelabofragrances.co.kr/bergamote-22-771.html"
     },
     "storeQuery": "르 라보 백화점",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": {
       "file": "le-labo-bergamote-22.jpg",
       "source": "https://www.lelabofragrances.co.kr/bergamote-22-771.html"
@@ -5726,7 +5803,9 @@
       "source": "https://kr.aesop.com/kr/gifts/fragrant-gifts/silently--hwyl-eau-de-parfum/FR43.html"
     },
     "storeQuery": "이솝 매장",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": {
       "file": "aesop-hwyl.png",
       "source": "https://kr.aesop.com/kr/gifts/fragrant-gifts/silently--hwyl-eau-de-parfum/FR43.html"
@@ -5808,7 +5887,9 @@
       "source": "https://kr.aesop.com/kr/fragrance/fresh/tacit-truths-eau-de-parfum/FR41.html"
     },
     "storeQuery": "이솝 매장",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": {
       "file": "aesop-tacit.png",
       "source": "https://kr.aesop.com/kr/fragrance/fresh/tacit-truths-eau-de-parfum/FR41.html"
@@ -6066,7 +6147,9 @@
     "checkPoint": "레몬의 상큼함이 머스크로 이어지는지 맡아보세요",
     "krPrice": null,
     "storeQuery": "메종 프란시스 커정 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -6149,7 +6232,9 @@
     "checkPoint": "우드 향의 진함이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "메종 프란시스 커정 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -6220,7 +6305,9 @@
     "checkPoint": "앰버의 달콤함과 진한 정도를 확인해 보세요",
     "krPrice": null,
     "storeQuery": "메종 프란시스 커정 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -6294,7 +6381,9 @@
     "checkPoint": "첫 향의 알싸함이 바닐라로 바뀌는 순간을 맡아보세요",
     "krPrice": null,
     "storeQuery": "메종 프란시스 커정 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -6872,7 +6961,9 @@
     "checkPoint": "알싸한 첫 향이 바닐라로 바뀌는 흐름을 맡아보세요",
     "krPrice": null,
     "storeQuery": "딥티크 백화점",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -6940,7 +7031,9 @@
     "checkPoint": "주니퍼의 상쾌함이 나무 향으로 이어지는지 맡아보세요",
     "krPrice": null,
     "storeQuery": "딥티크 백화점",
-    "channels": [],
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -7024,7 +7117,9 @@
     "checkPoint": "체리와 아몬드의 달콤함이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "톰 포드 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -7112,7 +7207,9 @@
     "checkPoint": "꽃과 코코넛의 달콤함이 맞는지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "톰 포드 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -7189,7 +7286,9 @@
     "checkPoint": "가죽 향의 진한 정도를 확인해 보세요",
     "krPrice": null,
     "storeQuery": "톰 포드 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -7279,7 +7378,9 @@
     "checkPoint": "꽃 향이 진해서 호불호가 있으니 충분히 맡아보세요",
     "krPrice": null,
     "storeQuery": "톰 포드 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -7355,7 +7456,9 @@
     "checkPoint": "가죽 향이 부드러운지 거친지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "톰 포드 뷰티 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -7571,7 +7674,9 @@
     "checkPoint": "첫 향의 솔잎과 레몬이 얼마나 알싸한지 맡아보세요",
     "krPrice": null,
     "storeQuery": "펜할리곤스 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -8117,6 +8222,1301 @@
     "checkPoint": "달콤한 첫 향이 패출리로 이어지는지 맡아보세요",
     "krPrice": null,
     "storeQuery": "샤넬 뷰티 백화점",
+    "channels": [
+      "백화점"
+    ],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "versace-bright-crystal",
+    "brand": "Versace",
+    "brandKo": "베르사체",
+    "name": "Bright Crystal",
+    "nameKo": "브라이트 크리스탈",
+    "concentration": "EDT",
+    "notes": {
+      "top": [
+        {
+          "en": "Yuzu",
+          "ko": "유자",
+          "feel": "향긋하고 쌉쌀한 유자 껍질 향",
+          "family": "citrus"
+        },
+        {
+          "en": "Pomegranate",
+          "ko": "석류",
+          "feel": "새콤달콤한 붉은 열매 향",
+          "family": "fruity"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Magnolia",
+          "ko": "목련",
+          "feel": "부드럽고 크리미한 하얀 꽃 향",
+          "family": "floral"
+        },
+        {
+          "en": "Peony",
+          "ko": "작약",
+          "feel": "보드랍고 촉촉한 분홍 꽃 향",
+          "family": "floral"
+        },
+        {
+          "en": "Lotus",
+          "ko": "연꽃",
+          "feel": "맑고 촉촉한 물가의 꽃 향",
+          "family": "aqua"
+        }
+      ],
+      "base": [
+        {
+          "en": "Musk",
+          "ko": "머스크",
+          "feel": "따뜻한 살결 같은 포근한 향",
+          "family": "musk"
+        },
+        {
+          "en": "Amber",
+          "ko": "앰버",
+          "feel": "따뜻하고 달콤한 수지 향",
+          "family": "amber"
+        },
+        {
+          "en": "Woody Notes",
+          "ko": "우디 노트",
+          "feel": "마른 나무처럼 따뜻하고 부드러운 향",
+          "family": "woody"
+        }
+      ]
+    },
+    "family": "floral",
+    "subFamilies": [
+      "fruity",
+      "musk"
+    ],
+    "moods": [
+      "lovely",
+      "fresh",
+      "soft"
+    ],
+    "avoidFlags": [],
+    "intensity": "light",
+    "polarizing": "low",
+    "seasonOccasion": "봄·여름 · 데일리",
+    "summary": "유자와 석류의 상큼함 뒤로 맑은 꽃이 이어지는 가벼운 향",
+    "drydown": "시간이 지나면 부드러운 머스크가 가볍게 남아요",
+    "checkPoint": "상큼한 첫 향이 꽃 향으로 바뀌는지 맡아보세요",
+    "krPrice": null,
+    "storeQuery": "베르사체 향수 매장",
+    "channels": [
+      "올리브영"
+    ],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "versace-eros",
+    "brand": "Versace",
+    "brandKo": "베르사체",
+    "name": "Eros",
+    "nameKo": "에로스",
+    "concentration": "EDT",
+    "notes": {
+      "top": [
+        {
+          "en": "Mint",
+          "ko": "민트",
+          "feel": "입안이 시원해지는 박하 향",
+          "family": "aromatic"
+        },
+        {
+          "en": "Apple",
+          "ko": "사과",
+          "feel": "아삭하고 풋풋한 사과 향",
+          "family": "fruity"
+        },
+        {
+          "en": "Lemon",
+          "ko": "레몬",
+          "feel": "갓 짠 레몬즙처럼 톡 쏘는 상큼한 향",
+          "family": "citrus"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Tonka Bean",
+          "ko": "통카빈",
+          "feel": "바닐라와 아몬드가 섞인 달콤한 향",
+          "family": "gourmand"
+        },
+        {
+          "en": "Geranium",
+          "ko": "제라늄",
+          "feel": "싱그럽고 살짝 매콤한 잎·꽃 향",
+          "family": "aromatic"
+        },
+        {
+          "en": "Ambroxan",
+          "ko": "암브록산",
+          "feel": "깨끗하고 따뜻한 피부 같은 은은한 향",
+          "family": "musk"
+        }
+      ],
+      "base": [
+        {
+          "en": "Vanilla",
+          "ko": "바닐라",
+          "feel": "달콤하고 포근한 디저트 향",
+          "family": "gourmand"
+        },
+        {
+          "en": "Vetiver",
+          "ko": "베티버",
+          "feel": "촉촉한 흙과 풀뿌리 같은 차분한 향",
+          "family": "woody"
+        },
+        {
+          "en": "Oakmoss",
+          "ko": "오크모스",
+          "feel": "축축한 이끼와 숲 바닥 같은 향",
+          "family": "woody"
+        },
+        {
+          "en": "Cedar",
+          "ko": "시더",
+          "feel": "연필을 깎을 때 나는 깔끔한 나무 향",
+          "family": "woody"
+        }
+      ]
+    },
+    "family": "aromatic",
+    "subFamilies": [
+      "gourmand",
+      "woody"
+    ],
+    "moods": [
+      "fresh",
+      "sweet",
+      "warm"
+    ],
+    "avoidFlags": [
+      "tooSweet"
+    ],
+    "intensity": "strong",
+    "polarizing": "mid",
+    "seasonOccasion": "사계절 · 데이트",
+    "summary": "민트와 사과의 시원함에 바닐라가 더해진 달콤하고 강한 향",
+    "drydown": "시간이 지나면 바닐라와 나무 향이 남아요",
+    "checkPoint": "시원한 첫 향 뒤에 바닐라가 얼마나 달게 오는지 확인해 보세요",
+    "krPrice": null,
+    "storeQuery": "베르사체 향수 매장",
+    "channels": [
+      "올리브영"
+    ],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "paco-rabanne-1-million",
+    "brand": "Paco Rabanne",
+    "brandKo": "파코 라반",
+    "name": "1 Million",
+    "nameKo": "원 밀리언",
+    "concentration": "EDT",
+    "notes": {
+      "top": [
+        {
+          "en": "Grapefruit",
+          "ko": "자몽",
+          "feel": "새콤쌉쌀하고 시원한 자몽 향",
+          "family": "citrus"
+        },
+        {
+          "en": "Mint",
+          "ko": "민트",
+          "feel": "입안이 시원해지는 박하 향",
+          "family": "aromatic"
+        },
+        {
+          "en": "Orange",
+          "ko": "오렌지",
+          "feel": "달콤하고 밝은 오렌지 껍질 향",
+          "family": "citrus"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Cinnamon",
+          "ko": "시나몬",
+          "feel": "달콤하고 따뜻한 계피 향",
+          "family": "spicy"
+        },
+        {
+          "en": "Rose",
+          "ko": "장미",
+          "feel": "우아하고 부드러운 꽃잎 향",
+          "family": "floral"
+        },
+        {
+          "en": "Spices",
+          "ko": "향신료",
+          "feel": "따뜻하고 알싸한 향신료 향",
+          "family": "spicy"
+        }
+      ],
+      "base": [
+        {
+          "en": "Amber",
+          "ko": "앰버",
+          "feel": "따뜻하고 달콤한 수지 향",
+          "family": "amber"
+        },
+        {
+          "en": "Leather",
+          "ko": "가죽",
+          "feel": "따뜻하고 고급스러운 가죽 향",
+          "family": "leather"
+        },
+        {
+          "en": "Patchouli",
+          "ko": "패출리",
+          "feel": "흙냄새 나는 깊고 진한 풀 향",
+          "family": "woody"
+        },
+        {
+          "en": "Woody Notes",
+          "ko": "우디 노트",
+          "feel": "마른 나무처럼 따뜻하고 부드러운 향",
+          "family": "woody"
+        }
+      ]
+    },
+    "family": "amber",
+    "subFamilies": [
+      "leather",
+      "spicy"
+    ],
+    "moods": [
+      "warm",
+      "deep",
+      "sensual"
+    ],
+    "avoidFlags": [
+      "tooSweet",
+      "tooStrong"
+    ],
+    "intensity": "strong",
+    "polarizing": "high",
+    "seasonOccasion": "가을·겨울 · 저녁",
+    "summary": "계피와 가죽, 앰버가 어우러진 강하고 달콤한 향",
+    "drydown": "시간이 지나도 달콤한 앰버와 가죽이 오래 남아요",
+    "checkPoint": "가죽과 계피의 달콤함이 부담스럽지 않은지 확인해 보세요",
+    "krPrice": null,
+    "storeQuery": "파코 라반 향수 매장",
+    "channels": [],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "paco-rabanne-lady-million",
+    "brand": "Paco Rabanne",
+    "brandKo": "파코 라반",
+    "name": "Lady Million",
+    "nameKo": "레이디 밀리언",
+    "concentration": "EDP",
+    "notes": {
+      "top": [
+        {
+          "en": "Raspberry",
+          "ko": "라즈베리",
+          "feel": "새콤달콤한 붉은 베리 향",
+          "family": "fruity"
+        },
+        {
+          "en": "Orange Blossom",
+          "ko": "오렌지 블러섬",
+          "feel": "달콤하고 깨끗한 흰 꽃 향",
+          "family": "whiteFloral"
+        },
+        {
+          "en": "Neroli",
+          "ko": "네롤리",
+          "feel": "맑고 쌉쌀한 오렌지 꽃 향",
+          "family": "citrus"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Jasmine",
+          "ko": "자스민",
+          "feel": "달콤하고 진한 하얀 꽃 향",
+          "family": "whiteFloral"
+        },
+        {
+          "en": "Honey",
+          "ko": "꿀",
+          "feel": "끈적하고 달콤한 벌꿀 향",
+          "family": "gourmand"
+        },
+        {
+          "en": "Gardenia",
+          "ko": "가드니아",
+          "feel": "크리미하고 진한 하얀 꽃 향",
+          "family": "whiteFloral"
+        }
+      ],
+      "base": [
+        {
+          "en": "Patchouli",
+          "ko": "패출리",
+          "feel": "흙냄새 나는 깊고 진한 풀 향",
+          "family": "woody"
+        },
+        {
+          "en": "Amber",
+          "ko": "앰버",
+          "feel": "따뜻하고 달콤한 수지 향",
+          "family": "amber"
+        }
+      ]
+    },
+    "family": "gourmand",
+    "subFamilies": [
+      "whiteFloral",
+      "fruity"
+    ],
+    "moods": [
+      "sweet",
+      "lovely",
+      "elegant"
+    ],
+    "avoidFlags": [
+      "tooSweet"
+    ],
+    "intensity": "medium",
+    "polarizing": "mid",
+    "seasonOccasion": "가을·겨울 · 저녁",
+    "summary": "라즈베리와 꿀, 하얀 꽃이 어우러진 화려하고 달콤한 향",
+    "drydown": "시간이 지나면 달콤한 앰버와 패출리가 남아요",
+    "checkPoint": "첫 향의 베리와 꿀의 달콤함을 확인해 보세요",
+    "krPrice": null,
+    "storeQuery": "파코 라반 향수 매장",
+    "channels": [],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "hugo-boss-bottled",
+    "brand": "Hugo Boss",
+    "brandKo": "휴고 보스",
+    "name": "Boss Bottled",
+    "nameKo": "보스 보틀드",
+    "concentration": "EDT",
+    "notes": {
+      "top": [
+        {
+          "en": "Apple",
+          "ko": "사과",
+          "feel": "아삭하고 풋풋한 사과 향",
+          "family": "fruity"
+        },
+        {
+          "en": "Bergamot",
+          "ko": "베르가못",
+          "feel": "상큼하고 살짝 쌉쌀한 귤 껍질 향",
+          "family": "citrus"
+        },
+        {
+          "en": "Lemon",
+          "ko": "레몬",
+          "feel": "갓 짠 레몬즙처럼 톡 쏘는 상큼한 향",
+          "family": "citrus"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Cinnamon",
+          "ko": "시나몬",
+          "feel": "달콤하고 따뜻한 계피 향",
+          "family": "spicy"
+        },
+        {
+          "en": "Geranium",
+          "ko": "제라늄",
+          "feel": "싱그럽고 살짝 매콤한 잎·꽃 향",
+          "family": "aromatic"
+        },
+        {
+          "en": "Woody Notes",
+          "ko": "우디 노트",
+          "feel": "마른 나무처럼 따뜻하고 부드러운 향",
+          "family": "woody"
+        }
+      ],
+      "base": [
+        {
+          "en": "Vanilla",
+          "ko": "바닐라",
+          "feel": "달콤하고 포근한 디저트 향",
+          "family": "gourmand"
+        },
+        {
+          "en": "Sandalwood",
+          "ko": "샌달우드",
+          "feel": "부드럽고 크리미한 따뜻한 나무 향",
+          "family": "woody"
+        },
+        {
+          "en": "Vetiver",
+          "ko": "베티버",
+          "feel": "촉촉한 흙과 풀뿌리 같은 차분한 향",
+          "family": "woody"
+        },
+        {
+          "en": "Cedar",
+          "ko": "시더",
+          "feel": "연필을 깎을 때 나는 깔끔한 나무 향",
+          "family": "woody"
+        }
+      ]
+    },
+    "family": "woody",
+    "subFamilies": [
+      "aromatic",
+      "spicy"
+    ],
+    "moods": [
+      "calm",
+      "warm",
+      "fresh"
+    ],
+    "avoidFlags": [],
+    "intensity": "medium",
+    "polarizing": "mid",
+    "seasonOccasion": "사계절 · 출근",
+    "summary": "사과와 계피가 우디한 향으로 이어지는 단정한 클래식 향",
+    "drydown": "시간이 지나면 부드러운 바닐라와 나무 향이 남아요",
+    "checkPoint": "사과 향이 우디하게 바뀌는 흐름을 맡아보세요",
+    "krPrice": null,
+    "storeQuery": "휴고 보스 향수 매장",
+    "channels": [],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "calvin-klein-eternity",
+    "brand": "Calvin Klein",
+    "brandKo": "캘빈 클라인",
+    "name": "Eternity",
+    "nameKo": "이터니티",
+    "concentration": "EDP",
+    "notes": {
+      "top": [
+        {
+          "en": "Mandarin",
+          "ko": "만다린",
+          "feel": "말랑하고 달콤한 귤 향",
+          "family": "citrus"
+        },
+        {
+          "en": "Freesia",
+          "ko": "프리지아",
+          "feel": "가볍고 싱그러운 봄꽃 향",
+          "family": "floral"
+        },
+        {
+          "en": "Sage",
+          "ko": "세이지",
+          "feel": "마른 풀처럼 건조하고 쌉쌀한 허브 향",
+          "family": "aromatic"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Lily of the Valley",
+          "ko": "은방울꽃",
+          "feel": "맑고 청순한 작은 꽃 향",
+          "family": "floral"
+        },
+        {
+          "en": "Jasmine",
+          "ko": "자스민",
+          "feel": "달콤하고 진한 하얀 꽃 향",
+          "family": "whiteFloral"
+        },
+        {
+          "en": "Rose",
+          "ko": "장미",
+          "feel": "우아하고 부드러운 꽃잎 향",
+          "family": "floral"
+        }
+      ],
+      "base": [
+        {
+          "en": "Sandalwood",
+          "ko": "샌달우드",
+          "feel": "부드럽고 크리미한 따뜻한 나무 향",
+          "family": "woody"
+        },
+        {
+          "en": "Musk",
+          "ko": "머스크",
+          "feel": "따뜻한 살결 같은 포근한 향",
+          "family": "musk"
+        },
+        {
+          "en": "Amber",
+          "ko": "앰버",
+          "feel": "따뜻하고 달콤한 수지 향",
+          "family": "amber"
+        }
+      ]
+    },
+    "family": "floral",
+    "subFamilies": [
+      "musk"
+    ],
+    "moods": [
+      "soft",
+      "elegant",
+      "clean"
+    ],
+    "avoidFlags": [],
+    "intensity": "light",
+    "polarizing": "low",
+    "seasonOccasion": "봄 · 데일리",
+    "summary": "맑은 흰 꽃을 부드러운 머스크가 감싸는 깨끗한 향",
+    "drydown": "시간이 지나면 부드러운 머스크와 샌달우드가 남아요",
+    "checkPoint": "꽃 향이 은은하게 퍼지는지 확인해 보세요",
+    "krPrice": null,
+    "storeQuery": "캘빈클라인 향수 매장",
+    "channels": [],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "carolina-herrera-good-girl",
+    "brand": "Carolina Herrera",
+    "brandKo": "캐롤리나 헤레라",
+    "name": "Good Girl",
+    "nameKo": "굿 걸",
+    "concentration": "EDP",
+    "notes": {
+      "top": [
+        {
+          "en": "Almond",
+          "ko": "아몬드",
+          "feel": "고소하고 달콤한 견과 향",
+          "family": "gourmand"
+        },
+        {
+          "en": "Coffee",
+          "ko": "커피",
+          "feel": "고소하고 쌉쌀한 커피콩 향",
+          "family": "gourmand"
+        },
+        {
+          "en": "Bergamot",
+          "ko": "베르가못",
+          "feel": "상큼하고 살짝 쌉쌀한 귤 껍질 향",
+          "family": "citrus"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Tuberose",
+          "ko": "튜베로즈",
+          "feel": "진하고 관능적인 하얀 꽃 향",
+          "family": "whiteFloral"
+        },
+        {
+          "en": "Jasmine",
+          "ko": "자스민",
+          "feel": "달콤하고 진한 하얀 꽃 향",
+          "family": "whiteFloral"
+        },
+        {
+          "en": "Orange Blossom",
+          "ko": "오렌지 블러섬",
+          "feel": "달콤하고 깨끗한 흰 꽃 향",
+          "family": "whiteFloral"
+        }
+      ],
+      "base": [
+        {
+          "en": "Tonka Bean",
+          "ko": "통카빈",
+          "feel": "바닐라와 아몬드가 섞인 달콤한 향",
+          "family": "gourmand"
+        },
+        {
+          "en": "Cacao",
+          "ko": "카카오",
+          "feel": "쌉쌀하고 고소한 코코아 향",
+          "family": "gourmand"
+        },
+        {
+          "en": "Vanilla",
+          "ko": "바닐라",
+          "feel": "달콤하고 포근한 디저트 향",
+          "family": "gourmand"
+        },
+        {
+          "en": "Sandalwood",
+          "ko": "샌달우드",
+          "feel": "부드럽고 크리미한 따뜻한 나무 향",
+          "family": "woody"
+        }
+      ]
+    },
+    "family": "gourmand",
+    "subFamilies": [
+      "whiteFloral"
+    ],
+    "moods": [
+      "sweet",
+      "sensual",
+      "elegant"
+    ],
+    "avoidFlags": [
+      "tooSweet",
+      "tooStrong"
+    ],
+    "intensity": "strong",
+    "polarizing": "high",
+    "seasonOccasion": "가을·겨울 · 저녁",
+    "summary": "하얀 꽃과 카카오가 어우러진 진하고 달콤한 향",
+    "drydown": "시간이 지나도 달콤한 통카빈과 카카오가 오래 남아요",
+    "checkPoint": "꽃과 달콤함의 진한 정도를 확인해 보세요",
+    "krPrice": null,
+    "storeQuery": "캐롤리나 헤레라 향수 매장",
+    "channels": [],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "ysl-y-edp",
+    "brand": "Yves Saint Laurent",
+    "brandKo": "입생로랑",
+    "name": "Y Eau de Parfum",
+    "nameKo": "와이 오 드 퍼퓸",
+    "concentration": "EDP",
+    "notes": {
+      "top": [
+        {
+          "en": "Apple",
+          "ko": "사과",
+          "feel": "아삭하고 풋풋한 사과 향",
+          "family": "fruity"
+        },
+        {
+          "en": "Ginger",
+          "ko": "생강",
+          "feel": "톡 쏘면서 따뜻한 생강 향",
+          "family": "spicy"
+        },
+        {
+          "en": "Bergamot",
+          "ko": "베르가못",
+          "feel": "상큼하고 살짝 쌉쌀한 귤 껍질 향",
+          "family": "citrus"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Sage",
+          "ko": "세이지",
+          "feel": "마른 풀처럼 건조하고 쌉쌀한 허브 향",
+          "family": "aromatic"
+        },
+        {
+          "en": "Juniper Berries",
+          "ko": "주니퍼 베리",
+          "feel": "상쾌하고 알싸한 진(gin) 같은 향",
+          "family": "aromatic"
+        },
+        {
+          "en": "Geranium",
+          "ko": "제라늄",
+          "feel": "싱그럽고 살짝 매콤한 잎·꽃 향",
+          "family": "aromatic"
+        }
+      ],
+      "base": [
+        {
+          "en": "Ambroxan",
+          "ko": "암브록산",
+          "feel": "깨끗하고 따뜻한 피부 같은 은은한 향",
+          "family": "musk"
+        },
+        {
+          "en": "Tonka Bean",
+          "ko": "통카빈",
+          "feel": "바닐라와 아몬드가 섞인 달콤한 향",
+          "family": "gourmand"
+        },
+        {
+          "en": "Cedar",
+          "ko": "시더",
+          "feel": "연필을 깎을 때 나는 깔끔한 나무 향",
+          "family": "woody"
+        },
+        {
+          "en": "Vetiver",
+          "ko": "베티버",
+          "feel": "촉촉한 흙과 풀뿌리 같은 차분한 향",
+          "family": "woody"
+        }
+      ]
+    },
+    "family": "aromatic",
+    "subFamilies": [
+      "woody",
+      "citrus"
+    ],
+    "moods": [
+      "cool",
+      "fresh",
+      "deep"
+    ],
+    "avoidFlags": [],
+    "intensity": "medium",
+    "polarizing": "low",
+    "seasonOccasion": "사계절 · 출근",
+    "summary": "사과와 생강의 상쾌함이 깔끔한 나무 향으로 이어지는 향",
+    "drydown": "몇 시간 뒤엔 깨끗한 앰브록산과 나무 향이 남아요",
+    "checkPoint": "상쾌한 첫 향이 깔끔하게 정리되는지 맡아보세요",
+    "krPrice": null,
+    "storeQuery": "입생로랑 뷰티 백화점",
+    "channels": [
+      "백화점"
+    ],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "lancome-idole",
+    "brand": "Lancôme",
+    "brandKo": "랑콤",
+    "name": "Idôle",
+    "nameKo": "이돌",
+    "concentration": "EDP",
+    "notes": {
+      "top": [
+        {
+          "en": "Pear",
+          "ko": "배",
+          "feel": "촉촉하고 달콤한 배 향",
+          "family": "fruity"
+        },
+        {
+          "en": "Bergamot",
+          "ko": "베르가못",
+          "feel": "상큼하고 살짝 쌉쌀한 귤 껍질 향",
+          "family": "citrus"
+        },
+        {
+          "en": "Pink Pepper",
+          "ko": "핑크 페퍼",
+          "feel": "톡 쏘고 가벼운 후추 향",
+          "family": "spicy"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Jasmine",
+          "ko": "자스민",
+          "feel": "달콤하고 진한 하얀 꽃 향",
+          "family": "whiteFloral"
+        },
+        {
+          "en": "Rose",
+          "ko": "장미",
+          "feel": "우아하고 부드러운 꽃잎 향",
+          "family": "floral"
+        }
+      ],
+      "base": [
+        {
+          "en": "Vanilla",
+          "ko": "바닐라",
+          "feel": "달콤하고 포근한 디저트 향",
+          "family": "gourmand"
+        },
+        {
+          "en": "Musk",
+          "ko": "머스크",
+          "feel": "따뜻한 살결 같은 포근한 향",
+          "family": "musk"
+        },
+        {
+          "en": "Cedar",
+          "ko": "시더",
+          "feel": "연필을 깎을 때 나는 깔끔한 나무 향",
+          "family": "woody"
+        }
+      ]
+    },
+    "family": "floral",
+    "subFamilies": [
+      "musk",
+      "fruity"
+    ],
+    "moods": [
+      "lovely",
+      "soft",
+      "clean"
+    ],
+    "avoidFlags": [],
+    "intensity": "medium",
+    "polarizing": "low",
+    "seasonOccasion": "봄·가을 · 데일리",
+    "summary": "배와 장미, 깨끗한 머스크가 어우러진 산뜻한 꽃 향",
+    "drydown": "시간이 지나면 부드러운 머스크와 바닐라가 남아요",
+    "checkPoint": "배와 장미의 균형을 손목에서 확인해 보세요",
+    "krPrice": null,
+    "storeQuery": "랑콤 뷰티 백화점",
+    "channels": [
+      "백화점"
+    ],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "montblanc-explorer",
+    "brand": "Montblanc",
+    "brandKo": "몽블랑",
+    "name": "Explorer",
+    "nameKo": "익스플로러",
+    "concentration": "EDP",
+    "notes": {
+      "top": [
+        {
+          "en": "Bergamot",
+          "ko": "베르가못",
+          "feel": "상큼하고 살짝 쌉쌀한 귤 껍질 향",
+          "family": "citrus"
+        },
+        {
+          "en": "Pink Pepper",
+          "ko": "핑크 페퍼",
+          "feel": "톡 쏘고 가벼운 후추 향",
+          "family": "spicy"
+        },
+        {
+          "en": "Clary Sage",
+          "ko": "클라리 세이지",
+          "feel": "따뜻하고 달큰한 허브 향",
+          "family": "aromatic"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Vetiver",
+          "ko": "베티버",
+          "feel": "촉촉한 흙과 풀뿌리 같은 차분한 향",
+          "family": "woody"
+        },
+        {
+          "en": "Patchouli",
+          "ko": "패출리",
+          "feel": "흙냄새 나는 깊고 진한 풀 향",
+          "family": "woody"
+        },
+        {
+          "en": "Leather",
+          "ko": "가죽",
+          "feel": "따뜻하고 고급스러운 가죽 향",
+          "family": "leather"
+        }
+      ],
+      "base": [
+        {
+          "en": "Ambroxan",
+          "ko": "암브록산",
+          "feel": "깨끗하고 따뜻한 피부 같은 은은한 향",
+          "family": "musk"
+        },
+        {
+          "en": "Cashmeran",
+          "ko": "캐시머란",
+          "feel": "포근하고 약간 스모키한 나무 향",
+          "family": "woody"
+        }
+      ]
+    },
+    "family": "woody",
+    "subFamilies": [
+      "aromatic",
+      "leather"
+    ],
+    "moods": [
+      "calm",
+      "deep",
+      "fresh"
+    ],
+    "avoidFlags": [],
+    "intensity": "medium",
+    "polarizing": "mid",
+    "seasonOccasion": "사계절 · 출근",
+    "summary": "시트러스로 시작해 가죽과 우디로 이어지는 차분한 향",
+    "drydown": "시간이 지나면 깨끗한 앰브록산과 나무 향이 남아요",
+    "checkPoint": "가죽 느낌이 부담스럽지 않은지 확인해 보세요",
+    "krPrice": null,
+    "storeQuery": "몽블랑 향수 매장",
+    "channels": [
+      "올리브영"
+    ],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "armani-my-way",
+    "brand": "Giorgio Armani",
+    "brandKo": "조르지오 아르마니",
+    "name": "My Way",
+    "nameKo": "마이 웨이",
+    "concentration": "EDP",
+    "notes": {
+      "top": [
+        {
+          "en": "Bergamot",
+          "ko": "베르가못",
+          "feel": "상큼하고 살짝 쌉쌀한 귤 껍질 향",
+          "family": "citrus"
+        },
+        {
+          "en": "Orange Blossom",
+          "ko": "오렌지 블러섬",
+          "feel": "달콤하고 깨끗한 흰 꽃 향",
+          "family": "whiteFloral"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Tuberose",
+          "ko": "튜베로즈",
+          "feel": "진하고 관능적인 하얀 꽃 향",
+          "family": "whiteFloral"
+        },
+        {
+          "en": "Jasmine",
+          "ko": "자스민",
+          "feel": "달콤하고 진한 하얀 꽃 향",
+          "family": "whiteFloral"
+        }
+      ],
+      "base": [
+        {
+          "en": "White Musk",
+          "ko": "화이트 머스크",
+          "feel": "갓 빤 하얀 빨래 같은 포근한 향",
+          "family": "musk"
+        },
+        {
+          "en": "Cedar",
+          "ko": "시더",
+          "feel": "연필을 깎을 때 나는 깔끔한 나무 향",
+          "family": "woody"
+        },
+        {
+          "en": "Vanilla",
+          "ko": "바닐라",
+          "feel": "달콤하고 포근한 디저트 향",
+          "family": "gourmand"
+        }
+      ]
+    },
+    "family": "whiteFloral",
+    "subFamilies": [
+      "musk"
+    ],
+    "moods": [
+      "elegant",
+      "clean",
+      "soft"
+    ],
+    "avoidFlags": [],
+    "intensity": "medium",
+    "polarizing": "low",
+    "seasonOccasion": "봄·가을 · 데이트",
+    "summary": "하얀 꽃과 머스크가 부드럽게 어우러진 깨끗한 꽃 향",
+    "drydown": "시간이 지나면 보송한 화이트 머스크가 남아요",
+    "checkPoint": "꽃 향이 진하지 않고 깨끗한지 확인해 보세요",
+    "krPrice": null,
+    "storeQuery": "조르지오 아르마니 뷰티 백화점",
+    "channels": [],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "bvlgari-omnia-crystalline",
+    "brand": "Bvlgari",
+    "brandKo": "불가리",
+    "name": "Omnia Crystalline",
+    "nameKo": "옴니아 크리스탈린",
+    "concentration": "EDT",
+    "notes": {
+      "top": [
+        {
+          "en": "Bamboo",
+          "ko": "대나무",
+          "feel": "맑고 푸릇한 대나무 잎 향",
+          "family": "green"
+        },
+        {
+          "en": "Pear",
+          "ko": "배",
+          "feel": "촉촉하고 달콤한 배 향",
+          "family": "fruity"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Lotus",
+          "ko": "연꽃",
+          "feel": "맑고 촉촉한 물가의 꽃 향",
+          "family": "aqua"
+        }
+      ],
+      "base": [
+        {
+          "en": "Woody Notes",
+          "ko": "우디 노트",
+          "feel": "마른 나무처럼 따뜻하고 부드러운 향",
+          "family": "woody"
+        },
+        {
+          "en": "Musk",
+          "ko": "머스크",
+          "feel": "따뜻한 살결 같은 포근한 향",
+          "family": "musk"
+        }
+      ]
+    },
+    "family": "aqua",
+    "subFamilies": [
+      "green",
+      "musk"
+    ],
+    "moods": [
+      "clean",
+      "cool",
+      "soft"
+    ],
+    "avoidFlags": [],
+    "intensity": "light",
+    "polarizing": "low",
+    "seasonOccasion": "봄·여름 · 데일리",
+    "summary": "대나무와 연꽃처럼 맑고 투명한 물빛 향",
+    "drydown": "시간이 지나면 가벼운 머스크와 나무 향이 남아요",
+    "checkPoint": "투명한 첫 향이 얼마나 오래가는지 맡아보세요",
+    "krPrice": null,
+    "storeQuery": "불가리 향수 매장",
+    "channels": [
+      "백화점"
+    ],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "ysl-mon-paris",
+    "brand": "Yves Saint Laurent",
+    "brandKo": "입생로랑",
+    "name": "Mon Paris",
+    "nameKo": "몽 파리",
+    "concentration": "EDP",
+    "notes": {
+      "top": [
+        {
+          "en": "Strawberry",
+          "ko": "딸기",
+          "feel": "달콤하고 상큼한 딸기 향",
+          "family": "fruity"
+        },
+        {
+          "en": "Raspberry",
+          "ko": "라즈베리",
+          "feel": "새콤달콤한 붉은 베리 향",
+          "family": "fruity"
+        },
+        {
+          "en": "Pear",
+          "ko": "배",
+          "feel": "촉촉하고 달콤한 배 향",
+          "family": "fruity"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Peony",
+          "ko": "작약",
+          "feel": "보드랍고 촉촉한 분홍 꽃 향",
+          "family": "floral"
+        }
+      ],
+      "base": [
+        {
+          "en": "Patchouli",
+          "ko": "패출리",
+          "feel": "흙냄새 나는 깊고 진한 풀 향",
+          "family": "woody"
+        },
+        {
+          "en": "White Musk",
+          "ko": "화이트 머스크",
+          "feel": "갓 빤 하얀 빨래 같은 포근한 향",
+          "family": "musk"
+        }
+      ]
+    },
+    "family": "fruity",
+    "subFamilies": [
+      "floral",
+      "gourmand"
+    ],
+    "moods": [
+      "sweet",
+      "lovely",
+      "elegant"
+    ],
+    "avoidFlags": [
+      "tooSweet"
+    ],
+    "intensity": "medium",
+    "polarizing": "mid",
+    "seasonOccasion": "봄·가을 · 데이트",
+    "summary": "딸기와 작약, 패출리가 어우러진 달콤한 향",
+    "drydown": "시간이 지나면 화이트 머스크와 패출리가 남아요",
+    "checkPoint": "딸기의 달콤함이 부담스럽지 않은지 확인해 보세요",
+    "krPrice": null,
+    "storeQuery": "입생로랑 뷰티 백화점",
+    "channels": [
+      "백화점"
+    ],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "prada-candy",
+    "brand": "Prada",
+    "brandKo": "프라다",
+    "name": "Candy",
+    "nameKo": "캔디",
+    "concentration": "EDP",
+    "notes": {
+      "top": [
+        {
+          "en": "Caramel",
+          "ko": "카라멜",
+          "feel": "달콤하고 끈적한 설탕 향",
+          "family": "gourmand"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Musk",
+          "ko": "머스크",
+          "feel": "따뜻한 살결 같은 포근한 향",
+          "family": "musk"
+        },
+        {
+          "en": "Benzoin",
+          "ko": "벤조인",
+          "feel": "달콤하고 따뜻한 수지 향",
+          "family": "amber"
+        }
+      ],
+      "base": [
+        {
+          "en": "Vanilla",
+          "ko": "바닐라",
+          "feel": "달콤하고 포근한 디저트 향",
+          "family": "gourmand"
+        }
+      ]
+    },
+    "family": "gourmand",
+    "subFamilies": [
+      "musk",
+      "amber"
+    ],
+    "moods": [
+      "sweet",
+      "cozy",
+      "warm"
+    ],
+    "avoidFlags": [
+      "tooSweet"
+    ],
+    "intensity": "medium",
+    "polarizing": "mid",
+    "seasonOccasion": "가을·겨울 · 데일리",
+    "summary": "카라멜 사탕처럼 달콤하고 포근한 향",
+    "drydown": "시간이 지나도 달콤한 바닐라와 머스크가 남아요",
+    "checkPoint": "카라멜의 달콤함이 얼마나 진한지 확인해 보세요",
+    "krPrice": null,
+    "storeQuery": "프라다 뷰티 백화점",
+    "channels": [],
+    "image": null,
+    "dataStatus": "draft"
+  },
+  {
+    "id": "mugler-alien",
+    "brand": "Mugler",
+    "brandKo": "뮈글러",
+    "name": "Alien",
+    "nameKo": "에일리언",
+    "concentration": "EDP",
+    "notes": {
+      "top": [
+        {
+          "en": "Jasmine",
+          "ko": "자스민",
+          "feel": "달콤하고 진한 하얀 꽃 향",
+          "family": "whiteFloral"
+        }
+      ],
+      "middle": [
+        {
+          "en": "Cashmeran",
+          "ko": "캐시머란",
+          "feel": "포근하고 약간 스모키한 나무 향",
+          "family": "woody"
+        }
+      ],
+      "base": [
+        {
+          "en": "Amber",
+          "ko": "앰버",
+          "feel": "따뜻하고 달콤한 수지 향",
+          "family": "amber"
+        }
+      ]
+    },
+    "family": "whiteFloral",
+    "subFamilies": [
+      "woody",
+      "amber"
+    ],
+    "moods": [
+      "elegant",
+      "deep",
+      "sensual"
+    ],
+    "avoidFlags": [
+      "tooStrong"
+    ],
+    "intensity": "strong",
+    "polarizing": "high",
+    "seasonOccasion": "가을·겨울 · 저녁",
+    "summary": "진한 자스민과 따뜻한 나무가 어우러진 개성 있는 향",
+    "drydown": "시간이 지나도 따뜻한 앰버가 오래 남아요",
+    "checkPoint": "향이 진하니 소량만 뿌려 맡아보세요",
+    "krPrice": null,
+    "storeQuery": "뮈글러 향수 매장",
     "channels": [],
     "image": null,
     "dataStatus": "draft"

@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import caretDown from '../assets/icons/notes/caret-down.svg'
 import emptyNotebook from '../assets/icons/notes/empty-notebook.svg'
@@ -10,7 +10,7 @@ import MemoCard from '../components/notes/MemoCard'
 import MemoSheet from '../components/result/MemoSheet'
 import Toast from '../components/Toast'
 import { PERFUMES } from '../lib/perfumes'
-import { loadMemos, saveMemos } from '../lib/storage'
+import { removeMemo, saveMemo, syncMemos, useMemos } from '../lib/storage'
 import type { Memo } from '../types'
 
 type Sort = 'newest' | 'oldest' | 'rating'
@@ -18,7 +18,7 @@ const SORT_LABEL: Record<Sort, string> = { newest: '최신 기록순', oldest: '
 const perfumeById = new Map(PERFUMES.map((p) => [p.id, p]))
 
 export default function Notes() {
-  const [memos, setMemos] = useState<Memo[]>(() => loadMemos())
+  const memos = useMemos()
   const [sort, setSort] = useState<Sort>('newest')
   const [editing, setEditing] = useState<Memo | null>(null)
   const [toast, setToast] = useState<string | null>(null)
@@ -41,18 +41,19 @@ export default function Notes() {
     toastTimer.current = window.setTimeout(() => setToast(null), 2600)
   }
 
-  const commit = (next: Memo[], message: string) => {
-    setMemos(next)
-    notify(saveMemos(next) ? message : '저장하지 못했어요. 브라우저 저장 공간을 확인해 주세요')
-  }
+  // 들어올 때 서버와 맞춘다 (서버를 못 쓰면 브라우저에 있는 메모만 보여준다)
+  useEffect(() => {
+    void syncMemos()
+    return () => window.clearTimeout(toastTimer.current)
+  }, [])
 
   const onDelete = (memo: Memo) => {
-    if (window.confirm('이 시향 노트를 삭제할까요?')) commit(memos.filter((m) => m.id !== memo.id), '삭제했어요')
+    if (window.confirm('이 시향 노트를 삭제할까요?')) notify(removeMemo(memo.id) ? '삭제했어요' : '삭제하지 못했어요. 브라우저 저장 공간을 확인해 주세요')
   }
 
   const onSaveEdit = (rating: number, text: string) => {
     if (!editing) return
-    commit(memos.map((m) => (m.id === editing.id ? { ...m, rating, text } : m)), '시향 노트에 저장했어요')
+    notify(saveMemo({ ...editing, rating, text }) ? '시향 노트에 저장했어요' : '저장하지 못했어요. 브라우저 저장 공간을 확인해 주세요')
     setEditing(null)
   }
 

@@ -87,6 +87,13 @@ export default function CardBack({ className, style, hidden, index, total, perfu
         <p className="text-[13px] leading-[17.88px] tracking-[-0.08px] text-ink">{p.checkPoint}</p>
       </div>
 
+      {p.channels.length > 0 && (
+        <p className="pt-2.5 text-[11px] leading-4 tracking-[0.55px] text-slate">
+          <b className="font-normal text-ink">시향 가능한 곳</b> · {p.channels.join(' · ')}
+          <span className="block text-hint">브랜드 기준이에요. 가기 전에 매장에 재고를 확인해 보세요.</span>
+        </p>
+      )}
+
       <div className="flex flex-col gap-2 pt-4">
         <div className="flex gap-2">
           <a
