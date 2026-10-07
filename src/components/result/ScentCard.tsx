@@ -75,7 +75,7 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
           </div>
 
           <div className="flex flex-col gap-1.5 pt-3">
-            <div className="flex h-2 overflow-hidden rounded-full bg-line" role="img" aria-label="탑·미들·베이스 노트 색">
+            <div className="flex h-4 overflow-hidden rounded-full bg-line" role="img" aria-label="탑·미들·베이스 노트 색">
               {tiersOf(p).map((t, i) => (
                 <span
                   key={t.key}

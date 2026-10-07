@@ -116,10 +116,10 @@ export default function TastePanel(p: Props) {
           {families.length > 0 && (
             <div className="flex flex-col gap-2 rounded-xl border border-line bg-mist p-[15px]">
               <div className="flex items-center justify-between">
-                <span className={label}>3-COLOR SCENT ACCORD STRIP</span>
+                <span className={label}>{families.length}-COLOR SCENT ACCORD STRIP</span>
                 <span className={label}>HARMONY</span>
               </div>
-              <div className="flex h-3 overflow-hidden rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.05)]" role="img" aria-label="선택한 향 계열 색 띠">
+              <div className="flex h-4 overflow-hidden rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.05)]" role="img" aria-label="선택한 향 계열 색 띠">
                 {families.map((f, i) => (
                   <span key={`${f}-${i}`} className="h-full flex-1" style={{ background: `var(--${f})` }} />
                 ))}
