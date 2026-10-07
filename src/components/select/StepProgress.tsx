@@ -4,7 +4,7 @@ import stageCheckCircle from '../../assets/icons/select/stage-check-circle.svg'
 import stageMark from '../../assets/icons/select/stage-mark.svg'
 import stagePending from '../../assets/icons/select/stage-pending.svg'
 
-const NAMES = ['01 분위기 선택', '02 선호 향조', '03 피하고 싶은 노트'] as const
+const NAMES = ['01 분위기 선택', '02 선호 향조', '03 피하고 싶은 느낌'] as const
 
 interface Props {
   step: 1 | 2 | 3

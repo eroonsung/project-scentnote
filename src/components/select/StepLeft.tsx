@@ -46,7 +46,7 @@ export function MoodStep({ selection, onToggle }: Props) {
           <b className="font-mono text-[13px] tracking-[0.65px] text-ink">OLFACTORY ARCHIVIST NOTE</b>
           <p className="text-sm leading-[22.75px] text-slate">
             일상에서 편안하게 느끼는 공기나 촉각을 떠올려보세요. <b className="font-normal text-ink">비 내린 숲길(차분한)</b>,{' '}
-            <b className="font-normal text-ink">빳빳하게 마른 셔츠(깨끗한)</b>처럼 심상이 선명할수록 조향 매장에서 조향사와의 소통이 훨씬 쉬워집니다.
+            <b className="font-normal text-ink">빳빳하게 마른 셔츠(깨끗한)</b>처럼 떠오르는 장면이 선명할수록 매장 직원에게 원하는 향을 설명하기 훨씬 쉬워져요.
           </p>
         </div>
       </div>
@@ -108,7 +108,7 @@ export function ScentStep({ selection, onToggle }: Props) {
       <div className="flex items-center justify-between gap-4 rounded-lg border border-line/80 bg-mist p-[17px]">
         <p className="flex items-center gap-3 text-sm leading-[22px] text-slate">
           <img src={tipBulb} alt="" width={12.5} height={16.67} className="shrink-0" />
-          선택한 3가지 향조를 바탕으로 매장 내 최적의 분사 순서(Top-Heart-Base)를 계산합니다.
+          고른 향기를 바탕으로 맡아볼 향수 3개와 가벼운 향부터의 순서를 알려 드려요.
         </p>
         <span className="shrink-0 font-mono text-[11px] tracking-[0.55px] text-slate">TIP 02</span>
       </div>

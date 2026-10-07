@@ -12,7 +12,7 @@ import type { Mode } from '../types'
 
 type Step = 1 | 2 | 3
 
-const NEXT_LABEL: Record<Step, string> = { 1: '다음 (02 향기 선택)', 2: '다음 (03 비선호 노트)', 3: '시향 후보 보기' }
+const NEXT_LABEL: Record<Step, string> = { 1: '다음 (02 향기 선택)', 2: '다음 (03 피하고 싶은 느낌)', 3: '시향 후보 보기' }
 const HINT: Record<Step, string> = {
   1: '분위기를 1개 이상 골라 주세요',
   2: '향기를 1개 이상 골라 주세요',

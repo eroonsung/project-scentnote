@@ -164,25 +164,26 @@ export default function TastePanel(p: Props) {
           <p className="text-sm leading-[22.75px] text-slate">
             {moods.length > 0 ? (
               <>
-                현재 선택된 분위기(<b className="font-normal text-ink">{moods.map((m) => m.label).join(', ')}</b>)를 기반으로 정교한 밸런스의 향조가
-                숏리스트 후보로 실시간 집계되고 있습니다.
+                고른 분위기(<b className="font-normal text-ink">{moods.map((m) => m.label).join(', ')}</b>)와 어울리는 향수가 지금 약{' '}
+                <b className="font-normal text-ink">{p.candidateCount}종</b> 있어요.
               </>
             ) : (
-              '분위기를 고르면 어울리는 향수 후보가 실시간으로 집계돼요.'
+              '분위기를 고르면 어울리는 향수가 몇 종인지 바로 알려 드려요.'
             )}
           </p>
-          <p className="flex items-center gap-2 pt-1 text-[11px] tracking-[0.55px] text-slate">
-            <span className="size-1.5 rounded-full bg-slate" aria-hidden="true" />
-            {moods.length > 0 ? `예상 추천 후보군 약 ${p.candidateCount}종 산출 중` : '예상 추천 후보군 집계 대기 중'}
-          </p>
+          {moods.length > 0 && (
+            <p className="flex items-center gap-2 pt-1 text-[11px] tracking-[0.55px] text-slate">
+              <span className="size-1.5 rounded-full bg-slate" aria-hidden="true" />
+              고를 때마다 숫자가 바뀌어요
+            </p>
+          )}
         </div>
       )}
       {step === 2 && families.length > 0 && (
         <div className="flex gap-2.5 rounded-xl bg-mist p-3.5">
           <img src={sequence} alt="" width={12.75} height={18.5} className="mt-0.5 h-[18.5px] shrink-0" />
           <p className="text-[11px] leading-[17.88px] tracking-[0.55px] text-slate">
-            <b className="font-normal text-ink">실시간 큐레이션 시퀀스 생성 중:</b> {families.map((f) => FAMILY_PHRASE[f]).join(' → ')} 구조로 오프라인 시향 순서가
-            자동 조율됩니다.
+            <b className="font-normal text-ink">이 순서로 맡아보게 될 거예요:</b> {families.map((f) => FAMILY_PHRASE[f]).join(' → ')}
           </p>
         </div>
       )}
@@ -190,9 +191,9 @@ export default function TastePanel(p: Props) {
         <div className="flex flex-col gap-1 rounded-xl bg-mist p-4">
           <p className="flex items-center gap-1.5 text-sm font-semibold text-ink">
             <img src={checkDone} alt="" width={14.67} height={14} />
-            큐레이션 분석 완료
+            고르기를 마쳤어요
           </p>
-          <p className="text-sm leading-[22.75px] text-slate">후각 피로를 최소화한 01 → 02 → 03 순서의 오프라인 시향 숏리스트가 준비되었습니다.</p>
+          <p className="text-sm leading-[22.75px] text-slate">가벼운 향부터 맡아볼 시향 후보 3개를 보여 드릴게요.</p>
         </div>
       )}
 

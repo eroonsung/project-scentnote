@@ -11,7 +11,7 @@ export default function Footer() {
           </p>
         </div>
         <p className="font-mono text-[11px] leading-4 tracking-[0.55px] text-slate">
-          © 2026 시향노트 (SCENT NOTE). 내일배움캠프 PM 8기 메이커톤 프로젝트
+          © 2026 내일배움캠프 PM 8기 메이커톤 프로젝트
         </p>
       </div>
     </footer>
