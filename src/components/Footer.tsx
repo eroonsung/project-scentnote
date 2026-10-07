@@ -7,7 +7,7 @@ export default function Footer() {
             SCENT NOTE · 시향노트
           </p>
           <p className="text-sm leading-[22px] text-slate">
-            매장에 가기 전, 오늘 맡아볼 향 3가지를 시향 순서대로 추천해드려요.
+            원하는 느낌과 향을 고르면, 맡아볼 향수 3개를 골라드려요.
           </p>
         </div>
         <p className="font-mono text-[11px] leading-4 tracking-[0.55px] text-slate">

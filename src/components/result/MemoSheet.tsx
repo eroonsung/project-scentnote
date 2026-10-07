@@ -10,7 +10,8 @@ const MAX = 100
 
 interface Props {
   perfume: Perfume
-  index: number
+  /** 시향 순서 번호(결과 화면에서만). 내 시향 노트에서는 없다 */
+  index?: number
   existing?: Memo
   onSave: (rating: number, text: string) => void
   onClose: () => void
@@ -71,7 +72,8 @@ export default function MemoSheet({ perfume: p, index, existing, onSave, onClose
             <div className="flex items-center gap-2 pt-1">
               <span className="size-2.5 rounded-full" style={{ background: `var(--${p.family})` }} aria-hidden="true" />
               <h2 id="memo-title" className="text-2xl font-bold leading-[34px] tracking-[-0.6px] text-ink">
-                {String(index + 1).padStart(2, '0')} · {p.nameKo}
+                {index !== undefined && `${String(index + 1).padStart(2, '0')} · `}
+                {p.nameKo}
               </h2>
             </div>
             <p className="text-sm leading-[22px] text-slate">
