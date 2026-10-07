@@ -1,7 +1,6 @@
 import bulb from '../../assets/icons/select/bulb.svg'
 import filterNote from '../../assets/icons/select/filter-note.svg'
 import noteBook from '../../assets/icons/select/note-book.svg'
-import tipBulb from '../../assets/icons/select/tip-bulb.svg'
 import tipInfo from '../../assets/icons/select/tip-info.svg'
 import moodForest from '../../assets/images/mood-forest.jpg'
 import moodLinen from '../../assets/images/mood-linen.jpg'
@@ -99,13 +98,6 @@ export function ScentStep({ selection, onToggle }: Props) {
               : '좋아하는 향기를 고르면 어떤 순서로 맡게 될지 여기에 풀어서 알려 드려요.'}
           </p>
         </div>
-      </div>
-      <div className="flex items-center justify-between gap-4 rounded-lg border border-line/80 bg-mist p-[17px]">
-        <p className="flex items-center gap-3 text-sm leading-[22px] text-slate">
-          <img src={tipBulb} alt="" width={12.5} height={16.67} className="shrink-0" />
-          고른 향기를 바탕으로 맡아볼 향수 3개와 가벼운 향부터의 순서를 알려 드려요.
-        </p>
-        <span className="shrink-0 font-mono text-[11px] tracking-[0.55px] text-slate">TIP 02</span>
       </div>
     </div>
   )
