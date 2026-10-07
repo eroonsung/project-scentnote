@@ -7,6 +7,7 @@ interface SelectionValue {
   selection: Selection
   setMode: (mode: Mode) => void
   toggle: (group: ChipGroup, id: string, max: number) => void
+  clear: (group: ChipGroup) => void
   setUnsure: (unsure: boolean) => void
   reset: () => void
 }
@@ -29,6 +30,8 @@ export function SelectionProvider({ children }: { children: ReactNode }) {
     })
   }, [])
 
+  const clear = useCallback((group: ChipGroup) => setSelection((prev) => ({ ...prev, [group]: [] })), [])
+
   const setUnsure = useCallback((unsure: boolean) => {
     setSelection((prev) => ({ ...prev, unsure, moods: unsure ? [] : prev.moods }))
   }, [])
@@ -36,8 +39,8 @@ export function SelectionProvider({ children }: { children: ReactNode }) {
   const reset = useCallback(() => setSelection(INITIAL), [])
 
   const value = useMemo(
-    () => ({ selection, setMode, toggle, setUnsure, reset }),
-    [selection, setMode, toggle, setUnsure, reset],
+    () => ({ selection, setMode, toggle, clear, setUnsure, reset }),
+    [selection, setMode, toggle, clear, setUnsure, reset],
   )
   return <SelectionContext.Provider value={value}>{children}</SelectionContext.Provider>
 }
