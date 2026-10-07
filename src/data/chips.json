@@ -77,6 +77,16 @@
       ]
     },
     {
+      "id": "lovely",
+      "label": "사랑스러운",
+      "affinity": [
+        "floral",
+        "fruity",
+        "whiteFloral",
+        "powdery"
+      ]
+    },
+    {
       "id": "elegant",
       "label": "우아한",
       "affinity": [
@@ -92,6 +102,17 @@
         "woody",
         "leather",
         "amber"
+      ]
+    },
+    {
+      "id": "sensual",
+      "label": "관능적인",
+      "affinity": [
+        "leather",
+        "spicy",
+        "amber",
+        "whiteFloral",
+        "gourmand"
       ]
     },
     {

@@ -399,7 +399,8 @@
     "moods": [
       "soft",
       "elegant",
-      "fresh"
+      "fresh",
+      "lovely"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -479,7 +480,8 @@
     "moods": [
       "soft",
       "sweet",
-      "elegant"
+      "elegant",
+      "lovely"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -564,7 +566,8 @@
     "moods": [
       "sweet",
       "cozy",
-      "warm"
+      "warm",
+      "lovely"
     ],
     "avoidFlags": [
       "tooSweet"
@@ -659,7 +662,8 @@
     "moods": [
       "soft",
       "sweet",
-      "zesty"
+      "zesty",
+      "lovely"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -1598,7 +1602,8 @@
     "moods": [
       "elegant",
       "sweet",
-      "warm"
+      "warm",
+      "lovely"
     ],
     "avoidFlags": [
       "heavyFloral"
@@ -1668,7 +1673,8 @@
     "moods": [
       "elegant",
       "soft",
-      "fresh"
+      "fresh",
+      "lovely"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -1736,7 +1742,8 @@
     "moods": [
       "elegant",
       "soft",
-      "warm"
+      "warm",
+      "lovely"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -1914,7 +1921,8 @@
     "moods": [
       "elegant",
       "sweet",
-      "soft"
+      "soft",
+      "lovely"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -1968,7 +1976,8 @@
     ],
     "moods": [
       "elegant",
-      "soft"
+      "soft",
+      "lovely"
     ],
     "avoidFlags": [
       "heavyFloral"
@@ -2405,7 +2414,8 @@
     "moods": [
       "soft",
       "elegant",
-      "calm"
+      "calm",
+      "lovely"
     ],
     "avoidFlags": [
       "powdery"
@@ -3049,7 +3059,8 @@
     "moods": [
       "deep",
       "calm",
-      "warm"
+      "warm",
+      "sensual"
     ],
     "avoidFlags": [
       "tooStrong"
@@ -3212,7 +3223,8 @@
     "moods": [
       "deep",
       "warm",
-      "elegant"
+      "elegant",
+      "sensual"
     ],
     "avoidFlags": [
       "tooStrong"
@@ -3394,7 +3406,8 @@
     "moods": [
       "warm",
       "elegant",
-      "sweet"
+      "sweet",
+      "sensual"
     ],
     "avoidFlags": [
       "tooSweet"
@@ -3488,7 +3501,8 @@
     "moods": [
       "warm",
       "deep",
-      "elegant"
+      "elegant",
+      "sensual"
     ],
     "avoidFlags": [
       "tooStrong"
@@ -3662,7 +3676,8 @@
     "moods": [
       "sweet",
       "deep",
-      "warm"
+      "warm",
+      "sensual"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -3757,7 +3772,8 @@
     "moods": [
       "sweet",
       "cozy",
-      "elegant"
+      "elegant",
+      "lovely"
     ],
     "avoidFlags": [
       "tooSweet"
@@ -3839,7 +3855,8 @@
     "moods": [
       "warm",
       "cozy",
-      "deep"
+      "deep",
+      "sensual"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -3927,7 +3944,8 @@
     "moods": [
       "sweet",
       "deep",
-      "warm"
+      "warm",
+      "sensual"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -4114,7 +4132,8 @@
     "moods": [
       "deep",
       "cozy",
-      "warm"
+      "warm",
+      "sensual"
     ],
     "avoidFlags": [
       "smoky"
@@ -4196,7 +4215,8 @@
     "moods": [
       "deep",
       "warm",
-      "cozy"
+      "cozy",
+      "sensual"
     ],
     "avoidFlags": [
       "tooStrong",
@@ -4356,7 +4376,8 @@
     "moods": [
       "deep",
       "warm",
-      "elegant"
+      "elegant",
+      "sensual"
     ],
     "avoidFlags": [
       "tooStrong",
@@ -4691,7 +4712,8 @@
     "moods": [
       "deep",
       "sweet",
-      "warm"
+      "warm",
+      "sensual"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -5136,7 +5158,8 @@
     "moods": [
       "elegant",
       "deep",
-      "warm"
+      "warm",
+      "sensual"
     ],
     "avoidFlags": [
       "tooStrong",
@@ -5238,7 +5261,8 @@
     "moods": [
       "warm",
       "cozy",
-      "deep"
+      "deep",
+      "sensual"
     ],
     "avoidFlags": [
       "tooStrong"
@@ -5318,7 +5342,8 @@
     ],
     "moods": [
       "elegant",
-      "warm"
+      "warm",
+      "sensual"
     ],
     "avoidFlags": [
       "heavyFloral",
@@ -5465,7 +5490,8 @@
     "moods": [
       "soft",
       "elegant",
-      "sweet"
+      "sweet",
+      "lovely"
     ],
     "avoidFlags": [
       "powdery"
@@ -5607,7 +5633,8 @@
     "moods": [
       "sweet",
       "soft",
-      "fresh"
+      "fresh",
+      "lovely"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -5856,7 +5883,8 @@
     "moods": [
       "elegant",
       "sweet",
-      "soft"
+      "soft",
+      "lovely"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -6104,7 +6132,8 @@
     "moods": [
       "deep",
       "elegant",
-      "warm"
+      "warm",
+      "sensual"
     ],
     "avoidFlags": [
       "tooStrong"
@@ -6173,7 +6202,8 @@
     "moods": [
       "warm",
       "deep",
-      "cozy"
+      "cozy",
+      "sensual"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -6324,7 +6354,8 @@
     "moods": [
       "deep",
       "warm",
-      "elegant"
+      "elegant",
+      "sensual"
     ],
     "avoidFlags": [
       "tooStrong"
@@ -6975,7 +7006,8 @@
     "moods": [
       "sweet",
       "warm",
-      "elegant"
+      "elegant",
+      "sensual"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -7065,7 +7097,8 @@
     "moods": [
       "warm",
       "sweet",
-      "elegant"
+      "elegant",
+      "sensual"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -7139,7 +7172,8 @@
     "moods": [
       "deep",
       "warm",
-      "elegant"
+      "elegant",
+      "sensual"
     ],
     "avoidFlags": [
       "tooStrong"
@@ -7227,7 +7261,8 @@
     "moods": [
       "deep",
       "elegant",
-      "warm"
+      "warm",
+      "sensual"
     ],
     "avoidFlags": [
       "heavyFloral",
@@ -7303,7 +7338,8 @@
     ],
     "moods": [
       "deep",
-      "warm"
+      "warm",
+      "sensual"
     ],
     "avoidFlags": [
       "tooStrong"
@@ -7681,7 +7717,8 @@
     "moods": [
       "warm",
       "sweet",
-      "deep"
+      "deep",
+      "sensual"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -7893,7 +7930,8 @@
     "moods": [
       "sweet",
       "elegant",
-      "soft"
+      "soft",
+      "lovely"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -7973,7 +8011,8 @@
     "moods": [
       "warm",
       "cozy",
-      "deep"
+      "deep",
+      "sensual"
     ],
     "avoidFlags": [
       "tooSweet"
@@ -8061,7 +8100,8 @@
     "moods": [
       "warm",
       "cozy",
-      "deep"
+      "deep",
+      "sensual"
     ],
     "avoidFlags": [
       "tooSweet"

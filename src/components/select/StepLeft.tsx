@@ -151,10 +151,10 @@ export function AvoidStep({ selection, onToggle }: Props) {
       <div className="flex flex-col gap-[3px] rounded-card bg-mist p-6">
         <p className="flex items-center gap-1 font-mono text-[11px] font-bold uppercase tracking-[0.55px] text-ink">
           <img src={tipInfo} alt="" width={13.33} height={13.33} />
-          TIP 03: 시향 피로도 방지 가이드
+          TIP 03: 시향 순서 가이드
         </p>
         <p className="text-sm leading-[22.75px] text-slate">
-          향수 시향 시 알코올 잔향과 지나친 당도(구르망 계열)는 후각 수용체 피로를 급격히 증가시키므로 민감하신 분들에게 필터링을 적극 권장합니다.
+          여러 향을 연달아 맡으면 코가 금방 둔해져요. 그래서 한 번에 3개만, 가벼운 향부터 맡아보라고 안내해 드려요.
         </p>
       </div>
     </div>

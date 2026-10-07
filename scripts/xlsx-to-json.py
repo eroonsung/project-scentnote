@@ -25,7 +25,9 @@ MOODS = [  # (id, 라벨, 연결 계열) — spec.md chips.json
     ("cool", "시원한", ["aqua", "citrus", "green", "aromatic"]), ("cozy", "포근한", ["musk", "powdery", "gourmand", "amber"]),
     ("fresh", "싱그러운", ["green", "citrus", "fruity"]), ("zesty", "상큼한", ["citrus", "fruity"]),
     ("warm", "따뜻한", ["amber", "spicy", "woody", "gourmand"]), ("sweet", "달콤한", ["gourmand", "fruity", "amber"]),
+    ("lovely", "사랑스러운", ["floral", "fruity", "whiteFloral", "powdery"]),
     ("elegant", "우아한", ["floral", "whiteFloral", "powdery"]), ("deep", "묵직한", ["woody", "leather", "amber"]),
+    ("sensual", "관능적인", ["leather", "spicy", "amber", "whiteFloral", "gourmand"]),
     ("soft", "보송한", ["powdery", "musk"]),
 ]
 OBJECTS = [
