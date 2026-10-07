@@ -60,7 +60,7 @@ export default function CardBack({ className, style, hidden, index, total, perfu
             ) : (
               t.notes.slice(0, 2).map((n) => (
                 <p key={n.en} className="pl-3.5 text-sm leading-[22px] text-ink">
-                  {n.ko} · {n.feel}
+                  <b className="font-semibold">{n.ko}</b> · {n.feel}
                 </p>
               ))
             )}
