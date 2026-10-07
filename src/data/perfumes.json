@@ -87,7 +87,10 @@
     "krPrice": null,
     "storeQuery": "아쿠아 디 파르마 백화점",
     "channels": [],
-    "image": null,
+    "image": {
+      "file": "acqua-di-parma-colonia.jpeg",
+      "source": null
+    },
     "dataStatus": "draft"
   },
   {
