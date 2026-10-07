@@ -5,7 +5,7 @@ import emptyNotebook from '../assets/icons/notes/empty-notebook.svg'
 import familyReco from '../assets/icons/notes/family-reco.svg'
 import hourglass from '../assets/icons/notes/hourglass.svg'
 import stepQa from '../assets/icons/notes/step-qa.svg'
-import storeRoute from '../assets/icons/notes/store-route.svg'
+import memoIcon from '../assets/icons/result/memo.svg'
 import MemoCard from '../components/notes/MemoCard'
 import MemoSheet from '../components/result/MemoSheet'
 import Toast from '../components/Toast'
@@ -102,8 +102,7 @@ export default function Notes() {
             </span>
             <span className="absolute right-2 top-2 size-3 rounded-full bg-powdery-tint" aria-hidden="true" />
           </div>
-          <p className="font-mono text-[11px] uppercase tracking-[1.1px] text-slate">DOSSIER EMPTY</p>
-          <h2 id="empty-title" className="pt-1 text-2xl font-medium leading-[34px] tracking-[-0.6px] text-ink">
+          <h2 id="empty-title" className="text-2xl font-medium leading-[34px] tracking-[-0.6px] text-ink">
             아직 맡아본 향이 없어요
           </h2>
           <p className="max-w-[448px] pt-1 text-base leading-[26px] tracking-[-0.08px] text-slate">
@@ -120,7 +119,7 @@ export default function Notes() {
               <img src={familyReco} alt="" width={10.5} height={10.5} />맞춤 계열 추천
             </li>
             <li className="flex items-center gap-1">
-              <img src={storeRoute} alt="" width={11.72} height={10.5} />별점·한 줄 메모 기록
+              <img src={memoIcon} alt="" width={12} height={10.67} className="invert opacity-70" />별점·한 줄 메모 기록
             </li>
           </ul>
         </section>
