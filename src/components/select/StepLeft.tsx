@@ -89,7 +89,7 @@ export function ScentStep({ selection, onToggle }: Props) {
         <div className="flex flex-col gap-[5px]">
           <b className="text-sm font-medium text-ink">향기 고르는 팁</b>
           <p className="text-xs leading-5 text-slate">
-            향수 이름이 아니라 일상에서 좋았던 향기를 떠올려 보세요. 갓 씻은 머리카락, 베어 문 과일, 비 온 뒤 풀 냄새처럼요. 똑같은 향이 아니어도, 그 향기의 결이 비슷한 향수를 보여 드려요.
+            평소 좋아하던 향기를 떠올려 보세요. 샴푸, 과일, 비 온 뒤 공기처럼 익숙한 향이면 충분해요. 똑같지 않아도, 비슷한 느낌의 향수를 찾아 드려요.
           </p>
           {picked.length > 0 && (
             <ul className="mt-1 flex flex-col gap-1 text-sm leading-[22.75px] text-ink">
