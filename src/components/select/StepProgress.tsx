@@ -87,7 +87,7 @@ function CardProgress({ step, onGo }: Pick<Props, 'step' | 'onGo'>) {
                 </span>
                 <span className="flex flex-col">
                   <span className={`font-mono text-[11px] uppercase tracking-[0.55px] ${active ? 'font-bold text-slate' : 'text-slate'}`}>
-                    STAGE 0{no} · {done ? 'COMPLETED' : active ? 'ACTIVE' : 'PENDING'}
+                    STEP 0{no} · {done ? 'COMPLETED' : active ? 'ACTIVE' : 'PENDING'}
                   </span>
                   <span className={`text-xs tracking-[0.48px] ${active ? 'font-bold text-ink' : 'text-ink'}`}>{n}</span>
                 </span>
@@ -132,7 +132,7 @@ function BandProgress({ step, onGo, moodCount, objectCount }: Props) {
                   <img src={active ? stageMark : stageCheckCircle} alt="" className="h-[16.67px] w-auto" />
                   <span className="flex flex-col">
                     <span className={`font-mono text-[11px] tracking-[0.55px] ${active ? 'text-hint' : 'text-slate'}`}>
-                      STAGE 0{no} · {active ? 'CURRENT' : 'COMPLETED'}
+                      STEP 0{no} · {active ? 'CURRENT' : 'COMPLETED'}
                     </span>
                     <span className={`text-sm ${active ? 'text-white' : 'text-ink'}`}>{n}</span>
                   </span>
