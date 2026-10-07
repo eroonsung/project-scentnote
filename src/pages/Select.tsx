@@ -109,7 +109,7 @@ export default function Select() {
       <TastePanel
         step={step}
         selection={selection}
-        candidateCount={countCandidates(PERFUMES, CHIPS, selection)}
+        candidates={countCandidates(PERFUMES, CHIPS, selection)}
         nextLabel={nextLabel}
         canNext={canNext}
         hint={hint}

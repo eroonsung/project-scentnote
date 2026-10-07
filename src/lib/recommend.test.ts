@@ -58,15 +58,18 @@ describe('recommend', () => {
     for (const r of items) expect(r.reasons.length).toBeLessThanOrEqual(2)
   })
 
-  it('후보 개수는 분위기 태그가 직접 붙은 향수만 센다', () => {
-    const n = countCandidates(perfumes, chips, { ...base, moods: ['calm', 'clean'] })
-    const expected = perfumes.filter((p) => p.moods.includes('calm') || p.moods.includes('clean')).length
-    expect(n).toBe(expected)
+  it('후보 개수: 모두 맞는 향수는 칩을 더할수록 줄고, 하나라도 맞는 향수는 늘어난다', () => {
+    const one = countCandidates(perfumes, chips, { ...base, moods: ['calm'] })
+    const two = countCandidates(perfumes, chips, { ...base, moods: ['calm', 'clean'] })
+    expect(two.all).toBeLessThanOrEqual(one.all)
+    expect(two.any).toBeGreaterThanOrEqual(one.any)
+    const expectedAll = perfumes.filter((p) => p.moods.includes('calm') && p.moods.includes('clean')).length
+    expect(two.all).toBe(expectedAll)
   })
 
   it('피하고 싶은 칩이 있으면 후보 개수에서 뺀다', () => {
     const all = countCandidates(perfumes, chips, { ...base, moods: ['sweet'] })
     const fewer = countCandidates(perfumes, chips, { ...base, moods: ['sweet'], avoids: ['tooSweet'] })
-    expect(fewer).toBeLessThan(all)
+    expect(fewer.any).toBeLessThan(all.any)
   })
 })

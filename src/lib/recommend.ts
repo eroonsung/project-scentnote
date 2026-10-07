@@ -25,19 +25,34 @@ function wantedFamilies(chips: Chips, selection: Selection): Set<string> {
   return set
 }
 
+export interface CandidateCount {
+  /** 고른 분위기를 모두 가진 향수 수 (칩을 더할수록 줄어든다) */
+  all: number
+  /** 고른 분위기 중 하나라도 가진 향수 수 (칩을 더할수록 늘어난다) */
+  any: number
+}
+
 /**
- * 지금까지 고른 칩과 맞는 시향 후보 개수 (Select 화면의 "어울리는 향수 약 N종" 숫자).
- * 분위기를 골랐으면 그 분위기 태그가 직접 붙은 향수만 센다(향 계열만 겹치는 향수는 세지 않는다).
- * 분위기 없이 향기만 골랐으면 그 향 계열의 향수를 센다. 피하고 싶은 칩과 겹치는 향수는 뺀다.
- * (실제 추천 3개를 뽑는 점수 계산은 recommend()에서 따로 한다)
+ * 지금까지 고른 칩과 맞는 시향 후보 개수 (Select 화면의 "어울리는 향수 미리보기" 숫자).
+ * 분위기 태그가 직접 붙은 향수만 센다(향 계열만 겹치는 향수는 세지 않는다). 피하고 싶은 칩과 겹치는 향수는 뺀다.
+ * 모두 맞는 향수는 칩을 더할수록 금방 0이 되므로, 추천은 '하나라도 맞는' 향수까지 넓혀서 점수 순으로 뽑는다(recommend()).
  */
-export function countCandidates(perfumes: Perfume[], chips: Chips, selection: Selection): number {
+export function countCandidates(perfumes: Perfume[], chips: Chips, selection: Selection): CandidateCount {
   const allowed = perfumes.filter((p) => !p.avoidFlags.some((f) => selection.avoids.includes(f)))
-  if (selection.unsure) return allowed.filter((p) => p.polarizing === 'low').length
-  if (selection.moods.length > 0) return allowed.filter((p) => p.moods.some((m) => selection.moods.includes(m))).length
+  if (selection.unsure) {
+    const n = allowed.filter((p) => p.polarizing === 'low').length
+    return { all: n, any: n }
+  }
+  if (selection.moods.length > 0) {
+    return {
+      all: allowed.filter((p) => selection.moods.every((m) => p.moods.includes(m))).length,
+      any: allowed.filter((p) => p.moods.some((m) => selection.moods.includes(m))).length,
+    }
+  }
   const wanted = wantedFamilies(chips, { ...selection, moods: [] })
-  if (wanted.size === 0) return 0
-  return allowed.filter((p) => wanted.has(p.family) || p.subFamilies.some((f) => wanted.has(f))).length
+  if (wanted.size === 0) return { all: 0, any: 0 }
+  const n = allowed.filter((p) => wanted.has(p.family) || p.subFamilies.some((f) => wanted.has(f))).length
+  return { all: n, any: n }
 }
 
 /** 한 향수가 선택과 얼마나 맞는지 점수와 이유를 계산한다 */

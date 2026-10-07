@@ -9,12 +9,13 @@ import sequence from '../../assets/icons/select/sequence.svg'
 import xSmall from '../../assets/icons/select/x-small.svg'
 import { AVOID_HINT, FAMILY_EN, FAMILY_PHRASE, TIER_LABELS } from '../../lib/labels'
 import { CHIPS } from '../../lib/perfumes'
+import type { CandidateCount } from '../../lib/recommend'
 import type { FamilyId, Selection } from '../../types'
 
 interface Props {
   step: 1 | 2 | 3
   selection: Selection
-  candidateCount: number
+  candidates: CandidateCount
   nextLabel: string
   canNext: boolean
   hint: string
@@ -163,8 +164,14 @@ export default function TastePanel(p: Props) {
           <p className="text-sm leading-[22.75px] text-slate">
             {moods.length > 0 ? (
               <>
-                고른 분위기(<b className="font-normal text-ink">{moods.map((m) => m.label).join(', ')}</b>)와 어울리는 향수가 지금 약{' '}
-                <b className="font-normal text-ink">{p.candidateCount}종</b> 있어요.
+                고른 분위기(<b className="font-normal text-ink">{moods.map((m) => m.label).join(', ')}</b>)를 모두 가진 향수가{' '}
+                {p.candidates.all > 0 ? (
+                  <>
+                    <b className="font-normal text-ink">{p.candidates.all}종</b> 있어요.
+                  </>
+                ) : (
+                  <b className="font-normal text-ink">아직 없어요.</b>
+                )}
               </>
             ) : (
               '분위기를 고르면 어울리는 향수가 몇 종인지 바로 알려 드려요.'
@@ -173,7 +180,9 @@ export default function TastePanel(p: Props) {
           {moods.length > 0 && (
             <p className="flex items-center gap-2 pt-1 text-[11px] tracking-[0.55px] text-slate">
               <span className="size-1.5 rounded-full bg-slate" aria-hidden="true" />
-              고를 때마다 숫자가 바뀌어요
+              {p.candidates.all >= 3
+                ? `하나라도 맞는 향수까지 넓히면 ${p.candidates.any}종이에요`
+                : `모두 맞는 향수가 적어서, 하나라도 맞는 ${p.candidates.any}종 중에서 가까운 향수를 함께 골라 드려요`}
             </p>
           )}
         </div>
