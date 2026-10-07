@@ -162,7 +162,7 @@ export default function Home() {
                 어떻게 이용하나요? <span className="text-sm font-normal tracking-normal text-slate">(3-Step Field Guide)</span>
               </h2>
             </div>
-            <p className="text-sm text-slate">복잡한 백화점 1층에서도 길을 잃지 않는 명확한 3단계 안내</p>
+            <p className="text-sm text-slate">느낌 고르기부터 시향 기록까지, 3단계면 끝나요</p>
           </div>
           <ol className="grid gap-6 md:grid-cols-3">
             {STEPS.map((s) => (
