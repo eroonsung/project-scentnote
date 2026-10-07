@@ -1,7 +1,6 @@
 import bulb from '../../assets/icons/select/bulb.svg'
 import filterNote from '../../assets/icons/select/filter-note.svg'
 import noteBook from '../../assets/icons/select/note-book.svg'
-import tipInfo from '../../assets/icons/select/tip-info.svg'
 import moodForest from '../../assets/images/mood-forest.jpg'
 import moodLinen from '../../assets/images/mood-linen.jpg'
 import { FAMILY_EN, FAMILY_PHRASE } from '../../lib/labels'
@@ -137,15 +136,6 @@ export function AvoidStep({ selection, onToggle, gift }: Props & { gift?: boolea
             피하고 싶은 불호 노트를 사전에 제외하면 매장에서 맡아볼 3가지 추천 향수가 첫인상부터 편안하게 다가옵니다. 선택하지 않고 건너뛰셔도 선호도 기반 큐레이션이 안전하게 완성됩니다.
           </p>
         </div>
-      </div>
-      <div className="flex flex-col gap-[3px] rounded-card bg-mist p-6">
-        <p className="flex items-center gap-1 font-mono text-[11px] font-bold uppercase tracking-[0.55px] text-ink">
-          <img src={tipInfo} alt="" width={13.33} height={13.33} />
-          TIP 03: 시향 순서 가이드
-        </p>
-        <p className="text-sm leading-[22.75px] text-slate">
-          여러 향을 연달아 맡으면 코가 금방 둔해져요. 그래서 한 번에 3개만, 가벼운 향부터 맡아보라고 안내해 드려요.
-        </p>
       </div>
     </div>
   )
