@@ -62,9 +62,6 @@ export function GiftMoodStep({ selection, onToggleMood, onUnsure }: MoodProps) {
   const full = selection.moods.length >= 3
   return (
     <div className="flex flex-col">
-      <p className="mb-3 w-fit rounded bg-mist px-2 py-0.5 font-mono text-[11px] font-bold uppercase tracking-[1.1px] text-slate">
-        ARCHIVAL QUERY NO. 201 · RECIPIENT AURA
-      </p>
       <h1 className="pb-4 text-[32px] font-medium leading-10 tracking-[-1px] text-ink md:text-[40px] md:leading-[52px]">그 사람은 어떤 분위기인가요?</h1>
       <p className="max-w-[576px] pb-8 text-base leading-[26px] tracking-[-0.08px] text-slate">
         상대방을 떠올렸을 때 느껴지는 인상을 1~3개 골라 주세요. 선물 받는 분의 일상과 스타일에 자연스럽게 스며드는 향을 찾아 드려요.

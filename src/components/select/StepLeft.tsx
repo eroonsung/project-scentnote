@@ -38,17 +38,17 @@ export function MoodStep({ selection, onToggle }: Props) {
           <img src={bulb} alt="" width={11.25} height={15} />
         </span>
         <div className="flex flex-col gap-1">
-          <b className="font-mono text-[13px] tracking-[0.65px] text-ink">OLFACTORY ARCHIVIST NOTE</b>
+          <b className="text-sm font-medium text-ink">느낌 고르는 팁</b>
           <p className="text-sm leading-[22.75px] text-slate">
             일상에서 편안하게 느끼는 공기나 촉각을 떠올려보세요. <b className="font-normal text-ink">비 내린 숲길(차분한)</b>,{' '}
-            <b className="font-normal text-ink">빳빳하게 마른 셔츠(깨끗한)</b>처럼 떠오르는 장면이 선명할수록 매장 직원에게 원하는 향을 설명하기 훨씬 쉬워져요.
+            <b className="font-normal text-ink">빳빳하게 마른 셔츠(보송한)</b>처럼 떠오르는 장면이 선명할수록 매장 직원에게 원하는 향을 설명하기 훨씬 쉬워져요.
           </p>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4">
         {[
           { src: moodForest, cap: '예시 · 비 내린 숲길 → 차분한' },
-          { src: moodLinen, cap: '예시 · 마른 셔츠 → 깨끗한' },
+          { src: moodLinen, cap: '예시 · 마른 셔츠 → 보송한' },
         ].map((i) => (
           <figure key={i.cap} className="relative h-28 overflow-hidden rounded-xl border border-line/50 bg-mist">
             <img src={i.src} alt="" className="absolute inset-0 size-full object-cover opacity-75 mix-blend-multiply" loading="lazy" />
@@ -69,13 +69,8 @@ export function ScentStep({ selection, onToggle }: Props) {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2.5">
-        <p className={`${query} flex flex-wrap items-center gap-2 tracking-[1.1px]`}>
-          ARCHIVAL QUERY NO. 102
-          <span className="size-1.5 rounded-full bg-line" aria-hidden="true" />
-          <span className="tracking-[0.55px]">MAXIMUM 3 PICKS</span>
-        </p>
         <h1 className={title}>어떤 향기가 좋아요?</h1>
-        <p className={`${lead} max-w-[576px]`}>기억에 남거나 평소 마음이 편안해지는 향기를 골라 주세요. 전문 조향 용어 대신 일상의 친숙한 감각으로 정리해 드립니다.</p>
+        <p className={`${lead} max-w-[576px]`}>기억에 남거나 평소 마음이 편안해지는 향기를 1~3개 골라 주세요. 전문 조향 용어 대신 일상의 친숙한 감각으로 정리해 드립니다.</p>
       </div>
       <div className="flex flex-wrap gap-x-3 gap-y-[10px] pt-2" role="group" aria-label="향기 (1~3개 선택)">
         {CHIPS.objects.map((o) => (
@@ -117,7 +112,6 @@ export function AvoidStep({ selection, onToggle, gift }: Props & { gift?: boolea
   return (
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-2">
-        <p className={query}>ARCHIVAL QUERY NO. {gift ? 202 : 103} • OPTIONAL EXCLUSION</p>
         <h1 className={title}>피하고 싶은 느낌이 있나요?</h1>
         <p className={`${lead} max-w-[576px]`}>
           {gift
