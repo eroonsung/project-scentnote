@@ -2,16 +2,7 @@ import { useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useSelection } from '../context/SelectionContext'
 import { loadMemos } from '../lib/storage'
-
-function LogoMark() {
-  return (
-    <span className="flex flex-col gap-[3px]" aria-hidden="true">
-      <span className="h-[3px] w-5 rounded-full bg-citrus" />
-      <span className="h-[3px] w-5 rounded-full bg-floral" />
-      <span className="h-[3px] w-5 rounded-full bg-powdery" />
-    </span>
-  )
-}
+import logo from '../assets/scentnote-logo.svg'
 
 export default function Header() {
   const { reset } = useSelection()
@@ -23,8 +14,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-paper/90 backdrop-blur-[6px]">
       <div className="mx-auto flex h-[72px] max-w-[1120px] items-center justify-between px-6">
-        <Link to="/" onClick={reset} className="flex items-center gap-4" aria-label="시향노트 처음으로">
-          <LogoMark />
+        <Link to="/" onClick={reset} className="flex items-center gap-3" aria-label="시향노트 처음으로">
+          <img src={logo} alt="" width={40} height={40} className="size-10" />
           <span className="flex flex-col">
             <span className="text-lg font-medium leading-[26px] tracking-[-0.45px] text-ink">시향노트</span>
             <span className="font-mono text-[11px] uppercase leading-4 tracking-[1.1px] text-slate">SCENT NOTE</span>
