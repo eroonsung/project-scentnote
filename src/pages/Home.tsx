@@ -76,7 +76,7 @@ export default function Home() {
               <li className="hidden h-3 w-px bg-line sm:block" aria-hidden="true" />
               <li className="flex items-center gap-2">
                 <img src={gridSmall} alt="" width={12.75} height={12.75} />
-                코 피로도를 줄여주는 순서 추천
+                가벼운 향부터 맡는 순서 추천
               </li>
             </ul>
             <div ref={heroButtons} className="mt-8 flex flex-wrap items-center gap-4">
@@ -200,7 +200,7 @@ export default function Home() {
               "향수는 종이 설명글이 아닌, 내 코와 피부로 직접 경험할 때 비로소 완성됩니다."
             </p>
             <p className="pt-1 text-sm leading-[22px] text-slate">
-              지금 바로 3분 큐레이션을 시작하고, 주말 오프라인 시향을 준비해보세요.
+              지금 바로 큐레이션을 시작하고, 오프라인 시향을 준비해보세요.
             </p>
           </div>
           <button type="button" onClick={scrollToStart} className={`${primaryBtn} shrink-0`}>
