@@ -5,8 +5,6 @@ import ScentStrips from '../components/ScentStrips'
 import curveLine from '../assets/icons/curve-line.svg'
 import shieldCheck from '../assets/icons/shield-check.svg'
 import gridSmall from '../assets/icons/grid-small.svg'
-import indexLine from '../assets/icons/index-line.svg'
-import adBias from '../assets/icons/ad-bias.svg'
 import noteFatigue from '../assets/icons/note-fatigue.svg'
 import stepCards from '../assets/icons/step-cards.svg'
 import stepBottles from '../assets/icons/step-bottles.svg'
@@ -60,9 +58,7 @@ export default function Home() {
           <div className="flex min-w-0 flex-col">
             <span className="mb-6 inline-flex w-fit max-w-full items-center gap-2 rounded-full bg-mist px-3 py-1.5">
               <span className="size-1.5 rounded-full bg-ink" aria-hidden="true" />
-              <span className="font-mono text-[11px] uppercase leading-4 tracking-[1.1px] text-slate">
-                SCENT NOTE · OLFACTORY SHORTLIST ARCHIVE
-              </span>
+              <span className="text-xs leading-4 tracking-[0.3px] text-slate">매장 가기 전에 미리 정하는 시향 후보 3개</span>
             </span>
             <h1 className="text-[32px] font-medium leading-[44px] tracking-[-1px] text-ink md:text-[40px] md:leading-[52px]">
               직접 맡아봐야 아는 향수,
@@ -91,22 +87,17 @@ export default function Home() {
                 선물할 향수 찾기
               </Link>
             </div>
-            <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-3 pt-6 font-mono text-[11px] leading-4 tracking-[0.55px] text-slate">
-              <span className="flex items-center gap-2">
-                <img src={indexLine} alt="" width={14.85} height={9.1} />
-                Accords Indexed
-              </span>
-              <span className="size-1 rounded-full bg-line" aria-hidden="true" />
-              <span className="flex items-center gap-2">
-                <b className="text-[13px] tracking-[1.04px] text-ink">3-TIER</b>
-                Fatigue-Safe Protocol
-              </span>
-              <span className="size-1 rounded-full bg-line" aria-hidden="true" />
-              <span className="flex items-center gap-2">
-                <img src={adBias} alt="" width={14.87} height={9.46} />
-                Ad Bias
-              </span>
-            </div>
+            <ul className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-3 pt-6 text-xs leading-4 tracking-[0.3px] text-slate">
+              <li className="flex items-center gap-1.5">
+                <b className="font-mono text-[13px] tracking-[1.04px] text-ink">14</b> 향 계열
+              </li>
+              <li className="size-1 rounded-full bg-line" aria-hidden="true" />
+              <li className="flex items-center gap-1.5">
+                <b className="font-mono text-[13px] tracking-[1.04px] text-ink">3</b> 시향 후보 · 가벼운 향부터
+              </li>
+              <li className="size-1 rounded-full bg-line" aria-hidden="true" />
+              <li>광고·구매 링크 없음</li>
+            </ul>
           </div>
 
           {/* 시향지 띠 */}
@@ -124,10 +115,10 @@ export default function Home() {
               <div className="relative flex items-center justify-between pb-5">
                 <span className="flex items-center gap-2 font-mono text-[13px] font-bold uppercase tracking-[0.65px] text-ink">
                   <span className="size-2 rounded-full bg-ink" aria-hidden="true" />
-                  SPECIMEN NO. 14 / MOUILLETTE ARCHIVE
+                  시향지로 보는 향 계열 14가지
                 </span>
                 <span className="hidden rounded-full bg-mist px-2.5 py-0.5 font-mono text-[11px] tracking-[0.55px] text-slate sm:inline">
-                  VOLATILITY FLOW
+                  가벼운 향 → 진한 향
                 </span>
               </div>
               <img src={curveLine} alt="" className="relative mb-2 h-8 w-full" />
@@ -136,13 +127,13 @@ export default function Home() {
               </div>
               <div className="relative flex items-center justify-between gap-4 pt-4 font-mono text-[11px] leading-4 tracking-[0.55px] text-slate">
                 <p>
-                  <b className="mr-2 text-ink">PROTOCOL EXAMPLE:</b>
-                  01 시트러스 (휘발성 높음) → 02 플로럴 → 03 우디 (베이스 잔향)
+                  <b className="mr-2 text-ink">시향 순서 예시</b>
+                  01 시트러스 → 02 플로럴 → 03 우디
                 </p>
                 <p className="hidden shrink-0 text-right opacity-70 sm:block">
-                  14-FAMILY
+                  14개
                   <br />
-                  TAXONOMY
+                  향 계열
                 </p>
               </div>
             </div>
@@ -151,10 +142,8 @@ export default function Home() {
                 <img src={noteFatigue} alt="" width={16.67} height={14.17} />
               </span>
               <span>
-                <span className="block text-xs font-semibold uppercase leading-4 tracking-[0.48px] text-slate">
-                  FATIGUE PROTECTION
-                </span>
-                <span className="block text-sm leading-[17.5px] text-ink">연속 시향 시 후각 마비 예방</span>
+                <span className="block text-xs font-semibold leading-4 tracking-[0.3px] text-slate">시향 팁</span>
+                <span className="block text-sm leading-[17.5px] text-ink">가벼운 향부터 맡아 보세요</span>
               </span>
             </div>
           </div>

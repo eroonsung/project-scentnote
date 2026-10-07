@@ -3,20 +3,20 @@ import type { FamilyId } from '../types'
 
 /** 향 계열 14개를 시향지 띠로 보여준다. 높이는 디자인(Figma)의 제각각인 높이를 따른다. */
 const STRIP: Record<FamilyId, { height: number; label: string }> = {
-  citrus: { height: 250, label: 'CITRUS' },
-  fruity: { height: 220, label: 'FRUITY' },
-  aqua: { height: 200, label: 'AQUA' },
-  green: { height: 215, label: 'GREEN' },
-  aromatic: { height: 230, label: 'AROMA' },
-  floral: { height: 265, label: 'FLORAL' },
-  whiteFloral: { height: 225, label: 'W.FLORAL' },
-  powdery: { height: 195, label: 'POWDER' },
-  musk: { height: 190, label: 'MUSK' },
-  spicy: { height: 210, label: 'SPICY' },
-  woody: { height: 280, label: 'WOODY' },
-  amber: { height: 205, label: 'AMBER' },
-  gourmand: { height: 235, label: 'GOURM.' },
-  leather: { height: 245, label: 'LEATHER' },
+  citrus: { height: 250, label: '시트러스' },
+  fruity: { height: 220, label: '프루티' },
+  aqua: { height: 200, label: '아쿠아' },
+  green: { height: 215, label: '그린' },
+  aromatic: { height: 230, label: '아로마틱' },
+  floral: { height: 265, label: '플로럴' },
+  whiteFloral: { height: 225, label: '하얀 꽃' },
+  powdery: { height: 195, label: '파우더리' },
+  musk: { height: 190, label: '머스크' },
+  spicy: { height: 210, label: '스파이시' },
+  woody: { height: 280, label: '우디' },
+  amber: { height: 205, label: '앰버' },
+  gourmand: { height: 235, label: '구르망' },
+  leather: { height: 245, label: '레더' },
 }
 
 /** 예시 시향 순서: 가벼운 향 → 진한 향 */
@@ -41,7 +41,7 @@ export default function ScentStrips() {
             >
               <span className="h-1 w-full rounded-full" style={{ background: `var(--${f.id})` }} />
               <span
-                className={`font-mono text-[10px] tracking-[-0.08px] [writing-mode:vertical-rl] rotate-180 ${
+                className={`text-[10px] tracking-[-0.08px] [writing-mode:vertical-rl] [text-orientation:upright] ${
                   seq ? 'font-bold text-ink' : 'text-slate opacity-80'
                 }`}
               >

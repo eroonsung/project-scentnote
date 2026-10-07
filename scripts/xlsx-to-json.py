@@ -33,7 +33,7 @@ MOODS = [  # (id, 라벨, 연결 계열) — spec.md chips.json
 OBJECTS = [
     ("lemon", "레몬·귤", "citrus"), ("fruit", "과일", "fruity"), ("rain", "바람·비", "aqua"), ("grass", "풀잎·녹차", "green"),
     ("herb", "허브", "aromatic"), ("flower", "꽃", "floral"), ("whiteFlower", "하얀 꽃", "whiteFloral"), ("powder", "파우더", "powdery"),
-    ("soap", "비누·빨래", "musk"), ("spice", "후추·향신료", "spicy"), ("forest", "숲·나무", "woody"), ("resin", "따뜻한 나무진", "amber"),
+    ("soap", "비누·빨래", "musk"), ("spice", "후추·향신료", "spicy"), ("forest", "숲·나무", "woody"), ("resin", "흙·나무", "amber"),
     ("vanilla", "바닐라·달콤", "gourmand"), ("smoky", "스모키", "leather"),
 ]
 AVOIDS = [("tooSweet", "너무 단 향"), ("tooStrong", "너무 진한 향"), ("headache", "머리 아픈 향"),
