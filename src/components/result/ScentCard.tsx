@@ -1,5 +1,7 @@
 import { useRef, useState } from 'react'
 import flipIcon from '../../assets/icons/result/flip.svg'
+import storeIcon from '../../assets/icons/result/store.svg'
+import { naverMapSearchUrl } from '../../lib/links'
 import { getFamily, imageSrc, placeholderSrc } from '../../lib/perfumes'
 import { formatPrice } from '../../lib/price'
 import type { Recommendation } from '../../lib/recommend'
@@ -117,10 +119,19 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
           </div>
           </div>
 
+          <a
+            href={naverMapSearchUrl(p.storeQuery)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 flex h-10 items-center justify-center gap-1.5 rounded-xl border border-ink/20 text-[13px] tracking-[-0.08px] text-ink hover:bg-card/60"
+          >
+            <img src={storeIcon} alt="" width={12} height={10.67} />
+            매장 찾기
+          </a>
           <button
             type="button"
             onClick={() => flip(true)}
-            className="mt-6 flex h-11 items-center justify-center gap-1.5 rounded-xl bg-card/90 text-sm text-ink shadow-[0_1px_2px_rgba(0,0,0,0.05)] hover:bg-card"
+            className="mt-2 flex h-11 items-center justify-center gap-1.5 rounded-xl bg-card/90 text-sm text-ink shadow-[0_1px_2px_rgba(0,0,0,0.05)] hover:bg-card"
           >
             노트·시향 팁 보기 <img src={flipIcon} alt="" width={10.67} height={10.67} />
           </button>

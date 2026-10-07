@@ -2,8 +2,6 @@ import type { CSSProperties, Ref } from 'react'
 import checkpoint from '../../assets/icons/result/checkpoint.svg'
 import flipBack from '../../assets/icons/result/flip-back.svg'
 import memoIcon from '../../assets/icons/result/memo.svg'
-import storeIcon from '../../assets/icons/result/store.svg'
-import { naverMapSearchUrl } from '../../lib/links'
 import type { Perfume } from '../../types'
 import { INTENSITY_KO, POLARIZING_KO, tiersOf } from './noteInfo'
 
@@ -95,25 +93,14 @@ export default function CardBack({ className, style, hidden, index, total, perfu
       )}
 
       <div className="flex flex-col gap-2 pt-4">
-        <div className="flex gap-2">
-          <a
-            href={naverMapSearchUrl(p.storeQuery)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-10 flex-1 items-center justify-center gap-1 rounded-xl border border-line bg-card/60 text-[13px] tracking-[-0.08px] text-ink hover:bg-card"
-          >
-            <img src={storeIcon} alt="" width={12} height={10.67} />
-            매장 찾기
-          </a>
-          <button
-            type="button"
-            onClick={onMemo}
-            className="flex h-10 flex-1 items-center justify-center gap-1 rounded-xl bg-ink text-[13px] tracking-[-0.08px] text-paper hover:bg-ink-deep"
-          >
-            <img src={memoIcon} alt="" width={12} height={10.67} />
-            {hasMemo ? '메모 수정하기' : '메모 남기기'}
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={onMemo}
+          className="flex h-12 w-full items-center justify-center gap-1.5 rounded-xl bg-ink text-sm tracking-[-0.08px] text-paper hover:bg-ink-deep"
+        >
+          <img src={memoIcon} alt="" width={14} height={12} />
+          {hasMemo ? '메모 수정하기' : '메모 남기기'}
+        </button>
         <button type="button" onClick={onFlipBack} className="flex min-h-9 items-center justify-center gap-1 text-[13px] tracking-[-0.08px] text-slate">
           앞면 보기 <img src={flipBack} alt="" width={10} height={10} />
         </button>
