@@ -32,7 +32,7 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
     window.setTimeout(() => (to ? backTitle : frontTitle).current?.focus(), 50)
   }
 
-  const face = 'col-start-1 row-start-1 flex min-h-[580px] flex-col justify-between rounded-card border p-[25px] [backface-visibility:hidden]'
+  const face = 'col-start-1 row-start-1 flex min-h-[580px] flex-col rounded-card border p-[25px] [backface-visibility:hidden]'
   const faceStyle = {
     background: `var(--${p.family}-tint)`,
     borderColor: `color-mix(in srgb, var(--${p.family}), transparent 55%)`,
@@ -68,13 +68,13 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
             <h2
               ref={frontTitle}
               tabIndex={-1}
-              className="mt-2 text-center text-lg font-medium leading-[26px] tracking-[-0.18px] text-ink outline-none"
+              className="mt-2 min-h-[52px] text-center text-lg font-medium leading-[26px] tracking-[-0.18px] text-ink outline-none"
             >
               {p.brandKo} · {p.nameKo}
             </h2>
           </div>
 
-          <div className="flex flex-col gap-1.5 pt-3">
+          <div className="flex flex-col gap-1.5 pt-1">
             <div className="flex h-4 overflow-hidden rounded-full bg-line" role="img" aria-label="탑·미들·베이스 노트 색">
               {tiersOf(p).map((t, i) => (
                 <span
@@ -100,7 +100,7 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 pt-[15px]">
+          <div className="flex flex-col gap-2 pt-4">
             <p className="text-sm leading-[19.25px] text-ink">"{p.summary}"</p>
             {rec.reasons.length > 0 && (
               <p className="rounded-lg bg-paper/70 px-2.5 py-2.5 text-[13px] leading-[21px] tracking-[-0.08px] text-ink">
@@ -109,7 +109,7 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
             )}
           </div>
 
-          <div className="flex flex-col gap-3 pt-4">
+          <div className="mt-auto flex flex-col gap-3 pt-4">
             <div className="flex items-baseline justify-between gap-2 border-t border-line/40 pt-3">
               <span className={`${price.hasPrice ? 'font-mono font-bold' : ''} text-[11px] tracking-[0.55px] text-ink`}>{price.main}</span>
               {price.note && <span className="font-mono text-[10px] text-slate">{price.note}</span>}
@@ -126,7 +126,7 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
 
         {/* 뒷면 */}
         <CardBack
-          className={`${face} [transform:rotateY(180deg)]`}
+          className={`${face} justify-between [transform:rotateY(180deg)]`}
           style={faceStyle}
           hidden={!flipped}
           index={index}
