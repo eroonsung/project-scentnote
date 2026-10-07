@@ -220,6 +220,14 @@
     {
       "id": "powdery",
       "label": "화장품 파우더 향"
+    },
+    {
+      "id": "spicy",
+      "label": "알싸한 향"
+    },
+    {
+      "id": "soapy",
+      "label": "비누·세제 같은 향"
     }
   ],
   "conflicts": [

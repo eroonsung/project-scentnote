@@ -197,3 +197,9 @@
 - **결과**: 태그 평균 3.3→4.3개. 선택 가능한 3칩 조합(184개) 중 결과 0종 64%→20%, 3종 미만 87%→48%, 평균 1.2→4.2종. 향수는 삭제하지 않음.
 - **적용 방법**: `scripts/expand-moods.py --write`로 엑셀 `moods` 열을 갱신하고 `scripts/xlsx-to-json.py`로 JSON 재생성.
 - **검토 필요**: maison-margiela-replica-beach-walk(태그 4개 추가), creed-aventus·versace-eros(strong인데 fresh 태그 보유) — 사람이 확인.
+
+## D-31. 피하고 싶은 칩 2개 추가 + headache 재정리
+- **결정**: 피하고 싶은 칩을 6→8개로 늘린다. 추가: 알싸한 향(`spicy`), 비누·세제 같은 향(`soapy`). `headache`는 규칙(strong 강도 + 화이트 플로럴 계열 또는 튜베로즈·오우드·가드니아·인센스·파출리·타바코 노트)으로 다시 태그한다.
+- **이유**: 필터가 향수의 `avoidFlags`로만 작동하는데 headache는 1종, smoky는 4종뿐이었다. 호불호가 크게 갈리는 향신료·비누 향이 빠져 있었다.
+- **태그 규칙**: spicy = 스파이시 계열/서브계열 또는 (light 아님 + 블랙페퍼·시나몬·카다멈·클로브·사프란·큐민·진저 노트), 핑크페퍼·육두구는 은은해서 제외. soapy = 머스크 계열+깨끗한 분위기 또는 알데하이드·비누·코튼·화이트머스크·리넨 노트.
+- **결과**: spicy 28종, soapy 17종, headache 1→20종. `scripts/tag-avoids.py --write`로 엑셀 `avoid_flags` 열을 갱신하고 `xlsx-to-json.py`로 JSON 재생성. 태그는 AI 규칙 기반이라 실제 시향 확인 전 초안이다.

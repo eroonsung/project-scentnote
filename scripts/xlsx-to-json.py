@@ -46,7 +46,8 @@ MOOD_CONFLICTS = [
     ("lovely", "sensual"), ("lovely", "deep"),
 ]
 AVOIDS = [("tooSweet", "너무 단 향"), ("tooStrong", "너무 진한 향"), ("headache", "머리 아픈 향"),
-          ("heavyFloral", "꽃향이 강한 향"), ("smoky", "스모키한 향"), ("powdery", "화장품 파우더 향")]
+          ("heavyFloral", "꽃향이 강한 향"), ("smoky", "스모키한 향"), ("powdery", "화장품 파우더 향"),
+          ("spicy", "알싸한 향"), ("soapy", "비누·세제 같은 향")]
 TIPS = [
     "1번부터 가벼운 향 순서로 맡아요. 진한 향을 먼저 맡으면 코가 금방 둔해져요.",
     "시향지에 향수 이름을 적어 두세요.",

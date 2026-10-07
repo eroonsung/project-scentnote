@@ -25,4 +25,6 @@ export const AVOID_HINT: Record<string, string> = {
   heavyFloral: '꽃향이 강한 향 제외',
   smoky: '스모키한 향 제외',
   powdery: '화장품 파우더 향 제외',
+  spicy: '알싸한 향 제외',
+  soapy: '비누·세제 같은 향 제외',
 }
