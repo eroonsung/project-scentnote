@@ -106,7 +106,7 @@ export default function Result() {
         <header className="mx-auto flex max-w-[672px] flex-col items-center gap-2 text-center">
           <span className="flex items-center gap-2 rounded-full bg-mist px-3 py-1 font-mono text-[13px] font-bold uppercase tracking-[1.3px] text-slate">
             <span className="size-1.5 rounded-full bg-ink" aria-hidden="true" />
-            YOUR SCENT NOTE · {items.length}
+            YOUR SHORTLIST · {items.length}
           </span>
           <h1 className="pt-1 text-[32px] font-medium leading-10 tracking-[-1px] text-ink md:text-[40px] md:leading-[52px]">
             {selection.mode === 'gift' ? '이 순서로 맡아보고 골라 보세요' : '이 순서로 맡아보세요'}
