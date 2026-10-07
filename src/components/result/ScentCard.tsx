@@ -31,7 +31,7 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
   const flip = (to: boolean) => {
     setFlipped(to)
     // 뒤집은 뒤 포커스는 보이는 면의 제목으로
-    window.setTimeout(() => (to ? backTitle : frontTitle).current?.focus(), 50)
+    window.setTimeout(() => (to ? backTitle : frontTitle).current?.focus({ preventScroll: true }), 50)
   }
 
   const face = 'col-start-1 row-start-1 flex min-h-[580px] flex-col rounded-card border p-[25px] [backface-visibility:hidden]'
