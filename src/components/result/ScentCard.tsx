@@ -54,9 +54,9 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
           </div>
 
           {/* 가운데 내용 3덩어리는 간격을 고정해 세로 가운데로 모은다 (카드마다 간격이 같다) */}
-          <div className="flex flex-1 flex-col justify-center gap-8">
+          <div className="flex flex-1 flex-col justify-center gap-5">
           <div className="flex flex-col items-center">
-            <div className="flex h-60 w-[180px] items-center justify-center overflow-hidden rounded-xl bg-card shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
+            <div className="flex h-72 w-[216px] items-center justify-center overflow-hidden rounded-xl bg-card shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
               <PerfumeImage perfume={p} />
             </div>
             <span
@@ -123,7 +123,7 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
             href={naverMapSearchUrl(p.storeQuery)}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 flex h-10 items-center justify-center gap-1.5 rounded-xl border border-ink/20 text-[13px] tracking-[-0.08px] text-ink hover:bg-card/60"
+            className="mt-4 flex h-10 items-center justify-center gap-1.5 rounded-xl border border-ink/20 text-[13px] tracking-[-0.08px] text-ink hover:bg-card/60"
           >
             <img src={storeIcon} alt="" width={12} height={10.67} />
             매장 찾기
