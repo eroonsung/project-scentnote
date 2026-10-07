@@ -88,15 +88,17 @@ export default function Home() {
               </Link>
             </div>
             <ul className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-3 pt-6 text-xs leading-4 tracking-[0.3px] text-slate">
-              <li className="flex items-center gap-1.5">
-                <b className="font-mono text-[13px] tracking-[1.04px] text-ink">14</b> 향 계열
+              <li className="flex items-baseline">
+                <b className="font-mono text-[15px] font-bold tracking-[1.04px] text-ink mr-px">14</b>가지 향 계열
               </li>
               <li className="size-1 rounded-full bg-line" aria-hidden="true" />
-              <li className="flex items-center gap-1.5">
-                <b className="font-mono text-[13px] tracking-[1.04px] text-ink">3</b> 시향 후보 · 가벼운 향부터
+              <li className="flex items-baseline">
+                <b className="font-mono text-[15px] font-bold tracking-[1.04px] text-ink">3</b>가지 시향 후보 · 가벼운 향부터
               </li>
               <li className="size-1 rounded-full bg-line" aria-hidden="true" />
-              <li>광고·구매 링크 없음</li>
+              <li className="flex items-baseline">
+                광고·구매 링크 <b className="font-mono text-[15px] font-bold tracking-[1.04px] text-ink">0</b>개
+              </li>
             </ul>
           </div>
 
