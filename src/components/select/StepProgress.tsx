@@ -54,10 +54,6 @@ function CardProgress({ step, onGo }: Pick<Props, 'step' | 'onGo'>) {
             STEP 0{step} / 03 · SCENT FAMILY DISCOVERY · FOR MYSELF
           </span>
         </div>
-        <span className="flex items-center gap-2 font-mono text-[11px] tracking-[0.55px] text-ink">
-          <span className="size-2 rounded-full bg-ink" aria-hidden="true" />
-          REAL-TIME ARCHIVING
-        </span>
       </div>
       <ol className="grid gap-3 md:grid-cols-3">
         {NAMES.map((n, i) => {
