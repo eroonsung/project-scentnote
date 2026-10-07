@@ -18,18 +18,20 @@ const josa = (word: string, withBatchim: string, without: string) => {
   return code >= 0 && code % 28 !== 0 ? withBatchim : without
 }
 
-/** 흐리게 보이는 칩마다 한 줄: "'따뜻한'과 어울리지 않아 '시원한'을 고를 수 없어요". 없으면 빈 배열 */
+/** 고른 칩마다 한 줄: "'시원한'과 어울리지 않아 '따뜻한', '포근한'은 고를 수 없어요". 없으면 빈 배열 */
 export function conflictNotice(selectedIds: string[]): string[] {
   const label = (id: string) => CHIPS.moods.find((m) => m.id === id)?.label ?? id
-  const lines: string[] = []
+  const bySelected = new Map<string, string[]>()
   for (const m of CHIPS.moods) {
     if (selectedIds.includes(m.id)) continue
     const blocker = conflictingSelected(m.id, selectedIds)
-    if (!blocker) continue
-    const a = label(blocker)
-    lines.push(`'${a}'${josa(a, '과', '와')} 어울리지 않아 '${m.label}'${josa(m.label, '을', '를')} 고를 수 없어요`)
+    if (blocker) bySelected.set(blocker, [...(bySelected.get(blocker) ?? []), m.label])
   }
-  return lines
+  return [...bySelected.entries()].map(([id, names]) => {
+    const a = label(id)
+    const last = names[names.length - 1]
+    return `'${a}'${josa(a, '과', '와')} 어울리지 않아 ${names.map((n) => `'${n}'`).join(', ')}${josa(last, '은', '는')} 고를 수 없어요`
+  })
 }
 
 /** 흐리게 보이는 칩에 붙는 이유 한 줄. 어울리지 않는 선택이 없으면 undefined */
