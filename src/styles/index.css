@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* Tailwind 색은 tokens.css의 CSS 변수를 참조한다. 새 HEX 값을 직접 쓰지 않는다. */
+@theme inline {
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-mist: var(--mist);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-deep: var(--ink-deep);
+  --color-slate: var(--slate);
+  --color-hint: var(--hint);
+  --color-citrus: var(--citrus);
+  --color-citrus-tint: var(--citrus-tint);
+  --color-citrus-deep: var(--citrus-deep);
+  --color-fruity: var(--fruity);
+  --color-fruity-tint: var(--fruity-tint);
+  --color-fruity-deep: var(--fruity-deep);
+  --color-aqua: var(--aqua);
+  --color-aqua-tint: var(--aqua-tint);
+  --color-aqua-deep: var(--aqua-deep);
+  --color-green: var(--green);
+  --color-green-tint: var(--green-tint);
+  --color-green-deep: var(--green-deep);
+  --color-aromatic: var(--aromatic);
+  --color-aromatic-tint: var(--aromatic-tint);
+  --color-aromatic-deep: var(--aromatic-deep);
+  --color-floral: var(--floral);
+  --color-floral-tint: var(--floral-tint);
+  --color-floral-deep: var(--floral-deep);
+  --color-whiteFloral: var(--whiteFloral);
+  --color-whiteFloral-tint: var(--whiteFloral-tint);
+  --color-whiteFloral-deep: var(--whiteFloral-deep);
+  --color-powdery: var(--powdery);
+  --color-powdery-tint: var(--powdery-tint);
+  --color-powdery-deep: var(--powdery-deep);
+  --color-musk: var(--musk);
+  --color-musk-tint: var(--musk-tint);
+  --color-musk-deep: var(--musk-deep);
+  --color-spicy: var(--spicy);
+  --color-spicy-tint: var(--spicy-tint);
+  --color-spicy-deep: var(--spicy-deep);
+  --color-woody: var(--woody);
+  --color-woody-tint: var(--woody-tint);
+  --color-woody-deep: var(--woody-deep);
+  --color-amber: var(--amber);
+  --color-amber-tint: var(--amber-tint);
+  --color-amber-deep: var(--amber-deep);
+  --color-gourmand: var(--gourmand);
+  --color-gourmand-tint: var(--gourmand-tint);
+  --color-gourmand-deep: var(--gourmand-deep);
+  --color-leather: var(--leather);
+  --color-leather-tint: var(--leather-tint);
+  --color-leather-deep: var(--leather-deep);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --radius-chip: var(--r-chip);
+  --radius-btn: var(--r-btn);
+  --radius-card: var(--r-card);
+  --radius-sheet: var(--r-sheet);
+  --shadow-float: var(--shadow-float);
+}
+
+html { background: var(--paper); color: var(--ink); font-family: var(--font-sans); }
+body { margin: 0; min-width: 320px; }
+button { font: inherit; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }

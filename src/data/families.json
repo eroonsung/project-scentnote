@@ -1,0 +1,86 @@
+[
+  {
+    "id": "citrus",
+    "name": "시트러스",
+    "order": 1,
+    "examples": "레몬·베르가못·자몽"
+  },
+  {
+    "id": "fruity",
+    "name": "프루티",
+    "order": 2,
+    "examples": "복숭아·배·베리"
+  },
+  {
+    "id": "aqua",
+    "name": "아쿠아·오존",
+    "order": 3,
+    "examples": "바다·빗물·바람"
+  },
+  {
+    "id": "green",
+    "name": "그린",
+    "order": 4,
+    "examples": "풀잎·녹차·무화과잎"
+  },
+  {
+    "id": "aromatic",
+    "name": "아로마틱",
+    "order": 5,
+    "examples": "라벤더·로즈마리·민트"
+  },
+  {
+    "id": "floral",
+    "name": "플로럴",
+    "order": 6,
+    "examples": "장미·작약·은방울꽃"
+  },
+  {
+    "id": "whiteFloral",
+    "name": "화이트 플로럴",
+    "order": 7,
+    "examples": "자스민·튜베로즈·오렌지꽃"
+  },
+  {
+    "id": "powdery",
+    "name": "파우더리",
+    "order": 8,
+    "examples": "아이리스·바이올렛"
+  },
+  {
+    "id": "musk",
+    "name": "머스크·클린",
+    "order": 9,
+    "examples": "비누·갓 빤 빨래·살결"
+  },
+  {
+    "id": "spicy",
+    "name": "스파이시",
+    "order": 10,
+    "examples": "핑크페퍼·카다멈·시나몬"
+  },
+  {
+    "id": "woody",
+    "name": "우디",
+    "order": 11,
+    "examples": "시더·샌달우드·베티버"
+  },
+  {
+    "id": "amber",
+    "name": "앰버",
+    "order": 12,
+    "examples": "앰버·레진"
+  },
+  {
+    "id": "gourmand",
+    "name": "구르망",
+    "order": 13,
+    "examples": "바닐라·카라멜·꿀"
+  },
+  {
+    "id": "leather",
+    "name": "레더·스모키",
+    "order": 14,
+    "examples": "가죽·타바코·인센스"
+  }
+]

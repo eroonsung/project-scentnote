@@ -1,0 +1,25 @@
+:root {
+  --paper: #F8F6F3; --card: #FFFFFF; --mist: #F0EDF2; --line: #E3DFE6;
+  --ink: #231F3A; --ink-deep: #17142A; --slate: #5A556B; --hint: #9A95A8;
+
+  /* 향 계열: fill(막대·점) / tint(배경) / deep(색 글자). 번호 = 시향 순서 */
+  --citrus: #F2C94C;      --citrus-tint: #FDF6DD;      --citrus-deep: #7A5D00;
+  --fruity: #F49A84;      --fruity-tint: #FDECE7;      --fruity-deep: #8C3A24;
+  --aqua: #7FB7D6;        --aqua-tint: #E7F2F8;        --aqua-deep: #235E7E;
+  --green: #8CC08A;       --green-tint: #ECF5EA;       --green-deep: #2C6535;
+  --aromatic: #6FB3A4;    --aromatic-tint: #E5F3F0;    --aromatic-deep: #22615A;
+  --floral: #E8A0B4;      --floral-tint: #FBEAF0;      --floral-deep: #8F3550;
+  --whiteFloral: #E2CDE3; --whiteFloral-tint: #F8F2F8; --whiteFloral-deep: #6E4A6C;
+  --powdery: #C9B4E3;     --powdery-tint: #F3EEFA;     --powdery-deep: #5A4590;
+  --musk: #B9C6E6;        --musk-tint: #EEF2FA;        --musk-deep: #3A4E85;
+  --spicy: #D97B5C;       --spicy-tint: #F9E7E0;       --spicy-deep: #8A3418;
+  --woody: #B48A6A;       --woody-tint: #F3ECE6;       --woody-deep: #5F4029;
+  --amber: #E3A35E;       --amber-tint: #FBEEDF;       --amber-deep: #7D430D;
+  --gourmand: #E6CFA6;    --gourmand-tint: #FAF4EA;    --gourmand-deep: #6E5530;
+  --leather: #8E8494;     --leather-tint: #EDEBEE;     --leather-deep: #3D3542;
+
+  --font-sans: 'IBM Plex Sans KR', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --r-chip: 999px; --r-btn: 14px; --r-card: 16px; --r-sheet: 24px;
+  --shadow-float: 0 6px 20px rgba(35, 31, 58, 0.10);
+}

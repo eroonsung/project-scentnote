@@ -1,0 +1,204 @@
+{
+  "moods": [
+    {
+      "id": "calm",
+      "label": "차분한",
+      "affinity": [
+        "woody",
+        "musk",
+        "powdery",
+        "aromatic"
+      ]
+    },
+    {
+      "id": "clean",
+      "label": "깨끗한",
+      "affinity": [
+        "musk",
+        "aqua",
+        "citrus",
+        "whiteFloral"
+      ]
+    },
+    {
+      "id": "cool",
+      "label": "시원한",
+      "affinity": [
+        "aqua",
+        "citrus",
+        "green",
+        "aromatic"
+      ]
+    },
+    {
+      "id": "cozy",
+      "label": "포근한",
+      "affinity": [
+        "musk",
+        "powdery",
+        "gourmand",
+        "amber"
+      ]
+    },
+    {
+      "id": "fresh",
+      "label": "싱그러운",
+      "affinity": [
+        "green",
+        "citrus",
+        "fruity"
+      ]
+    },
+    {
+      "id": "zesty",
+      "label": "상큼한",
+      "affinity": [
+        "citrus",
+        "fruity"
+      ]
+    },
+    {
+      "id": "warm",
+      "label": "따뜻한",
+      "affinity": [
+        "amber",
+        "spicy",
+        "woody",
+        "gourmand"
+      ]
+    },
+    {
+      "id": "sweet",
+      "label": "달콤한",
+      "affinity": [
+        "gourmand",
+        "fruity",
+        "amber"
+      ]
+    },
+    {
+      "id": "elegant",
+      "label": "우아한",
+      "affinity": [
+        "floral",
+        "whiteFloral",
+        "powdery"
+      ]
+    },
+    {
+      "id": "deep",
+      "label": "묵직한",
+      "affinity": [
+        "woody",
+        "leather",
+        "amber"
+      ]
+    },
+    {
+      "id": "soft",
+      "label": "보송한",
+      "affinity": [
+        "powdery",
+        "musk"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "lemon",
+      "label": "레몬·귤",
+      "family": "citrus"
+    },
+    {
+      "id": "fruit",
+      "label": "과일",
+      "family": "fruity"
+    },
+    {
+      "id": "rain",
+      "label": "바람·비",
+      "family": "aqua"
+    },
+    {
+      "id": "grass",
+      "label": "풀잎·녹차",
+      "family": "green"
+    },
+    {
+      "id": "herb",
+      "label": "허브",
+      "family": "aromatic"
+    },
+    {
+      "id": "flower",
+      "label": "꽃",
+      "family": "floral"
+    },
+    {
+      "id": "whiteFlower",
+      "label": "하얀 꽃",
+      "family": "whiteFloral"
+    },
+    {
+      "id": "powder",
+      "label": "파우더",
+      "family": "powdery"
+    },
+    {
+      "id": "soap",
+      "label": "비누·빨래",
+      "family": "musk"
+    },
+    {
+      "id": "spice",
+      "label": "후추·향신료",
+      "family": "spicy"
+    },
+    {
+      "id": "forest",
+      "label": "숲·나무",
+      "family": "woody"
+    },
+    {
+      "id": "resin",
+      "label": "따뜻한 나무진",
+      "family": "amber"
+    },
+    {
+      "id": "vanilla",
+      "label": "바닐라·달콤",
+      "family": "gourmand"
+    },
+    {
+      "id": "smoky",
+      "label": "스모키",
+      "family": "leather"
+    }
+  ],
+  "avoids": [
+    {
+      "id": "tooSweet",
+      "label": "너무 단 향"
+    },
+    {
+      "id": "tooStrong",
+      "label": "너무 진한 향"
+    },
+    {
+      "id": "headache",
+      "label": "머리 아픈 향"
+    },
+    {
+      "id": "heavyFloral",
+      "label": "꽃향이 강한 향"
+    },
+    {
+      "id": "smoky",
+      "label": "스모키한 향"
+    },
+    {
+      "id": "powdery",
+      "label": "화장품 파우더 향"
+    }
+  ]
+}

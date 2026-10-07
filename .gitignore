@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+*.log
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# 비밀 키: 절대 올리지 않는다
+.env
+.env.*
+!.env.example
+*.local
