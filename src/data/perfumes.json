@@ -347,7 +347,9 @@
       "zesty",
       "cool"
     ],
-    "avoidFlags": [],
+    "avoidFlags": [
+      "soapy"
+    ],
     "intensity": "light",
     "polarizing": "low",
     "seasonOccasion": "사계절 · 데일리",
@@ -503,9 +505,7 @@
       "fresh",
       "zesty"
     ],
-    "avoidFlags": [
-      "soapy"
-    ],
+    "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
     "seasonOccasion": "봄 · 데이트",
@@ -1043,9 +1043,7 @@
       "clean",
       "fresh"
     ],
-    "avoidFlags": [
-      "soapy"
-    ],
+    "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
     "seasonOccasion": "여름 · 출근",
@@ -1468,9 +1466,7 @@
       "deep",
       "clean"
     ],
-    "avoidFlags": [
-      "spicy"
-    ],
+    "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
     "seasonOccasion": "사계절 · 출근",
@@ -1568,8 +1564,7 @@
     "moods": [
       "cozy",
       "warm",
-      "sweet",
-      "calm"
+      "sweet"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -1662,6 +1657,8 @@
     ],
     "avoidFlags": [
       "heavyFloral",
+      "tooSweet",
+      "tooStrong",
       "headache"
     ],
     "intensity": "strong",
@@ -1732,9 +1729,7 @@
       "fresh",
       "lovely"
     ],
-    "avoidFlags": [
-      "soapy"
-    ],
+    "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
     "seasonOccasion": "봄 · 데이트",
@@ -1901,9 +1896,7 @@
       "fresh",
       "lovely"
     ],
-    "avoidFlags": [
-      "soapy"
-    ],
+    "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
     "seasonOccasion": "사계절 · 데이트",
@@ -2131,7 +2124,9 @@
       "clean",
       "lovely"
     ],
-    "avoidFlags": [],
+    "avoidFlags": [
+      "heavyFloral"
+    ],
     "intensity": "medium",
     "polarizing": "mid",
     "seasonOccasion": "여름 · 저녁",
@@ -2842,6 +2837,7 @@
       "cozy"
     ],
     "avoidFlags": [
+      "powdery",
       "soapy"
     ],
     "intensity": "medium",
@@ -2941,9 +2937,7 @@
       "cozy",
       "soft"
     ],
-    "avoidFlags": [
-      "soapy"
-    ],
+    "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
     "seasonOccasion": "여름 · 휴가",
@@ -3187,7 +3181,7 @@
     ],
     "avoidFlags": [
       "tooStrong",
-      "spicy"
+      "smoky"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -3358,8 +3352,8 @@
     ],
     "avoidFlags": [
       "tooStrong",
-      "spicy",
-      "headache"
+      "smoky",
+      "spicy"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -3549,7 +3543,7 @@
     ],
     "avoidFlags": [
       "tooSweet",
-      "spicy"
+      "tooStrong"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -3649,7 +3643,7 @@
     ],
     "avoidFlags": [
       "tooStrong",
-      "headache"
+      "powdery"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -3833,9 +3827,7 @@
     ],
     "avoidFlags": [
       "tooSweet",
-      "tooStrong",
-      "spicy",
-      "headache"
+      "tooStrong"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -3933,7 +3925,8 @@
       "warm"
     ],
     "avoidFlags": [
-      "tooSweet"
+      "tooSweet",
+      "powdery"
     ],
     "intensity": "medium",
     "polarizing": "mid",
@@ -4020,8 +4013,7 @@
     ],
     "avoidFlags": [
       "tooSweet",
-      "tooStrong",
-      "spicy"
+      "tooStrong"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -4196,8 +4188,7 @@
       "sensual"
     ],
     "avoidFlags": [
-      "smoky",
-      "spicy"
+      "smoky"
     ],
     "intensity": "medium",
     "polarizing": "mid",
@@ -4387,10 +4378,10 @@
       "sensual"
     ],
     "avoidFlags": [
+      "tooSweet",
       "tooStrong",
       "smoky",
-      "spicy",
-      "headache"
+      "spicy"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -4462,9 +4453,7 @@
       "calm",
       "cozy"
     ],
-    "avoidFlags": [
-      "soapy"
-    ],
+    "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
     "seasonOccasion": "사계절 · 데일리",
@@ -4558,9 +4547,8 @@
     ],
     "avoidFlags": [
       "tooStrong",
-      "smoky",
       "spicy",
-      "headache"
+      "smoky"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -4652,7 +4640,9 @@
       "deep",
       "fresh"
     ],
-    "avoidFlags": [],
+    "avoidFlags": [
+      "smoky"
+    ],
     "intensity": "medium",
     "polarizing": "mid",
     "seasonOccasion": "가을·겨울 · 휴식",
@@ -4822,7 +4812,8 @@
       "warm"
     ],
     "avoidFlags": [
-      "tooSweet"
+      "tooSweet",
+      "tooStrong"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -5014,7 +5005,8 @@
       "sweet"
     ],
     "avoidFlags": [
-      "headache"
+      "smoky",
+      "tooStrong"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -5358,7 +5350,7 @@
       "tooStrong",
       "heavyFloral",
       "spicy",
-      "headache"
+      "smoky"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -5913,7 +5905,9 @@
       "fresh",
       "warm"
     ],
-    "avoidFlags": [],
+    "avoidFlags": [
+      "smoky"
+    ],
     "intensity": "medium",
     "polarizing": "mid",
     "seasonOccasion": "사계절 · 휴식",
@@ -6195,8 +6189,7 @@
       "calm"
     ],
     "avoidFlags": [
-      "tooSweet",
-      "spicy"
+      "tooSweet"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -6354,7 +6347,7 @@
     ],
     "avoidFlags": [
       "tooStrong",
-      "headache"
+      "smoky"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -6507,9 +6500,7 @@
       "sweet",
       "deep"
     ],
-    "avoidFlags": [
-      "spicy"
-    ],
+    "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
     "seasonOccasion": "가을·겨울 · 데일리",
@@ -6589,7 +6580,7 @@
     ],
     "avoidFlags": [
       "tooStrong",
-      "spicy",
+      "smoky",
       "headache"
     ],
     "intensity": "strong",
@@ -6755,9 +6746,7 @@
       "clean",
       "cozy"
     ],
-    "avoidFlags": [
-      "soapy"
-    ],
+    "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
     "seasonOccasion": "사계절 · 데일리",
@@ -6928,9 +6917,7 @@
       "deep",
       "soft"
     ],
-    "avoidFlags": [
-      "spicy"
-    ],
+    "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
     "seasonOccasion": "사계절 · 데이트",
@@ -7103,7 +7090,8 @@
       "soft"
     ],
     "avoidFlags": [
-      "spicy"
+      "spicy",
+      "smoky"
     ],
     "intensity": "medium",
     "polarizing": "mid",
@@ -7353,9 +7341,7 @@
       "elegant",
       "sensual"
     ],
-    "avoidFlags": [
-      "spicy"
-    ],
+    "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
     "seasonOccasion": "여름 · 휴가",
@@ -7434,7 +7420,7 @@
     ],
     "avoidFlags": [
       "tooStrong",
-      "spicy"
+      "smoky"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -7527,6 +7513,7 @@
     "avoidFlags": [
       "heavyFloral",
       "tooStrong",
+      "tooSweet",
       "headache"
     ],
     "intensity": "strong",
@@ -7606,8 +7593,7 @@
     ],
     "avoidFlags": [
       "tooStrong",
-      "spicy",
-      "headache"
+      "smoky"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -7997,7 +7983,7 @@
       "tooSweet",
       "tooStrong",
       "spicy",
-      "headache"
+      "smoky"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -8082,9 +8068,7 @@
       "calm",
       "cozy"
     ],
-    "avoidFlags": [
-      "soapy"
-    ],
+    "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
     "seasonOccasion": "사계절 · 데일리",
@@ -8126,9 +8110,7 @@
       "calm",
       "cozy"
     ],
-    "avoidFlags": [
-      "soapy"
-    ],
+    "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
     "seasonOccasion": "사계절 · 데일리",
@@ -8299,7 +8281,7 @@
     "avoidFlags": [
       "tooSweet",
       "spicy",
-      "headache"
+      "smoky"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -8390,7 +8372,7 @@
     ],
     "avoidFlags": [
       "tooSweet",
-      "headache"
+      "tooStrong"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -8578,8 +8560,7 @@
     "moods": [
       "fresh",
       "sweet",
-      "warm",
-      "calm"
+      "warm"
     ],
     "avoidFlags": [
       "tooSweet"
@@ -8688,8 +8669,7 @@
     "avoidFlags": [
       "tooSweet",
       "tooStrong",
-      "spicy",
-      "headache"
+      "spicy"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -9074,8 +9054,7 @@
     ],
     "avoidFlags": [
       "tooSweet",
-      "tooStrong",
-      "headache"
+      "tooStrong"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -9175,9 +9154,7 @@
       "deep",
       "calm"
     ],
-    "avoidFlags": [
-      "spicy"
-    ],
+    "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
     "seasonOccasion": "사계절 · 출근",
@@ -9437,9 +9414,7 @@
       "soft",
       "lovely"
     ],
-    "avoidFlags": [
-      "soapy"
-    ],
+    "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
     "seasonOccasion": "봄·가을 · 데이트",
@@ -9586,8 +9561,7 @@
       "zesty"
     ],
     "avoidFlags": [
-      "tooSweet",
-      "soapy"
+      "tooSweet"
     ],
     "intensity": "medium",
     "polarizing": "mid",
@@ -9712,6 +9686,7 @@
       "sensual"
     ],
     "avoidFlags": [
+      "heavyFloral",
       "tooStrong",
       "headache"
     ],
