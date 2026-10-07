@@ -51,8 +51,8 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
             <span className="font-mono text-[11px] tracking-[0.55px] text-slate">INDEX {index + 1}/{total}</span>
           </div>
 
-          {/* 가운데 내용 3덩어리는 남는 공간을 똑같이 나눠 가져, 카드마다 간격이 같다 */}
-          <div className="flex flex-1 flex-col justify-evenly">
+          {/* 가운데 내용 3덩어리는 간격을 고정해 세로 가운데로 모은다 (카드마다 간격이 같다) */}
+          <div className="flex flex-1 flex-col justify-center gap-8">
           <div className="flex flex-col items-center">
             <div className="flex h-40 w-[120px] items-center justify-center overflow-hidden rounded-xl bg-card shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
               <PerfumeImage perfume={p} />
@@ -113,7 +113,7 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
 
           </div>
 
-          <div className="flex flex-col gap-3 pt-4">
+          <div className="flex flex-col gap-3 pt-10">
             <div className="flex items-baseline justify-between gap-2 border-t border-line/40 pt-3">
               <span className={`${price.hasPrice ? 'font-mono font-bold' : ''} text-[11px] tracking-[0.55px] text-ink`}>{price.main}</span>
               {price.note && <span className="font-mono text-[10px] text-slate">{price.note}</span>}
