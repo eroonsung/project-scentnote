@@ -34,7 +34,13 @@ export function MoodStep({ selection, onToggle }: Props) {
           <MoodChip key={m.id} label={m.label} selected={selection.moods.includes(m.id)} disabled={full} conflict={conflictReason(m.id, selection.moods)} onClick={() => onToggle('moods', m.id)} />
         ))}
       </div>
-      {notice && <p className="text-sm text-slate" role="status">{notice}</p>}
+      {notice.length > 0 && (
+        <ul className=" list-disc space-y-0.5 pl-5 text-xs text-slate" role="status">
+          {notice.map((n) => (
+            <li key={n}>{n}</li>
+          ))}
+        </ul>
+      )}
       <div className="mt-2 flex gap-3.5 rounded-xl border border-line/60 bg-mist p-[21px]">
         <span className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-line/80 bg-card">
           <img src={bulb} alt="" width={11.25} height={15} />

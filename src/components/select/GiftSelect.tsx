@@ -95,7 +95,13 @@ export function GiftMoodStep({ selection, onToggleMood, onUnsure }: MoodProps) {
             )
           })}
         </div>
-        {notice && <p className="pt-1 text-sm text-slate" role="status">{notice}</p>}
+        {notice.length > 0 && (
+        <ul className="pt-1 list-disc space-y-0.5 pl-5 text-xs text-slate" role="status">
+          {notice.map((n) => (
+            <li key={n}>{n}</li>
+          ))}
+        </ul>
+      )}
       </div>
 
       <div className="mb-8 flex flex-col gap-3 rounded-xl bg-mist p-5 shadow-[0_1px_1px_rgba(0,0,0,0.05)]">
