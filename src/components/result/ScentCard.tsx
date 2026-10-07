@@ -111,20 +111,19 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
             )}
           </div>
 
-          <div className="flex flex-col gap-3">
-            <div className="flex items-baseline justify-between gap-2 border-t border-line/40 pt-3">
-              <span className={`${price.hasPrice ? 'font-mono font-bold' : ''} text-[11px] tracking-[0.55px] text-ink`}>{price.main}</span>
-              {price.note && <span className="font-mono text-[10px] text-slate">{price.note}</span>}
-            </div>
-            <button
-              type="button"
-              onClick={() => flip(true)}
-              className="flex h-11 items-center justify-center gap-1.5 rounded-xl bg-card/90 text-sm text-ink shadow-[0_1px_2px_rgba(0,0,0,0.05)] hover:bg-card"
-            >
-              노트·시향 팁 보기 <img src={flipIcon} alt="" width={10.67} height={10.67} />
-            </button>
+          <div className="flex items-baseline justify-between gap-2 border-t border-line/40 pt-3">
+            <span className={`${price.hasPrice ? 'font-mono font-bold' : ''} text-[11px] tracking-[0.55px] text-ink`}>{price.main}</span>
+            {price.note && <span className="font-mono text-[10px] text-slate">{price.note}</span>}
           </div>
           </div>
+
+          <button
+            type="button"
+            onClick={() => flip(true)}
+            className="mt-6 flex h-11 items-center justify-center gap-1.5 rounded-xl bg-card/90 text-sm text-ink shadow-[0_1px_2px_rgba(0,0,0,0.05)] hover:bg-card"
+          >
+            노트·시향 팁 보기 <img src={flipIcon} alt="" width={10.67} height={10.67} />
+          </button>
         </div>
 
         {/* 뒷면 */}
