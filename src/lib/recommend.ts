@@ -31,6 +31,7 @@ function wantedFamilies(chips: Chips, selection: Selection): Set<string> {
  */
 export function countCandidates(perfumes: Perfume[], chips: Chips, selection: Selection): number {
   const wanted = wantedFamilies(chips, selection)
+  if (selection.unsure) return perfumes.filter((p) => p.polarizing === 'low' && !p.avoidFlags.some((f) => selection.avoids.includes(f))).length
   if (wanted.size === 0 && selection.moods.length === 0) return 0
   return perfumes.filter((p) => {
     if (p.avoidFlags.some((f) => selection.avoids.includes(f))) return false

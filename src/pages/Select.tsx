@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
-import { Link, useNavigate, useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
+import { GiftMoodStep, GiftProgress } from '../components/select/GiftSelect'
+import GiftPanel from '../components/select/GiftPanel'
 import StepProgress from '../components/select/StepProgress'
 import { AvoidStep, MoodStep, ScentStep } from '../components/select/StepLeft'
 import TastePanel from '../components/select/TastePanel'
@@ -16,15 +18,17 @@ const HINT: Record<Step, string> = {
   2: '향기를 1개 이상 골라 주세요',
   3: '',
 }
+const LOW_COUNT = PERFUMES.filter((p) => p.polarizing === 'low').length
 
 export default function Select() {
   const [params, setParams] = useSearchParams()
   const navigate = useNavigate()
-  const { selection, setMode, toggle, clear, reset } = useSelection()
+  const { selection, setMode, toggle, clear, setUnsure, reset } = useSelection()
 
   const mode: Mode = params.get('mode') === 'gift' ? 'gift' : 'self'
+  const maxStep = mode === 'gift' ? 2 : 3
   const raw = Number(params.get('step'))
-  const step: Step = raw === 2 || raw === 3 ? raw : 1
+  const step = (raw >= 2 ? Math.min(raw, maxStep) : 1) as Step
 
   // 주소로 바로 들어와도 모드가 맞도록
   useEffect(() => {
@@ -34,14 +38,26 @@ export default function Select() {
   // 단계가 바뀌면 맨 위로
   useEffect(() => {
     window.scrollTo({ top: 0 })
-  }, [step])
+  }, [step, mode])
 
   const goStep = (s: Step) => setParams({ mode, step: String(s) })
-  const canNext = step === 1 ? selection.moods.length >= 1 : step === 2 ? selection.objects.length >= 1 : true
+  const gift = mode === 'gift'
+  const lastStep = step === maxStep
+  const canNext = gift
+    ? step === 1
+      ? selection.moods.length >= 1 || selection.unsure
+      : true
+    : step === 1
+      ? selection.moods.length >= 1
+      : step === 2
+        ? selection.objects.length >= 1
+        : true
+  const hint = gift ? '분위기를 고르거나 \'잘 모르겠어요\'를 눌러 주세요' : HINT[step]
+  const nextLabel = gift ? (step === 1 ? '다음 (02 피하고 싶은 느낌)' : '시향 후보 보기') : NEXT_LABEL[step]
 
   const onNext = () => {
     if (!canNext) return
-    if (step === 3) navigate('/result')
+    if (lastStep) navigate('/result')
     else goStep((step + 1) as Step)
   }
   const onBack = () => (step === 1 ? navigate('/') : goStep((step - 1) as Step))
@@ -50,53 +66,72 @@ export default function Select() {
     setMode(mode)
     goStep(1)
   }
+  const onSkip = () => {
+    // 건너뛰기: 피하고 싶은 느낌을 비우고 결과로
+    clear('avoids')
+    navigate('/result')
+  }
   const onToggle = (group: 'moods' | 'objects' | 'avoids', id: string) => toggle(group, id, 3)
 
-  if (mode === 'gift') {
-    return (
-      <main className="mx-auto flex max-w-[1120px] flex-col items-start gap-4 px-6 py-12">
-        <h1 className="text-[32px] font-medium text-ink">선물할 향수 찾기</h1>
-        <p className="text-slate">선물 모드 화면은 곧 만들어 드릴게요.</p>
-        <Link to="/select?mode=self" className="inline-flex h-[52px] items-center rounded-btn bg-ink px-8 text-white">
-          나를 위한 향수 찾기로 가기
-        </Link>
-      </main>
+  let progress, left, panel
+  if (gift) {
+    progress = <GiftProgress step={step as 1 | 2} onGo={(s) => goStep(s)} />
+    left =
+      step === 1 ? (
+        <GiftMoodStep selection={selection} onToggleMood={(id) => onToggle('moods', id)} onUnsure={() => setUnsure(!selection.unsure)} />
+      ) : (
+        <AvoidStep selection={selection} onToggle={onToggle} gift />
+      )
+    panel = (
+      <GiftPanel
+        step={step as 1 | 2}
+        selection={selection}
+        lowCount={LOW_COUNT}
+        totalCount={PERFUMES.length}
+        canNext={canNext}
+        hint={hint}
+        onNext={onNext}
+        onBack={onBack}
+        onSkip={onSkip}
+        onRestart={onRestart}
+        onSwitchToSelf={() => {
+          reset()
+          setMode('self')
+          navigate('/select?mode=self')
+        }}
+      />
+    )
+  } else {
+    progress = <StepProgress step={step} onGo={goStep} moodCount={selection.moods.length} objectCount={selection.objects.length} />
+    left =
+      step === 1 ? <MoodStep selection={selection} onToggle={onToggle} /> : step === 2 ? <ScentStep selection={selection} onToggle={onToggle} /> : <AvoidStep selection={selection} onToggle={onToggle} />
+    panel = (
+      <TastePanel
+        step={step}
+        selection={selection}
+        candidateCount={countCandidates(PERFUMES, CHIPS, selection)}
+        nextLabel={nextLabel}
+        canNext={canNext}
+        hint={hint}
+        onNext={onNext}
+        onBack={onBack}
+        onSkip={onSkip}
+        onRestart={onRestart}
+        onRemoveMood={(id) => toggle('moods', id, 3)}
+      />
     )
   }
 
-  const panel = (
-    <TastePanel
-      step={step}
-      selection={selection}
-      candidateCount={countCandidates(PERFUMES, CHIPS, selection)}
-      nextLabel={NEXT_LABEL[step]}
-      canNext={canNext}
-      hint={HINT[step]}
-      onNext={onNext}
-      onBack={onBack}
-      onSkip={() => {
-        // 건너뛰기: 피하고 싶은 느낌을 비우고 다음으로
-        clear('avoids')
-        navigate('/result')
-      }}
-      onRestart={onRestart}
-      onRemoveMood={(id) => toggle('moods', id, 3)}
-    />
-  )
-  const progress = (
-    <StepProgress step={step} onGo={goStep} moodCount={selection.moods.length} objectCount={selection.objects.length} />
-  )
-  const left =
-    step === 1 ? <MoodStep selection={selection} onToggle={onToggle} /> : step === 2 ? <ScentStep selection={selection} onToggle={onToggle} /> : <AvoidStep selection={selection} onToggle={onToggle} />
+  const bandProgress = !gift && step === 3
 
   return (
     <main className="pb-24 lg:pb-0">
-      {step === 3 && <div className="bg-mist/70 px-6 py-6"><div className="mx-auto max-w-[1120px]">{progress}</div></div>}
+      {bandProgress && <div className="bg-mist/70 px-6 py-6"><div className="mx-auto max-w-[1120px]">{progress}</div></div>}
       <div className="mx-auto flex max-w-[1120px] flex-col gap-10 px-6 py-10">
-        {step !== 3 && progress}
+        {!bandProgress && progress}
         <div className="grid grid-cols-[minmax(0,1fr)] items-start gap-12 lg:grid-cols-12">
           <div className="min-w-0 lg:col-span-7">{left}</div>
-          <div className="min-w-0 lg:col-span-5 lg:sticky lg:top-24">{panel}</div>
+          <div className="min-w-0 lg:sticky lg:top-24 lg:col-span-5">{panel}</div>
         </div>
       </div>
       {/* 모바일: 하단 고정 다음 버튼 */}
@@ -107,7 +142,7 @@ export default function Select() {
           onClick={onNext}
           className="h-[52px] w-full rounded-btn bg-ink text-base text-white disabled:cursor-not-allowed disabled:bg-hint"
         >
-          {canNext ? NEXT_LABEL[step] : HINT[step]}
+          {canNext ? nextLabel : hint}
         </button>
       </div>
     </main>

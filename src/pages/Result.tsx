@@ -135,6 +135,7 @@ export default function Result() {
                     total={items.length}
                     rec={r}
                     hasMemo={memos.some((m) => m.perfumeId === r.perfume.id)}
+                    gift={selection.mode === 'gift'}
                     onMemo={() => setMemoTarget(i)}
                   />
                 </div>

@@ -12,10 +12,12 @@ interface Props {
   total: number
   rec: Recommendation
   hasMemo: boolean
+  /** 선물 모드: 호불호 적은 향이면 앞면에 배지를 보여준다 */
+  gift?: boolean
   onMemo: (p: Perfume) => void
 }
 
-export default function ScentCard({ index, total, rec, hasMemo, onMemo }: Props) {
+export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: Props) {
   const p = rec.perfume
   const [flipped, setFlipped] = useState(false)
   const frontTitle = useRef<HTMLHeadingElement>(null)
@@ -60,6 +62,9 @@ export default function ScentCard({ index, total, rec, hasMemo, onMemo }: Props)
               <span className="size-1.5 rounded-full" style={{ background: `var(--${p.family})` }} aria-hidden="true" />
               {family?.name}
             </span>
+            {gift && p.polarizing === 'low' && (
+              <span className="mt-1.5 rounded-full border border-line/60 bg-card/80 px-2.5 py-0.5 text-[11px] tracking-[0.55px] text-ink">호불호 적음</span>
+            )}
             <h2
               ref={frontTitle}
               tabIndex={-1}
