@@ -8,6 +8,7 @@ import moodLinen from '../../assets/images/mood-linen.jpg'
 import { FAMILY_EN, FAMILY_PHRASE } from '../../lib/labels'
 import { CHIPS } from '../../lib/perfumes'
 import type { FamilyId, Selection } from '../../types'
+import { conflictNotice, conflictReason } from '../../lib/chipConflicts'
 import { AvoidChip, MoodChip, ScentChip } from './Chips'
 
 interface Props {
@@ -21,6 +22,7 @@ const lead = 'text-base leading-[26px] tracking-[-0.08px] text-slate'
 /** Step 1 왼쪽: 분위기 칩 */
 export function MoodStep({ selection, onToggle }: Props) {
   const full = selection.moods.length >= 3
+  const notice = conflictNotice(selection.moods)
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2 pt-1">
@@ -29,9 +31,10 @@ export function MoodStep({ selection, onToggle }: Props) {
       </div>
       <div className="flex flex-wrap gap-3 pt-2" role="group" aria-label="분위기 (1~3개 선택)">
         {CHIPS.moods.map((m) => (
-          <MoodChip key={m.id} label={m.label} selected={selection.moods.includes(m.id)} disabled={full} onClick={() => onToggle('moods', m.id)} />
+          <MoodChip key={m.id} label={m.label} selected={selection.moods.includes(m.id)} disabled={full} conflict={conflictReason(m.id, selection.moods)} onClick={() => onToggle('moods', m.id)} />
         ))}
       </div>
+      {notice && <p className="text-sm text-slate" role="status">{notice}</p>}
       <div className="mt-2 flex gap-3.5 rounded-xl border border-line/60 bg-mist p-[21px]">
         <span className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-line/80 bg-card">
           <img src={bulb} alt="" width={11.25} height={15} />

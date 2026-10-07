@@ -182,7 +182,7 @@
     },
     {
       "id": "resin",
-      "label": "따뜻한 나무진",
+      "label": "흙·나무",
       "family": "amber"
     },
     {
@@ -221,5 +221,55 @@
       "id": "powdery",
       "label": "화장품 파우더 향"
     }
+  ],
+  "conflicts": [
+    [
+      "cool",
+      "warm"
+    ],
+    [
+      "cool",
+      "cozy"
+    ],
+    [
+      "cool",
+      "sensual"
+    ],
+    [
+      "cool",
+      "deep"
+    ],
+    [
+      "clean",
+      "sensual"
+    ],
+    [
+      "clean",
+      "deep"
+    ],
+    [
+      "zesty",
+      "deep"
+    ],
+    [
+      "zesty",
+      "sensual"
+    ],
+    [
+      "fresh",
+      "sensual"
+    ],
+    [
+      "soft",
+      "sensual"
+    ],
+    [
+      "lovely",
+      "sensual"
+    ],
+    [
+      "lovely",
+      "deep"
+    ]
   ]
 }

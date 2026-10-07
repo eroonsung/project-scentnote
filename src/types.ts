@@ -16,7 +16,13 @@ export interface Family {
 export interface MoodChip { id: string; label: string; affinity: FamilyId[] }
 export interface ObjectChip { id: string; label: string; family: FamilyId }
 export interface AvoidChip { id: string; label: string }
-export interface Chips { moods: MoodChip[]; objects: ObjectChip[]; avoids: AvoidChip[] }
+export interface Chips {
+  moods: MoodChip[]
+  objects: ObjectChip[]
+  avoids: AvoidChip[]
+  /** 함께 고르면 어울리지 않는 분위기 칩 id 쌍 */
+  conflicts: [string, string][]
+}
 
 export interface NoteItem { en: string; ko: string; feel: string; family: FamilyId }
 

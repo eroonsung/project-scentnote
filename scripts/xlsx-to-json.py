@@ -36,6 +36,15 @@ OBJECTS = [
     ("soap", "비누·빨래", "musk"), ("spice", "후추·향신료", "spicy"), ("forest", "숲·나무", "woody"), ("resin", "흙·나무", "amber"),
     ("vanilla", "바닐라·달콤", "gourmand"), ("smoky", "스모키", "leather"),
 ]
+# 함께 고르면 어울리지 않는 분위기 쌍 (의미 기준으로 직접 정함). Select 화면에서 한쪽을 고르면 다른 쪽을 흐리게 한다.
+MOOD_CONFLICTS = [
+    ("cool", "warm"), ("cool", "cozy"), ("cool", "sensual"), ("cool", "deep"),
+    ("clean", "sensual"), ("clean", "deep"),
+    ("zesty", "deep"), ("zesty", "sensual"),
+    ("fresh", "sensual"),
+    ("soft", "sensual"),
+    ("lovely", "sensual"), ("lovely", "deep"),
+]
 AVOIDS = [("tooSweet", "너무 단 향"), ("tooStrong", "너무 진한 향"), ("headache", "머리 아픈 향"),
           ("heavyFloral", "꽃향이 강한 향"), ("smoky", "스모키한 향"), ("powdery", "화장품 파우더 향")]
 TIPS = [
@@ -102,6 +111,7 @@ dump("perfumes.json", perfumes)
 dump("families.json", [{"id": i, "name": n, "order": k + 1, "examples": e} for k, (i, n, e) in enumerate(FAMILIES)])
 dump("chips.json", {"moods": [{"id": i, "label": l, "affinity": a} for i, l, a in MOODS],
                     "objects": [{"id": i, "label": l, "family": f} for i, l, f in OBJECTS],
-                    "avoids": [{"id": i, "label": l} for i, l in AVOIDS]})
+                    "avoids": [{"id": i, "label": l} for i, l in AVOIDS],
+                    "conflicts": [list(c) for c in MOOD_CONFLICTS]})
 dump("tips.json", TIPS)
 print(f"perfumes {len(perfumes)}, with price {sum(1 for p in perfumes if p['krPrice'])}, with image {sum(1 for p in perfumes if p['image'])}")

@@ -1,6 +1,7 @@
 import checkWhite from '../../assets/icons/gift/check-white.svg'
 import compass from '../../assets/icons/gift/compass.svg'
 import curator from '../../assets/icons/gift/curator.svg'
+import { conflictNotice, conflictReason } from '../../lib/chipConflicts'
 import { CHIPS } from '../../lib/perfumes'
 import type { Selection } from '../../types'
 
@@ -60,6 +61,7 @@ const pill = 'inline-flex min-h-11 items-center gap-1.5 rounded-chip px-4 text-s
 /** 선물 Step 1 왼쪽: 받는 사람의 분위기 칩 + [잘 모르겠어요] */
 export function GiftMoodStep({ selection, onToggleMood, onUnsure }: MoodProps) {
   const full = selection.moods.length >= 3
+  const notice = conflictNotice(selection.moods)
   return (
     <div className="flex flex-col">
       <h1 className="pb-4 text-[32px] font-medium leading-10 tracking-[-1px] text-ink md:text-[40px] md:leading-[52px]">그 사람은 어떤 분위기인가요?</h1>
@@ -75,14 +77,17 @@ export function GiftMoodStep({ selection, onToggleMood, onUnsure }: MoodProps) {
         <div className="flex flex-wrap gap-2.5" role="group" aria-label="받는 사람의 분위기 (1~3개 선택)">
           {CHIPS.moods.map((m) => {
             const on = selection.moods.includes(m.id)
+            const conflict = conflictReason(m.id, selection.moods)
             return (
               <button
                 key={m.id}
                 type="button"
                 aria-pressed={on}
+                aria-disabled={conflict ? true : undefined}
+                title={conflict}
                 disabled={full && !on}
-                onClick={() => onToggleMood(m.id)}
-                className={`${pill} ${on ? 'bg-ink text-white' : 'bg-card text-ink shadow-[0_1px_1px_rgba(0,0,0,0.05)] hover:bg-mist'}`}
+                onClick={conflict ? undefined : () => onToggleMood(m.id)}
+                className={`${pill} ${conflict ? 'cursor-not-allowed bg-card text-slate opacity-40' : on ? 'bg-ink text-white' : 'bg-card text-ink shadow-[0_1px_1px_rgba(0,0,0,0.05)] hover:bg-mist'}`}
               >
                 {on && <img src={checkWhite} alt="" width={10.87} height={8.02} />}
                 {m.label}
@@ -90,6 +95,7 @@ export function GiftMoodStep({ selection, onToggleMood, onUnsure }: MoodProps) {
             )
           })}
         </div>
+        {notice && <p className="pt-1 text-sm text-slate" role="status">{notice}</p>}
       </div>
 
       <div className="mb-8 flex flex-col gap-3 rounded-xl bg-mist p-5 shadow-[0_1px_1px_rgba(0,0,0,0.05)]">

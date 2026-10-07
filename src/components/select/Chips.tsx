@@ -15,15 +15,19 @@ interface ToggleProps {
 }
 
 /** 분위기 칩: 선택하면 잉크 채움 */
-export function MoodChip({ label, selected, disabled, onClick }: ToggleProps & { label: string }) {
+export function MoodChip({ label, selected, disabled, conflict, onClick }: ToggleProps & { label: string; conflict?: string }) {
   return (
     <button
       type="button"
       aria-pressed={selected}
+      aria-disabled={conflict ? true : undefined}
+      title={conflict}
       disabled={disabled && !selected}
-      onClick={onClick}
+      onClick={conflict ? undefined : onClick}
       className={`${base} border ${
-        selected
+        conflict
+          ? 'cursor-not-allowed border-line/50 bg-card text-slate opacity-40'
+          : selected
           ? 'border-ink bg-ink text-white shadow-[0_1px_1px_rgba(0,0,0,0.05)]'
           : 'border-line bg-card text-ink hover:bg-mist'
       }`}
