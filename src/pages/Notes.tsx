@@ -65,7 +65,7 @@ export default function Notes() {
         <div className="flex max-w-[672px] flex-col gap-1">
           <p className="flex items-center gap-2 font-mono text-[11px] uppercase leading-4 tracking-[1.1px] text-slate">
             <span className="size-1.5 rounded-full bg-ink" aria-hidden="true" />
-            MY SCENT ARCHIVE · DOSSIER COLLECTION
+            MY SCENT ARCHIVE
           </p>
           <h1 className="text-[32px] font-medium leading-10 tracking-[-1px] text-ink md:text-[40px] md:leading-[52px]">내 시향 노트</h1>
           <p className="text-base leading-[26px] tracking-[-0.08px] text-slate">오프라인 매장에서 직접 맡아보고 기록한 향의 인상을 모아둔 아카이브입니다.</p>
@@ -120,7 +120,7 @@ export default function Notes() {
               <img src={familyReco} alt="" width={10.5} height={10.5} />맞춤 계열 추천
             </li>
             <li className="flex items-center gap-1">
-              <img src={storeRoute} alt="" width={11.72} height={10.5} />백화점 매장 동선
+              <img src={storeRoute} alt="" width={11.72} height={10.5} />별점·한 줄 메모 기록
             </li>
           </ul>
         </section>
