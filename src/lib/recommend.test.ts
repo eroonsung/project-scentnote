@@ -21,6 +21,22 @@ describe('recommend', () => {
     for (const s of cases) expect(recommend(perfumes, chips, familiesList, s).items).toHaveLength(3)
   })
 
+  it('분위기와 향기를 둘 다 충족하는 향수가 3개 이상이면 3개 모두 둘 다 충족한다', () => {
+    const meets = (p: Perfume, mood: string, family: string) =>
+      p.moods.includes(mood) && (p.family === family || p.subFamilies.includes(family as Perfume['family']))
+    let checked = 0
+    for (const m of chips.moods) {
+      for (const o of chips.objects) {
+        const pool = perfumes.filter((p) => meets(p, m.id, o.family))
+        if (pool.length < 3) continue
+        checked++
+        const { items } = recommend(perfumes, chips, familiesList, { ...base, moods: [m.id], objects: [o.id] })
+        for (const r of items) expect(meets(r.perfume, m.id, o.family)).toBe(true)
+      }
+    }
+    expect(checked).toBeGreaterThan(50)
+  })
+
   it('피하고 싶은 칩과 겹치는 향수는 나오지 않는다', () => {
     const s: Selection = { ...base, moods: ['warm', 'sweet'], objects: ['vanilla'], avoids: ['tooSweet'] }
     const { items } = recommend(perfumes, chips, familiesList, s)

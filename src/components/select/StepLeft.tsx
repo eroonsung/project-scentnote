@@ -3,9 +3,8 @@ import filterNote from '../../assets/icons/select/filter-note.svg'
 import noteBook from '../../assets/icons/select/note-book.svg'
 import moodForest from '../../assets/images/mood-forest.jpg'
 import moodLinen from '../../assets/images/mood-linen.jpg'
-import { FAMILY_EN, FAMILY_PHRASE } from '../../lib/labels'
-import { CHIPS } from '../../lib/perfumes'
-import type { FamilyId, Selection } from '../../types'
+import { CHIPS, getFamily } from '../../lib/perfumes'
+import type { Selection } from '../../types'
 import { conflictNotice, conflictReason } from '../../lib/chipConflicts'
 import { AvoidChip, MoodChip, ScentChip } from './Chips'
 
@@ -90,12 +89,20 @@ export function ScentStep({ selection, onToggle }: Props) {
         <div className="flex flex-col gap-[5px]">
           <b className="text-sm font-medium text-ink">향기 고르는 팁</b>
           <p className="text-sm leading-[22.75px] text-ink">
-            {picked.length > 0
-              ? `${picked.map((o) => `${o.label}(${FAMILY_EN[o.family as FamilyId]})`).join(', ')} 조합은 ${picked
-                  .map((o) => FAMILY_PHRASE[o.family as FamilyId])
-                  .join(' → ')} 순서로 이어져요.`
-              : '좋아하는 향기를 고르면 어떤 순서로 맡게 될지 여기에 풀어서 알려 드려요.'}
+            향수 이름이 아니라 일상에서 좋았던 향기를 떠올려 보세요. 갓 씻은 머리카락, 베어 문 과일, 비 온 뒤 풀 냄새처럼요. 똑같은 향이 아니어도, 그 향기의 결이 비슷한 향수를 보여 드려요.
           </p>
+          {picked.length > 0 && (
+            <ul className="mt-1 flex flex-col gap-1 text-sm leading-[22.75px] text-slate">
+              {picked.map((o) => {
+                const f = getFamily(o.family)
+                return (
+                  <li key={o.id}>
+                    <b className="font-normal text-ink">{o.label}</b> → {f?.name} 계열 · {f?.examples} 같은 향이에요.
+                  </li>
+                )
+              })}
+            </ul>
+          )}
         </div>
       </div>
     </div>
