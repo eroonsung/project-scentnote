@@ -40,7 +40,6 @@ export default function TastePanel(p: Props) {
     <aside className="flex flex-col gap-5 rounded-card border border-line bg-card p-[25px] shadow-float" aria-label="내 취향 노트">
       <div className="flex items-start justify-between gap-2 border-b border-line pb-4">
         <div>
-          <p className={label}>ARCHIVE DOSSIER</p>
           <h2 className="pt-0.5 text-lg font-medium leading-[26px] tracking-[-0.45px] text-ink">내 취향 노트</h2>
         </div>
         <span className="flex items-center gap-1.5 rounded-full bg-powdery-tint px-3 py-1 font-mono text-[11px] font-bold tracking-[0.55px] text-powdery-deep">
@@ -134,7 +133,7 @@ export default function TastePanel(p: Props) {
 
       {/* INDEX 03 피하고 싶은 느낌 */}
       {step < 3 ? (
-        <Pending title="INDEX 03 · 피하고 싶은 느낌" text="선택 대기" badge="STANDBY" dashed={step === 2} icon={step === 2 ? hourglass : undefined} />
+        <Pending title="INDEX 03 · 피하고 싶은 느낌" text="아직 고르지 않았어요" badge="STANDBY" dashed={step === 2} icon={step === 2 ? hourglass : undefined} />
       ) : (
         <section className={`${box} flex flex-col gap-1 bg-mist/60`}>
           <span className={label}>INDEX 03 · 피하고 싶은 느낌 (EXCLUDED)</span>
@@ -159,7 +158,7 @@ export default function TastePanel(p: Props) {
         <div className="relative flex flex-col gap-2 rounded-xl border border-line bg-mist p-4">
           <div className="flex items-center gap-2">
             <img src={predict} alt="" width={13.33} height={13.33} />
-            <span className="font-mono text-[11px] font-bold uppercase tracking-[0.55px] text-ink">REAL-TIME CURATION PREVIEW</span>
+            <span className="text-sm font-medium text-ink">어울리는 향수 미리보기</span>
           </div>
           <p className="text-sm leading-[22.75px] text-slate">
             {moods.length > 0 ? (

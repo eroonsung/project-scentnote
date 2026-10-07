@@ -15,7 +15,6 @@ interface Props {
   onToggle: (group: 'moods' | 'objects' | 'avoids', id: string) => void
 }
 
-const query = 'font-mono text-[11px] uppercase tracking-[0.55px] text-slate'
 const title = 'text-[32px] font-medium leading-10 tracking-[-1px] text-ink md:text-[40px] md:leading-[52px]'
 const lead = 'text-base leading-[26px] tracking-[-0.08px] text-slate'
 
@@ -38,7 +37,7 @@ export function MoodStep({ selection, onToggle }: Props) {
           <img src={bulb} alt="" width={11.25} height={15} />
         </span>
         <div className="flex flex-col gap-1">
-          <b className="text-sm font-medium text-ink">느낌 고르는 팁</b>
+          <b className="text-sm font-medium text-ink">분위기 고르는 팁</b>
           <p className="text-sm leading-[22.75px] text-slate">
             일상에서 편안하게 느끼는 공기나 촉각을 떠올려보세요. <b className="font-normal text-ink">비 내린 숲길(차분한)</b>,{' '}
             <b className="font-normal text-ink">빳빳하게 마른 셔츠(보송한)</b>처럼 떠오르는 장면이 선명할수록 매장 직원에게 원하는 향을 설명하기 훨씬 쉬워져요.
@@ -82,10 +81,7 @@ export function ScentStep({ selection, onToggle }: Props) {
           <img src={noteBook} alt="" width={18.33} height={16.25} />
         </span>
         <div className="flex flex-col gap-[5px]">
-          <p className="flex flex-wrap items-center gap-2">
-            <b className="font-mono text-[11px] tracking-[0.55px] text-ink">OLFACTORY ARCHIVIST NOTE</b>
-            <span className={query}>RECOMMENDED ACCORD</span>
-          </p>
+          <b className="text-sm font-medium text-ink">향기 고르는 팁</b>
           <p className="text-sm leading-[22.75px] text-ink">
             {picked.length > 0
               ? `${picked.map((o) => `${o.label}(${FAMILY_EN[o.family as FamilyId]})`).join(', ')} 조합은 ${picked
@@ -135,7 +131,7 @@ export function AvoidStep({ selection, onToggle, gift }: Props & { gift?: boolea
           <img src={filterNote} alt="" width={19.8} height={19.8} />
         </span>
         <div className="flex flex-col gap-[3px]">
-          <b className="text-xs font-semibold uppercase tracking-[0.6px] text-ink">OLFACTORY ARCHIVIST NOTE • FILTER PROTOCOL</b>
+          <b className="text-sm font-medium text-ink">피하고 싶은 느낌 팁</b>
           <p className="text-sm leading-[22.75px] text-slate">
             피하고 싶은 불호 노트를 사전에 제외하면 매장에서 맡아볼 3가지 추천 향수가 첫인상부터 편안하게 다가옵니다. 선택하지 않고 건너뛰셔도 선호도 기반 큐레이션이 안전하게 완성됩니다.
           </p>

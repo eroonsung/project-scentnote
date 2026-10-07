@@ -36,7 +36,6 @@ export default function GiftPanel(p: Props) {
     <aside className="flex flex-col rounded-card bg-card p-7 shadow-float" aria-label="선물 취향 노트">
       <div className="flex items-start justify-between gap-2 pb-6">
         <div>
-          <p className={`${label} tracking-[1.1px]`}>ARCHIVE DOSSIER · GIFT NOTE</p>
           <h2 className="pt-1 text-2xl font-medium leading-[34px] tracking-[-0.36px] text-ink">선물 취향 노트</h2>
         </div>
         <span className="rounded-full bg-powdery-tint px-2.5 py-1 font-mono text-[13px] font-bold tracking-[0.65px] text-powdery-deep">GIFT MODE</span>
@@ -94,7 +93,7 @@ export default function GiftPanel(p: Props) {
           <section className="flex flex-col gap-1 rounded-xl bg-mist p-4">
             <span className={`${label} font-bold`}>INDEX 02 · 피하고 싶은 느낌 (EXCLUDED)</span>
             {avoids.length === 0 ? (
-              <p className="pt-1 text-sm text-slate">선택 대기 · 없으면 건너뛰어도 돼요</p>
+              <p className="pt-1 text-sm text-slate">아직 고르지 않았어요 · 없으면 건너뛰어도 돼요</p>
             ) : (
               <ul className="flex flex-col gap-1.5 pt-1">
                 {avoids.map((a) => (
