@@ -1,6 +1,5 @@
 import bulb from '../../assets/icons/select/bulb.svg'
 import filterNote from '../../assets/icons/select/filter-note.svg'
-import infoCircle from '../../assets/icons/select/info-circle.svg'
 import noteBook from '../../assets/icons/select/note-book.svg'
 import tipBulb from '../../assets/icons/select/tip-bulb.svg'
 import tipInfo from '../../assets/icons/select/tip-info.svg'
@@ -26,12 +25,8 @@ export function MoodStep({ selection, onToggle }: Props) {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2 pt-1">
-        <p className={`${query} flex items-center gap-1.5 tracking-[1.1px]`}>
-          <img src={infoCircle} alt="" width={12.5} height={12.5} />
-          ARCHIVAL QUERY NO. 101
-        </p>
         <h1 className={title}>어떤 분위기를 원하세요?</h1>
-        <p className={lead}>1~3개 골라 주세요. 매장에서 어색하지 않게, 나만의 감각적인 언어로 시향을 시작합니다.</p>
+        <p className={lead}>1~3개 골라 주세요. 나만의 감각적인 언어로 시향을 시작합니다.</p>
       </div>
       <div className="flex flex-wrap gap-3 pt-2" role="group" aria-label="분위기 (1~3개 선택)">
         {CHIPS.moods.map((m) => (
