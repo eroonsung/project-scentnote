@@ -587,6 +587,6 @@ public/perfumes/ 향수병 이미지와 대체 이미지
 8. 시향 가이드(업계 판매처 블로그, 한 번에 3~5개 권장): Pairfum, *How to Avoid Nose Blindness When Testing Perfumes at Home* https://www.pairfum.com/avoid-nose-blindness-when-testing-perfumes/ · Fragrenza, *What Is Olfactory Fatigue — and How to Avoid It When Fragrance Shopping?* https://www.fragrenza.com/blogs/the-dry-down/what-is-olfactory-fatigue-and-how-to-avoid-it-when-fragrance-shopping — 학술 근거가 아니라 업계 가이드라는 점에 유의.
 9. **Fragrance wheel**, Wikipedia. 마이클 에드워즈의 1992년 휠, 소매점·소비자를 위한 분류. https://en.wikipedia.org/wiki/Fragrance_wheel
 
-**자체 자료:** 시향노트 설문(2026.10.06~07, 구매 경험자 21명), 커뮤니티 게시글 조사(더쿠·디시·Threads, 2025~2026, 정성 자료), 사용자 피드백(박람회 준비 중 지인 피드백).
+**자체 자료:** 시향노트 설문(2026.10.06~07, 구매 경험자 21명), 커뮤니티 게시글 조사(더쿠·디시·Threads, 2025&2026, 정성 자료), 사용자 피드백(박람회 준비 중 지인 피드백).
 
 > 이 서비스는 구매를 권하지 않으며 광고·판매 링크를 포함하지 않습니다. 향수 정보는 직접 정리한 초안이고, 향수병 이미지는 각 브랜드·판매처에 저작권이 있습니다.
