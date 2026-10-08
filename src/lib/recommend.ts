@@ -181,9 +181,12 @@ export function recommend(
   // 고른 향기가 있으면 향기도 맞는 향수만 쓴다. 분위기를 안 골랐으면(잘 모르겠어요 등) 점수 순.
   const scentOk = (r: Recommendation) => selection.objects.length === 0 || r.scentMatch.matched > 0
   const moodCount = selection.unsure ? 0 : selection.moods.length
+  // 고른 분위기와 서로 어울리지 않는 분위기 태그를 가진 향수(예: '시원한'을 골랐는데 '따뜻한' 태그)는 마지막에만 쓴다
+  const clashes = (r: Recommendation) =>
+    selection.moods.some((m) => r.perfume.moods.some((pm) => chips.conflicts.some(([a, b]) => (a === m && b === pm) || (b === m && a === pm))))
   if (moodCount > 0) {
     for (let level = moodCount; level >= 1 && picked.length < 3; level--) {
-      fillFrom(matched.filter((r) => scentOk(r) && r.moodMatch.matched >= level))
+      fillFrom(matched.filter((r) => scentOk(r) && !clashes(r) && r.moodMatch.matched >= level))
     }
   } else {
     fillFrom(matched.filter(scentOk))

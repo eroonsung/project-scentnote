@@ -2,10 +2,11 @@ import { useRef, useState } from 'react'
 import flipIcon from '../../assets/icons/result/flip.svg'
 import storeIcon from '../../assets/icons/result/store.svg'
 import { naverMapSearchUrl } from '../../lib/links'
-import { getFamily, imageSrc, placeholderSrc } from '../../lib/perfumes'
+import { getFamily } from '../../lib/perfumes'
 import { formatPrice } from '../../lib/price'
 import type { Recommendation } from '../../lib/recommend'
 import type { Perfume } from '../../types'
+import PerfumeImage from '../PerfumeImage'
 import CardBack from './CardBack'
 import ConcentrationHint from './ConcentrationHint'
 import FaceLabel from './FaceLabel'
@@ -193,24 +194,5 @@ export default function ScentCard({ index, rec, hasMemo, triedRating, gift, onMe
         />
       </div>
     </article>
-  )
-}
-
-function PerfumeImage({ perfume }: { perfume: Perfume }) {
-  const hasReal = !!perfume.image
-  return (
-    <img
-      src={imageSrc(perfume)}
-      alt={hasReal ? `${perfume.brandKo} ${perfume.nameKo} 병 이미지` : '향수병 이미지 준비 중'}
-      loading="lazy"
-      className={`size-full ${hasReal ? 'object-contain' : 'object-cover'}`}
-      onError={(e) => {
-        const img = e.currentTarget
-        img.onerror = null
-        img.src = placeholderSrc(perfume.family)
-        img.alt = '향수병 이미지 준비 중'
-        img.className = 'size-full object-cover'
-      }}
-    />
   )
 }

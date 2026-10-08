@@ -65,3 +65,7 @@
 html { background: var(--paper); color: var(--ink); font-family: var(--font-sans); }
 body { margin: 0; min-width: 320px; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+/* 시향 노트 카드를 뒤집을 때 (보이는 면만 새로 그려지며 돌아 들어온다) */
+@keyframes flip-in { from { transform: perspective(900px) rotateY(80deg); opacity: 0.2; } to { transform: perspective(900px) rotateY(0); opacity: 1; } }
+.animate-flip-in { animation: flip-in 300ms ease-out; }

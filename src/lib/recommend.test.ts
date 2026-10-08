@@ -254,3 +254,19 @@ describe('향기를 고르고도 그 향의 지나친 것만 피하기', () => {
     expect(tagged).toBeLessThanOrEqual(items.length)
   })
 })
+
+describe('고른 분위기와 반대인 향수', () => {
+  it('후보가 충분하면 고른 분위기와 어울리지 않는 분위기 태그를 가진 향수는 나오지 않는다', () => {
+    const clash = (moods: string[], perfumeMoods: string[]) =>
+      moods.some((m) => perfumeMoods.some((pm) => chips.conflicts.some(([a, b]) => (a === m && b === pm) || (b === m && a === pm))))
+    let checked = 0
+    for (const o of chips.objects) {
+      const moods = ['lovely', 'cool']
+      const pool = perfumes.filter((p) => moods.some((m) => p.moods.includes(m)) && !clash(moods, p.moods) && (p.family === o.family || p.subFamilies.includes(o.family)))
+      if (pool.length < 3) continue
+      checked++
+      for (const r of recommend(perfumes, chips, familiesList, { ...base, moods, objects: [o.id] }).items) expect(clash(moods, r.perfume.moods)).toBe(false)
+    }
+    expect(checked).toBeGreaterThan(3)
+  })
+})
