@@ -54,7 +54,7 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
               <span className="flex size-8 items-center justify-center rounded-full bg-ink font-mono text-[11px] font-bold text-white">{no}</span>
               <span className="font-mono text-[11px] tracking-[0.55px] text-slate">INDEX {index + 1}/{total}</span>
             </span>
-            <FaceLabel family={p.family}>CARD FRONT</FaceLabel>
+            <FaceLabel family={p.family} face="front" />
           </div>
 
           {/* 가운데 내용 3덩어리는 간격을 고정해 세로 가운데로 모은다 (카드마다 간격이 같다) */}

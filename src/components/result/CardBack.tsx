@@ -32,7 +32,7 @@ export default function CardBack({ className, style, hidden, index, total, perfu
           <span className="font-mono text-[11px] leading-4 tracking-[0.55px] text-slate">
             INDEX {index + 1}/{total} · SCENT ARCHIVE DOSSIER
           </span>
-          <FaceLabel family={p.family}>CARD BACK</FaceLabel>
+          <FaceLabel family={p.family} face="back" />
         </div>
         <div className="flex items-start justify-between gap-2 pt-1">
           <div>
