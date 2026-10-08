@@ -67,6 +67,7 @@
 
 ### 근거 ① 자체 설문
 
+- **원본 응답:** [docs/survey-responses.csv](docs/survey-responses.csv) (이름·연락처 등 개인정보를 받지 않은 설문입니다)
 - **기간·대상:** 2026.10.06~07, 응답 26명(20대 10 · 30대 15 · 40대 1) 중 **최근 2년 안에 향수를 고르거나 산 적이 있는 21명**(선물 경험자 17명)을 아래 수치의 기준으로 삼았습니다.
 - **한계:** 지인 위주의 20~30대 응답이라 대표성은 낮고, 인터뷰까지 하지 못해 "왜"를 깊게 파악하지는 못했습니다.
 
@@ -544,7 +545,7 @@ src/
  ├ lib/          recommend.ts(추천) · avoid.ts(제외 규칙) · scenes.ts · auth.ts · storage.ts · feedback.ts …
  ├ data/         perfumes.json · chips.json · families.json (변환 스크립트가 생성)
  └ styles/       디자인 토큰 (미드나잇 잉크 + 향 계열 색)
-docs/            spec.md(화면·데이터 명세) · decisions.md(결정 기록) · perfumes-draft.xlsx · supabase/
+docs/            spec.md(화면·데이터 명세) · decisions.md(결정 기록) · perfumes-draft.xlsx · survey-responses.csv(설문 응답 원본) · supabase/
 scripts/         xlsx-to-json.py(변환) · apply-review.py · add-perfumes.py …
 public/perfumes/ 향수병 이미지와 대체 이미지
 ```
