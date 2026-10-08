@@ -101,6 +101,12 @@ const readPending = () => read<string[]>(PENDING_DELETE_KEY, [])
 const addPending = (id: string) => write(PENDING_DELETE_KEY, [...new Set([...readPending(), id])])
 const removePending = (id: string) => write(PENDING_DELETE_KEY, readPending().filter((x) => x !== id))
 
+/** 로그아웃할 때: 이 기기에 남은 노트와 지우지 못한 삭제 기록을 비운다 */
+export function clearLocalMemos(): void {
+  setCache([])
+  write(PENDING_DELETE_KEY, [])
+}
+
 let syncing: Promise<void> | null = null
 
 /**

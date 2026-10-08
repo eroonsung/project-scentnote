@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import type { ReactNode } from 'react'
 import close from '../assets/icons/result/close.svg'
 
@@ -18,7 +19,9 @@ export default function InfoSheet({ title, eyebrow, onClose, children }: Props) 
 
   useEffect(() => {
     opener.current = document.activeElement
-    closeBtn.current?.focus()
+    // 입력칸이 있으면 첫 입력칸에, 없으면 닫기 버튼에 포커스
+    const first = dialog.current?.querySelector<HTMLElement>('input')
+    ;(first ?? closeBtn.current)?.focus()
     const prev = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     return () => {
@@ -30,7 +33,7 @@ export default function InfoSheet({ title, eyebrow, onClose, children }: Props) 
   const onKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') onClose()
     if (e.key !== 'Tab') return
-    const items = dialog.current?.querySelectorAll<HTMLElement>('button')
+    const items = dialog.current?.querySelectorAll<HTMLElement>('button, input')
     if (!items || items.length === 0) return
     const first = items[0]
     const last = items[items.length - 1]
@@ -43,7 +46,8 @@ export default function InfoSheet({ title, eyebrow, onClose, children }: Props) 
     }
   }
 
-  return (
+  // 헤더처럼 backdrop-filter가 걸린 부모 안에서는 fixed가 부모 크기에 갇혀 잘리므로, 팝업은 body에 직접 그린다
+  return createPortal(
     <div
       className="fixed inset-0 z-30 flex items-end justify-center bg-ink-deep/45 p-0 backdrop-blur-[3px] md:items-center md:p-4"
       onMouseDown={(e) => e.target === e.currentTarget && onClose()}
@@ -72,6 +76,7 @@ export default function InfoSheet({ title, eyebrow, onClose, children }: Props) 
           닫기
         </button>
       </div>
-    </div>
+    </div>,
+    document.body,
   )
 }

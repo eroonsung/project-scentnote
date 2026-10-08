@@ -6,6 +6,7 @@ import familyReco from '../assets/icons/notes/family-reco.svg'
 import hourglass from '../assets/icons/notes/hourglass.svg'
 import stepQa from '../assets/icons/notes/step-qa.svg'
 import memoIcon from '../assets/icons/result/memo.svg'
+import AccountBar from '../components/account/AccountBar'
 import MemoCard from '../components/notes/MemoCard'
 import MemoSheet from '../components/result/MemoSheet'
 import Toast from '../components/Toast'
@@ -93,6 +94,8 @@ export default function Notes() {
           </div>
         )}
       </header>
+
+      <AccountBar onNotify={notify} />
 
       {memos.length === 0 ? (
         <section className="flex flex-col items-center rounded-xl bg-card px-6 py-16 text-center shadow-[0_1px_1px_rgba(0,0,0,0.05)]" aria-labelledby="empty-title">
