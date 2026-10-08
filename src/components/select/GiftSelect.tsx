@@ -2,6 +2,7 @@ import checkWhite from '../../assets/icons/gift/check-white.svg'
 import compass from '../../assets/icons/gift/compass.svg'
 import curator from '../../assets/icons/gift/curator.svg'
 import { conflictNotice, conflictReason } from '../../lib/chipConflicts'
+import MoodExamples from './MoodExamples'
 import { CHIPS } from '../../lib/perfumes'
 import type { Selection } from '../../types'
 
@@ -95,6 +96,7 @@ export function GiftMoodStep({ selection, onToggleMood, onUnsure }: MoodProps) {
             )
           })}
         </div>
+        <MoodExamples className="pt-1" />
         {notice.length > 0 && (
         <ul className="pt-1 list-disc space-y-0.5 pl-5 text-xs text-slate" role="status">
           {notice.map((n) => (

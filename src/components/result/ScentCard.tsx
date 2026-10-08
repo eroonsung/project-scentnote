@@ -7,6 +7,7 @@ import { formatPrice } from '../../lib/price'
 import type { Recommendation } from '../../lib/recommend'
 import type { Perfume } from '../../types'
 import CardBack from './CardBack'
+import FaceLabel from './FaceLabel'
 import { tiersOf } from './noteInfo'
 
 interface Props {
@@ -49,8 +50,11 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
         {/* 앞면 */}
         <div className={face} style={faceStyle} inert={flipped} aria-hidden={flipped}>
           <div className="flex items-center justify-between">
-            <span className="flex size-8 items-center justify-center rounded-full bg-ink font-mono text-[11px] font-bold text-white">{no}</span>
-            <span className="font-mono text-[11px] tracking-[0.55px] text-slate">INDEX {index + 1}/{total}</span>
+            <span className="flex items-center gap-2.5">
+              <span className="flex size-8 items-center justify-center rounded-full bg-ink font-mono text-[11px] font-bold text-white">{no}</span>
+              <span className="font-mono text-[11px] tracking-[0.55px] text-slate">INDEX {index + 1}/{total}</span>
+            </span>
+            <FaceLabel family={p.family}>CARD FRONT</FaceLabel>
           </div>
 
           {/* 가운데 내용 3덩어리는 간격을 고정해 세로 가운데로 모은다 (카드마다 간격이 같다) */}
@@ -140,7 +144,7 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
         {/* 뒷면 */}
         <CardBack
           className={`${face} justify-between [transform:rotateY(180deg)]`}
-          style={faceStyle}
+          style={{ ...faceStyle, background: `color-mix(in srgb, var(--${p.family}-tint), var(--${p.family}) 30%)` }}
           hidden={!flipped}
           index={index}
           total={total}

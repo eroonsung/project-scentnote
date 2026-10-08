@@ -7,6 +7,7 @@ import { CHIPS, getFamily } from '../../lib/perfumes'
 import type { Selection } from '../../types'
 import { conflictNotice, conflictReason } from '../../lib/chipConflicts'
 import { AvoidChip, MoodChip, ScentChip } from './Chips'
+import MoodExamples from './MoodExamples'
 
 interface Props {
   selection: Selection
@@ -48,6 +49,7 @@ export function MoodStep({ selection, onToggle }: Props) {
             일상에서 편안하게 느끼는 공기나 촉각을 떠올려보세요. <b className="font-normal text-ink">비 내린 숲길(차분한)</b>,{' '}
             <b className="font-normal text-ink">빳빳하게 마른 셔츠(보송한)</b>처럼 떠오르는 장면이 선명할수록 매장 직원에게 원하는 향을 설명하기 훨씬 쉬워져요.
           </p>
+          <MoodExamples className="mt-1" />
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4">

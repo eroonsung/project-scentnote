@@ -19,8 +19,8 @@ export function tiersOf(p: Perfume): TierInfo[] {
     return { key, short, title, hint, family: notes[0]?.family ?? p.family, notes }
   }
   return [
-    tier('top', 'TOP', 'TOP · 처음 10~30분', '초기 발향'),
-    tier('middle', 'MID', 'MIDDLE · 30분~몇 시간', '하트 노트'),
-    tier('base', 'BASE', 'BASE · 잔향', '피부 밀착'),
+    tier('top', 'TOP', 'TOP · 처음 10~30분', '첫인상'),
+    tier('middle', 'MID', 'MIDDLE · 30분~몇 시간', '하트노트'),
+    tier('base', 'BASE', 'BASE · 몇 시간 이후', '잔향'),
   ]
 }

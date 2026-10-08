@@ -3,6 +3,8 @@ import checkpoint from '../../assets/icons/result/checkpoint.svg'
 import flipBack from '../../assets/icons/result/flip-back.svg'
 import memoIcon from '../../assets/icons/result/memo.svg'
 import type { Perfume } from '../../types'
+import ConcentrationHint from './ConcentrationHint'
+import FaceLabel from './FaceLabel'
 import { INTENSITY_KO, POLARIZING_KO, tiersOf } from './noteInfo'
 
 interface Props {
@@ -30,7 +32,7 @@ export default function CardBack({ className, style, hidden, index, total, perfu
           <span className="font-mono text-[11px] leading-4 tracking-[0.55px] text-slate">
             INDEX {index + 1}/{total} · SCENT ARCHIVE DOSSIER
           </span>
-          <span className="shrink-0 rounded-full bg-ink px-2 py-0.5 font-mono text-[11px] font-bold tracking-[0.275px] text-paper">CARD BACK</span>
+          <FaceLabel family={p.family}>CARD BACK</FaceLabel>
         </div>
         <div className="flex items-start justify-between gap-2 pt-1">
           <div>
@@ -41,7 +43,7 @@ export default function CardBack({ className, style, hidden, index, total, perfu
               {p.brandKo} ({p.brand} · {p.name})
             </p>
           </div>
-          {p.concentration && <span className="font-mono text-[13px] font-bold tracking-[1.04px] text-ink">{p.concentration}</span>}
+          {p.concentration && <ConcentrationHint concentration={p.concentration} family={p.family} />}
         </div>
       </div>
 

@@ -66,7 +66,7 @@ export default function Home() {
               무엇부터 맡아볼까요?
             </h1>
             <p className="mt-5 text-base leading-[26px] tracking-[-0.08px] text-slate">
-              좋아하는 느낌을 고르면 맡아볼 향수 3개와 맡는 순서를 알려 드려요.
+              좋아하는 느낌을 고르면 맡아볼 추천 향수 3개와 맡는 순서를 알려 드려요.
             </p>
             <ul className="mt-6 flex flex-col gap-3 rounded-xl bg-mist px-4 py-3.5 text-sm text-ink sm:flex-row sm:items-center sm:gap-4">
               <li className="flex items-center gap-2">
