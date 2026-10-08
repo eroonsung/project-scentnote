@@ -5,6 +5,7 @@ import { AVOID_HINT, FAMILY_PHRASE } from '../../lib/labels'
 import { avoidedCount } from '../../lib/avoid'
 import { CHIPS, PERFUMES } from '../../lib/perfumes'
 import type { FamilyId, Selection } from '../../types'
+import EditButton from './EditButton'
 
 interface Props {
   step: 1 | 2
@@ -17,6 +18,8 @@ interface Props {
   onNext: () => void
   onBack: () => void
   onSkip: () => void
+  /** 분위기 고르기(1단계)로 돌아가 고친다 */
+  onEditMood: () => void
   onRestart: () => void
   onSwitchToSelf: () => void
 }
@@ -46,8 +49,11 @@ export default function GiftPanel(p: Props) {
         <section className="flex flex-col gap-2.5 rounded-xl bg-mist p-4">
           <div className="flex items-center justify-between">
             <span className={`${label} font-bold`}>INDEX 01 · 받는 사람 분위기</span>
-            <span className={`rounded-full px-2 py-0.5 font-mono text-[11px] font-bold leading-[11px] tracking-[0.55px] ${hasMood ? 'bg-powdery-tint text-ink' : 'bg-line/60 text-slate'}`}>
-              {hasMood ? 'RECORDED' : 'PENDING'}
+            <span className="flex items-center gap-2">
+              {step === 2 && <EditButton onClick={p.onEditMood} label="받는 사람 분위기 고르기로 돌아가 고치기" />}
+              <span className={`rounded-full px-2 py-0.5 font-mono text-[11px] font-bold leading-[11px] tracking-[0.55px] ${hasMood ? 'bg-powdery-tint text-ink' : 'bg-line/60 text-slate'}`}>
+                {hasMood ? 'RECORDED' : 'PENDING'}
+              </span>
             </span>
           </div>
           {!hasMood ? (
@@ -119,14 +125,12 @@ export default function GiftPanel(p: Props) {
 
       <div className="flex flex-col gap-3 pt-8">
         <div className="flex gap-3 pt-6">
+          <button type="button" onClick={p.onBack} className="h-[52px] rounded-btn border border-line bg-card px-5 text-base tracking-[-0.08px] text-ink hover:bg-mist">
+            이전
+          </button>
           {step === 2 && (
             <button type="button" onClick={p.onSkip} className="h-[52px] flex-1 rounded-btn bg-mist text-base tracking-[-0.08px] text-ink hover:bg-line/50">
               건너뛰기
-            </button>
-          )}
-          {step === 1 && (
-            <button type="button" onClick={p.onBack} className="h-[52px] rounded-btn border border-line bg-card px-5 text-base tracking-[-0.08px] text-ink hover:bg-mist">
-              이전
             </button>
           )}
           <button

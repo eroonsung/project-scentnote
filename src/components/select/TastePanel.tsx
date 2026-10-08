@@ -5,8 +5,8 @@ import hourglass from '../../assets/icons/select/hourglass.svg'
 import indexCheck from '../../assets/icons/select/index-check.svg'
 import predict from '../../assets/icons/select/predict.svg'
 import restart from '../../assets/icons/select/restart.svg'
-import sequence from '../../assets/icons/select/sequence.svg'
 import xSmall from '../../assets/icons/select/x-small.svg'
+import EditButton from './EditButton'
 import { AVOID_HINT, FAMILY_EN, FAMILY_PHRASE, TIER_LABELS } from '../../lib/labels'
 import { avoidedCount } from '../../lib/avoid'
 import { CHIPS, PERFUMES } from '../../lib/perfumes'
@@ -23,6 +23,8 @@ interface Props {
   onNext: () => void
   onBack?: () => void
   onSkip?: () => void
+  /** 이미 고른 단계로 돌아가 고친다 (1 또는 2) */
+  onGoStep?: (step: 1 | 2) => void
   onRestart: () => void
   onRemoveMood: (id: string) => void
 }
@@ -55,7 +57,12 @@ export default function TastePanel(p: Props) {
         <div className="flex items-center justify-between">
           <span className={label}>INDEX 01 · 분위기</span>
           {step === 1 && <b className="font-mono text-[11px] tracking-[0.55px] text-ink">{moods.length ? 'RECORDED' : 'ACTIVE'}</b>}
-          {step > 1 && <img src={indexCheck} alt="" width={9.5} height={7} />}
+          {step > 1 && (
+            <span className="flex items-center gap-2">
+              <EditButton onClick={() => p.onGoStep?.(1)} label="분위기 고르기로 돌아가 고치기" />
+              <img src={indexCheck} alt="" width={9.5} height={7} />
+            </span>
+          )}
         </div>
         {moods.length === 0 ? (
           <p className="text-sm text-slate/70">아직 고르지 않았어요</p>
@@ -92,7 +99,10 @@ export default function TastePanel(p: Props) {
         <section className={`${box} flex flex-col gap-2.5 bg-card`}>
           <div className="flex items-center justify-between">
             <span className={`${label} ${step === 2 ? 'font-bold text-ink' : ''}`}>INDEX 02 · 선호 향기{step === 2 ? ' (RECORDED)' : ''}</span>
-            <span className={label}>{objects.length} ITEMS</span>
+            <span className="flex items-center gap-2">
+              {step === 3 && <EditButton onClick={() => p.onGoStep?.(2)} label="향기 고르기로 돌아가 고치기" />}
+              <span className={label}>{objects.length} ITEMS</span>
+            </span>
           </div>
           {objects.length === 0 ? (
             <p className="text-sm text-slate/70">아직 고르지 않았어요</p>
@@ -126,7 +136,7 @@ export default function TastePanel(p: Props) {
                 ))}
               </div>
               <p className="text-center text-[11px] leading-4 tracking-[0.55px] text-slate">
-                {families.map((f) => FAMILY_PHRASE[f]).join(' → ')}
+                {families.map((f) => FAMILY_PHRASE[f]).join(' · ')}
               </p>
             </div>
           )}
@@ -188,14 +198,6 @@ export default function TastePanel(p: Props) {
           )}
         </div>
       )}
-      {step === 2 && families.length > 0 && (
-        <div className="flex gap-2.5 rounded-xl bg-mist p-3.5">
-          <img src={sequence} alt="" width={12.75} height={18.5} className="mt-0.5 h-[18.5px] shrink-0" />
-          <p className="text-[11px] leading-[17.88px] tracking-[0.55px] text-slate">
-            <b className="font-normal text-ink">이 순서로 맡아보게 될 거예요:</b> {families.map((f) => FAMILY_PHRASE[f]).join(' → ')}
-          </p>
-        </div>
-      )}
       {step === 3 && (
         <div className="flex flex-col gap-1 rounded-xl bg-mist p-4">
           <p className="flex items-center gap-1.5 text-sm font-semibold text-ink">
@@ -209,6 +211,11 @@ export default function TastePanel(p: Props) {
       {/* 버튼 */}
       <div className="flex flex-col gap-3 pt-2">
         <div className="flex gap-3">
+          {step === 3 && p.onBack && (
+            <button type="button" onClick={p.onBack} className="h-[52px] rounded-btn border border-line bg-card px-[18px] text-base tracking-[-0.08px] text-ink hover:bg-mist">
+              이전
+            </button>
+          )}
           {step === 3 ? (
             <button type="button" onClick={p.onSkip} className="h-[52px] flex-1 rounded-btn bg-mist text-lg tracking-[-0.18px] text-ink hover:bg-line/50">
               건너뛰기

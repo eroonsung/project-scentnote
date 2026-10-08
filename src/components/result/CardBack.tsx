@@ -12,7 +12,6 @@ interface Props {
   style: CSSProperties
   hidden: boolean
   index: number
-  total: number
   perfume: Perfume
   hasMemo: boolean
   titleRef: Ref<HTMLHeadingElement>
@@ -23,15 +22,12 @@ interface Props {
 const chip = 'rounded-full border border-line/40 bg-card/90 px-[11px] py-[5px] text-[11px] leading-4 tracking-[0.55px] text-ink'
 
 /** 카드 뒷면: 시향 가이드 (노트 3단, 잔향, 강도, 호불호, 체크 포인트, 매장 찾기·메모) */
-export default function CardBack({ className, style, hidden, index, total, perfume: p, hasMemo, titleRef, onMemo, onFlipBack }: Props) {
+export default function CardBack({ className, style, hidden, index, perfume: p, hasMemo, titleRef, onMemo, onFlipBack }: Props) {
   const no = String(index + 1).padStart(2, '0')
   return (
     <div className={className} style={style} inert={hidden} aria-hidden={hidden}>
       <div className="flex flex-col gap-2 border-b border-line/40 pb-[13px]">
-        <div className="flex items-center justify-between gap-2">
-          <span className="font-mono text-[11px] leading-4 tracking-[0.55px] text-slate">
-            INDEX {index + 1}/{total} · SCENT ARCHIVE DOSSIER
-          </span>
+        <div className="flex items-center justify-end gap-2">
           <FaceLabel family={p.family} face="back" />
         </div>
         <div className="flex items-start justify-between gap-2 pt-1">

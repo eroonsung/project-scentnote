@@ -133,7 +133,6 @@ export default function Result() {
                 <div className="flex min-w-0 flex-1">
                   <ScentCard
                     index={i}
-                    total={items.length}
                     rec={r}
                     hasMemo={memos.some((m) => m.perfumeId === r.perfume.id)}
                     triedRating={memos.find((m) => m.perfumeId === r.perfume.id)?.rating}

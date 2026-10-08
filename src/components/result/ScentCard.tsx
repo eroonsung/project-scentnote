@@ -13,7 +13,6 @@ import { tiersOf } from './noteInfo'
 
 interface Props {
   index: number
-  total: number
   rec: Recommendation
   hasMemo: boolean
   /** 이미 시향 노트에 남긴 별점(있으면 "이미 맡아본 향" 표시) */
@@ -31,7 +30,7 @@ function matchLine(rec: Recommendation): string {
   return parts.length > 0 ? `${parts.join(' · ')}가 맞아요` : '호불호가 적은 향 위주로 골랐어요'
 }
 
-export default function ScentCard({ index, total, rec, hasMemo, triedRating, gift, onMemo }: Props) {
+export default function ScentCard({ index, rec, hasMemo, triedRating, gift, onMemo }: Props) {
   const p = rec.perfume
   const [flipped, setFlipped] = useState(false)
   const frontTitle = useRef<HTMLHeadingElement>(null)
@@ -61,10 +60,7 @@ export default function ScentCard({ index, total, rec, hasMemo, triedRating, gif
         {/* 앞면 */}
         <div className={face} style={faceStyle} inert={flipped} aria-hidden={flipped}>
           <div className="flex items-center justify-between">
-            <span className="flex items-center gap-2.5">
-              <span className="flex size-8 items-center justify-center rounded-full bg-ink font-mono text-[11px] font-bold text-white">{no}</span>
-              <span className="font-mono text-[11px] tracking-[0.55px] text-slate">INDEX {index + 1}/{total}</span>
-            </span>
+            <span className="flex size-8 items-center justify-center rounded-full bg-ink font-mono text-[11px] font-bold text-white">{no}</span>
             <FaceLabel family={p.family} face="front" />
           </div>
 
@@ -180,7 +176,6 @@ export default function ScentCard({ index, total, rec, hasMemo, triedRating, gif
           style={{ ...faceStyle, background: `color-mix(in srgb, var(--${p.family}-tint), var(--${p.family}) 30%)` }}
           hidden={!flipped}
           index={index}
-          total={total}
           perfume={p}
           hasMemo={hasMemo}
           titleRef={backTitle}

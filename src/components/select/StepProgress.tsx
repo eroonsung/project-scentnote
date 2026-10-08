@@ -66,7 +66,7 @@ function CardProgress({ step, onGo }: Pick<Props, 'step' | 'onGo'>) {
                 type="button"
                 disabled={!done}
                 onClick={() => onGo(no)}
-                className={`relative flex w-full items-center gap-3.5 overflow-hidden rounded-lg text-left ${
+                className={`relative flex w-full enabled:cursor-pointer items-center gap-3.5 overflow-hidden rounded-lg text-left ${
                   active
                     ? 'border-2 border-ink bg-card p-3.5 shadow-[0_1px_2px_rgba(0,0,0,0.05)]'
                     : done
@@ -120,7 +120,7 @@ function BandProgress({ step, onGo, moodCount, objectCount }: Props) {
                 type="button"
                 disabled={active}
                 onClick={() => onGo(no)}
-                className={`flex w-full items-center justify-between rounded-xl p-4 text-left ${
+                className={`flex w-full enabled:cursor-pointer items-center justify-between rounded-xl p-4 text-left ${
                   active ? 'bg-ink shadow-float' : 'bg-card shadow-[0_1px_1px_rgba(0,0,0,0.05)] hover:bg-mist'
                 }`}
               >

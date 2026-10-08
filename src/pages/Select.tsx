@@ -94,6 +94,7 @@ export default function Select() {
         onNext={onNext}
         onBack={onBack}
         onSkip={onSkip}
+        onEditMood={() => goStep(1)}
         onRestart={onRestart}
         onSwitchToSelf={() => {
           reset()
@@ -131,6 +132,7 @@ export default function Select() {
         hint={hint}
         onNext={onNext}
         onBack={onBack}
+        onGoStep={(s) => goStep(s)}
         onSkip={onSkip}
         onRestart={onRestart}
         onRemoveMood={(id) => toggle('moods', id, 3)}
