@@ -132,17 +132,11 @@ export default function Home() {
               <div className="relative">
                 <ScentStrips />
               </div>
-              <div className="relative flex items-center justify-between gap-4 pt-4 font-mono text-[11px] leading-4 tracking-[0.55px] text-slate">
-                <p>
-                  <b className="mr-2 text-ink">시향 순서 예시</b>
-                  01 시트러스 → 02 플로럴 → 03 우디
-                </p>
-                <p className="hidden shrink-0 text-right opacity-70 sm:block">
-                  14개
-                  <br />
-                  향 계열
-                </p>
-              </div>
+              <p className="relative hidden pt-4 text-right font-mono text-[11px] leading-4 tracking-[0.55px] text-slate opacity-70 sm:block">
+                14개
+                <br />
+                향 계열
+              </p>
             </div>
             <div className="mt-4 flex max-w-[280px] items-center gap-3 rounded-xl bg-card p-4 shadow-float lg:absolute lg:-bottom-10 lg:-left-5 lg:mt-0">
               <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-mist">
