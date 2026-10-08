@@ -14,7 +14,7 @@ import Toast from '../components/Toast'
 import { useSelection } from '../context/SelectionContext'
 import { CHIPS, FAMILIES, PERFUMES, TIPS } from '../lib/perfumes'
 import { recommend } from '../lib/recommend'
-import { saveMemo, syncMemos, useMemos } from '../lib/storage'
+import { loadMemos, saveMemo, syncMemos, useMemos } from '../lib/storage'
 import type { Memo, Selection } from '../types'
 
 const GUIDE = [
@@ -48,9 +48,11 @@ export default function Result() {
   const toastTimer = useRef<number | undefined>(undefined)
 
   const hasInput = selection.moods.length > 0 || selection.objects.length > 0 || selection.unsure
+  // 이미 별 1~2개를 준 향수는 다시 추천하지 않는다. 화면을 보는 동안 카드가 바뀌지 않게 들어올 때의 기록만 쓴다.
+  const [lowRated] = useState(() => new Set(loadMemos().filter((m) => m.rating <= 2).map((m) => m.perfumeId)))
   const result = useMemo(
-    () => (hasInput ? recommend(PERFUMES, CHIPS, FAMILIES, selection) : null),
-    [hasInput, selection],
+    () => (hasInput ? recommend(PERFUMES, CHIPS, FAMILIES, selection, { excludeIds: lowRated }) : null),
+    [hasInput, selection, lowRated],
   )
 
   useEffect(() => {
@@ -134,6 +136,7 @@ export default function Result() {
                     total={items.length}
                     rec={r}
                     hasMemo={memos.some((m) => m.perfumeId === r.perfume.id)}
+                    triedRating={memos.find((m) => m.perfumeId === r.perfume.id)?.rating}
                     gift={selection.mode === 'gift'}
                     onMemo={() => setMemoTarget(i)}
                   />

@@ -75,9 +75,9 @@
     "moods": [
       "clean",
       "fresh",
-      "calm",
+      "zesty",
       "cool",
-      "zesty"
+      "calm"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -157,11 +157,11 @@
       "whiteFloral"
     ],
     "moods": [
-      "clean",
+      "fresh",
       "zesty",
+      "clean",
       "elegant",
-      "cool",
-      "fresh"
+      "cool"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -413,10 +413,9 @@
     ],
     "moods": [
       "soft",
-      "elegant",
       "fresh",
+      "elegant",
       "lovely",
-      "zesty",
       "sweet"
     ],
     "avoidFlags": [],
@@ -499,11 +498,10 @@
     ],
     "moods": [
       "soft",
-      "sweet",
-      "elegant",
       "lovely",
       "fresh",
-      "zesty"
+      "sweet",
+      "elegant"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -589,11 +587,9 @@
     ],
     "moods": [
       "sweet",
-      "cozy",
-      "warm",
       "lovely",
       "fresh",
-      "zesty"
+      "warm"
     ],
     "avoidFlags": [
       "tooSweet"
@@ -686,11 +682,10 @@
       "floral"
     ],
     "moods": [
-      "soft",
-      "sweet",
-      "zesty",
       "lovely",
-      "fresh"
+      "fresh",
+      "sweet",
+      "soft"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -777,10 +772,8 @@
     ],
     "moods": [
       "elegant",
-      "warm",
       "sweet",
-      "fresh",
-      "zesty",
+      "warm",
       "lovely"
     ],
     "avoidFlags": [],
@@ -877,8 +870,8 @@
     ],
     "moods": [
       "cool",
-      "clean",
-      "fresh"
+      "fresh",
+      "clean"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -1103,8 +1096,7 @@
     "moods": [
       "fresh",
       "calm",
-      "soft",
-      "cool"
+      "soft"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -1264,8 +1256,8 @@
       "musk"
     ],
     "moods": [
-      "fresh",
       "clean",
+      "fresh",
       "calm",
       "cool"
     ],
@@ -1353,16 +1345,15 @@
       "woody"
     ],
     "moods": [
-      "cool",
-      "deep",
       "fresh",
-      "calm"
+      "deep",
+      "warm"
     ],
     "avoidFlags": [
       "spicy"
     ],
     "intensity": "medium",
-    "polarizing": "mid",
+    "polarizing": "high",
     "seasonOccasion": "사계절 · 데이트",
     "summary": "상쾌한 시트러스와 후추, 깨끗한 나무 향",
     "drydown": "몇 시간 뒤엔 깔끔한 앰버와 나무 향이 남아요",
@@ -1462,9 +1453,10 @@
       "citrus"
     ],
     "moods": [
+      "fresh",
+      "elegant",
       "calm",
-      "deep",
-      "clean"
+      "deep"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -1562,10 +1554,10 @@
       "spicy"
     ],
     "moods": [
-      "cozy",
-      "warm",
       "sweet",
-      "calm"
+      "warm",
+      "sensual",
+      "cozy"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -1651,15 +1643,14 @@
       "whiteFloral"
     ],
     "moods": [
-      "elegant",
       "sweet",
-      "warm",
-      "lovely"
+      "lovely",
+      "elegant",
+      "warm"
     ],
     "avoidFlags": [
       "heavyFloral",
       "tooSweet",
-      "tooStrong",
       "headache"
     ],
     "intensity": "strong",
@@ -1725,10 +1716,10 @@
       "citrus"
     ],
     "moods": [
-      "elegant",
       "soft",
+      "lovely",
       "fresh",
-      "lovely"
+      "elegant"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -1796,10 +1787,10 @@
       "leather"
     ],
     "moods": [
-      "elegant",
       "soft",
-      "warm",
-      "lovely"
+      "lovely",
+      "elegant",
+      "warm"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -1894,8 +1885,8 @@
     "moods": [
       "elegant",
       "warm",
-      "fresh",
-      "lovely"
+      "lovely",
+      "fresh"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -1982,10 +1973,9 @@
     ],
     "moods": [
       "elegant",
-      "sweet",
-      "soft",
       "lovely",
-      "clean"
+      "sweet",
+      "soft"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -2040,10 +2030,9 @@
       "floral"
     ],
     "moods": [
-      "elegant",
-      "soft",
       "lovely",
-      "clean"
+      "soft",
+      "elegant"
     ],
     "avoidFlags": [
       "heavyFloral"
@@ -2122,8 +2111,7 @@
       "elegant",
       "soft",
       "calm",
-      "clean",
-      "lovely"
+      "clean"
     ],
     "avoidFlags": [
       "heavyFloral"
@@ -2230,9 +2218,9 @@
     ],
     "moods": [
       "elegant",
-      "calm",
       "clean",
-      "lovely"
+      "soft",
+      "calm"
     ],
     "avoidFlags": [
       "powdery",
@@ -2324,9 +2312,8 @@
     "moods": [
       "calm",
       "soft",
-      "elegant",
-      "cozy",
-      "lovely"
+      "clean",
+      "elegant"
     ],
     "avoidFlags": [
       "powdery"
@@ -2406,11 +2393,11 @@
       "gourmand"
     ],
     "moods": [
-      "calm",
-      "deep",
       "soft",
+      "elegant",
       "cozy",
-      "elegant"
+      "deep",
+      "calm"
     ],
     "avoidFlags": [
       "powdery"
@@ -2499,9 +2486,9 @@
     "moods": [
       "soft",
       "elegant",
-      "calm",
       "lovely",
-      "cozy"
+      "clean",
+      "calm"
     ],
     "avoidFlags": [
       "powdery"
@@ -2582,8 +2569,7 @@
     "moods": [
       "clean",
       "soft",
-      "calm",
-      "cozy"
+      "calm"
     ],
     "avoidFlags": [
       "soapy"
@@ -2752,16 +2738,12 @@
       "amber"
     ],
     "moods": [
-      "soft",
-      "elegant",
+      "sensual",
       "warm",
-      "calm",
-      "clean",
+      "elegant",
       "cozy"
     ],
-    "avoidFlags": [
-      "soapy"
-    ],
+    "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
     "seasonOccasion": "사계절 · 데이트",
@@ -2834,8 +2816,8 @@
     "moods": [
       "soft",
       "clean",
-      "calm",
-      "cozy"
+      "cozy",
+      "calm"
     ],
     "avoidFlags": [
       "powdery",
@@ -2931,11 +2913,9 @@
     ],
     "moods": [
       "fresh",
+      "clean",
       "warm",
       "sweet",
-      "calm",
-      "clean",
-      "cozy",
       "soft"
     ],
     "avoidFlags": [],
@@ -3029,9 +3009,9 @@
     ],
     "moods": [
       "deep",
-      "calm",
       "warm",
-      "sensual"
+      "calm",
+      "fresh"
     ],
     "avoidFlags": [
       "spicy"
@@ -3087,9 +3067,10 @@
       "woody"
     ],
     "moods": [
-      "warm",
+      "fresh",
       "elegant",
-      "fresh"
+      "warm",
+      "lovely"
     ],
     "avoidFlags": [
       "spicy"
@@ -3175,13 +3156,12 @@
       "spicy"
     ],
     "moods": [
+      "warm",
       "deep",
       "calm",
-      "warm",
-      "sensual"
+      "cozy"
     ],
     "avoidFlags": [
-      "tooStrong",
       "smoky"
     ],
     "intensity": "strong",
@@ -3257,9 +3237,9 @@
     ],
     "moods": [
       "calm",
+      "warm",
       "cozy",
-      "deep",
-      "warm"
+      "elegant"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -3345,16 +3325,13 @@
       "amber"
     ],
     "moods": [
+      "elegant",
       "deep",
       "warm",
-      "elegant",
-      "sensual",
-      "calm"
+      "sensual"
     ],
     "avoidFlags": [
-      "tooStrong",
-      "smoky",
-      "spicy"
+      "smoky"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -3452,10 +3429,9 @@
     ],
     "moods": [
       "calm",
-      "cozy",
-      "soft",
+      "fresh",
       "warm",
-      "deep"
+      "cozy"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -3535,16 +3511,13 @@
       "whiteFloral"
     ],
     "moods": [
+      "sweet",
       "warm",
       "elegant",
-      "sweet",
-      "sensual",
-      "cozy",
-      "deep"
+      "cozy"
     ],
     "avoidFlags": [
-      "tooSweet",
-      "tooStrong"
+      "tooSweet"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -3636,14 +3609,12 @@
     ],
     "moods": [
       "warm",
-      "deep",
-      "elegant",
       "sensual",
-      "cozy",
+      "elegant",
+      "deep",
       "sweet"
     ],
     "avoidFlags": [
-      "tooStrong",
       "powdery"
     ],
     "intensity": "strong",
@@ -3732,9 +3703,7 @@
       "warm",
       "elegant",
       "soft",
-      "cozy",
-      "sweet",
-      "deep"
+      "sweet"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -3821,14 +3790,12 @@
     ],
     "moods": [
       "sweet",
-      "deep",
-      "warm",
       "sensual",
-      "cozy"
+      "warm",
+      "deep"
     ],
     "avoidFlags": [
-      "tooSweet",
-      "tooStrong"
+      "tooSweet"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -3920,10 +3887,9 @@
     ],
     "moods": [
       "sweet",
-      "cozy",
-      "elegant",
       "lovely",
-      "warm"
+      "cozy",
+      "elegant"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -4007,14 +3973,13 @@
     ],
     "moods": [
       "warm",
+      "sweet",
       "cozy",
-      "deep",
       "sensual",
-      "sweet"
+      "deep"
     ],
     "avoidFlags": [
-      "tooSweet",
-      "tooStrong"
+      "tooSweet"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -4098,13 +4063,11 @@
     "moods": [
       "sweet",
       "deep",
-      "warm",
       "sensual",
-      "cozy"
+      "warm"
     ],
     "avoidFlags": [
       "tooSweet",
-      "tooStrong",
       "headache"
     ],
     "intensity": "strong",
@@ -4186,7 +4149,7 @@
       "cozy",
       "warm",
       "deep",
-      "sensual"
+      "sweet"
     ],
     "avoidFlags": [
       "smoky"
@@ -4288,9 +4251,9 @@
       "amber"
     ],
     "moods": [
-      "deep",
-      "cozy",
       "warm",
+      "cozy",
+      "deep",
       "sensual"
     ],
     "avoidFlags": [
@@ -4373,16 +4336,15 @@
       "spicy"
     ],
     "moods": [
-      "deep",
       "warm",
       "cozy",
+      "deep",
+      "sweet",
       "sensual"
     ],
     "avoidFlags": [
       "tooSweet",
-      "tooStrong",
-      "smoky",
-      "spicy"
+      "smoky"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -4451,12 +4413,11 @@
     "moods": [
       "clean",
       "soft",
-      "calm",
-      "cozy"
+      "calm"
     ],
     "avoidFlags": [],
     "intensity": "medium",
-    "polarizing": "mid",
+    "polarizing": "high",
     "seasonOccasion": "사계절 · 데일리",
     "summary": "깨끗한 피부 같은 투명한 머스크 향",
     "drydown": "시간이 지나도 깨끗한 머스크가 피부에 오래 남아요",
@@ -4541,13 +4502,12 @@
       "leather"
     ],
     "moods": [
+      "elegant",
       "deep",
       "warm",
-      "elegant",
       "sensual"
     ],
     "avoidFlags": [
-      "tooStrong",
       "spicy",
       "smoky"
     ],
@@ -4638,8 +4598,7 @@
     "moods": [
       "calm",
       "cozy",
-      "deep",
-      "fresh"
+      "deep"
     ],
     "avoidFlags": [
       "smoky"
@@ -4723,8 +4682,8 @@
     ],
     "moods": [
       "fresh",
-      "clean",
       "zesty",
+      "clean",
       "cool"
     ],
     "avoidFlags": [],
@@ -4808,13 +4767,12 @@
     "moods": [
       "sweet",
       "soft",
-      "elegant",
       "cozy",
-      "warm"
+      "warm",
+      "lovely"
     ],
     "avoidFlags": [
-      "tooSweet",
-      "tooStrong"
+      "tooSweet"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -4891,15 +4849,14 @@
       "leather"
     ],
     "moods": [
-      "deep",
       "sweet",
+      "deep",
       "warm",
       "sensual",
       "cozy"
     ],
     "avoidFlags": [
-      "tooSweet",
-      "tooStrong"
+      "tooSweet"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -5001,13 +4958,12 @@
     ],
     "moods": [
       "fresh",
-      "deep",
       "elegant",
-      "sweet"
+      "sweet",
+      "deep"
     ],
     "avoidFlags": [
-      "smoky",
-      "tooStrong"
+      "smoky"
     ],
     "intensity": "strong",
     "polarizing": "mid",
@@ -5085,8 +5041,8 @@
     ],
     "moods": [
       "fresh",
-      "clean",
-      "cool"
+      "cool",
+      "clean"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -5243,9 +5199,10 @@
       "citrus"
     ],
     "moods": [
-      "cool",
       "fresh",
-      "clean"
+      "cool",
+      "clean",
+      "elegant"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -5348,7 +5305,6 @@
       "sensual"
     ],
     "avoidFlags": [
-      "tooStrong",
       "heavyFloral",
       "spicy",
       "smoky"
@@ -5449,12 +5405,10 @@
     "moods": [
       "warm",
       "cozy",
-      "deep",
       "sensual",
-      "calm"
+      "deep"
     ],
     "avoidFlags": [
-      "tooStrong",
       "spicy"
     ],
     "intensity": "strong",
@@ -5532,12 +5486,11 @@
     ],
     "moods": [
       "elegant",
-      "warm",
-      "sensual"
+      "sensual",
+      "warm"
     ],
     "avoidFlags": [
       "heavyFloral",
-      "tooStrong",
       "headache"
     ],
     "intensity": "strong",
@@ -5605,8 +5558,8 @@
     "moods": [
       "fresh",
       "soft",
-      "calm",
-      "cool"
+      "cool",
+      "calm"
     ],
     "avoidFlags": [
       "powdery"
@@ -5681,11 +5634,9 @@
     ],
     "moods": [
       "soft",
-      "elegant",
       "sweet",
       "lovely",
-      "calm",
-      "cozy"
+      "elegant"
     ],
     "avoidFlags": [
       "powdery"
@@ -5826,11 +5777,10 @@
       "floral"
     ],
     "moods": [
+      "lovely",
       "sweet",
       "soft",
-      "fresh",
-      "lovely",
-      "zesty"
+      "fresh"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -5903,8 +5853,7 @@
     "moods": [
       "calm",
       "deep",
-      "fresh",
-      "warm"
+      "fresh"
     ],
     "avoidFlags": [
       "smoky"
@@ -5989,9 +5938,9 @@
     ],
     "moods": [
       "fresh",
+      "zesty",
       "clean",
-      "cool",
-      "zesty"
+      "cool"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -6085,10 +6034,10 @@
       "gourmand"
     ],
     "moods": [
+      "lovely",
       "elegant",
       "sweet",
-      "soft",
-      "lovely"
+      "soft"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -6185,9 +6134,9 @@
     ],
     "moods": [
       "warm",
-      "deep",
       "elegant",
-      "calm"
+      "sweet",
+      "deep"
     ],
     "avoidFlags": [
       "tooSweet"
@@ -6340,18 +6289,14 @@
       "amber"
     ],
     "moods": [
-      "deep",
-      "elegant",
-      "warm",
       "sensual",
-      "calm"
+      "deep",
+      "warm",
+      "elegant"
     ],
-    "avoidFlags": [
-      "tooStrong",
-      "smoky"
-    ],
+    "avoidFlags": [],
     "intensity": "strong",
-    "polarizing": "high",
+    "polarizing": "mid",
     "seasonOccasion": "가을·겨울 · 저녁",
     "summary": "장미와 우드에 바닐라가 감싸는 부드럽고 깊은 향",
     "drydown": "시간이 지나도 달콤한 우디 향이 오래 남아요",
@@ -6415,9 +6360,9 @@
     ],
     "moods": [
       "warm",
-      "deep",
-      "cozy",
       "sensual",
+      "cozy",
+      "deep",
       "sweet"
     ],
     "avoidFlags": [
@@ -6496,10 +6441,9 @@
     ],
     "moods": [
       "warm",
-      "cozy",
       "soft",
-      "sweet",
-      "deep"
+      "cozy",
+      "sweet"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -6575,9 +6519,8 @@
     "moods": [
       "deep",
       "warm",
-      "elegant",
       "sensual",
-      "calm"
+      "elegant"
     ],
     "avoidFlags": [
       "tooStrong",
@@ -6661,9 +6604,7 @@
     "moods": [
       "fresh",
       "zesty",
-      "elegant",
-      "sweet",
-      "lovely"
+      "elegant"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -6743,11 +6684,13 @@
     ],
     "moods": [
       "soft",
-      "calm",
       "clean",
-      "cozy"
+      "calm",
+      "lovely"
     ],
-    "avoidFlags": [],
+    "avoidFlags": [
+      "powdery"
+    ],
     "intensity": "medium",
     "polarizing": "low",
     "seasonOccasion": "사계절 · 데일리",
@@ -6831,10 +6774,10 @@
     ],
     "moods": [
       "fresh",
-      "warm",
+      "zesty",
       "soft",
       "clean",
-      "zesty"
+      "warm"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -7005,8 +6948,7 @@
     "moods": [
       "cozy",
       "warm",
-      "soft",
-      "deep"
+      "soft"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -7088,7 +7030,8 @@
     "moods": [
       "warm",
       "cozy",
-      "soft"
+      "soft",
+      "calm"
     ],
     "avoidFlags": [
       "spicy",
@@ -7159,11 +7102,10 @@
       "whiteFloral"
     ],
     "moods": [
-      "calm",
-      "cozy",
-      "elegant",
       "warm",
-      "deep"
+      "elegant",
+      "cozy",
+      "calm"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -7244,10 +7186,9 @@
     ],
     "moods": [
       "sweet",
-      "warm",
-      "elegant",
       "sensual",
-      "cozy"
+      "warm",
+      "elegant"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -7339,8 +7280,7 @@
     "moods": [
       "warm",
       "sweet",
-      "elegant",
-      "sensual"
+      "elegant"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -7506,10 +7446,10 @@
       "amber"
     ],
     "moods": [
+      "sensual",
       "deep",
       "elegant",
-      "warm",
-      "sensual"
+      "warm"
     ],
     "avoidFlags": [
       "heavyFloral",
@@ -7588,9 +7528,9 @@
       "woody"
     ],
     "moods": [
-      "deep",
       "warm",
-      "sensual"
+      "sensual",
+      "deep"
     ],
     "avoidFlags": [
       "tooStrong",
@@ -7656,9 +7596,9 @@
     ],
     "moods": [
       "calm",
-      "warm",
       "fresh",
-      "deep"
+      "warm",
+      "elegant"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -7732,7 +7672,8 @@
     "moods": [
       "fresh",
       "zesty",
-      "cool"
+      "cool",
+      "clean"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -7883,7 +7824,7 @@
     "moods": [
       "zesty",
       "fresh",
-      "warm",
+      "sweet",
       "clean"
     ],
     "avoidFlags": [],
@@ -7974,11 +7915,11 @@
       "leather"
     ],
     "moods": [
-      "warm",
       "sweet",
-      "deep",
+      "warm",
+      "cozy",
       "sensual",
-      "cozy"
+      "deep"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -8024,8 +7965,7 @@
     "moods": [
       "clean",
       "soft",
-      "calm",
-      "warm"
+      "calm"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -8193,10 +8133,10 @@
       "whiteFloral"
     ],
     "moods": [
+      "lovely",
       "sweet",
       "elegant",
-      "soft",
-      "lovely"
+      "soft"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -8367,9 +8307,8 @@
     "moods": [
       "warm",
       "cozy",
-      "deep",
-      "sensual",
-      "sweet"
+      "sweet",
+      "deep"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -8458,10 +8397,10 @@
       "musk"
     ],
     "moods": [
-      "lovely",
       "fresh",
-      "soft",
-      "elegant"
+      "zesty",
+      "lovely",
+      "soft"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -8561,8 +8500,7 @@
     "moods": [
       "fresh",
       "sweet",
-      "warm",
-      "calm"
+      "warm"
     ],
     "avoidFlags": [
       "tooSweet"
@@ -8662,11 +8600,10 @@
       "spicy"
     ],
     "moods": [
+      "sweet",
       "warm",
-      "deep",
       "sensual",
-      "cozy",
-      "sweet"
+      "deep"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -8756,9 +8693,7 @@
     "moods": [
       "sweet",
       "lovely",
-      "elegant",
-      "cozy",
-      "warm"
+      "elegant"
     ],
     "avoidFlags": [
       "tooSweet"
@@ -8856,10 +8791,9 @@
       "spicy"
     ],
     "moods": [
-      "calm",
-      "warm",
       "fresh",
-      "deep"
+      "warm",
+      "calm"
     ],
     "avoidFlags": [
       "spicy"
@@ -8950,10 +8884,10 @@
       "musk"
     ],
     "moods": [
-      "soft",
-      "elegant",
       "clean",
-      "lovely"
+      "soft",
+      "lovely",
+      "elegant"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -9051,7 +8985,6 @@
       "sweet",
       "sensual",
       "elegant",
-      "cozy",
       "warm"
     ],
     "avoidFlags": [
@@ -9151,9 +9084,8 @@
       "citrus"
     ],
     "moods": [
-      "cool",
       "fresh",
-      "deep",
+      "cool",
       "calm"
     ],
     "avoidFlags": [],
@@ -9329,10 +9261,9 @@
       "leather"
     ],
     "moods": [
-      "calm",
-      "deep",
       "fresh",
-      "warm"
+      "warm",
+      "deep"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -9558,9 +9489,8 @@
     "moods": [
       "sweet",
       "lovely",
-      "elegant",
       "fresh",
-      "zesty"
+      "elegant"
     ],
     "avoidFlags": [
       "tooSweet"
@@ -9630,7 +9560,8 @@
       "sensual"
     ],
     "avoidFlags": [
-      "tooSweet"
+      "tooSweet",
+      "powdery"
     ],
     "intensity": "medium",
     "polarizing": "mid",
@@ -9683,13 +9614,13 @@
       "amber"
     ],
     "moods": [
-      "elegant",
+      "sensual",
       "deep",
-      "sensual"
+      "elegant",
+      "warm"
     ],
     "avoidFlags": [
       "heavyFloral",
-      "tooStrong",
       "headache"
     ],
     "intensity": "strong",
@@ -10108,8 +10039,7 @@
       "elegant",
       "soft",
       "calm",
-      "cozy",
-      "lovely"
+      "cozy"
     ],
     "avoidFlags": [
       "powdery"
@@ -10197,10 +10127,9 @@
     ],
     "moods": [
       "sensual",
+      "sweet",
       "warm",
-      "deep",
-      "cozy",
-      "sweet"
+      "deep"
     ],
     "avoidFlags": [
       "tooSweet"
@@ -10629,10 +10558,8 @@
     "moods": [
       "warm",
       "soft",
-      "elegant",
       "cozy",
-      "sweet",
-      "deep"
+      "elegant"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -10807,9 +10734,8 @@
     ],
     "moods": [
       "fresh",
-      "calm",
       "clean",
-      "warm"
+      "calm"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -11059,10 +10985,9 @@
       "spicy"
     ],
     "moods": [
-      "elegant",
-      "warm",
       "sensual",
-      "calm",
+      "warm",
+      "elegant",
       "deep"
     ],
     "avoidFlags": [],
@@ -11318,8 +11243,7 @@
     "moods": [
       "deep",
       "warm",
-      "sensual",
-      "calm"
+      "sensual"
     ],
     "avoidFlags": [
       "smoky",
@@ -11793,9 +11717,7 @@
       "clean",
       "soft",
       "elegant",
-      "calm",
-      "cozy",
-      "lovely"
+      "calm"
     ],
     "avoidFlags": [
       "powdery"
@@ -11882,7 +11804,8 @@
     "moods": [
       "lovely",
       "soft",
-      "elegant"
+      "elegant",
+      "warm"
     ],
     "avoidFlags": [
       "powdery"
@@ -11960,7 +11883,6 @@
       "lovely",
       "fresh",
       "soft",
-      "clean",
       "elegant"
     ],
     "avoidFlags": [],
@@ -12030,8 +11952,8 @@
     "moods": [
       "calm",
       "soft",
-      "clean",
-      "cool"
+      "cozy",
+      "clean"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -12278,7 +12200,7 @@
     "moods": [
       "fresh",
       "cool",
-      "calm"
+      "clean"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -12451,10 +12373,9 @@
       "whiteFloral"
     ],
     "moods": [
-      "sensual",
-      "warm",
       "sweet",
-      "cozy"
+      "sensual",
+      "warm"
     ],
     "avoidFlags": [
       "tooSweet"
@@ -12542,8 +12463,8 @@
     "moods": [
       "sweet",
       "warm",
-      "sensual",
-      "cozy"
+      "cozy",
+      "fresh"
     ],
     "avoidFlags": [
       "tooSweet",
@@ -12669,9 +12590,9 @@
     ],
     "moods": [
       "soft",
-      "lovely",
       "fresh",
-      "elegant"
+      "lovely",
+      "sweet"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -12835,10 +12756,11 @@
       "clean",
       "calm",
       "soft",
-      "lovely",
       "elegant"
     ],
-    "avoidFlags": [],
+    "avoidFlags": [
+      "soapy"
+    ],
     "intensity": "light",
     "polarizing": "low",
     "seasonOccasion": "봄·여름 · 출근",
@@ -13090,10 +13012,9 @@
       "woody"
     ],
     "moods": [
-      "cool",
       "fresh",
-      "clean",
-      "calm"
+      "cool",
+      "clean"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -13183,11 +13104,12 @@
     ],
     "moods": [
       "warm",
+      "sensual",
       "elegant",
-      "sensual"
+      "sweet"
     ],
     "avoidFlags": [
-      "heavyFloral"
+      "powdery"
     ],
     "intensity": "medium",
     "polarizing": "mid",
@@ -13260,10 +13182,10 @@
       "fruity"
     ],
     "moods": [
-      "elegant",
       "soft",
-      "calm",
-      "lovely"
+      "fresh",
+      "elegant",
+      "calm"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -13489,7 +13411,10 @@
       "cozy",
       "calm"
     ],
-    "avoidFlags": [],
+    "avoidFlags": [
+      "powdery",
+      "soapy"
+    ],
     "intensity": "medium",
     "polarizing": "low",
     "seasonOccasion": "사계절 · 데일리",
@@ -13576,8 +13501,7 @@
       "calm",
       "soft",
       "cozy",
-      "warm",
-      "deep"
+      "warm"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -13944,10 +13868,9 @@
     ],
     "moods": [
       "fresh",
-      "lovely",
-      "soft",
       "zesty",
-      "sweet"
+      "sweet",
+      "lovely"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -14016,6 +13939,7 @@
     ],
     "moods": [
       "clean",
+      "fresh",
       "calm",
       "cool"
     ],
@@ -14094,8 +14018,7 @@
       "lovely",
       "sweet",
       "soft",
-      "fresh",
-      "zesty"
+      "fresh"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -14472,8 +14395,9 @@
     ],
     "moods": [
       "fresh",
-      "elegant",
-      "lovely"
+      "soft",
+      "lovely",
+      "elegant"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -14532,10 +14456,9 @@
       "green"
     ],
     "moods": [
-      "calm",
       "fresh",
+      "calm",
       "elegant",
-      "warm",
       "deep"
     ],
     "avoidFlags": [],
@@ -14662,9 +14585,9 @@
     ],
     "moods": [
       "calm",
-      "deep",
       "soft",
-      "warm"
+      "warm",
+      "elegant"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -14897,15 +14820,16 @@
     ],
     "moods": [
       "zesty",
-      "lovely",
-      "soft",
+      "fresh",
       "clean",
-      "cool",
-      "fresh"
+      "sweet",
+      "soft"
     ],
-    "avoidFlags": [],
+    "avoidFlags": [
+      "soapy"
+    ],
     "intensity": "light",
-    "polarizing": "low",
+    "polarizing": "high",
     "seasonOccasion": "봄·여름 · 휴가",
     "summary": "귤과 레몬 위에 꽃과 머스크가 번지는 향",
     "drydown": "몇 시간 뒤엔 보송한 화이트 머스크가 남아요",
@@ -14978,7 +14902,7 @@
       "calm",
       "fresh",
       "soft",
-      "cool"
+      "cozy"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -15146,7 +15070,7 @@
       "elegant",
       "soft",
       "lovely",
-      "clean"
+      "sweet"
     ],
     "avoidFlags": [
       "heavyFloral"
@@ -15232,7 +15156,6 @@
       "clean",
       "fresh",
       "soft",
-      "cool",
       "zesty"
     ],
     "avoidFlags": [],
@@ -15322,7 +15245,6 @@
     "moods": [
       "warm",
       "deep",
-      "cozy",
       "sweet",
       "sensual"
     ],
@@ -15406,15 +15328,15 @@
         }
       ]
     },
-    "family": "fruity",
+    "family": "floral",
     "subFamilies": [
-      "floral"
+      "citrus"
     ],
     "moods": [
       "fresh",
+      "soft",
       "lovely",
-      "zesty",
-      "sweet"
+      "elegant"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -15721,7 +15643,8 @@
       "deep"
     ],
     "avoidFlags": [
-      "heavyFloral"
+      "heavyFloral",
+      "spicy"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -15894,12 +15817,13 @@
       "amber"
     ],
     "moods": [
-      "deep",
+      "sweet",
+      "warm",
       "sensual",
-      "warm"
+      "deep"
     ],
     "avoidFlags": [
-      "smoky"
+      "tooSweet"
     ],
     "intensity": "strong",
     "polarizing": "high",
@@ -15976,7 +15900,8 @@
     "moods": [
       "elegant",
       "sensual",
-      "warm"
+      "warm",
+      "sweet"
     ],
     "avoidFlags": [
       "heavyFloral"
@@ -16055,10 +15980,9 @@
       "citrus"
     ],
     "moods": [
-      "zesty",
-      "lovely",
-      "soft",
       "fresh",
+      "zesty",
+      "soft",
       "sweet"
     ],
     "avoidFlags": [],
@@ -16132,12 +16056,12 @@
     "moods": [
       "soft",
       "cozy",
-      "lovely",
-      "calm",
-      "clean"
+      "sweet",
+      "lovely"
     ],
     "avoidFlags": [
-      "powdery"
+      "powdery",
+      "tooSweet"
     ],
     "intensity": "medium",
     "polarizing": "mid",
@@ -16451,7 +16375,7 @@
       "cozy",
       "warm",
       "sweet",
-      "sensual"
+      "soft"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -16529,8 +16453,7 @@
     "moods": [
       "lovely",
       "fresh",
-      "soft",
-      "elegant"
+      "soft"
     ],
     "avoidFlags": [],
     "intensity": "light",
@@ -16700,10 +16623,9 @@
     ],
     "moods": [
       "fresh",
-      "elegant",
       "zesty",
-      "sweet",
-      "lovely"
+      "elegant",
+      "sweet"
     ],
     "avoidFlags": [],
     "intensity": "medium",
@@ -16808,9 +16730,8 @@
     ],
     "moods": [
       "fresh",
-      "deep",
       "warm",
-      "calm"
+      "deep"
     ],
     "avoidFlags": [
       "spicy"
@@ -17248,8 +17169,7 @@
       "deep",
       "sensual",
       "warm",
-      "cozy",
-      "sweet"
+      "elegant"
     ],
     "avoidFlags": [
       "smoky",
@@ -17426,10 +17346,9 @@
     ],
     "moods": [
       "warm",
-      "sensual",
-      "elegant",
-      "cozy",
       "sweet",
+      "sensual",
+      "cozy",
       "deep"
     ],
     "avoidFlags": [
@@ -17509,11 +17428,11 @@
       "soft",
       "cozy",
       "calm",
-      "clean"
+      "warm"
     ],
     "avoidFlags": [],
     "intensity": "medium",
-    "polarizing": "mid",
+    "polarizing": "high",
     "seasonOccasion": "가을·겨울 · 휴식",
     "summary": "살결에 닿는 따뜻한 머스크 같은 포근한 향",
     "drydown": "몇 시간 뒤엔 부드러운 머스크가 피부 가까이 남아요",
@@ -17583,8 +17502,7 @@
       "clean",
       "fresh",
       "soft",
-      "calm",
-      "cozy"
+      "calm"
     ],
     "avoidFlags": [],
     "intensity": "medium",

@@ -19,14 +19,23 @@ function rowKey(concentration: string): string | null {
 }
 
 /** 카드 뒷면의 농도 버튼: 올려 두거나 누르면 농도 종류 표가 뜨고, 이 향수의 농도 행을 강조한다 */
-export default function ConcentrationHint({ concentration, family }: { concentration: string; family: FamilyId }) {
+export default function ConcentrationHint({
+  concentration,
+  family,
+  align = 'right',
+}: {
+  concentration: string
+  family: FamilyId
+  /** right: 버튼 오른쪽 끝에 맞춰 왼쪽으로 펼침 / center: 가장 가까운 relative 부모의 가운데 아래로 펼침 */
+  align?: 'right' | 'center'
+}) {
   const [hover, setHover] = useState(false)
   const [pinned, setPinned] = useState(false)
   const id = useId()
   const open = hover || pinned
   const mine = rowKey(concentration)
   return (
-    <span className="relative shrink-0" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+    <span className={`shrink-0 ${align === 'right' ? 'relative' : ''}`} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <button
         type="button"
         aria-expanded={open}
@@ -45,7 +54,9 @@ export default function ConcentrationHint({ concentration, family }: { concentra
         <div
           id={id}
           role="tooltip"
-          className="absolute right-0 top-[calc(100%+6px)] z-20 w-[min(272px,calc(100vw-64px))] rounded-xl border border-line bg-card p-3.5 shadow-[0_12px_32px_-8px_rgba(0,0,0,0.25)]"
+          className={`absolute top-[calc(100%+6px)] z-20 w-[min(272px,calc(100vw-64px))] rounded-xl border border-line bg-card p-3.5 shadow-[0_12px_32px_-8px_rgba(0,0,0,0.25)] ${
+            align === 'right' ? 'right-0' : 'left-1/2 -translate-x-1/2'
+          }`}
         >
           <p className="pb-2 text-xs font-medium text-ink">향수 농도 한눈에 보기</p>
           <ul className="flex flex-col gap-1">

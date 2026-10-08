@@ -7,6 +7,7 @@ import { formatPrice } from '../../lib/price'
 import type { Recommendation } from '../../lib/recommend'
 import type { Perfume } from '../../types'
 import CardBack from './CardBack'
+import ConcentrationHint from './ConcentrationHint'
 import FaceLabel from './FaceLabel'
 import { tiersOf } from './noteInfo'
 
@@ -15,12 +16,22 @@ interface Props {
   total: number
   rec: Recommendation
   hasMemo: boolean
+  /** 이미 시향 노트에 남긴 별점(있으면 "이미 맡아본 향" 표시) */
+  triedRating?: number
   /** 선물 모드: 호불호 적은 향이면 앞면에 배지를 보여준다 */
   gift?: boolean
   onMemo: (p: Perfume) => void
 }
 
-export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: Props) {
+/** "분위기 3개 중 2개 · 향기 1개 중 1개가 맞아요" */
+function matchLine(rec: Recommendation): string {
+  const parts: string[] = []
+  if (rec.moodMatch.total > 0) parts.push(`분위기 ${rec.moodMatch.total}개 중 ${rec.moodMatch.matched}개`)
+  if (rec.scentMatch.total > 0) parts.push(`향기 ${rec.scentMatch.total}개 중 ${rec.scentMatch.matched}개`)
+  return parts.length > 0 ? `${parts.join(' · ')}가 맞아요` : '호불호가 적은 향 위주로 골랐어요'
+}
+
+export default function ScentCard({ index, total, rec, hasMemo, triedRating, gift, onMemo }: Props) {
   const p = rec.perfume
   const [flipped, setFlipped] = useState(false)
   const frontTitle = useRef<HTMLHeadingElement>(null)
@@ -62,14 +73,33 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
           <div className="flex flex-col items-center">
             <div className="flex h-72 w-[216px] items-center justify-center overflow-hidden rounded-xl bg-card shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
               <PerfumeImage perfume={p} />
+
             </div>
-            <span
-              className="mt-4 flex items-center gap-1.5 rounded-full px-3 py-1 text-sm text-ink"
-              style={{ background: `color-mix(in srgb, var(--${p.family}), transparent 75%)` }}
-            >
-              <span className="size-1.5 rounded-full" style={{ background: `var(--${p.family})` }} aria-hidden="true" />
-              {family?.name}
-            </span>
+            <div className="relative mt-4 flex items-center justify-center gap-2">
+              <span
+                className="flex items-center gap-1.5 rounded-full px-3 py-1 text-sm text-ink"
+                style={{ background: `color-mix(in srgb, var(--${p.family}), transparent 75%)` }}
+              >
+                <span className="size-1.5 rounded-full" style={{ background: `var(--${p.family})` }} aria-hidden="true" />
+                {family?.name}
+              </span>
+              {p.concentration && <ConcentrationHint concentration={p.concentration} family={p.family} align="center" />}
+            </div>
+            {/* 이미 시향 노트에 남긴 향수: 칸을 항상 비워 두어 카드마다 아래 내용이 같은 높이에 놓인다 */}
+            <div className="mt-1.5 flex h-6 items-center">
+              {triedRating !== undefined && (
+                <span
+                  className="flex items-center gap-1.5 rounded-full border bg-card px-2.5 py-0.5 text-[11px] tracking-[0.2px] text-ink"
+                  style={{ borderColor: `color-mix(in srgb, var(--${p.family}), var(--ink) 25%)` }}
+                  aria-label={`이미 맡아본 향, 별점 ${triedRating}점`}
+                >
+                  이미 맡아본 향
+                  <span aria-hidden="true" className="text-[11px] tracking-[0.5px] text-citrus-deep">
+                    {'★'.repeat(triedRating)}
+                  </span>
+                </span>
+              )}
+            </div>
             {gift && p.polarizing === 'low' && (
               <span className="mt-1.5 rounded-full border border-line/60 bg-card/80 px-2.5 py-0.5 text-[11px] tracking-[0.55px] text-ink">호불호 적음</span>
             )}
@@ -110,11 +140,14 @@ export default function ScentCard({ index, total, rec, hasMemo, gift, onMemo }: 
 
           <div className="flex flex-col gap-3">
             <p className="min-h-[39px] text-sm leading-[19.25px] text-ink">"{p.summary}"</p>
-            {rec.reasons.length > 0 && (
-              <p className="rounded-lg bg-paper/70 px-2.5 py-2.5 text-[13px] leading-[21px] tracking-[-0.08px] text-ink">
-                추천 이유 <span className="text-slate">· {rec.reasons.join(' + ')}</span>
-              </p>
-            )}
+            <div className="flex h-[84px] flex-col justify-center gap-0.5 overflow-hidden rounded-lg bg-paper/70 px-2.5 py-2 text-[13px] leading-[21px] tracking-[-0.08px] text-ink">
+              {rec.reasons.length > 0 && (
+                <p className="line-clamp-2">
+                  추천 이유 <span className="text-slate">· {rec.reasons.join(' + ')}</span>
+                </p>
+              )}
+              <p className="text-[12px] leading-[19px] text-slate">{matchLine(rec)}</p>
+            </div>
           </div>
 
           <div className="flex items-baseline justify-between gap-2 border-t border-line/40 pt-3">

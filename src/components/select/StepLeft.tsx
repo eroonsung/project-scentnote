@@ -3,7 +3,8 @@ import filterNote from '../../assets/icons/select/filter-note.svg'
 import noteBook from '../../assets/icons/select/note-book.svg'
 import moodForest from '../../assets/images/mood-forest.jpg'
 import moodLinen from '../../assets/images/mood-linen.jpg'
-import { CHIPS, getFamily } from '../../lib/perfumes'
+import { avoidedCount } from '../../lib/avoid'
+import { CHIPS, getFamily, PERFUMES } from '../../lib/perfumes'
 import type { Selection } from '../../types'
 import { conflictNotice, conflictReason } from '../../lib/chipConflicts'
 import { AvoidChip, MoodChip, ScentChip } from './Chips'
@@ -131,7 +132,7 @@ export function AvoidStep({ selection, onToggle, gift }: Props & { gift?: boolea
         </div>
         <div className="flex flex-wrap gap-3" role="group" aria-label="피하고 싶은 느낌 (0~3개 선택)">
           {CHIPS.avoids.map((a) => (
-            <AvoidChip key={a.id} label={a.label} selected={selection.avoids.includes(a.id)} disabled={full} onClick={() => onToggle('avoids', a.id)} />
+            <AvoidChip key={a.id} label={a.label} selected={selection.avoids.includes(a.id)} disabled={full} count={avoidedCount(PERFUMES, a.id)} onClick={() => onToggle('avoids', a.id)} />
           ))}
         </div>
       </div>

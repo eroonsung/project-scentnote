@@ -8,7 +8,8 @@ import restart from '../../assets/icons/select/restart.svg'
 import sequence from '../../assets/icons/select/sequence.svg'
 import xSmall from '../../assets/icons/select/x-small.svg'
 import { AVOID_HINT, FAMILY_EN, FAMILY_PHRASE, TIER_LABELS } from '../../lib/labels'
-import { CHIPS } from '../../lib/perfumes'
+import { avoidedCount } from '../../lib/avoid'
+import { CHIPS, PERFUMES } from '../../lib/perfumes'
 import type { CandidateCount } from '../../lib/recommend'
 import type { FamilyId, Selection } from '../../types'
 
@@ -146,7 +147,7 @@ export default function TastePanel(p: Props) {
                 <li key={a.id} className="flex w-fit max-w-full flex-wrap items-center gap-2 rounded-full bg-card px-3 py-1.5 text-sm text-ink shadow-[0_1px_1px_rgba(0,0,0,0.05)]">
                   <img src={block} alt="" width={11.67} height={11.67} />
                   {a.label}
-                  <span className="text-[11px] tracking-[0.55px] text-slate">({AVOID_HINT[a.id]})</span>
+                  <span className="text-[11px] tracking-[0.55px] text-slate">({AVOID_HINT[a.id]} · {avoidedCount(PERFUMES, a.id)}종)</span>
                 </li>
               ))}
             </ul>

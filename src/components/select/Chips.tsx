@@ -77,7 +77,7 @@ export function ScentChip({ chip, selected, disabled, onClick }: ToggleProps & {
 }
 
 /** 피하고 싶은 칩: 선택하면 X 표시와 EXCLUDED */
-export function AvoidChip({ label, selected, disabled, onClick }: ToggleProps & { label: string }) {
+export function AvoidChip({ label, selected, disabled, count, onClick }: ToggleProps & { label: string; count?: number }) {
   return (
     <button
       type="button"
@@ -90,7 +90,11 @@ export function AvoidChip({ label, selected, disabled, onClick }: ToggleProps & 
     >
       <img src={selected ? xSelected : minusCircle} alt="" width={selected ? 9.33 : 13.33} height={selected ? 9.33 : 13.33} />
       {label}
-      {selected && <span className="font-mono text-[11px] uppercase tracking-[0.55px] text-hint">EXCLUDED</span>}
+      {selected ? (
+        <span className="font-mono text-[11px] uppercase tracking-[0.55px] text-hint">EXCLUDED</span>
+      ) : (
+        count !== undefined && <span className="font-mono text-[11px] tracking-[0.55px] text-hint">{count}종</span>
+      )}
     </button>
   )
 }

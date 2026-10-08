@@ -3,6 +3,7 @@ import chipsJson from '../data/chips.json'
 import familiesJson from '../data/families.json'
 import perfumesJson from '../data/perfumes.json'
 import type { Chips, Family, Perfume, Selection } from '../types'
+import { AVOID_RULES, isAvoided } from './avoid'
 import { countCandidates, recommend } from './recommend'
 
 const perfumes = perfumesJson as unknown as Perfume[]
@@ -35,6 +36,49 @@ describe('recommend', () => {
       }
     }
     expect(checked).toBeGreaterThan(50)
+  })
+
+  it('분위기를 모두 가진 향수가 3개 이상이면 3개 모두 분위기를 전부 충족한다(단계별 확장)', () => {
+    let checked = 0
+    for (const o of chips.objects) {
+      const sel: Selection = { ...base, moods: ['calm', 'fresh'], objects: [o.id] }
+      const pool = perfumes.filter((p) => p.moods.includes('calm') && p.moods.includes('fresh') && (p.family === o.family || p.subFamilies.includes(o.family)))
+      if (pool.length < 3) continue
+      checked++
+      for (const r of recommend(perfumes, chips, familiesList, sel).items) expect(r.moodMatch).toEqual({ matched: 2, total: 2 })
+    }
+    expect(checked).toBeGreaterThan(0)
+  })
+
+  it('모두 가진 향수가 모자라면 분위기가 하나 덜 맞는 향수로 넓히고, 맞은 개수를 알려준다', () => {
+    const sel: Selection = { ...base, moods: ['calm', 'sweet', 'sensual'], objects: ['forest'] }
+    const { items } = recommend(perfumes, chips, familiesList, sel)
+    expect(items).toHaveLength(3)
+    for (const r of items) {
+      expect(r.moodMatch.total).toBe(3)
+      expect(r.moodMatch.matched).toBe(['calm', 'sweet', 'sensual'].filter((m) => r.perfume.moods.includes(m)).length)
+      expect(r.reasons.length).toBeGreaterThanOrEqual(r.moodMatch.matched + r.scentMatch.matched)
+    }
+  })
+
+  it('스모키·파우더·알싸한 향을 피하면 그 계열 향수는 태그가 없어도 나오지 않는다', () => {
+    const cases: [string, string][] = [['smoky', 'leather'], ['powdery', 'powdery'], ['spicy', 'spicy']]
+    for (const [avoid, family] of cases) {
+      for (const m of chips.moods) {
+        const sel: Selection = { ...base, moods: [m.id], objects: ['soap'], avoids: [avoid] }
+        for (const r of recommend(perfumes, chips, familiesList, sel).items) expect(r.perfume.family).not.toBe(family)
+      }
+      const open = countCandidates(perfumes, chips, { ...base, moods: ['soft'] })
+      const closed = countCandidates(perfumes, chips, { ...base, moods: ['soft'], avoids: [avoid] })
+      expect(closed.any).toBeLessThanOrEqual(open.any)
+    }
+  })
+
+  it('같은 계열이어도 점수가 높으면 함께 나온다 (계열 다양화는 하지 않는다)', () => {
+    const sel: Selection = { ...base, moods: ['calm', 'clean'], objects: ['lemon'] }
+    const { items } = recommend(perfumes, chips, familiesList, sel)
+    const top = Math.max(...items.map((r) => r.score))
+    expect(items.filter((r) => r.score === top).length).toBeGreaterThanOrEqual(2)
   })
 
   it('피하고 싶은 칩과 겹치는 향수는 나오지 않는다', () => {
@@ -110,5 +154,68 @@ describe('장면 고르기(SCENES)', () => {
       const both = items.filter((r) => r.perfume.moods.some((m) => s.moods.includes(m)) && (r.perfume.family === fam || r.perfume.subFamilies.includes(fam)))
       expect(both.length).toBeGreaterThanOrEqual(2)
     }
+  })
+})
+
+describe('시향 순서 정렬', () => {
+  it('같은 계열·같은 강도면 농도가 낮은 향수가 먼저 온다 (EDT → EDP)', async () => {
+    const { sortSniffingOrder } = await import('./recommend')
+    const mk = (id: string, concentration: string): any => ({
+      perfume: { id, family: 'citrus', intensity: 'medium', concentration },
+      score: 5, reasons: [], moodMatch: { matched: 0, total: 0 }, scentMatch: { matched: 0, total: 0 },
+    })
+    const sorted = sortSniffingOrder([mk('a', 'EDP'), mk('b', 'EDT'), mk('c', 'EDC')], familiesList)
+    expect(sorted.map((r) => r.perfume.id)).toEqual(['c', 'b', 'a'])
+  })
+})
+
+describe('피하고 싶은 느낌', () => {
+  const rule = (id: string) => AVOID_RULES[id]
+
+  it('칩마다 기준이 있고, 고르면 그 기준에 해당하는 향수는 추천에 나오지 않는다', () => {
+    for (const a of chips.avoids) {
+      expect(rule(a.id)).toBeTypeOf('function')
+      for (const m of chips.moods) {
+        const sel: Selection = { ...base, moods: [m.id], objects: ['lemon'], avoids: [a.id] }
+        for (const r of recommend(perfumes, chips, familiesList, sel).items) expect(rule(a.id)(r.perfume)).toBe(false)
+      }
+    }
+  })
+
+  it('너무 진한 향을 피하면 강도가 진함인 향수는 태그와 상관없이 모두 빠진다', () => {
+    const strong = perfumes.filter((p) => p.intensity === 'strong')
+    expect(strong.length).toBeGreaterThan(0)
+    for (const p of strong) expect(isAvoided(p, ['tooStrong'])).toBe(true)
+    const sel: Selection = { ...base, moods: ['deep'], objects: ['smoky'], avoids: ['tooStrong'] }
+    for (const r of recommend(perfumes, chips, familiesList, sel).items) expect(r.perfume.intensity).not.toBe('strong')
+  })
+
+  it('피하고 싶은 칩을 3개 모두 골라도 추천 3개가 나온다', () => {
+    const triples = [['tooStrong', 'tooSweet', 'heavyFloral'], ['smoky', 'powdery', 'spicy'], ['tooStrong', 'headache', 'soapy']]
+    for (const avoids of triples) {
+      for (const m of chips.moods) {
+        const { items } = recommend(perfumes, chips, familiesList, { ...base, moods: [m.id], objects: ['flower'], avoids })
+        expect(items).toHaveLength(3)
+        for (const r of items) expect(isAvoided(r.perfume, avoids)).toBe(false)
+      }
+    }
+  })
+})
+
+describe('이미 평가한 향수·동점 순서', () => {
+  it('제외할 향수 id를 주면 추천에 나오지 않는다', () => {
+    const sel: Selection = { ...base, moods: ['calm', 'clean'], objects: ['lemon'] }
+    const first = recommend(perfumes, chips, familiesList, sel).items
+    const excludeIds = new Set(first.map((r) => r.perfume.id))
+    const next = recommend(perfumes, chips, familiesList, sel, { excludeIds }).items
+    expect(next).toHaveLength(3)
+    for (const r of next) expect(excludeIds.has(r.perfume.id)).toBe(false)
+  })
+
+  it('같은 선택이면 항상 같은 결과가 나온다', () => {
+    const sel: Selection = { ...base, moods: ['cozy'], objects: ['vanilla'] }
+    const a = recommend(perfumes, chips, familiesList, sel).items.map((r) => r.perfume.id)
+    const b = recommend(perfumes, chips, familiesList, sel).items.map((r) => r.perfume.id)
+    expect(a).toEqual(b)
   })
 })
