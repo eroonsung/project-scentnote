@@ -8,12 +8,14 @@ import tip1 from '../assets/icons/result/tip-1.svg'
 import tip2 from '../assets/icons/result/tip-2.svg'
 import tip3 from '../assets/icons/result/tip-3.svg'
 import tip4 from '../assets/icons/result/tip-4.svg'
+import FeedbackBar from '../components/result/FeedbackBar'
 import MemoSheet from '../components/result/MemoSheet'
 import ScentCard from '../components/result/ScentCard'
 import Toast from '../components/Toast'
 import { useSelection } from '../context/SelectionContext'
 import { CHIPS, FAMILIES, PERFUMES, TIPS } from '../lib/perfumes'
 import { recommend } from '../lib/recommend'
+import { syncFeedback } from '../lib/feedback'
 import { loadMemos, saveMemo, syncMemos, useMemos } from '../lib/storage'
 import type { Memo, Selection } from '../types'
 
@@ -58,6 +60,7 @@ export default function Result() {
   useEffect(() => {
     window.scrollTo({ top: 0 })
     void syncMemos()
+    void syncFeedback()
     return () => window.clearTimeout(toastTimer.current)
   }, [])
 
@@ -147,6 +150,17 @@ export default function Result() {
             * 가격은 공식몰에서 확인한 값이에요. 가격은 변동될 수 있어요.
           </p>
         </section>
+
+        <FeedbackBar
+          base={{
+            mode: selection.mode,
+            moods: selection.moods,
+            objects: selection.objects,
+            avoids: selection.avoids,
+            unsure: selection.unsure,
+            perfumeIds: items.map((r) => r.perfume.id),
+          }}
+        />
 
         <section className="flex flex-col gap-6 rounded-card border border-line/60 bg-mist p-6 md:p-[33px]" aria-labelledby="guide-title">
           <div className="flex items-center justify-between gap-3 border-b border-line/40 pb-[17px]">
