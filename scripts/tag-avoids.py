@@ -66,6 +66,9 @@ FLAGS = {
     "prada-candy": [S],
     "mugler-alien": [F, T, H],
 }
+# 2026-10-08 이전의 114개 중 FLAGS에 없는 향수는 태그 없음으로 확정돼 있다 (이후 추가분은 add-perfumes.py가 태그를 쓴다)
+LEGACY_CLEARED = set()
+
 # 분위기 태그 손질: 어울리지 않는 자동 추가 태그 제거
 MOOD_DROP = {"versace-eros": ["calm"], "jean-paul-gaultier-le-male": ["calm"]}
 
@@ -79,7 +82,9 @@ print("플래그별 향수 수")
 for f in (S, T, H, F, K, P, SP, SO): print(f"  {f}: {sum(f in v for v in FLAGS.values())}")
 if "--write" in sys.argv:
     for pid, r in ids.items():
-        ws.cell(r, col["avoid_flags"]).value = ", ".join(FLAGS.get(pid, [])) or None
+        # 이 목록에 없는 향수(나중에 추가된 향수 등)는 건드리지 않는다
+        if pid in FLAGS or pid in LEGACY_CLEARED:
+            ws.cell(r, col["avoid_flags"]).value = ", ".join(FLAGS.get(pid, [])) or None
     for pid, drop in MOOD_DROP.items():
         c = ws.cell(ids[pid], col["moods"])
         c.value = ", ".join(m for m in c.value.split(", ") if m not in drop)
