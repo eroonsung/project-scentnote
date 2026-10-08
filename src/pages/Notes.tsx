@@ -170,6 +170,27 @@ export default function Notes() {
         </ol>
       </section>
 
+      {/* 친구에게 공유하기도 이번에 만들지 않는다: 준비 중 안내만 */}
+      <section className="flex gap-4 rounded-xl bg-mist p-6 shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
+        <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-card text-ink shadow-[0_1px_1px_rgba(0,0,0,0.05)]">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <path d="M8.6 10.5l6.8-4M8.6 13.5l6.8 4" />
+          </svg>
+        </span>
+        <div className="flex max-w-[672px] flex-col gap-1">
+          <div className="flex flex-wrap items-center gap-2">
+            <h2 className="text-lg font-medium leading-[26px] tracking-[-0.18px] text-ink">공유 서비스 준비 중</h2>
+            <span className="rounded-full bg-ink-deep px-2 py-0.5 font-mono text-[11px] tracking-[0.275px] text-white">COMING SOON · SHARE</span>
+          </div>
+          <p className="text-sm leading-[22.75px] text-slate">
+            내가 시향해 본 향수를 친구에게 보내면, 친구가 자기 시향 노트에 저장할지 고를 수 있는 기능이 곧 추가돼요.
+          </p>
+        </div>
+      </section>
+
       {editing && editingPerfume && (
         <MemoSheet perfume={editingPerfume} existing={editing} onSave={onSaveEdit} onClose={() => setEditing(null)} />
       )}
