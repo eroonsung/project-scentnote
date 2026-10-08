@@ -87,6 +87,14 @@ export default function Home() {
                 선물할 향수 찾기
               </Link>
             </div>
+            <Link
+              to="/start"
+              className="mt-4 inline-flex h-12 items-center gap-2 rounded-btn border-2 border-dashed border-ink/40 bg-card/70 px-6 text-sm text-ink hover:border-ink hover:bg-card"
+            >
+              <b className="font-medium">향수가 처음이에요</b>
+              <span className="text-slate">· 장면 하나만 고르면 돼요</span>
+              <span aria-hidden="true" className="text-[11px]">→</span>
+            </Link>
             <ul className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-3 pt-6 text-xs leading-4 tracking-[0.3px] text-slate">
               <li className="flex items-baseline">
                 <b className="font-mono text-[15px] font-bold tracking-[1.04px] text-ink mr-px">14</b>가지 향 계열

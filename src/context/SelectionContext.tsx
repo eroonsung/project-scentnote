@@ -9,6 +9,8 @@ interface SelectionValue {
   toggle: (group: ChipGroup, id: string, max: number) => void
   clear: (group: ChipGroup) => void
   setUnsure: (unsure: boolean) => void
+  /** 분위기·향기를 한꺼번에 채운다 (장면 고르기). 나를 위한 향수 모드로 시작 */
+  applyPreset: (moods: string[], objects: string[]) => void
   reset: () => void
 }
 
@@ -36,11 +38,15 @@ export function SelectionProvider({ children }: { children: ReactNode }) {
     setSelection((prev) => ({ ...prev, unsure, moods: unsure ? [] : prev.moods }))
   }, [])
 
+  const applyPreset = useCallback((moods: string[], objects: string[]) => {
+    setSelection({ ...INITIAL, mode: 'self', moods, objects })
+  }, [])
+
   const reset = useCallback(() => setSelection(INITIAL), [])
 
   const value = useMemo(
-    () => ({ selection, setMode, toggle, clear, setUnsure, reset }),
-    [selection, setMode, toggle, clear, setUnsure, reset],
+    () => ({ selection, setMode, toggle, clear, setUnsure, applyPreset, reset }),
+    [selection, setMode, toggle, clear, setUnsure, applyPreset, reset],
   )
   return <SelectionContext.Provider value={value}>{children}</SelectionContext.Provider>
 }

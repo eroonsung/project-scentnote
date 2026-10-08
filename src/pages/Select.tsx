@@ -8,6 +8,7 @@ import TastePanel from '../components/select/TastePanel'
 import { useSelection } from '../context/SelectionContext'
 import { CHIPS, PERFUMES } from '../lib/perfumes'
 import { countCandidates } from '../lib/recommend'
+import { SCENES } from '../lib/scenes'
 import type { Mode } from '../types'
 
 type Step = 1 | 2 | 3
@@ -103,8 +104,23 @@ export default function Select() {
     )
   } else {
     progress = <StepProgress step={step} onGo={goStep} moodCount={selection.moods.length} objectCount={selection.objects.length} />
+    const scene = SCENES.find((sc) => sc.id === params.get('scene'))
     left =
-      step === 1 ? <MoodStep selection={selection} onToggle={onToggle} /> : step === 2 ? <ScentStep selection={selection} onToggle={onToggle} /> : <AvoidStep selection={selection} onToggle={onToggle} />
+      step === 1 ? (
+        <MoodStep selection={selection} onToggle={onToggle} />
+      ) : step === 2 ? (
+        <ScentStep selection={selection} onToggle={onToggle} />
+      ) : (
+        <div className="flex flex-col gap-8">
+          {scene && selection.moods.length > 0 && (
+            <p className="rounded-xl border border-line bg-mist px-5 py-4 text-sm leading-[22px] text-ink" role="status">
+              <b className="font-medium">'{scene.title}'</b> 장면에 맞춰 분위기와 향기를 미리 골라 두었어요. 바꾸고 싶으면 위의 <b className="font-medium">01 분위기</b>,{' '}
+              <b className="font-medium">02 향기</b> 단계를 눌러 고칠 수 있어요.
+            </p>
+          )}
+          <AvoidStep selection={selection} onToggle={onToggle} />
+        </div>
+      )
     panel = (
       <TastePanel
         step={step}

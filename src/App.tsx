@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Notes from './pages/Notes'
 import Result from './pages/Result'
 import Select from './pages/Select'
+import Start from './pages/Start'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
+            <Route path="/start" element={<Start />} />
             <Route path="/select" element={<Select />} />
             <Route path="/result" element={<Result />} />
             <Route path="/notes" element={<Notes />} />

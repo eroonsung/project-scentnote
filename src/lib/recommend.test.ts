@@ -89,3 +89,26 @@ describe('recommend', () => {
     expect(fewer.any).toBeLessThan(all.any)
   })
 })
+
+describe('장면 고르기(SCENES)', () => {
+  it('장면의 칩은 모두 실제 칩이고, 서로 어울리지 않는 분위기가 없다', async () => {
+    const { SCENES } = await import('./scenes')
+    for (const s of SCENES) {
+      for (const m of s.moods) expect(chips.moods.some((c) => c.id === m)).toBe(true)
+      for (const o of s.objects) expect(chips.objects.some((c) => c.id === o)).toBe(true)
+      for (const [a, b] of chips.conflicts) expect(s.moods.includes(a) && s.moods.includes(b)).toBe(false)
+    }
+  })
+
+  it('장면마다 추천 3개가 나오고, 분위기와 향기를 둘 다 충족하는 향수가 먼저 나온다', async () => {
+    const { SCENES } = await import('./scenes')
+    for (const s of SCENES) {
+      const sel: Selection = { ...base, moods: s.moods, objects: s.objects }
+      const { items } = recommend(perfumes, chips, familiesList, sel)
+      expect(items).toHaveLength(3)
+      const fam = chips.objects.find((o) => o.id === s.objects[0])!.family
+      const both = items.filter((r) => r.perfume.moods.some((m) => s.moods.includes(m)) && (r.perfume.family === fam || r.perfume.subFamilies.includes(fam)))
+      expect(both.length).toBeGreaterThanOrEqual(2)
+    }
+  })
+})
