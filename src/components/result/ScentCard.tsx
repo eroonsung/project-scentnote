@@ -22,6 +22,13 @@ interface Props {
   onMemo: (p: Perfume) => void
 }
 
+/** 선물 모드: 데이터(호불호·세기)로 설명하는 한 줄. 예: "호불호가 적고 가벼운 향이에요" */
+function giftReason(p: Perfume): string {
+  const taste = { low: '호불호가 적고', mid: '개성은 있지만 대중적이고', high: '취향이 갈릴 수 있고' }[p.polarizing]
+  const strength = { light: '가벼운 향이에요', medium: '세기가 보통인 향이에요', strong: '진한 향이에요' }[p.intensity]
+  return `${taste} ${strength}`
+}
+
 /** "분위기 3개 중 2개 · 향기 1개 중 1개가 맞아요" */
 function matchLine(rec: Recommendation): string {
   const parts: string[] = []
@@ -96,9 +103,6 @@ export default function ScentCard({ index, rec, hasMemo, triedRating, gift, onMe
                 </span>
               )}
             </div>
-            {gift && p.polarizing === 'low' && (
-              <span className="mt-1.5 rounded-full border border-line/60 bg-card/80 px-2.5 py-0.5 text-[11px] tracking-[0.55px] text-ink">호불호 적음</span>
-            )}
             <h2
               ref={frontTitle}
               tabIndex={-1}
@@ -136,13 +140,18 @@ export default function ScentCard({ index, rec, hasMemo, triedRating, gift, onMe
 
           <div className="flex flex-col gap-3">
             <p className="min-h-[39px] text-sm leading-[19.25px] text-ink">"{p.summary}"</p>
-            <div className="flex h-[84px] flex-col justify-center gap-0.5 overflow-hidden rounded-lg bg-paper/70 px-2.5 py-2 text-[13px] leading-[21px] tracking-[-0.08px] text-ink">
+            <div className={`flex ${gift ? 'h-[112px]' : 'h-[84px]'} flex-col justify-center gap-0.5 overflow-hidden rounded-lg bg-paper/70 px-2.5 py-2 text-[13px] leading-[21px] tracking-[-0.08px] text-ink`}>
               {rec.reasons.length > 0 && (
                 <p className="line-clamp-2">
                   추천 이유 <span className="text-slate">· {rec.reasons.join(' + ')}</span>
                 </p>
               )}
               <p className="text-[12px] leading-[19px] text-slate">{matchLine(rec)}</p>
+              {gift && (
+                <p className="text-[12px] leading-[19px] text-ink">
+                  <b className="font-medium">{p.polarizing === 'high' ? '선물 전에 참고' : '선물하기 좋은 이유'}</b> · {giftReason(p)}
+                </p>
+              )}
             </div>
           </div>
 

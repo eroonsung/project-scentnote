@@ -2,7 +2,7 @@ import arrowRight from '../../assets/icons/select/arrow-right.svg'
 import block from '../../assets/icons/select/block.svg'
 import giftBox from '../../assets/icons/gift/gift-box.svg'
 import { AVOID_HINT, FAMILY_PHRASE } from '../../lib/labels'
-import { avoidedCount } from '../../lib/avoid'
+import { avoidedCount, chosenFamilies } from '../../lib/avoid'
 import { CHIPS, PERFUMES } from '../../lib/perfumes'
 import type { FamilyId, Selection } from '../../types'
 import EditButton from './EditButton'
@@ -107,7 +107,7 @@ export default function GiftPanel(p: Props) {
                   <li key={a.id} className="flex w-fit max-w-full flex-wrap items-center gap-2 rounded-full bg-card px-3 py-1.5 text-sm text-ink shadow-[0_1px_1px_rgba(0,0,0,0.05)]">
                     <img src={block} alt="" width={11.67} height={11.67} />
                     {a.label}
-                    <span className="text-[11px] tracking-[0.55px] text-slate">({AVOID_HINT[a.id]} · {avoidedCount(PERFUMES, a.id)}종)</span>
+                    <span className="text-[11px] tracking-[0.55px] text-slate">({AVOID_HINT[a.id]} · {avoidedCount(PERFUMES, a.id, chosenFamilies(selection.objects))}종)</span>
                   </li>
                 ))}
               </ul>

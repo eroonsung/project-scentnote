@@ -1,5 +1,5 @@
 import type { Chips, FamilyId, Family, Perfume, Selection } from '../types'
-import { isAvoided } from './avoid'
+import { AVOID_RULES, isAvoided } from './avoid'
 
 export interface Recommendation {
   perfume: Perfume
@@ -43,7 +43,8 @@ export interface CandidateCount {
  * 모두 맞는 향수는 칩을 더할수록 금방 0이 되므로, 추천은 '하나라도 맞는' 향수까지 넓혀서 점수 순으로 뽑는다(recommend()).
  */
 export function countCandidates(perfumes: Perfume[], chips: Chips, selection: Selection): CandidateCount {
-  const allowed = perfumes.filter((p) => !isAvoided(p, selection.avoids))
+  const chosen = selection.objects.map((id) => chips.objects.find((o) => o.id === id)?.family).filter((f): f is NonNullable<typeof f> => !!f)
+  const allowed = perfumes.filter((p) => !isAvoided(p, selection.avoids, chosen))
   if (selection.unsure) {
     const n = allowed.filter((p) => p.polarizing === 'low').length
     return { all: n, any: n }
@@ -101,6 +102,8 @@ export function scorePerfume(
       score += 1
     }
   }
+  // 피하고 싶은 칩의 태그가 붙어 있는데도 남은 향수(그 계열을 직접 골라서 허용된 경우)는 태그가 없는 향수보다 뒤로
+  for (const a of selection.avoids) if (p.avoidFlags.includes(AVOID_RULES[a]?.flag ?? a)) score -= 1
   if (selection.mode === 'gift' || selection.unsure) {
     if (p.polarizing === 'low') score += 2
     if (p.polarizing === 'high') score -= 2
@@ -141,7 +144,8 @@ export function recommend(
   selection: Selection,
   options: { excludeIds?: ReadonlySet<string> } = {},
 ): RecommendResult {
-  const allowed = perfumes.filter((p) => !isAvoided(p, selection.avoids) && !options.excludeIds?.has(p.id))
+  const chosen = selection.objects.map((id) => chips.objects.find((o) => o.id === id)?.family).filter((f): f is NonNullable<typeof f> => !!f)
+  const allowed = perfumes.filter((p) => !isAvoided(p, selection.avoids, chosen) && !options.excludeIds?.has(p.id))
   const scored: Recommendation[] = allowed.map((p) => ({ perfume: p, ...scorePerfume(p, chips, selection) }))
 
   // 동점이면 고른 조합마다 정해진 섞인 순서로 가른다(같은 선택이면 항상 같은 결과, 이름순·사진 유무에 치우치지 않게)
@@ -160,10 +164,16 @@ export function recommend(
       const hit = pool.find((r) => !picked.includes(r) && r.perfume.family === chip.family)
       if (hit) picked.push(hit)
     }
-    // 나머지는 점수 순으로 채운다. 계열이 겹쳐도 되고, 같은 계열 안의 순서는 마지막 시향 순서 정렬이 정한다.
-    for (const r of pool) {
-      if (picked.length === 3) break
-      if (!picked.includes(r)) picked.push(r)
+    // 나머지는 점수 순으로 채운다. 점수가 같은 향수끼리만, 이미 뽑힌 것과 세기·계열이 다른 향수를 먼저 쓴다
+    // (비슷한 향수 3개보다 가볍게→진하게 순서가 의미 있도록). 점수가 더 높은 향수를 건너뛰지는 않는다.
+    while (picked.length < 3) {
+      const remaining = pool.filter((r) => !picked.includes(r))
+      if (remaining.length === 0) break
+      const tied = remaining.filter((r) => r.score === remaining[0].score)
+      const seenIntensity = new Set(picked.map((r) => r.perfume.intensity))
+      const seenFamily = new Set(picked.map((r) => r.perfume.family))
+      const variety = (r: Recommendation) => (seenIntensity.has(r.perfume.intensity) ? 0 : 2) + (seenFamily.has(r.perfume.family) ? 0 : 1)
+      picked.push(tied.reduce((best, r) => (variety(r) > variety(best) ? r : best), tied[0]))
     }
   }
 

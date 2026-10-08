@@ -36,6 +36,12 @@ export default function Select() {
     if (selection.mode !== mode) setMode(mode)
   }, [mode, selection.mode, setMode])
 
+  // '피하고 싶은 느낌' 단계 앞으로 돌아오면 그 단계에서 고른 것을 비운다(앞 단계 선택이 바뀔 수 있어서)
+  const avoidStep = mode === 'gift' ? 2 : 3
+  useEffect(() => {
+    if (step < avoidStep && selection.avoids.length > 0) clear('avoids')
+  }, [step, avoidStep, selection.avoids.length, clear])
+
   // 단계가 바뀌면 맨 위로
   useEffect(() => {
     window.scrollTo({ top: 0 })

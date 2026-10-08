@@ -33,7 +33,7 @@ MOODS = [  # (id, 라벨, 연결 계열) — spec.md chips.json
 OBJECTS = [
     ("lemon", "레몬·귤", "citrus"), ("fruit", "과일", "fruity"), ("rain", "바람·비", "aqua"), ("grass", "풀잎·녹차", "green"),
     ("herb", "허브", "aromatic"), ("flower", "꽃", "floral"), ("whiteFlower", "하얀 꽃", "whiteFloral"), ("powder", "파우더", "powdery"),
-    ("soap", "비누·빨래", "musk"), ("spice", "후추·향신료", "spicy"), ("forest", "숲·나무", "woody"), ("resin", "흙·나무", "amber"),
+    ("soap", "비누·빨래", "musk"), ("spice", "후추·향신료", "spicy"), ("forest", "숲·나무", "woody"), ("resin", "송진·호박", "amber"),
     ("vanilla", "바닐라·달콤", "gourmand"), ("smoky", "스모키", "leather"),
 ]
 # 함께 고르면 어울리지 않는 분위기 쌍 (의미 기준으로 직접 정함). Select 화면에서 한쪽을 고르면 다른 쪽을 흐리게 한다.
