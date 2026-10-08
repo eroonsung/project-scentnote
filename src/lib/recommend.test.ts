@@ -87,24 +87,35 @@ describe('recommend', () => {
     for (const r of items) expect(r.perfume.avoidFlags).not.toContain('tooSweet')
   })
 
-  it('시향 순서는 향 계열 순서 → 강도 순서로 정렬된다', () => {
+  it('시향 순서는 강도(가벼움 → 진함) → 향 계열 순서로 정렬된다', () => {
     const s: Selection = { ...base, moods: ['calm', 'clean'], objects: ['rain', 'soap', 'forest'] }
     const { items } = recommend(perfumes, chips, familiesList, s)
     const order = new Map(familiesList.map((f) => [f.id, f.order]))
-    const orders = items.map((r) => order.get(r.perfume.family) ?? 99)
-    expect(orders).toEqual([...orders].sort((a, b) => a - b))
+    const rank = { light: 0, medium: 1, strong: 2 } as const
+    const keys = items.map((r) => [rank[r.perfume.intensity], order.get(r.perfume.family) ?? 99])
+    expect(keys).toEqual([...keys].sort((a, b) => a[0] - b[0] || a[1] - b[1]))
   })
 
-  it('가능하면 서로 다른 향 계열 3개를 고른다', () => {
-    const s: Selection = { ...base, moods: ['calm', 'clean'], objects: ['rain', 'soap', 'forest'] }
+  it('고른 향기 칩이 2~3개면 칩마다 그 계열(대표 계열) 향수가 하나씩 나온다', () => {
+    const cases = [['rain', 'soap', 'forest'], ['rain', 'forest'], ['soap', 'lemon', 'herb']]
+    for (const objects of cases) {
+      const s: Selection = { ...base, moods: ['calm', 'clean'], objects }
+      const got = new Set(recommend(perfumes, chips, familiesList, s).items.map((r) => r.perfume.family))
+      for (const id of objects) expect(got.has(chips.objects.find((o) => o.id === id)!.family)).toBe(true)
+    }
+  })
+
+  it('고른 분위기를 가진 향수가 없는 계열은 억지로 넣지 않는다 (분위기가 하나도 안 맞는 향수를 끼워 넣지 않음)', () => {
+    // 달콤한·매혹적인 분위기에 맞는 시트러스가 거의 없다: 레몬 칩이 있어도 분위기 0개짜리 시트러스를 넣지 않는다
+    const s: Selection = { ...base, moods: ['calm', 'sweet', 'sensual'], objects: ['lemon', 'vanilla', 'smoky'] }
     const { items } = recommend(perfumes, chips, familiesList, s)
-    expect(new Set(items.map((r) => r.perfume.family)).size).toBe(3)
+    for (const r of items) expect(r.moodMatch.matched).toBeGreaterThanOrEqual(1)
   })
 
-  it('고른 향기 칩마다 그 계열의 향수가 하나씩 나온다', () => {
-    const s: Selection = { ...base, moods: ['calm', 'clean'], objects: ['rain', 'soap', 'forest'] }
-    const got = recommend(perfumes, chips, familiesList, s).items.map((r) => r.perfume.family)
-    expect(new Set(got)).toEqual(new Set(['aqua', 'musk', 'woody']))
+  it('일부만 맞는 향수가 섞이면 partial로 알린다', () => {
+    const s: Selection = { ...base, moods: ['calm', 'sweet', 'sensual'], objects: ['forest'] }
+    const r = recommend(perfumes, chips, familiesList, s)
+    expect(r.partial).toBe(r.items.some((x) => x.moodMatch.matched < 3))
   })
 
   it('잘 모르겠어요(unsure)이면 호불호 적은 향을 먼저 고른다', () => {
@@ -157,7 +168,37 @@ describe('장면 고르기(SCENES)', () => {
   })
 })
 
+describe('선물하기', () => {
+  it('호불호가 큰 향수는 다른 후보로 3개를 채울 수 있으면 쓰지 않는다', () => {
+    let checked = 0
+    for (const m of chips.moods) {
+      const ok = perfumes.filter((p) => p.polarizing !== 'high' && p.moods.includes(m.id))
+      if (ok.length < 3) continue
+      checked++
+      const { items } = recommend(perfumes, chips, familiesList, { ...base, mode: 'gift', moods: [m.id] })
+      for (const r of items) expect(r.perfume.polarizing).not.toBe('high')
+    }
+    expect(checked).toBeGreaterThan(5)
+  })
+
+  it('잘 모르겠어요이면 호불호가 적은 향수만 나오고 항상 3개다', () => {
+    const { items } = recommend(perfumes, chips, familiesList, { ...base, mode: 'gift', unsure: true })
+    expect(items).toHaveLength(3)
+    for (const r of items) expect(r.perfume.polarizing).toBe('low')
+  })
+})
+
 describe('시향 순서 정렬', () => {
+  it('계열 순서가 늦어도 강도가 가벼우면 먼저 온다', async () => {
+    const { sortSniffingOrder } = await import('./recommend')
+    const mk = (id: string, family: string, intensity: string): any => ({
+      perfume: { id, family, intensity, concentration: 'EDP' },
+      score: 5, reasons: [], moodMatch: { matched: 0, total: 0 }, scentMatch: { matched: 0, total: 0 },
+    })
+    const sorted = sortSniffingOrder([mk('a', 'citrus', 'strong'), mk('b', 'musk', 'light')], familiesList)
+    expect(sorted.map((r) => r.perfume.id)).toEqual(['b', 'a'])
+  })
+
   it('같은 계열·같은 강도면 농도가 낮은 향수가 먼저 온다 (EDT → EDP)', async () => {
     const { sortSniffingOrder } = await import('./recommend')
     const mk = (id: string, concentration: string): any => ({

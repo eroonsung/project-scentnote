@@ -73,7 +73,7 @@ export default function GiftPanel(p: Props) {
           )}
           {families.length > 0 && !selection.unsure && (
             <p className="pt-1 text-[11px] leading-4 tracking-[0.55px] text-slate">
-              먼저 살펴볼 향: {families.slice(0, 3).map((f) => FAMILY_PHRASE[f]).join(' · ')}
+              분위기와 어울리는 향 계열: {families.slice(0, 3).map((f) => FAMILY_PHRASE[f]).join(' · ')}
             </p>
           )}
         </section>

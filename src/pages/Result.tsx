@@ -119,9 +119,15 @@ export default function Result() {
           <p className="text-base leading-[26px] tracking-[-0.08px] text-slate">{summarize(selection)}</p>
           <p className="mt-2 flex items-center gap-2 rounded-lg bg-mist/80 px-3.5 py-1.5 text-sm text-ink">
             <img src={summaryPill} alt="" width={15} height={15} />
-            오프라인 매장 시향 최적화 숏리스트 (가벼운 향 → 묵직한 잔향 순)
+            가벼운 향부터 진한 향 순서예요
           </p>
-          {result.relaxed && <p className="text-sm text-slate">조건에 딱 맞는 향이 적어 비슷한 향을 함께 보여드려요.</p>}
+          {result.relaxed ? (
+            <p className="text-sm text-slate">조건에 딱 맞는 향이 적어 비슷한 향을 함께 보여드려요.</p>
+          ) : (
+            result.partial && (
+              <p className="text-sm text-slate">고른 느낌을 모두 가진 향수가 적어, 일부만 맞는 향수도 함께 보여 드려요. 카드에서 몇 개가 맞는지 확인해 보세요.</p>
+            )
+          )}
         </header>
 
         <section aria-label="시향 후보" className="flex flex-col gap-3">

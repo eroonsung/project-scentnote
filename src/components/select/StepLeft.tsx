@@ -143,7 +143,7 @@ export function AvoidStep({ selection, onToggle, gift }: Props & { gift?: boolea
         <div className="flex flex-col gap-[3px]">
           <b className="text-sm font-medium text-ink">피하고 싶은 느낌 팁</b>
           <p className="text-sm leading-[22.75px] text-slate">
-            피하고 싶은 불호 노트를 사전에 제외하면 매장에서 맡아볼 3가지 추천 향수가 첫인상부터 편안하게 다가옵니다. 선택하지 않고 건너뛰셔도 선호도 기반 큐레이션이 안전하게 완성됩니다.
+            싫은 느낌을 골라 두면 그런 향수는 처음부터 결과에서 빠져요. 고르지 않고 건너뛰어도 괜찮아요.
           </p>
         </div>
       </div>

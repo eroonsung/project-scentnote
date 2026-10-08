@@ -16,6 +16,8 @@ export interface RecommendResult {
   items: Recommendation[]
   /** 조건에 딱 맞는 향이 적어 조건을 완화해서 채웠는지 */
   relaxed: boolean
+  /** 고른 분위기·향기를 전부 가진 향수가 모자라 일부만 맞는 향수가 섞였는지 */
+  partial: boolean
 }
 
 const INTENSITY_ORDER = { light: 0, medium: 1, strong: 2 } as const
@@ -120,13 +122,13 @@ export function scorePerfume(
 const CONCENTRATION_ORDER: Record<string, number> = { edc: 0, cologne: 0, edt: 1, 'cologne absolue': 2, edp: 2, parfum: 3, extrait: 3 }
 const concentrationRank = (c: string | null | undefined) => CONCENTRATION_ORDER[(c ?? '').toLowerCase()] ?? 1.5
 
-/** 시향 순서: 가벼운 향 → 진한 향 (향 계열 order → 강도 → 농도). 모두 같으면 뽑힌 순서(점수 순) 그대로 */
+/** 시향 순서: 가벼운 향 → 진한 향 (강도 → 향 계열 order → 농도). 모두 같으면 뽑힌 순서(점수 순) 그대로 */
 export function sortSniffingOrder(items: Recommendation[], families: Family[]): Recommendation[] {
   const order = new Map<FamilyId, number>(families.map((f) => [f.id, f.order]))
   return [...items].sort(
     (a, b) =>
-      (order.get(a.perfume.family) ?? 99) - (order.get(b.perfume.family) ?? 99) ||
       INTENSITY_ORDER[a.perfume.intensity] - INTENSITY_ORDER[b.perfume.intensity] ||
+      (order.get(a.perfume.family) ?? 99) - (order.get(b.perfume.family) ?? 99) ||
       concentrationRank(a.perfume.concentration) - concentrationRank(b.perfume.concentration),
   )
 }
@@ -134,7 +136,8 @@ export function sortSniffingOrder(items: Recommendation[], families: Family[]): 
 /**
  * 추천 3개를 고른다.
  * 1) 피하고 싶은 칩과 겹치는 향수 제외 2) 점수 순 정렬(동점은 선택 조합마다 고정된 섞인 순서)
- * 3) 고른 분위기를 모두 가진 향수(향기도 맞는)를 먼저 뽑고, 3개가 안 되면 분위기가 하나 덜 맞는 향수까지 단계적으로 넓힌다. 고른 향기 칩마다 그 계열 향수를 1개씩 먼저, 나머지는 점수 순(계열이 겹쳐도 됨)
+ * 3) 고른 향기 칩마다 그 계열에서 분위기가 가장 잘 맞는 향수를 1개씩 먼저 뽑고(고른 향기가 결과에 빠지지 않게),
+ *    남은 자리는 고른 분위기를 모두 가진 향수(향기도 맞는)부터, 모자라면 분위기가 하나 덜 맞는 향수까지 단계적으로 넓혀 점수 순으로 채운다(계열이 겹쳐도 됨)
  * 4) 시향 순서(가벼운 향 → 진한 향)로 정렬
  */
 export function recommend(
@@ -155,15 +158,29 @@ export function recommend(
 
   const matched = scored.filter((r) => r.score > 0)
   const picked: Recommendation[] = []
-  const fillFrom = (pool: Recommendation[]) => {
-    // 고른 향기 칩마다 그 계열에서 가장 잘 맞는 향수를 하나씩 먼저 뽑는다 (고른 향기가 결과에 하나씩 보이도록)
+  // 고른 분위기와 서로 어울리지 않는 분위기 태그를 가진 향수(예: '시원한'을 골랐는데 '따뜻한' 태그)는 마지막에만 쓴다
+  const clashes = (r: Recommendation) =>
+    selection.moods.some((m) => r.perfume.moods.some((pm) => chips.conflicts.some(([a, b]) => (a === m && b === pm) || (b === m && a === pm))))
+
+  // 먼저, 고른 향기 칩이 2개 이상이면 칩마다 그 계열 향수를 1개씩 뽑는다 (고른 향기가 결과에서 빠지지 않도록).
+  // 그 계열이 대표 계열이고, 반대 분위기 태그가 없고, 고른 분위기를 하나 이상 가진 향수 중에서 분위기를 많이 가진 → 점수 높은 순(동점은 섞인 순서).
+  // 그런 향수가 그 계열에 없으면 억지로 넣지 않는다(분위기가 하나도 안 맞는 향수를 끼워 넣지 않기 위해).
+  // 칩이 1개면 아래 단계별 확장이 이미 그 향기에 맞는 향수만 쓰므로 따로 하지 않는다.
+  if (selection.objects.length >= 2) {
+    const needMood = !selection.unsure && selection.moods.length > 0
     for (const id of selection.objects) {
       if (picked.length === 3) break
       const chip = chips.objects.find((o) => o.id === id)
       if (!chip || picked.some((r) => r.perfume.family === chip.family)) continue
-      const hit = pool.find((r) => !picked.includes(r) && r.perfume.family === chip.family)
-      if (hit) picked.push(hit)
+      // matched는 이미 점수 순(동점은 섞인 순서)이고 sort는 안정 정렬이라, 분위기 일치 수가 같으면 그 순서가 유지된다
+      const best = matched
+        .filter((r) => r.perfume.family === chip.family && !clashes(r) && (!needMood || r.moodMatch.matched >= 1))
+        .sort((x, y) => y.moodMatch.matched - x.moodMatch.matched)[0]
+      if (best) picked.push(best)
     }
+  }
+
+  const fillFrom = (pool: Recommendation[]) => {
     // 나머지는 점수 순으로 채운다. 점수가 같은 향수끼리만, 이미 뽑힌 것과 세기·계열이 다른 향수를 먼저 쓴다
     // (비슷한 향수 3개보다 가볍게→진하게 순서가 의미 있도록). 점수가 더 높은 향수를 건너뛰지는 않는다.
     while (picked.length < 3) {
@@ -181,17 +198,17 @@ export function recommend(
   // 고른 향기가 있으면 향기도 맞는 향수만 쓴다. 분위기를 안 골랐으면(잘 모르겠어요 등) 점수 순.
   const scentOk = (r: Recommendation) => selection.objects.length === 0 || r.scentMatch.matched > 0
   const moodCount = selection.unsure ? 0 : selection.moods.length
-  // 고른 분위기와 서로 어울리지 않는 분위기 태그를 가진 향수(예: '시원한'을 골랐는데 '따뜻한' 태그)는 마지막에만 쓴다
-  const clashes = (r: Recommendation) =>
-    selection.moods.some((m) => r.perfume.moods.some((pm) => chips.conflicts.some(([a, b]) => (a === m && b === pm) || (b === m && a === pm))))
+  // 선물이면 호불호가 큰 향수도 마지막에만 쓴다(선물은 실패 확률이 낮은 후보가 우선)
+  const risky = (r: Recommendation) => (selection.mode === 'gift' || selection.unsure) && r.perfume.polarizing === 'high'
   if (moodCount > 0) {
     for (let level = moodCount; level >= 1 && picked.length < 3; level--) {
-      fillFrom(matched.filter((r) => scentOk(r) && !clashes(r) && r.moodMatch.matched >= level))
+      fillFrom(matched.filter((r) => scentOk(r) && !clashes(r) && !risky(r) && r.moodMatch.matched >= level))
     }
   } else {
     fillFrom(matched.filter(scentOk))
   }
-  // 그래도 모자라면 향기나 분위기가 덜 맞는 향수까지
+  // 그래도 모자라면 반대 분위기 태그가 있는 향수까지(고른 향기는 맞는 향수 먼저), 그다음 향기나 분위기가 덜 맞는 향수까지
+  fillFrom(matched.filter((r) => !picked.includes(r) && scentOk(r)))
   fillFrom(matched.filter((r) => !picked.includes(r)))
   // 그래도 모자라면 조건을 완화해서 (호불호 적은 향 우선) 채운다
   let relaxed = false
@@ -204,5 +221,6 @@ export function recommend(
       picked.push(r)
     }
   }
-  return { items: sortSniffingOrder(picked, families), relaxed }
+  const partial = picked.some((r) => r.moodMatch.matched < r.moodMatch.total || r.scentMatch.matched < r.scentMatch.total)
+  return { items: sortSniffingOrder(picked, families), relaxed, partial }
 }

@@ -127,9 +127,6 @@ export default function Home() {
                   <span className="size-2 rounded-full bg-ink" aria-hidden="true" />
                   시향지로 보는 향 계열 14가지
                 </span>
-                <span className="hidden rounded-full bg-mist px-2.5 py-0.5 font-mono text-[11px] tracking-[0.55px] text-slate sm:inline">
-                  가벼운 향 → 진한 향
-                </span>
               </div>
               <img src={curveLine} alt="" className="relative mb-2 h-8 w-full" />
               <div className="relative">

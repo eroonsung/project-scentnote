@@ -19,7 +19,7 @@ const STRIP: Record<FamilyId, { height: number; label: string }> = {
   leather: { height: 245, label: '레더' },
 }
 
-/** 예시 시향 순서: 가벼운 향 → 진한 향 */
+/** 예시 시향 순서 (실제 순서는 강도에 따라 달라진다) */
 const ACTIVE: Partial<Record<FamilyId, string>> = { citrus: '01', floral: '02', woody: '03' }
 
 export default function ScentStrips() {
@@ -47,7 +47,6 @@ export default function ScentStrips() {
               >
                 {s.label}
               </span>
-              <span className="font-mono text-[9px] text-hint">#{String(f.order).padStart(2, '0')}</span>
             </div>
           </div>
         )
