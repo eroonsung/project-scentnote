@@ -8,6 +8,8 @@
 - 📦 **저장소:** https://github.com/eroonsung/project-scentnote
 - 🗓️ 내일배움캠프 PM 8기 메이커톤 프로젝트 (2026.10)
 
+> ⚠️ **이미지·데이터 안내:** 이 저장소의 향수병 이미지(`public/perfumes/`)는 박람회용 **비상업 데모**로만 사용하며, **저작권은 각 브랜드·판매처에 있습니다.** 향수 정보(노트·분위기·호불호 등)는 AI가 정리한 **초안**이라 틀릴 수 있습니다. 이미지와 데이터를 재배포하거나 상업적으로 쓰지 마세요. 출처 URL은 `docs/perfumes-draft.xlsx`의 `image_source_url`에 향수별로 기록했습니다. 설문 응답 원본(`docs/survey-responses.csv`)에는 이름·연락처 등 개인정보가 없습니다.
+
 > 이 문서는 박람회 브로셔 내용을 겸한 **자세한 버전**입니다. 숫자·출처는 2026-10-08에 원문을 열어 확인했고, 확인하지 못한 자료는 싣지 않았습니다. 설계 결정의 날짜와 이유는 [docs/decisions.md](docs/decisions.md), 화면·데이터 명세는 [docs/spec.md](docs/spec.md)에 있습니다.
 
 ---
