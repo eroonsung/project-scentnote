@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelection } from '../context/SelectionContext'
 import ScentStrips from '../components/ScentStrips'
@@ -41,14 +40,6 @@ const secondaryBtn =
 
 export default function Home() {
   const { setMode } = useSelection()
-  const heroButtons = useRef<HTMLDivElement>(null)
-
-  // 하단 배너 버튼: 상단의 "나를 위한 / 선물할" 버튼 위치로 올라간다
-  const scrollToStart = () => {
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    heroButtons.current?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' })
-    heroButtons.current?.querySelector('a')?.focus({ preventScroll: true })
-  }
 
   return (
     <main>
@@ -79,7 +70,7 @@ export default function Home() {
                 가벼운 향부터 맡는 순서 추천
               </li>
             </ul>
-            <div ref={heroButtons} className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link to="/select?mode=self" onClick={() => setMode('self')} className={primaryBtn}>
                 나를 위한 향수 찾기 <span aria-hidden="true" className="text-[11px]">→</span>
               </Link>
@@ -202,9 +193,9 @@ export default function Home() {
               지금 바로 큐레이션을 시작하고, 오프라인 시향을 준비해보세요.
             </p>
           </div>
-          <button type="button" onClick={scrollToStart} className={`${primaryBtn} shrink-0`}>
+          <Link to="/select?mode=self" onClick={() => setMode('self')} className={`${primaryBtn} shrink-0`}>
             지금 큐레이션 시작 <span aria-hidden="true" className="text-[11px]">→</span>
-          </button>
+          </Link>
         </section>
       </div>
     </main>
