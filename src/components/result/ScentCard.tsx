@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import flipIcon from '../../assets/icons/result/flip.svg'
 import storeIcon from '../../assets/icons/result/store.svg'
-import { naverMapSearchUrl } from '../../lib/links'
+import { isGenericStoreQuery, naverMapSearchUrl } from '../../lib/links'
 import { getFamily } from '../../lib/perfumes'
 import { formatPrice } from '../../lib/price'
 import type { Recommendation } from '../../lib/recommend'
@@ -169,7 +169,7 @@ export default function ScentCard({ index, rec, hasMemo, triedRating, gift, onMe
             className="mt-4 flex h-10 items-center justify-center gap-1.5 rounded-xl border border-ink/20 text-[13px] tracking-[-0.08px] text-ink hover:bg-card/60"
           >
             <img src={storeIcon} alt="" width={12} height={10.67} />
-            매장 찾기
+            {isGenericStoreQuery(p.storeQuery) ? '향수 매장 찾기' : '매장 찾기'}
           </a>
           <button
             type="button"

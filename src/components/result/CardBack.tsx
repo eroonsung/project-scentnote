@@ -2,6 +2,7 @@ import type { CSSProperties, Ref } from 'react'
 import checkpoint from '../../assets/icons/result/checkpoint.svg'
 import flipBack from '../../assets/icons/result/flip-back.svg'
 import memoIcon from '../../assets/icons/result/memo.svg'
+import { genericStoreNote, isGenericStoreQuery } from '../../lib/links'
 import type { Perfume } from '../../types'
 import ConcentrationHint from './ConcentrationHint'
 import FaceLabel from './FaceLabel'
@@ -82,6 +83,12 @@ export default function CardBack({ className, style, hidden, index, perfume: p, 
         <img src={checkpoint} alt="" width={16.5} height={15.75} className="shrink-0" />
         <p className="text-[13px] leading-[17.88px] tracking-[-0.08px] text-ink">{p.checkPoint}</p>
       </div>
+
+      {isGenericStoreQuery(p.storeQuery) && (
+        <p className="pt-2.5 text-[11px] leading-4 tracking-[0.55px] text-slate">
+          {genericStoreNote(p.storeQuery)}
+        </p>
+      )}
 
       {p.channels.length > 0 && (
         <p className="pt-2.5 text-[11px] leading-4 tracking-[0.55px] text-slate">

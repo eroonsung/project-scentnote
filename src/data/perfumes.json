@@ -87,8 +87,11 @@
     "drydown": "몇 시간 뒤엔 부드러운 나무 향만 가볍게 남아요",
     "checkPoint": "처음의 레몬 향이 라벤더와 나무 향으로 바뀌는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "아쿠아 디 파르마 백화점",
-    "channels": [],
+    "storeQuery": "아쿠아디파르마",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "acqua-di-parma-colonia.jpeg",
       "source": "https://kream.co.kr/products/226125"
@@ -171,7 +174,7 @@
     "drydown": "몇 시간 뒤엔 부드러운 앰버가 살결에 은은히 남아요",
     "checkPoint": "시트러스 뒤에 꽃 향이 얼마나 올라오는지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "톰 포드 뷰티 백화점",
+    "storeQuery": "톰 포드 백화점",
     "channels": [
       "백화점"
     ],
@@ -357,8 +360,10 @@
     "drydown": "몇 시간 뒤엔 깨끗한 비누 같은 머스크가 남아요",
     "checkPoint": "상큼한 첫 향이 머스크로 넘어가는 과정을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "캘빈클라인 향수 백화점",
-    "channels": [],
+    "storeQuery": "올리브영 향수",
+    "channels": [
+      "올리브영"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -426,7 +431,7 @@
     "drydown": "시간이 지나면 부드러운 패출리와 앰버가 따뜻하게 남아요",
     "checkPoint": "배 향이 꽃 향으로 바뀌는 순간을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "조말론 런던 백화점",
+    "storeQuery": "조말론런던",
     "channels": [
       "백화점",
       "브랜드 매장"
@@ -606,8 +611,10 @@
       "checkedAt": "2026-10-07",
       "source": "https://kr.burberry.com/her-eau-de-parfum-50ml-p40804581"
     },
-    "storeQuery": "버버리 향수 백화점",
-    "channels": [],
+    "storeQuery": "버버리 백화점",
+    "channels": [
+      "올리브영"
+    ],
     "image": {
       "file": "burberry-her.jpg",
       "source": "https://kr.burberry.com/her-eau-de-parfum-50ml-p40804581"
@@ -695,7 +702,7 @@
     "drydown": "시간이 지나면 보송한 머스크와 가벼운 바닐라가 남아요",
     "checkPoint": "딸기 향이 꽃 향으로 이어지는 변화를 맡아보세요",
     "krPrice": null,
-    "storeQuery": "마크제이콥스 데이지 백화점",
+    "storeQuery": "마크제이콥스",
     "channels": [
       "올리브영"
     ],
@@ -784,7 +791,7 @@
     "drydown": "몇 시간 뒤엔 부드러운 바닐라와 앰버가 남아요",
     "checkPoint": "베리 향이 바닐라로 넘어갈 때 달콤함의 정도를 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "조르지오 아르마니 뷰티 백화점",
+    "storeQuery": "조르지오 아르마니 백화점",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -881,8 +888,10 @@
     "drydown": "시간이 지나면 가벼운 이끼와 머스크가 남아요",
     "checkPoint": "민트의 시원함이 얼마나 오래가는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "다비도프 쿨워터 백화점",
-    "channels": [],
+    "storeQuery": "올리브영 향수",
+    "channels": [
+      "올리브영"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -944,7 +953,7 @@
     "drydown": "시간이 지나면 보송한 머스크 느낌만 가볍게 남아요",
     "checkPoint": "소금과 허브 향이 얼마나 조화로운지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "조말론 런던 백화점",
+    "storeQuery": "조말론런던",
     "channels": [
       "백화점",
       "브랜드 매장"
@@ -1044,7 +1053,7 @@
     "drydown": "몇 시간 뒤엔 깨끗한 머스크와 나무 향이 남아요",
     "checkPoint": "시트러스 뒤에 바다 느낌이 오는지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "조르지오 아르마니 뷰티 백화점",
+    "storeQuery": "조르지오 아르마니 백화점",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -1106,7 +1115,7 @@
     "drydown": "시간이 지나면 우유 같은 나무 향이 조용히 남아요",
     "checkPoint": "풀 향과 달콤한 열매 향의 균형을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "딥티크 백화점",
+    "storeQuery": "Diptyque 백화점",
     "channels": [
       "브랜드 매장"
     ],
@@ -1182,8 +1191,11 @@
     "drydown": "시간이 지나면 은은한 인센스와 나무 향이 가볍게 남아요",
     "checkPoint": "망고의 풋풋함이 부담스럽지 않은지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "에르메스 뷰티 백화점",
-    "channels": [],
+    "storeQuery": "에르메스 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -1269,7 +1281,7 @@
     "drydown": "몇 시간 뒤엔 가벼운 머스크가 은은하게 남아요",
     "checkPoint": "차 향이 시트러스 뒤에 얼마나 깔끔하게 나는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "불가리 향수 백화점",
+    "storeQuery": "불가리 백화점",
     "channels": [
       "백화점"
     ],
@@ -1359,7 +1371,7 @@
     "drydown": "몇 시간 뒤엔 깔끔한 앰버와 나무 향이 남아요",
     "checkPoint": "첫 향의 후추 느낌이 얼마나 강한지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "디올 뷰티 백화점",
+    "storeQuery": "디올 백화점",
     "channels": [
       "백화점"
     ],
@@ -1570,7 +1582,7 @@
     "drydown": "몇 시간 뒤엔 포근한 바닐라 향이 오래 남아요",
     "checkPoint": "달콤한 바닐라 느낌이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "장폴고티에 향수 백화점",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -1660,7 +1672,7 @@
     "drydown": "시간이 지나면 달콤한 패출리와 머스크가 남아요",
     "checkPoint": "꽃 향이 진해서 호불호가 갈릴 수 있으니 한 번에 길게 맡아보세요",
     "krPrice": null,
-    "storeQuery": "빅터앤롤프 플라워밤 백화점",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -1729,7 +1741,7 @@
     "drydown": "몇 시간 뒤엔 보송한 화이트 머스크가 남아요",
     "checkPoint": "꽃 향이 가볍게 퍼지는지 손목에 뿌려 맡아보세요",
     "krPrice": null,
-    "storeQuery": "디올 뷰티 백화점",
+    "storeQuery": "디올 백화점",
     "channels": [
       "백화점"
     ],
@@ -1800,7 +1812,7 @@
     "drydown": "시간이 지나면 보들보들한 가죽 느낌이 남아요",
     "checkPoint": "꽃 향 뒤에 스웨이드가 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "조말론 런던 백화점",
+    "storeQuery": "조말론런던",
     "channels": [
       "백화점",
       "브랜드 매장"
@@ -1985,7 +1997,7 @@
     "drydown": "몇 시간 뒤엔 부드러운 머스크와 바닐라가 남아요",
     "checkPoint": "꽃 향이 진한 정도를 손목에서 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "디올 뷰티 백화점",
+    "storeQuery": "디올 백화점",
     "channels": [
       "백화점"
     ],
@@ -2044,7 +2056,7 @@
     "drydown": "시간이 지나도 꽃 향이 은은하게 이어져요",
     "checkPoint": "꽃 향이 진한 편이라 호불호가 있는지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "구찌 뷰티 백화점",
+    "storeQuery": "구찌 향수",
     "channels": [
       "백화점"
     ],
@@ -2123,7 +2135,7 @@
     "drydown": "시간이 지나면 보송한 분내가 잔잔하게 남아요",
     "checkPoint": "튜베로즈의 진함이 부담스럽지 않은지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "딥티크 백화점",
+    "storeQuery": "Diptyque 백화점",
     "channels": [
       "브랜드 매장"
     ],
@@ -2325,7 +2337,7 @@
     "drydown": "시간이 지나면 부드러운 나무와 인센스가 남아요",
     "checkPoint": "보송한 분 느낌이 얼마나 강한지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "프라다 뷰티 백화점",
+    "storeQuery": "프라다 백화점",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -2409,7 +2421,7 @@
     "drydown": "몇 시간 뒤엔 차분한 나무 향이 남아요",
     "checkPoint": "아이리스의 분 느낌과 카카오의 달콤함을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "디올 뷰티 백화점",
+    "storeQuery": "디올 백화점",
     "channels": [
       "백화점"
     ],
@@ -2500,8 +2512,10 @@
     "drydown": "몇 시간 뒤엔 은은한 장미와 나무 향이 남아요",
     "checkPoint": "장미 향이 분 향처럼 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "끌로에 향수 백화점",
-    "channels": [],
+    "storeQuery": "끌로에 백화점",
+    "channels": [
+      "올리브영"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -2586,8 +2600,11 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.byredo.com/ko_kr/p/blanche-eau-de-parfum"
     },
-    "storeQuery": "바이레도 백화점",
-    "channels": [],
+    "storeQuery": "바이레도",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "byredo-blanche.jpg",
       "source": "https://www.byredo.com/ko_kr/p/blanche-eau-de-parfum"
@@ -2671,7 +2688,7 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.maisonmargiela.com/ko-kr/%EB%A0%88%ED%94%8C%EB%A6%AC%EC%B9%B4-%EB%A0%88%EC%9D%B4%EC%A7%80-%EC%84%A0%EB%8D%B0%EC%9D%B4-%EB%AA%A8%EB%8B%9D-%EC%98%A4-%EB%93%9C-%EB%9A%9C%EC%99%88%EB%A0%9B-S33YX0018S10932001.html"
     },
-    "storeQuery": "메종 마르지엘라 레플리카 백화점",
+    "storeQuery": "메종 마르지엘라 향수",
     "channels": [
       "백화점"
     ],
@@ -2751,7 +2768,7 @@
     "drydown": "몇 시간 뒤엔 따뜻한 머스크가 오래 남아요",
     "checkPoint": "머스크가 포근한지 답답한지 손목에서 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "나르시소 로드리게즈 백화점",
+    "storeQuery": "올리브영 향수",
     "channels": [
       "올리브영"
     ],
@@ -2830,7 +2847,7 @@
     "drydown": "시간이 지나면 부드러운 피부 향처럼 남아요",
     "checkPoint": "머스크가 깨끗하게 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "딥티크 백화점",
+    "storeQuery": "Diptyque 백화점",
     "channels": [
       "브랜드 매장"
     ],
@@ -2926,7 +2943,7 @@
     "drydown": "시간이 지나면 부드럽고 달콤한 머스크가 남아요",
     "checkPoint": "첫 향의 시트러스가 코코넛으로 바뀌는 순간을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 마르지엘라 레플리카 백화점",
+    "storeQuery": "메종 마르지엘라 향수",
     "channels": [
       "백화점"
     ],
@@ -3023,8 +3040,11 @@
     "drydown": "몇 시간 뒤엔 차분한 베티버와 나무 향이 남아요",
     "checkPoint": "첫 향의 후추와 광물 느낌이 낯설지 않은지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "에르메스 뷰티 백화점",
-    "channels": [],
+    "storeQuery": "에르메스 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -3082,8 +3102,11 @@
     "drydown": "시간이 지나면 부드러운 샌달우드가 남아요",
     "checkPoint": "생강의 알싸함과 꽃 향의 조화를 맡아보세요",
     "krPrice": null,
-    "storeQuery": "에르메스 뷰티 백화점",
-    "channels": [],
+    "storeQuery": "에르메스 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -3176,7 +3199,7 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.lelabofragrances.co.kr/santal-33-987.html"
     },
-    "storeQuery": "르 라보 백화점",
+    "storeQuery": "르 라보 성수",
     "channels": [
       "브랜드 매장"
     ],
@@ -3249,7 +3272,7 @@
     "drydown": "시간이 지나면 부드러운 나무 향이 따뜻하게 남아요",
     "checkPoint": "첫 향의 사이프러스가 샌달우드로 바뀌는 흐름을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "딥티크 백화점",
+    "storeQuery": "Diptyque 백화점",
     "channels": [
       "브랜드 매장"
     ],
@@ -3340,7 +3363,7 @@
     "drydown": "시간이 지나도 우디한 향이 오래 남아요",
     "checkPoint": "우드 향의 진함이 부담스러운지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "톰 포드 뷰티 백화점",
+    "storeQuery": "톰 포드 백화점",
     "channels": [
       "백화점"
     ],
@@ -3446,8 +3469,11 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.byredo.com/ko_kr/p/gypsy-water-eau-de-parfum"
     },
-    "storeQuery": "바이레도 백화점",
-    "channels": [],
+    "storeQuery": "바이레도",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "byredo-gypsy-water.jpg",
       "source": "https://www.byredo.com/ko_kr/p/gypsy-water-eau-de-parfum"
@@ -3526,7 +3552,7 @@
     "drydown": "시간이 지나도 달콤한 앰버가 옷에 오래 남아요",
     "checkPoint": "달콤함이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "메종 프란시스 커정 백화점",
+    "storeQuery": "메종프란시스커정",
     "channels": [
       "백화점"
     ],
@@ -3624,7 +3650,7 @@
     "drydown": "시간이 지나도 달콤한 바닐라 향이 길게 남아요",
     "checkPoint": "향이 진하니 잔향까지 충분히 맡아보세요",
     "krPrice": null,
-    "storeQuery": "겔랑 향수 백화점",
+    "storeQuery": "겔랑",
     "channels": [
       "백화점"
     ],
@@ -3713,7 +3739,7 @@
     "drydown": "시간이 지나면 부드러운 바닐라와 머스크가 남아요",
     "checkPoint": "라벤더와 바닐라가 어우러지는 흐름을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "입생로랑 뷰티 백화점",
+    "storeQuery": "입생로랑 백화점",
     "channels": [
       "백화점"
     ],
@@ -3804,7 +3830,7 @@
     "drydown": "시간이 지나도 달콤한 바닐라 향이 오래 남아요",
     "checkPoint": "커피와 바닐라의 달콤함이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "입생로랑 뷰티 백화점",
+    "storeQuery": "입생로랑 백화점",
     "channels": [
       "백화점"
     ],
@@ -3902,9 +3928,10 @@
     "drydown": "시간이 지나면 고소한 달콤함이 남아요",
     "checkPoint": "달콤한 첫 향이 프랄린으로 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "랑콤 뷰티 백화점",
+    "storeQuery": "랑콤 백화점",
     "channels": [
-      "백화점"
+      "백화점",
+      "올리브영"
     ],
     "image": null,
     "dataStatus": "draft"
@@ -3988,8 +4015,10 @@
     "drydown": "시간이 지나도 달콤한 술 향이 포근하게 남아요",
     "checkPoint": "술 향 같은 달콤함이 진한 편이니 한 번에 길게 맡아보세요",
     "krPrice": null,
-    "storeQuery": "킬리안 파리 백화점",
-    "channels": [],
+    "storeQuery": "킬리안 백화점",
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -4077,7 +4106,7 @@
     "drydown": "시간이 지나도 달콤한 향이 매우 오래 남아요",
     "checkPoint": "향이 매우 진하니 소량만 뿌려 맡아보세요",
     "krPrice": null,
-    "storeQuery": "뮈글러 엔젤 백화점",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -4166,7 +4195,7 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.maisonmargiela.com/ko-kr/replica-by-the-fireplace-eau-de-toilette-%7C-maison-margiela-S33YX0024S11331961.html"
     },
-    "storeQuery": "메종 마르지엘라 레플리카 백화점",
+    "storeQuery": "메종 마르지엘라 향수",
     "channels": [
       "백화점"
     ],
@@ -4266,7 +4295,7 @@
     "drydown": "시간이 지나면 달콤한 담배와 바닐라가 남아요",
     "checkPoint": "럼과 담배 잎의 조화를 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 마르지엘라 레플리카 백화점",
+    "storeQuery": "메종 마르지엘라 향수",
     "channels": [
       "백화점"
     ],
@@ -4353,7 +4382,7 @@
     "drydown": "시간이 지나도 달콤한 담배 향이 오래 남아요",
     "checkPoint": "향이 매우 진하니 소량만 뿌려 맡아보세요",
     "krPrice": null,
-    "storeQuery": "톰 포드 뷰티 백화점",
+    "storeQuery": "톰 포드 백화점",
     "channels": [
       "백화점"
     ],
@@ -4428,7 +4457,7 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.lelabofragrances.co.kr/another-13-747.html"
     },
-    "storeQuery": "르 라보 백화점",
+    "storeQuery": "르 라보 성수",
     "channels": [
       "브랜드 매장"
     ],
@@ -4523,7 +4552,7 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.lelabofragrances.co.kr/rose-31-962.html"
     },
-    "storeQuery": "르 라보 백화점",
+    "storeQuery": "르 라보 성수",
     "channels": [
       "브랜드 매장"
     ],
@@ -4615,7 +4644,7 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.lelabofragrances.co.kr/th-noir-29-1003.html"
     },
-    "storeQuery": "르 라보 백화점",
+    "storeQuery": "르 라보 성수",
     "channels": [
       "브랜드 매장"
     ],
@@ -4699,7 +4728,7 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.lelabofragrances.co.kr/bergamote-22-771.html"
     },
-    "storeQuery": "르 라보 백화점",
+    "storeQuery": "르 라보 성수",
     "channels": [
       "브랜드 매장"
     ],
@@ -4781,8 +4810,10 @@
     "drydown": "시간이 지나도 달콤한 바닐라 머스크가 길게 남아요",
     "checkPoint": "설탕 같은 달콤함이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "킬리안 파리 백화점",
-    "channels": [],
+    "storeQuery": "킬리안 백화점",
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -4865,8 +4896,10 @@
     "drydown": "시간이 지나도 달콤한 우디 향이 오래 남아요",
     "checkPoint": "달콤함과 쌉쌀함의 균형을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "킬리안 파리 백화점",
-    "channels": [],
+    "storeQuery": "킬리안 백화점",
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -4972,8 +5005,11 @@
     "drydown": "시간이 지나면 이끼와 머스크가 깔끔하게 남아요",
     "checkPoint": "첫 향의 파인애플이 스모키하게 변하는 흐름을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "크리드 백화점",
-    "channels": [],
+    "storeQuery": "크리드 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -5052,8 +5088,11 @@
     "drydown": "몇 시간 뒤엔 부드러운 나무와 머스크가 남아요",
     "checkPoint": "레몬 버베나의 풋풋함이 얼마나 가는지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "크리드 백화점",
-    "channels": [],
+    "storeQuery": "크리드 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -5126,8 +5165,11 @@
     "drydown": "시간이 지나면 깨끗한 머스크와 나무 향이 남아요",
     "checkPoint": "시원한 첫 향이 차 향으로 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "크리드 백화점",
-    "channels": [],
+    "storeQuery": "크리드 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -5212,8 +5254,11 @@
     "drydown": "몇 시간 뒤엔 깨끗한 머스크와 가벼운 나무 향이 남아요",
     "checkPoint": "시트러스와 바다 향의 균형을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "크리드 백화점",
-    "channels": [],
+    "storeQuery": "크리드 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -5317,7 +5362,10 @@
     "checkPoint": "진한 장미 향이 부담스럽지 않은지 맡아보세요",
     "krPrice": null,
     "storeQuery": "프레데릭 말 백화점",
-    "channels": [],
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -5419,7 +5467,10 @@
     "checkPoint": "머스크가 달콤하고 진한 정도를 확인해 보세요",
     "krPrice": null,
     "storeQuery": "프레데릭 말 백화점",
-    "channels": [],
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -5501,7 +5552,10 @@
     "checkPoint": "꽃 향의 진한 정도가 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "프레데릭 말 백화점",
-    "channels": [],
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -5572,7 +5626,10 @@
     "checkPoint": "오이의 서늘함과 라일락의 보송함이 맞는지 맡아보세요",
     "krPrice": null,
     "storeQuery": "프레데릭 말 백화점",
-    "channels": [],
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -5649,7 +5706,10 @@
     "checkPoint": "화장품 같은 분 느낌이 마음에 드는지 확인해 보세요",
     "krPrice": null,
     "storeQuery": "프레데릭 말 백화점",
-    "channels": [],
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -5716,7 +5776,7 @@
     "drydown": "몇 시간 뒤엔 가벼운 시더 향만 남아요",
     "checkPoint": "레몬과 사이프러스의 시원함을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "아닉 구딸 백화점",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -5790,7 +5850,7 @@
     "drydown": "시간이 지나면 부드러운 머스크와 바닐라가 남아요",
     "checkPoint": "과일 향이 달콤한 정도를 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "아닉 구딸 백화점",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -6047,8 +6107,11 @@
     "drydown": "시간이 지나면 부드러운 바닐라 머스크가 남아요",
     "checkPoint": "리치의 새콤함이 장미로 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "퍼퓸 드 말리 백화점",
-    "channels": [],
+    "storeQuery": "퍼퓸드말리",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -6148,8 +6211,11 @@
     "drydown": "시간이 지나도 달콤한 바닐라와 나무 향이 오래 남아요",
     "checkPoint": "첫 향의 사과와 바닐라의 달콤함을 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "퍼퓸 드 말리 백화점",
-    "channels": [],
+    "storeQuery": "퍼퓸드말리",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -6219,7 +6285,7 @@
     "drydown": "몇 시간 뒤엔 보송한 화이트 머스크가 남아요",
     "checkPoint": "레몬의 상큼함이 머스크로 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 프란시스 커정 백화점",
+    "storeQuery": "메종프란시스커정",
     "channels": [
       "백화점"
     ],
@@ -6302,7 +6368,7 @@
     "drydown": "시간이 지나도 달콤한 우디 향이 오래 남아요",
     "checkPoint": "우드 향의 진함이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "메종 프란시스 커정 백화점",
+    "storeQuery": "메종프란시스커정",
     "channels": [
       "백화점"
     ],
@@ -6376,7 +6442,7 @@
     "drydown": "시간이 지나도 포근한 앰버와 바닐라가 길게 남아요",
     "checkPoint": "앰버의 달콤함과 진한 정도를 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "메종 프란시스 커정 백화점",
+    "storeQuery": "메종프란시스커정",
     "channels": [
       "백화점"
     ],
@@ -6453,7 +6519,7 @@
     "drydown": "시간이 지나면 부드러운 바닐라 앰버가 남아요",
     "checkPoint": "첫 향의 알싸함이 바닐라로 바뀌는 순간을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 프란시스 커정 백화점",
+    "storeQuery": "메종프란시스커정",
     "channels": [
       "백화점"
     ],
@@ -6534,7 +6600,7 @@
     "drydown": "시간이 지나도 우디한 향이 오래 남아요",
     "checkPoint": "향의 진함이 부담스럽지 않은지 한 번만 뿌려 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "이니시오 백화점",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -6614,8 +6680,10 @@
     "drydown": "시간이 지나면 이끼와 나무 향이 차분하게 남아요",
     "checkPoint": "상큼한 과일이 이끼 향으로 변하는 흐름을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "니샤네 백화점",
-    "channels": [],
+    "storeQuery": "퍼퓸갤러리",
+    "channels": [
+      "편집숍(퍼퓸갤러리)"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -6703,8 +6771,11 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.byredo.com/ko_kr/p/mojave-ghost-eau-de-parfum"
     },
-    "storeQuery": "바이레도 백화점",
-    "channels": [],
+    "storeQuery": "바이레도",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "byredo-mojave-ghost.jpg",
       "source": "https://www.byredo.com/ko_kr/p/mojave-ghost-eau-de-parfum"
@@ -6792,8 +6863,11 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.byredo.com/ko_kr/p/bal-d-afrique-eau-de-parfum"
     },
-    "storeQuery": "바이레도 백화점",
-    "channels": [],
+    "storeQuery": "바이레도",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "byredo-bal-d-afrique.jpg",
       "source": "https://www.byredo.com/ko_kr/p/bal-d-afrique-eau-de-parfum"
@@ -6874,8 +6948,11 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.byredo.com/ko_kr/p/rose-of-no-mans-land-eau-de-parfum"
     },
-    "storeQuery": "바이레도 백화점",
-    "channels": [],
+    "storeQuery": "바이레도",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "byredo-rose-of-no-mans-land.jpg",
       "source": "https://www.byredo.com/ko_kr/p/rose-of-no-mans-land-eau-de-parfum"
@@ -6963,8 +7040,11 @@
       "checkedAt": "2026-10-07",
       "source": "https://www.byredo.com/ko_kr/p/bibliotheque-eau-de-parfum"
     },
-    "storeQuery": "바이레도 백화점",
-    "channels": [],
+    "storeQuery": "바이레도",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "byredo-bibliotheque.jpg",
       "source": "https://www.byredo.com/ko_kr/p/bibliotheque-eau-de-parfum"
@@ -7044,7 +7124,7 @@
     "drydown": "시간이 지나면 부드러운 바닐라와 인센스가 남아요",
     "checkPoint": "알싸한 첫 향이 바닐라로 바뀌는 흐름을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "딥티크 백화점",
+    "storeQuery": "Diptyque 백화점",
     "channels": [
       "브랜드 매장"
     ],
@@ -7115,7 +7195,7 @@
     "drydown": "시간이 지나면 달콤한 통카빈과 머스크가 남아요",
     "checkPoint": "주니퍼의 상쾌함이 나무 향으로 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "딥티크 백화점",
+    "storeQuery": "Diptyque 백화점",
     "channels": [
       "브랜드 매장"
     ],
@@ -7201,7 +7281,7 @@
     "drydown": "시간이 지나도 달콤한 통카빈 향이 오래 남아요",
     "checkPoint": "체리와 아몬드의 달콤함이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "톰 포드 뷰티 백화점",
+    "storeQuery": "톰 포드 백화점",
     "channels": [
       "백화점"
     ],
@@ -7290,7 +7370,7 @@
     "drydown": "시간이 지나면 따뜻한 앰버와 바닐라가 남아요",
     "checkPoint": "꽃과 코코넛의 달콤함이 맞는지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "톰 포드 뷰티 백화점",
+    "storeQuery": "톰 포드 백화점",
     "channels": [
       "백화점"
     ],
@@ -7370,7 +7450,7 @@
     "drydown": "시간이 지나도 가죽과 앰버가 길게 남아요",
     "checkPoint": "가죽 향의 진한 정도를 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "톰 포드 뷰티 백화점",
+    "storeQuery": "톰 포드 백화점",
     "channels": [
       "백화점"
     ],
@@ -7464,7 +7544,7 @@
     "drydown": "시간이 지나도 달콤한 패출리와 바닐라가 오래 남아요",
     "checkPoint": "꽃 향이 진해서 호불호가 있으니 충분히 맡아보세요",
     "krPrice": null,
-    "storeQuery": "톰 포드 뷰티 백화점",
+    "storeQuery": "톰 포드 백화점",
     "channels": [
       "백화점"
     ],
@@ -7543,7 +7623,7 @@
     "drydown": "시간이 지나도 가죽과 패출리가 오래 남아요",
     "checkPoint": "가죽 향이 부드러운지 거친지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "톰 포드 뷰티 백화점",
+    "storeQuery": "톰 포드 백화점",
     "channels": [
       "백화점"
     ],
@@ -7608,8 +7688,11 @@
     "drydown": "시간이 지나면 포근한 통카빈이 은은하게 남아요",
     "checkPoint": "베티버의 풀 향이 달콤하게 바뀌는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "에르메스 뷰티 백화점",
-    "channels": [],
+    "storeQuery": "에르메스 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -7683,8 +7766,11 @@
     "drydown": "몇 시간 뒤엔 가벼운 시더와 머스크가 남아요",
     "checkPoint": "무화과의 풋풋함과 시트러스의 균형을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "아쿠아 디 파르마 백화점",
-    "channels": [],
+    "storeQuery": "아쿠아디파르마",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -7764,7 +7850,7 @@
     "drydown": "시간이 지나면 부드러운 머스크와 나무 향이 남아요",
     "checkPoint": "첫 향의 솔잎과 레몬이 얼마나 알싸한지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "펜할리곤스 백화점",
+    "storeQuery": "펜할리곤스",
     "channels": [
       "백화점"
     ],
@@ -7835,8 +7921,10 @@
     "drydown": "몇 시간 뒤엔 가벼운 머스크와 나무 향이 남아요",
     "checkPoint": "오렌지의 상큼함이 얼마나 오래 가는지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "아틀리에 코롱 백화점",
-    "channels": [],
+    "storeQuery": "아틀리에 코롱",
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -7934,8 +8022,10 @@
     "drydown": "시간이 지나도 달콤한 담배 향이 오래 남아요",
     "checkPoint": "꿀의 달콤함이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "제르조프 백화점",
-    "channels": [],
+    "storeQuery": "퍼퓸갤러리",
+    "channels": [
+      "편집숍(퍼퓸갤러리)"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -7975,7 +8065,7 @@
     "drydown": "피부에 은은하게 오래 남아요",
     "checkPoint": "향이 약하니 손목에서 시간을 두고 맡아보세요",
     "krPrice": null,
-    "storeQuery": "에센트릭 몰큘스 백화점",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -8017,7 +8107,7 @@
     "drydown": "피부에 은은하게 오래 남아요",
     "checkPoint": "향이 약하니 손목에서 시간을 두고 맡아보세요",
     "krPrice": null,
-    "storeQuery": "에센트릭 몰큘스 백화점",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -8059,8 +8149,10 @@
     "drydown": "피부에 은은하게 오래 남아요",
     "checkPoint": "향이 약하니 손목에서 시간을 두고 맡아보세요",
     "krPrice": null,
-    "storeQuery": "줄리엣 해즈 어 건 백화점",
-    "channels": [],
+    "storeQuery": "줄리엣 해즈 어 건",
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -8146,8 +8238,10 @@
     "drydown": "시간이 지나면 부드러운 머스크와 앰버가 남아요",
     "checkPoint": "과일 향이 꽃 향으로 이어지는 흐름을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "엑스 니힐로 백화점",
-    "channels": [],
+    "storeQuery": "엑스니힐로",
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -8231,8 +8325,11 @@
     "drydown": "시간이 지나도 달콤한 담배 향이 오래 남아요",
     "checkPoint": "계피와 담배의 달콤함을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "퍼퓸 드 말리 백화점",
-    "channels": [],
+    "storeQuery": "퍼퓸드말리",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -8410,7 +8507,7 @@
     "drydown": "시간이 지나면 부드러운 머스크가 가볍게 남아요",
     "checkPoint": "상큼한 첫 향이 꽃 향으로 바뀌는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "베르사체 향수 매장",
+    "storeQuery": "베르사체 백화점",
     "channels": [
       "올리브영"
     ],
@@ -8512,7 +8609,7 @@
     "drydown": "시간이 지나면 바닐라와 나무 향이 남아요",
     "checkPoint": "시원한 첫 향 뒤에 바닐라가 얼마나 달게 오는지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "베르사체 향수 매장",
+    "storeQuery": "베르사체 백화점",
     "channels": [
       "올리브영"
     ],
@@ -8617,7 +8714,7 @@
     "drydown": "시간이 지나도 달콤한 앰버와 가죽이 오래 남아요",
     "checkPoint": "가죽과 계피의 달콤함이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "파코 라반 향수 매장",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -8705,7 +8802,7 @@
     "drydown": "시간이 지나면 달콤한 앰버와 패출리가 남아요",
     "checkPoint": "첫 향의 베리와 꿀의 달콤함을 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "파코 라반 향수 매장",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -8805,7 +8902,7 @@
     "drydown": "시간이 지나면 부드러운 바닐라와 나무 향이 남아요",
     "checkPoint": "사과 향이 우디하게 바뀌는 흐름을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "휴고 보스 향수 매장",
+    "storeQuery": "휴고 보스 백화점",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -8897,8 +8994,10 @@
     "drydown": "시간이 지나면 부드러운 머스크와 샌달우드가 남아요",
     "checkPoint": "꽃 향이 은은하게 퍼지는지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "캘빈클라인 향수 매장",
-    "channels": [],
+    "storeQuery": "올리브영 향수",
+    "channels": [
+      "올리브영"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -8998,7 +9097,7 @@
     "drydown": "시간이 지나도 달콤한 통카빈과 카카오가 오래 남아요",
     "checkPoint": "꽃과 달콤함의 진한 정도를 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "캐롤리나 헤레라 향수 매장",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -9096,7 +9195,7 @@
     "drydown": "몇 시간 뒤엔 깨끗한 앰브록산과 나무 향이 남아요",
     "checkPoint": "상쾌한 첫 향이 깔끔하게 정리되는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "입생로랑 뷰티 백화점",
+    "storeQuery": "입생로랑 백화점",
     "channels": [
       "백화점"
     ],
@@ -9185,9 +9284,10 @@
     "drydown": "시간이 지나면 부드러운 머스크와 바닐라가 남아요",
     "checkPoint": "배와 장미의 균형을 손목에서 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "랑콤 뷰티 백화점",
+    "storeQuery": "랑콤 백화점",
     "channels": [
-      "백화점"
+      "백화점",
+      "올리브영"
     ],
     "image": null,
     "dataStatus": "draft"
@@ -9273,7 +9373,7 @@
     "drydown": "시간이 지나면 깨끗한 앰브록산과 나무 향이 남아요",
     "checkPoint": "가죽 느낌이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "몽블랑 향수 매장",
+    "storeQuery": "올리브영 향수",
     "channels": [
       "올리브영"
     ],
@@ -9355,7 +9455,7 @@
     "drydown": "시간이 지나면 보송한 화이트 머스크가 남아요",
     "checkPoint": "꽃 향이 진하지 않고 깨끗한지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "조르지오 아르마니 뷰티 백화점",
+    "storeQuery": "조르지오 아르마니 백화점",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -9423,7 +9523,7 @@
     "drydown": "시간이 지나면 가벼운 머스크와 나무 향이 남아요",
     "checkPoint": "투명한 첫 향이 얼마나 오래가는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "불가리 향수 매장",
+    "storeQuery": "불가리 백화점",
     "channels": [
       "백화점"
     ],
@@ -9502,7 +9602,7 @@
     "drydown": "시간이 지나면 화이트 머스크와 패출리가 남아요",
     "checkPoint": "딸기의 달콤함이 부담스럽지 않은지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "입생로랑 뷰티 백화점",
+    "storeQuery": "입생로랑 백화점",
     "channels": [
       "백화점"
     ],
@@ -9570,7 +9670,7 @@
     "drydown": "시간이 지나도 달콤한 바닐라와 머스크가 남아요",
     "checkPoint": "카라멜의 달콤함이 얼마나 진한지 확인해 보세요",
     "krPrice": null,
-    "storeQuery": "프라다 뷰티 백화점",
+    "storeQuery": "프라다 백화점",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -9630,7 +9730,7 @@
     "drydown": "시간이 지나도 따뜻한 앰버가 오래 남아요",
     "checkPoint": "향이 진하니 소량만 뿌려 맡아보세요",
     "krPrice": null,
-    "storeQuery": "뮈글러 향수 매장",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -9709,7 +9809,7 @@
     "drydown": "몇 시간 뒤엔 파촐리와 포근한 머스크가 남아요",
     "checkPoint": "첫 향의 핑크페퍼와 레몬이 재스민으로 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "샤넬 백화점",
+    "storeQuery": "샤넬 뷰티 백화점",
     "channels": [
       "백화점"
     ],
@@ -9791,7 +9891,7 @@
     "drydown": "몇 시간 뒤엔 부드러운 샌달우드와 머스크가 남아요",
     "checkPoint": "재스민과 오렌지 블로썸이 과하지 않게 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "샤넬 백화점",
+    "storeQuery": "샤넬 뷰티 백화점",
     "channels": [
       "백화점"
     ],
@@ -9886,7 +9986,7 @@
     "drydown": "몇 시간 뒤엔 바닐라와 우디 머스크가 은은히 남아요",
     "checkPoint": "오렌지 향 뒤에 후추와 시더가 깔끔하게 따라오는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "샤넬 백화점",
+    "storeQuery": "샤넬 뷰티 백화점",
     "channels": [
       "백화점"
     ],
@@ -10574,8 +10674,11 @@
       "checkedAt": "2026-10-08",
       "source": "https://www.hermes.com/kr/ko/category/fragrances/women/"
     },
-    "storeQuery": "에르메스 백화점",
-    "channels": [],
+    "storeQuery": "에르메스 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "hermes-eau-des-merveilles.jpg",
       "source": "https://www.hermes.com/kr/ko/category/fragrances/women/"
@@ -10656,8 +10759,11 @@
       "checkedAt": "2026-10-08",
       "source": "https://www.hermes.com/kr/ko/category/fragrances/women/"
     },
-    "storeQuery": "에르메스 백화점",
-    "channels": [],
+    "storeQuery": "에르메스 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "hermes-un-jardin-en-mediterranee.jpg",
       "source": "https://www.hermes.com/kr/ko/category/fragrances/women/"
@@ -10745,8 +10851,11 @@
     "drydown": "몇 시간 뒤엔 부드러운 머스크와 나무 향이 남아요",
     "checkPoint": "시트러스가 시더와 향신료로 넓게 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "에르메스 백화점",
-    "channels": [],
+    "storeQuery": "에르메스 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "hermes-voyage-d-hermes.jpg",
       "source": "https://www.hermes.com/us/en/product/voyage-d-hermes-eau-de-toilette-V107568V0/"
@@ -10827,8 +10936,11 @@
       "checkedAt": "2026-10-08",
       "source": "https://www.hermes.com/kr/ko/product/h24-%EC%98%A4-%EB%93%9C-%EB%9A%9C%EC%99%88%EB%A0%9B-V107333V0/"
     },
-    "storeQuery": "에르메스 백화점",
-    "channels": [],
+    "storeQuery": "에르메스 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "hermes-h24.jpg",
       "source": "https://www.hermes.com/kr/ko/product/h24-%EC%98%A4-%EB%93%9C-%EB%9A%9C%EC%99%88%EB%A0%9B-V107333V0/"
@@ -10915,8 +11027,11 @@
       "checkedAt": "2026-10-08",
       "source": "https://www.hermes.com/kr/ko/category/fragrances/women/"
     },
-    "storeQuery": "에르메스 백화점",
-    "channels": [],
+    "storeQuery": "에르메스 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "hermes-eau-d-orange-verte.jpg",
       "source": "https://www.hermes.com/kr/ko/category/fragrances/women/"
@@ -11819,7 +11934,8 @@
     "krPrice": null,
     "storeQuery": "랑콤 백화점",
     "channels": [
-      "백화점"
+      "백화점",
+      "올리브영"
     ],
     "image": null,
     "dataStatus": "draft"
@@ -11893,7 +12009,7 @@
     "drydown": "몇 시간 뒤엔 보송한 머스크와 패출리가 남아요",
     "checkPoint": "배의 싱그러움이 가드니아로 넘어가는 흐름을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "구찌 백화점",
+    "storeQuery": "구찌 향수",
     "channels": [
       "백화점"
     ],
@@ -11963,7 +12079,7 @@
     "drydown": "몇 시간 뒤엔 건조한 나무와 머스크가 남아요",
     "checkPoint": "캐모마일의 약초 같은 느낌이 낯설지 않은지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "구찌 백화점",
+    "storeQuery": "구찌 향수",
     "channels": [
       "백화점"
     ],
@@ -12045,7 +12161,9 @@
       "source": "https://kr.burberry.com/burberry-hero-eau-de-toilette-100ml-p40818661"
     },
     "storeQuery": "버버리 백화점",
-    "channels": [],
+    "channels": [
+      "올리브영"
+    ],
     "image": {
       "file": "burberry-hero.jpg",
       "source": "https://kr.burberry.com/burberry-hero-eau-de-toilette-100ml-p40818661"
@@ -12117,7 +12235,9 @@
       "source": "https://kr.burberry.com/burberry-goddess-eau-de-parfum-for-women-100ml-p40835981"
     },
     "storeQuery": "버버리 백화점",
-    "channels": [],
+    "channels": [
+      "올리브영"
+    ],
     "image": {
       "file": "burberry-goddess.jpg",
       "source": "https://kr.burberry.com/burberry-goddess-eau-de-parfum-for-women-100ml-p40835981"
@@ -12387,7 +12507,7 @@
     "drydown": "몇 시간 뒤엔 달콤한 패출리가 포근하게 남아요",
     "checkPoint": "꿀의 달콤함과 패출리의 진함이 부담스럽지 않은지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "장 폴 고티에 백화점",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -12477,7 +12597,7 @@
     "drydown": "몇 시간 뒤엔 바닐라와 앰버가 달콤하게 남아요",
     "checkPoint": "시원한 민트가 짙은 바닐라로 넘어가는 변화가 맞는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "장 폴 고티에 백화점",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -12539,7 +12659,7 @@
     "drydown": "몇 시간 뒤엔 톤카빈과 부드러운 나무 향이 남아요",
     "checkPoint": "코코넛의 달콤함이 우디 향과 균형을 이루는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "장 폴 고티에 백화점",
+    "storeQuery": "백화점 향수",
     "channels": [],
     "image": null,
     "dataStatus": "draft"
@@ -12602,7 +12722,7 @@
     "drydown": "몇 시간 뒤엔 보송한 머스크와 나무 향이 남아요",
     "checkPoint": "첫 향의 과일 느낌이 보송한 머스크로 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "마크 제이콥스 백화점",
+    "storeQuery": "마크제이콥스",
     "channels": [
       "올리브영"
     ],
@@ -12690,7 +12810,7 @@
     "drydown": "몇 시간 뒤엔 가벼운 머스크와 나무 향이 남아요",
     "checkPoint": "과일의 새콤함이 꽃 향으로 부드럽게 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "마크 제이콥스 백화점",
+    "storeQuery": "마크제이콥스",
     "channels": [
       "올리브영"
     ],
@@ -12768,7 +12888,7 @@
     "drydown": "몇 시간 뒤엔 부드러운 우디 머스크가 은은하게 남아요",
     "checkPoint": "물처럼 맑은 느낌과 꽃 향이 같이 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "이세이 미야케 백화점",
+    "storeQuery": "올리브영 향수",
     "channels": [
       "백화점 · 올리브영"
     ],
@@ -12859,7 +12979,7 @@
     "drydown": "몇 시간 뒤엔 깨끗한 나무 향이 남아요",
     "checkPoint": "유자의 상큼함 뒤로 나무 향이 차분히 나오는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "이세이 미야케 백화점",
+    "storeQuery": "올리브영 향수",
     "channels": [
       "백화점 · 올리브영"
     ],
@@ -12936,7 +13056,7 @@
     "drydown": "몇 시간 뒤엔 보송한 머스크와 앰버가 남아요",
     "checkPoint": "오리지널보다 시트러스가 진하고 깊게 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "돌체 앤 가바나 백화점",
+    "storeQuery": "돌체앤가바나 백화점",
     "channels": [
       "올리브영"
     ],
@@ -13024,7 +13144,7 @@
     "drydown": "몇 시간 뒤엔 깔끔한 이끼와 머스크가 남아요",
     "checkPoint": "자몽의 상큼함과 허브 향이 균형 있게 나는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "돌체 앤 가바나 백화점",
+    "storeQuery": "돌체앤가바나 백화점",
     "channels": [
       "올리브영"
     ],
@@ -13118,7 +13238,7 @@
     "drydown": "몇 시간 뒤엔 앰버와 바닐라가 따뜻하게 남아요",
     "checkPoint": "꽃 향이 앰버의 따뜻함과 어울리는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "돌체 앤 가바나 백화점",
+    "storeQuery": "돌체앤가바나 백화점",
     "channels": [
       "올리브영"
     ],
@@ -13196,7 +13316,9 @@
     "checkPoint": "꽃 향 아래 이끼 향이 은은하게 깔리는지 맡아보세요",
     "krPrice": null,
     "storeQuery": "끌로에 백화점",
-    "channels": [],
+    "channels": [
+      "올리브영"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -13264,7 +13386,9 @@
     "checkPoint": "하얀 꽃 향이 부드러운지, 무겁지 않은지 맡아보세요",
     "krPrice": null,
     "storeQuery": "끌로에 백화점",
-    "channels": [],
+    "channels": [
+      "올리브영"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -13343,7 +13467,7 @@
     "drydown": "몇 시간 뒤엔 가벼운 머스크가 은은하게 남아요",
     "checkPoint": "차 향과 레몬의 상큼함이 같이 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "엘리자베스 아덴 올리브영",
+    "storeQuery": "엘리자베스아덴",
     "channels": [
       "올리브영 · 공식몰"
     ],
@@ -13422,7 +13546,7 @@
     "drydown": "몇 시간 뒤엔 보드라운 머스크가 피부처럼 남아요",
     "checkPoint": "머스크가 깨끗하고 포근하게 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "나르시소 로드리게즈 백화점",
+    "storeQuery": "올리브영 향수",
     "channels": [
       "올리브영"
     ],
@@ -13516,8 +13640,10 @@
       "checkedAt": "2026-10-08",
       "source": "https://nonfiction.kr/product/detail.html?product_no=17"
     },
-    "storeQuery": "논픽션 올리브영",
-    "channels": [],
+    "storeQuery": "논픽션",
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": {
       "file": "nonfiction-gentle-night.jpg",
       "source": "https://nonfiction.kr/product/detail.html?product_no=17"
@@ -13598,8 +13724,10 @@
       "checkedAt": "2026-10-08",
       "source": "https://nonfiction.kr/product/detail.html?product_no=14"
     },
-    "storeQuery": "논픽션 올리브영",
-    "channels": [],
+    "storeQuery": "논픽션",
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": {
       "file": "nonfiction-santal-cream.jpg",
       "source": "https://nonfiction.kr/product/detail.html?product_no=14"
@@ -13684,8 +13812,10 @@
       "checkedAt": "2026-10-08",
       "source": "https://nonfiction.kr/product/detail.html?product_no=18"
     },
-    "storeQuery": "논픽션 올리브영",
-    "channels": [],
+    "storeQuery": "논픽션",
+    "channels": [
+      "브랜드 매장"
+    ],
     "image": {
       "file": "nonfiction-gaiac-flower.jpg",
       "source": "https://nonfiction.kr/product/detail.html?product_no=18"
@@ -13755,7 +13885,7 @@
       "checkedAt": "2026-10-08",
       "source": "https://www.lush.co.kr/m/products/view/300"
     },
-    "storeQuery": "러쉬 매장",
+    "storeQuery": "러쉬",
     "channels": [
       "브랜드 매장 · 공식몰"
     ],
@@ -13822,7 +13952,7 @@
     "drydown": "몇 시간 뒤엔 가벼운 우디 향이 살짝 남아요",
     "checkPoint": "라임의 상큼함 뒤에 바질의 허브 향이 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "조 말론 백화점",
+    "storeQuery": "조말론런던",
     "channels": [
       "백화점",
       "브랜드 매장"
@@ -13880,7 +14010,7 @@
     "drydown": "몇 시간 뒤엔 은은한 나무 향이 가볍게 남아요",
     "checkPoint": "블랙베리의 새콤함이 나무 향으로 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "조 말론 백화점",
+    "storeQuery": "조말론런던",
     "channels": [
       "백화점",
       "브랜드 매장"
@@ -13951,7 +14081,7 @@
     "drydown": "몇 시간 뒤엔 깨끗한 머스크가 부드럽게 남아요",
     "checkPoint": "홍차 향 위에 오이의 시원함이 겹쳐지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "조 말론 백화점",
+    "storeQuery": "조말론런던",
     "channels": [
       "백화점",
       "브랜드 매장"
@@ -14028,7 +14158,7 @@
     "drydown": "몇 시간 뒤엔 보송한 머스크가 부드럽게 남아요",
     "checkPoint": "복숭아의 달콤함이 꿀 향으로 번지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "조 말론 백화점",
+    "storeQuery": "조말론런던",
     "channels": [
       "백화점",
       "브랜드 매장"
@@ -14102,7 +14232,7 @@
     "drydown": "몇 시간 뒤엔 어두운 우디와 패출리가 남아요",
     "checkPoint": "장미 향 아래 오드의 묵직함이 부담스럽지 않은지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "조 말론 백화점",
+    "storeQuery": "조말론런던",
     "channels": [
       "백화점",
       "브랜드 매장"
@@ -14167,7 +14297,7 @@
     "drydown": "몇 시간 뒤엔 따뜻한 통카빈과 바닐라가 남아요",
     "checkPoint": "아몬드의 고소함이 바닐라로 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "조 말론 백화점",
+    "storeQuery": "조말론런던",
     "channels": [
       "백화점",
       "브랜드 매장"
@@ -14220,7 +14350,7 @@
     "drydown": "몇 시간 뒤엔 풋풋한 장미 향이 부드럽게 남아요",
     "checkPoint": "까시스의 풋풋함이 장미 향과 어우러지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "딥티크 백화점",
+    "storeQuery": "Diptyque 백화점",
     "channels": [
       "브랜드 매장"
     ],
@@ -14286,7 +14416,7 @@
     "drydown": "몇 시간 뒤엔 투명한 장미와 앰브록산이 남아요",
     "checkPoint": "장미의 풋풋함과 리치 향이 어울리는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "딥티크 백화점",
+    "storeQuery": "Diptyque 백화점",
     "channels": [
       "브랜드 매장"
     ],
@@ -14346,7 +14476,7 @@
     "drydown": "몇 시간 뒤엔 가벼운 허브 같은 잔향이 남아요",
     "checkPoint": "유자의 새콤함 뒤에 라즈베리가 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "딥티크 백화점",
+    "storeQuery": "Diptyque 백화점",
     "channels": [
       "브랜드 매장"
     ],
@@ -14407,7 +14537,7 @@
     "drydown": "몇 시간 뒤엔 부드러운 나무 향이 남아요",
     "checkPoint": "프리지아의 싱그러움 속 후추 느낌을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "딥티크 백화점",
+    "storeQuery": "Diptyque 백화점",
     "channels": [
       "브랜드 매장"
     ],
@@ -14469,7 +14599,7 @@
     "drydown": "몇 시간 뒤엔 마른 풀 같은 베티버가 남아요",
     "checkPoint": "베티버의 흙 느낌이 부담스럽지 않은지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "딥티크 백화점",
+    "storeQuery": "Diptyque 백화점",
     "channels": [
       "브랜드 매장"
     ],
@@ -14530,7 +14660,7 @@
     "drydown": "몇 시간 뒤엔 포근한 머스크가 가까이 남아요",
     "checkPoint": "미모사 위에 보송한 머스크가 얹히는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "딥티크 백화점",
+    "storeQuery": "Diptyque 백화점",
     "channels": [
       "브랜드 매장"
     ],
@@ -14597,8 +14727,11 @@
     "drydown": "몇 시간 뒤엔 베티버와 머스크가 차분히 남아요",
     "checkPoint": "시더의 건조함이 장미와 어울리는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "바이레도 백화점",
-    "channels": [],
+    "storeQuery": "바이레도",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "byredo-super-cedar.jpg",
       "source": "https://www.byredo.com/eu_en/p/super-cedar-eau-de-parfum"
@@ -14687,8 +14820,11 @@
     "drydown": "몇 시간 뒤엔 이끼와 베티버가 차분히 남아요",
     "checkPoint": "시트러스 뒤에 향 연기가 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "바이레도 백화점",
-    "channels": [],
+    "storeQuery": "바이레도",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "byredo-sunday-cologne.jpg",
       "source": "https://www.byredo.com/eu_en/p/sunday-cologne-eau-de-parfum"
@@ -14760,8 +14896,11 @@
     "drydown": "몇 시간 뒤엔 카카오와 머스크가 따뜻하게 남아요",
     "checkPoint": "코코넛의 달콤함과 패출리의 흙내가 맞는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "바이레도 백화점",
-    "channels": [],
+    "storeQuery": "바이레도",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "byredo-velvet-haze.jpg",
       "source": "https://www.byredo.com/eu_en/p/velvet-haze-eau-de-parfum"
@@ -14835,8 +14974,11 @@
     "drydown": "몇 시간 뒤엔 보송한 화이트 머스크가 남아요",
     "checkPoint": "시트러스가 네롤리를 거쳐 머스크로 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "바이레도 백화점",
-    "channels": [],
+    "storeQuery": "바이레도",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "byredo-sundazed.jpg",
       "source": "https://www.byredo.com/eu_en/p/sundazed-eau-de-parfum"
@@ -14917,7 +15059,7 @@
       "checkedAt": "2026-10-08",
       "source": "https://www.lelabofragrances.co.kr/th-matcha-26.html"
     },
-    "storeQuery": "르 라보 백화점",
+    "storeQuery": "르 라보 성수",
     "channels": [
       "브랜드 매장"
     ],
@@ -15001,7 +15143,7 @@
       "checkedAt": "2026-10-08",
       "source": "https://www.lelabofragrances.co.kr/fleur-doranger-27.html"
     },
-    "storeQuery": "르 라보 백화점",
+    "storeQuery": "르 라보 성수",
     "channels": [
       "브랜드 매장"
     ],
@@ -15087,7 +15229,7 @@
       "checkedAt": "2026-10-08",
       "source": "https://www.lelabofragrances.co.kr/lys-41.html"
     },
-    "storeQuery": "르 라보 백화점",
+    "storeQuery": "르 라보 성수",
     "channels": [
       "브랜드 매장"
     ],
@@ -15171,7 +15313,7 @@
       "checkedAt": "2026-10-08",
       "source": "https://www.lelabofragrances.co.kr/neroli-36.html"
     },
-    "storeQuery": "르 라보 백화점",
+    "storeQuery": "르 라보 성수",
     "channels": [
       "브랜드 매장"
     ],
@@ -15261,7 +15403,7 @@
       "checkedAt": "2026-10-08",
       "source": "https://www.lelabofragrances.co.kr/labdanum-18.html"
     },
-    "storeQuery": "르 라보 백화점",
+    "storeQuery": "르 라보 성수",
     "channels": [
       "브랜드 매장"
     ],
@@ -15346,7 +15488,7 @@
     "drydown": "몇 시간 뒤엔 베티버와 따뜻한 머스크가 남아요",
     "checkPoint": "상큼한 첫 향이 붓꽃의 부드러움으로 바뀌는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 프란시스 커정 백화점",
+    "storeQuery": "메종프란시스커정",
     "channels": [
       "백화점"
     ],
@@ -15421,7 +15563,7 @@
     "drydown": "몇 시간 뒤엔 은은한 꿀과 머스크가 남아요",
     "checkPoint": "장미 향이 무겁지 않고 투명하게 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 프란시스 커정 백화점",
+    "storeQuery": "메종프란시스커정",
     "channels": [
       "백화점"
     ],
@@ -15497,7 +15639,7 @@
     "drydown": "몇 시간 뒤엔 가벼운 머스크가 깔끔하게 남아요",
     "checkPoint": "라임의 상큼함 뒤에 미모사의 보송함이 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 프란시스 커정 백화점",
+    "storeQuery": "메종프란시스커정",
     "channels": [
       "백화점"
     ],
@@ -15575,7 +15717,7 @@
     "drydown": "몇 시간 뒤엔 보송한 흰 머스크가 가볍게 남아요",
     "checkPoint": "첫 향의 비누 같은 느낌이 부담스럽지 않은지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 프란시스 커정 백화점",
+    "storeQuery": "메종프란시스커정",
     "channels": [
       "백화점"
     ],
@@ -15914,7 +16056,9 @@
     "checkPoint": "튜베로즈가 너무 진하게 느껴지지 않는지 맡아보세요",
     "krPrice": null,
     "storeQuery": "킬리안 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -15994,7 +16138,9 @@
     "checkPoint": "시트러스 뒤 코코넛의 크리미함이 어떤지 맡아보세요",
     "krPrice": null,
     "storeQuery": "킬리안 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -16071,7 +16217,9 @@
     "checkPoint": "붓꽃의 파우더리함이 부담스럽지 않은지 맡아보세요",
     "krPrice": null,
     "storeQuery": "킬리안 백화점",
-    "channels": [],
+    "channels": [
+      "백화점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -16144,7 +16292,7 @@
     "drydown": "몇 시간 뒤엔 가벼운 시더와 머스크가 깔끔하게 남아요",
     "checkPoint": "레몬 뒤로 녹차의 풋풋함이 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 마르지엘라 백화점",
+    "storeQuery": "메종 마르지엘라 향수",
     "channels": [
       "백화점"
     ],
@@ -16218,7 +16366,7 @@
     "drydown": "몇 시간 뒤엔 보송한 머스크가 은은하게 남아요",
     "checkPoint": "젖은 풀잎 같은 투명함이 꽃 향과 어떻게 섞이는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 마르지엘라 백화점",
+    "storeQuery": "메종 마르지엘라 향수",
     "channels": [
       "백화점"
     ],
@@ -16300,7 +16448,7 @@
     "drydown": "몇 시간 뒤엔 보송한 머스크 향이 피부에 남아요",
     "checkPoint": "비누 거품 같은 깨끗함이 부담 없이 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 마르지엘라 백화점",
+    "storeQuery": "메종 마르지엘라 향수",
     "channels": [
       "백화점"
     ],
@@ -16385,7 +16533,7 @@
     "drydown": "몇 시간 뒤엔 부드러운 나무와 바닐라가 남아요",
     "checkPoint": "커피의 쌉싸름함과 부드러운 우유 느낌의 균형을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 마르지엘라 백화점",
+    "storeQuery": "메종 마르지엘라 향수",
     "channels": [
       "백화점"
     ],
@@ -16463,7 +16611,7 @@
     "drydown": "몇 시간 뒤엔 보송한 머스크와 은은한 꽃 향이 남아요",
     "checkPoint": "새콤한 과일 향이 꽃 향으로 부드럽게 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 마르지엘라 백화점",
+    "storeQuery": "메종 마르지엘라 향수",
     "channels": [
       "백화점"
     ],
@@ -16541,7 +16689,7 @@
     "drydown": "몇 시간 뒤엔 깨끗한 머스크가 잔잔하게 남아요",
     "checkPoint": "짭짤한 바다 느낌이 너무 비누처럼 느껴지지 않는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "메종 마르지엘라 백화점",
+    "storeQuery": "메종 마르지엘라 향수",
     "channels": [
       "백화점"
     ],
@@ -16635,8 +16783,11 @@
     "drydown": "몇 시간 뒤엔 패출리와 머스크가 부드럽게 남아요",
     "checkPoint": "새콤한 과일 향 뒤에 나무 향이 어떻게 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "크리드 백화점",
-    "channels": [],
+    "storeQuery": "크리드 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "creed-aventus-for-her.jpg",
       "source": "https://www.creedboutique.com/products/aventus-for-her"
@@ -16743,8 +16894,11 @@
     "drydown": "몇 시간 뒤엔 시더와 베티버가 차분히 남아요",
     "checkPoint": "민트의 서늘함과 향신료의 따뜻함이 같이 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "크리드 백화점",
-    "channels": [],
+    "storeQuery": "크리드 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "creed-viking.jpg",
       "source": "https://www.creedboutique.com/products/viking"
@@ -16826,8 +16980,11 @@
     "drydown": "몇 시간 뒤엔 부드러운 머스크와 은은한 단내가 남아요",
     "checkPoint": "라임의 상큼함 뒤로 코코넛이 너무 달지 않은지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "크리드 백화점",
-    "channels": [],
+    "storeQuery": "크리드 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "creed-virgin-island-water.jpg",
       "source": "https://www.creedboutique.com/products/virgin-island-water"
@@ -16911,8 +17068,11 @@
     "drydown": "몇 시간 뒤엔 보송한 머스크와 나무 향이 남아요",
     "checkPoint": "아이리스의 파우더리함이 부담 없는 정도인지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "크리드 백화점",
-    "channels": [],
+    "storeQuery": "크리드 향수",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "creed-love-in-white.jpg",
       "source": "https://www.creedboutique.com/products/love-in-white"
@@ -17001,8 +17161,11 @@
     "drydown": "몇 시간 뒤엔 바닐라와 샌들우드가 부드럽게 남아요",
     "checkPoint": "아몬드의 고소함이 달콤함으로 이어지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "파르팜 드 말리 백화점",
-    "channels": [],
+    "storeQuery": "퍼퓸드말리",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "parfums-de-marly-pegasus.png",
       "source": "https://www.parfums-de-marly.com/products/pegasus"
@@ -17096,8 +17259,11 @@
     "drydown": "몇 시간 뒤엔 우디한 머스크가 깨끗하게 남아요",
     "checkPoint": "민트의 서늘함과 라벤더의 결이 조화로운지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "파르팜 드 말리 백화점",
-    "channels": [],
+    "storeQuery": "퍼퓸드말리",
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": {
       "file": "parfums-de-marly-sedley.png",
       "source": "https://www.parfums-de-marly.com/products/sedley"
@@ -17182,7 +17348,7 @@
     "drydown": "몇 시간 뒤엔 우드와 앰버가 묵직하게 남아요",
     "checkPoint": "자몽의 상큼함이 향신료와 우드로 넘어가는 결을 맡아보세요",
     "krPrice": null,
-    "storeQuery": "펜할리곤스 백화점",
+    "storeQuery": "펜할리곤스",
     "channels": [
       "백화점"
     ],
@@ -17258,7 +17424,7 @@
     "drydown": "몇 시간 뒤엔 은은한 수지 향과 머스크가 남아요",
     "checkPoint": "장미 향이 침엽수의 서늘함과 어떻게 만나는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "펜할리곤스 백화점",
+    "storeQuery": "펜할리곤스",
     "channels": [
       "백화점"
     ],
@@ -17361,8 +17527,10 @@
     "drydown": "몇 시간 뒤엔 바닐라와 벤조인이 깊게 남아요",
     "checkPoint": "생강과 후추 뒤로 바닐라가 얼마나 달게 느껴지는지 맡아보세요",
     "krPrice": null,
-    "storeQuery": "니샤네 백화점",
-    "channels": [],
+    "storeQuery": "퍼퓸갤러리",
+    "channels": [
+      "편집숍(퍼퓸갤러리)"
+    ],
     "image": {
       "file": "nishane-ani.jpg",
       "source": "https://www.nishane.com/products/ani"
@@ -17439,7 +17607,10 @@
     "checkPoint": "머스크가 체취처럼 은근하게 느껴지는지 맡아보세요",
     "krPrice": null,
     "storeQuery": "프레데릭 말 백화점",
-    "channels": [],
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   },
@@ -17513,7 +17684,10 @@
     "checkPoint": "상큼한 시작이 머스크로 이어지는 변화를 맡아보세요",
     "krPrice": null,
     "storeQuery": "프레데릭 말 백화점",
-    "channels": [],
+    "channels": [
+      "백화점",
+      "면세점"
+    ],
     "image": null,
     "dataStatus": "draft"
   }
