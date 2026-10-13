@@ -36,14 +36,10 @@ OBJECTS = [
     ("soap", "비누·빨래", "musk"), ("spice", "후추·향신료", "spicy"), ("forest", "숲·나무", "woody"), ("resin", "송진·호박", "amber"),
     ("vanilla", "바닐라·달콤", "gourmand"), ("smoky", "스모키", "leather"),
 ]
-# 함께 고르면 어울리지 않는 분위기 쌍 (의미 기준으로 직접 정함). Select 화면에서 한쪽을 고르면 다른 쪽을 흐리게 한다.
+# 함께 고르면 서로 반대인 분위기 쌍 (의미 기준으로 직접 정함). Select 화면에서 한쪽을 고르면 다른 쪽을 흐리게 하고,
+# 추천에서도 반대 분위기 태그를 가진 향수는 마지막에만 쓴다. 드물 뿐 가능한 조합(예: 사랑스러운+매혹적인)은 막지 않는다 (D-51).
 MOOD_CONFLICTS = [
-    ("cool", "warm"), ("cool", "cozy"), ("cool", "sensual"), ("cool", "deep"),
-    ("clean", "sensual"), ("clean", "deep"),
-    ("zesty", "deep"), ("zesty", "sensual"),
-    ("fresh", "sensual"),
-    ("soft", "sensual"),
-    ("lovely", "sensual"), ("lovely", "deep"),
+    ("cool", "warm"), ("cool", "cozy"),
 ]
 AVOIDS = [("tooSweet", "너무 단 향"), ("tooStrong", "너무 진한 향"), ("headache", "머리 아픈 향"),
           ("heavyFloral", "꽃향이 강한 향"), ("smoky", "스모키한 향"), ("powdery", "화장품 파우더 향"),
@@ -57,6 +53,17 @@ TIPS = [
 
 def split(v):
     return [x.strip() for x in str(v).split(",") if x and x.strip()] if v else []
+
+def mood_scores(v, moods):
+    """엑셀 mood_scores("calm:2,clean:1") -> {"calm": 2, "clean": 1}. 없으면 moods 태그를 모두 2점으로 본다."""
+    if v and str(v).strip() not in ("", "-"):
+        out = {}
+        for part in str(v).split(","):
+            k, _, n = part.strip().partition(":")
+            if k and n.strip() in ("1", "2"):
+                out[k.strip()] = int(n)
+        return out
+    return {m: 2 for m in moods}
 
 def empty(v):
     return v is None or str(v).strip() == ""
@@ -94,7 +101,7 @@ for row in ws.iter_rows(min_row=2, values_only=True):
     perfumes.append({
         "id": d["id"], "brand": d["brand"], "brandKo": d["brand_ko"], "name": d["name"], "nameKo": d["name_ko"],
         "concentration": d["concentration"] or None, "notes": tiers,
-        "family": d["family"], "subFamilies": split(d["sub_families"]), "moods": split(d["moods"]),
+        "family": d["family"], "subFamilies": split(d["sub_families"]), "moods": split(d["moods"]), "moodScores": mood_scores(d.get("mood_scores"), split(d["moods"])),
         "avoidFlags": split(d["avoid_flags"]), "intensity": d["intensity"], "polarizing": d["polarizing"],
         "seasonOccasion": d["season_occasion"], "summary": d["summary"], "drydown": d["drydown"], "checkPoint": d["check_point"],
         "krPrice": kr, "storeQuery": d["store_query"],

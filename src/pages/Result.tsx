@@ -15,6 +15,7 @@ import Toast from '../components/Toast'
 import { useSelection } from '../context/SelectionContext'
 import { CHIPS, FAMILIES, PERFUMES, TIPS } from '../lib/perfumes'
 import { recommend } from '../lib/recommend'
+import { recommendSimilar } from '../lib/similar'
 import { syncFeedback } from '../lib/feedback'
 import { loadMemos, saveMemo, syncMemos, useMemos } from '../lib/storage'
 import type { Memo, Selection } from '../types'
@@ -28,6 +29,14 @@ const GUIDE = [
 
 /** 고른 칩을 한 줄 문장으로: "차분한, 깨끗한 분위기 · 비누·빨래 향 · 너무 단 향 제외" */
 function summarize(s: Selection): string {
+  if (s.likedId) {
+    const liked = PERFUMES.find((p) => p.id === s.likedId)
+    if (!liked) return '좋아하는 향수와 닮은 향'
+    const name = `${liked.brandKo} ${liked.nameKo}`
+    // 마지막 글자에 받침이 있으면 '과', 없거나 한글이 아니면 '와'
+    const code = name.charCodeAt(name.length - 1) - 0xac00
+    return `좋아하는 향수 '${name}'${code >= 0 && code <= 11171 && code % 28 !== 0 ? '과' : '와'} 닮은 향`
+  }
   const label = <T extends { id: string; label: string }>(list: T[], ids: string[]) =>
     ids.map((id) => list.find((c) => c.id === id)?.label).filter(Boolean) as string[]
   const parts: string[] = []
@@ -49,11 +58,15 @@ export default function Result() {
   const [toast, setToast] = useState<string | null>(null)
   const toastTimer = useRef<number | undefined>(undefined)
 
-  const hasInput = selection.moods.length > 0 || selection.objects.length > 0 || selection.unsure
+  const hasInput = selection.moods.length > 0 || selection.objects.length > 0 || selection.unsure || !!selection.likedId
   // 이미 별 1~2개를 준 향수는 다시 추천하지 않는다. 화면을 보는 동안 카드가 바뀌지 않게 들어올 때의 기록만 쓴다.
   const [lowRated] = useState(() => new Set(loadMemos().filter((m) => m.rating <= 2).map((m) => m.perfumeId)))
   const result = useMemo(
-    () => (hasInput ? recommend(PERFUMES, CHIPS, FAMILIES, selection, { excludeIds: lowRated }) : null),
+    () => {
+      if (!hasInput) return null
+      if (selection.likedId) return recommendSimilar(PERFUMES, CHIPS, FAMILIES, selection.likedId, selection.mode, { excludeIds: lowRated })
+      return recommend(PERFUMES, CHIPS, FAMILIES, selection, { excludeIds: lowRated })
+    },
     [hasInput, selection, lowRated],
   )
 
@@ -93,9 +106,10 @@ export default function Result() {
 
   const onRestart = () => {
     const mode = selection.mode
+    const similar = !!selection.likedId
     reset()
     setMode(mode)
-    navigate(`/select?mode=${mode}`)
+    navigate(similar ? '/similar' : `/select?mode=${mode}`)
   }
 
   return (
@@ -161,7 +175,8 @@ export default function Result() {
           base={{
             mode: selection.mode,
             moods: selection.moods,
-            objects: selection.objects,
+            // 좋아하는 향수로 찾기는 서버 스키마를 바꾸지 않고 objects에 'like:<향수 id>'로 남긴다 (D-53)
+            objects: selection.likedId ? [`like:${selection.likedId}`] : selection.objects,
             avoids: selection.avoids,
             unsure: selection.unsure,
             perfumeIds: items.map((r) => r.perfume.id),

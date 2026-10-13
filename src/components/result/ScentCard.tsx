@@ -38,6 +38,33 @@ function matchLine(rec: Recommendation): string {
   return parts.length > 0 ? `${parts.join(' · ')}가 맞아요` : '호불호가 적은 향 위주로 골랐어요'
 }
 
+const WEIGHT_LABEL = { 2: '대표 분위기', 1: '은은한 분위기', 0: '해당 없음' } as const
+
+/** 고른 분위기마다 이 향수의 정도를 점 2개로: ●● 대표, ●○ 은은함, ○○ 해당 없음 */
+function MoodDots({ detail }: { detail: Recommendation['moodDetail'] }) {
+  return (
+    <div className="flex flex-col gap-1">
+      <ul className="flex flex-wrap gap-1" aria-label="고른 분위기와 이 향수의 정도">
+        {detail.map((m) => (
+          <li
+            key={m.id}
+            aria-label={`${m.label}: ${WEIGHT_LABEL[m.weight]}`}
+            className={`inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-[12px] leading-[18px] ${m.weight > 0 ? 'bg-card text-ink' : 'bg-card/50 text-slate'}`}
+          >
+            {m.label}
+            <span className="flex gap-0.5" aria-hidden="true">
+              {[1, 2].map((i) => (
+                <span key={i} className={`size-1.5 rounded-full border ${m.weight >= i ? 'border-ink bg-ink' : 'border-slate/60 bg-transparent'}`} />
+              ))}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p className="text-[11px] leading-4 text-slate">점이 많을수록 그 분위기가 뚜렷해요</p>
+    </div>
+  )
+}
+
 export default function ScentCard({ index, rec, hasMemo, triedRating, gift, onMemo }: Props) {
   const p = rec.perfume
   const [flipped, setFlipped] = useState(false)
@@ -141,13 +168,25 @@ export default function ScentCard({ index, rec, hasMemo, triedRating, gift, onMe
 
           <div className="flex flex-col gap-3">
             <p className="min-h-[39px] text-sm leading-[19.25px] text-ink">"{p.summary}"</p>
-            <div className={`flex ${gift ? 'h-[112px]' : 'h-[84px]'} flex-col justify-center gap-0.5 overflow-hidden rounded-lg bg-paper/70 px-2.5 py-2 text-[13px] leading-[21px] tracking-[-0.08px] text-ink`}>
-              {rec.reasons.length > 0 && (
-                <p className="line-clamp-2">
-                  추천 이유 <span className="text-slate">· {rec.reasons.join(' + ')}</span>
-                </p>
+            <div className={`flex ${gift ? 'h-[140px]' : 'h-[116px]'} flex-col justify-center gap-1 overflow-hidden rounded-lg bg-paper/70 px-2.5 py-2 text-[13px] leading-[21px] tracking-[-0.08px] text-ink`}>
+              {rec.similarTo ? (
+                <>
+                  <p className="line-clamp-1">
+                    닮은 향 <span className="text-slate">· {rec.similarTo.likedName}</span>
+                  </p>
+                  {rec.reasons.length > 0 && <p className="line-clamp-2 text-[12px] leading-[19px] text-slate">닮은 점 · {rec.reasons.join(' · ')}</p>}
+                </>
+              ) : (
+                <>
+                  {rec.moodDetail.length > 0 && <MoodDots detail={rec.moodDetail} />}
+                  {rec.scentLabels.length > 0 && (
+                    <p className="line-clamp-1">
+                      향기 <span className="text-slate">· {rec.scentLabels.join(' + ')}</span>
+                    </p>
+                  )}
+                  <p className="text-[12px] leading-[19px] text-slate">{matchLine(rec)}</p>
+                </>
               )}
-              <p className="text-[12px] leading-[19px] text-slate">{matchLine(rec)}</p>
               {gift && (
                 <p className="text-[12px] leading-[19px] text-ink">
                   <b className="font-medium">{p.polarizing === 'high' ? '선물 전에 참고' : '선물하기 좋은 이유'}</b> · {giftReason(p)}

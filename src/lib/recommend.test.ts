@@ -84,7 +84,11 @@ describe('recommend', () => {
   it('피하고 싶은 칩과 겹치는 향수는 나오지 않는다', () => {
     const s: Selection = { ...base, moods: ['warm', 'sweet'], objects: ['vanilla'], avoids: ['tooSweet'] }
     const { items } = recommend(perfumes, chips, familiesList, s)
-    for (const r of items) expect(r.perfume.avoidFlags).not.toContain('tooSweet')
+    // 구르망 향기를 직접 골랐으므로 구르망 계열은 진한 향수만 거르고(D-42), 다른 계열은 '너무 단 향' 태그가 있으면 거른다
+    for (const r of items) {
+      if (r.perfume.family === 'gourmand') expect(r.perfume.intensity).not.toBe('strong')
+      else expect(r.perfume.avoidFlags).not.toContain('tooSweet')
+    }
   })
 
   it('시향 순서는 강도(가벼움 → 진함) → 향 계열 순서로 정렬된다', () => {
@@ -309,5 +313,34 @@ describe('고른 분위기와 반대인 향수', () => {
       for (const r of recommend(perfumes, chips, familiesList, { ...base, moods, objects: [o.id] }).items) expect(clash(moods, r.perfume.moods)).toBe(false)
     }
     expect(checked).toBeGreaterThan(3)
+  })
+})
+
+describe('분위기 정도 점수(moodScores)', () => {
+  it('모든 향수의 분위기 점수는 1·2이고, moods는 점수가 있는 분위기와 같다', () => {
+    for (const p of perfumes) {
+      const scored = Object.keys(p.moodScores ?? {})
+      expect([...scored].sort()).toEqual([...p.moods].sort())
+      for (const v of Object.values(p.moodScores ?? {})) expect([1, 2]).toContain(v)
+    }
+  })
+
+  it('서로 반대인 분위기(시원한↔따뜻한·포근한)는 한 향수에 함께 있지 않다', () => {
+    for (const p of perfumes) for (const [a, b] of chips.conflicts) expect(p.moods.includes(a) && p.moods.includes(b)).toBe(false)
+  })
+
+  it('사랑스러운 + 매혹적인을 골라도 두 분위기를 모두 가진 향수가 먼저 나온다', () => {
+    const { items } = recommend(perfumes, chips, familiesList, { ...base, moods: ['lovely', 'sensual'], objects: ['flower'] })
+    expect(items).toHaveLength(3)
+    for (const r of items) expect(r.moodMatch).toEqual({ matched: 2, total: 2 })
+  })
+
+  it('같은 분위기라면 대표(2점)인 향수가 은은한(1점) 향수보다 점수가 높다', async () => {
+    const { scorePerfume } = await import('./recommend')
+    const strong = perfumes.find((p) => p.moodScores?.lovely === 2)!
+    const weak = perfumes.find((p) => p.moodScores?.lovely === 1 && p.family === strong.family)
+    expect(weak).toBeDefined()
+    const sel: Selection = { ...base, moods: ['lovely'] }
+    expect(scorePerfume(strong, chips, sel).score).toBeGreaterThan(scorePerfume(weak!, chips, sel).score)
   })
 })

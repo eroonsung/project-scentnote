@@ -76,9 +76,16 @@
       "clean",
       "fresh",
       "zesty",
-      "cool",
-      "calm"
+      "calm",
+      "cool"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "zesty": 2,
+      "calm": 1,
+      "cool": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -162,10 +169,17 @@
     "moods": [
       "fresh",
       "zesty",
-      "clean",
       "elegant",
+      "clean",
       "cool"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "zesty": 2,
+      "elegant": 2,
+      "clean": 1,
+      "cool": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -250,11 +264,19 @@
       "aqua"
     ],
     "moods": [
-      "zesty",
-      "fresh",
       "clean",
-      "cool"
+      "fresh",
+      "zesty",
+      "cool",
+      "lovely"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "zesty": 2,
+      "cool": 1,
+      "lovely": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -348,8 +370,16 @@
       "clean",
       "fresh",
       "zesty",
-      "cool"
+      "cool",
+      "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "zesty": 2,
+      "cool": 1,
+      "soft": 1
+    },
     "avoidFlags": [
       "soapy"
     ],
@@ -417,12 +447,19 @@
       "floral"
     ],
     "moods": [
+      "lovely",
       "soft",
       "fresh",
-      "elegant",
-      "lovely",
-      "sweet"
+      "sweet",
+      "elegant"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "soft": 2,
+      "fresh": 1,
+      "sweet": 1,
+      "elegant": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -502,12 +539,19 @@
       "powdery"
     ],
     "moods": [
-      "soft",
-      "lovely",
       "fresh",
+      "lovely",
+      "soft",
       "sweet",
       "elegant"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "lovely": 2,
+      "soft": 2,
+      "sweet": 1,
+      "elegant": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -593,9 +637,17 @@
     "moods": [
       "sweet",
       "lovely",
+      "cozy",
       "fresh",
       "warm"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "lovely": 2,
+      "cozy": 1,
+      "fresh": 1,
+      "warm": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -689,11 +741,19 @@
       "floral"
     ],
     "moods": [
+      "sweet",
       "lovely",
       "fresh",
-      "sweet",
+      "zesty",
       "soft"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "lovely": 2,
+      "fresh": 1,
+      "zesty": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -778,11 +838,19 @@
       "floral"
     ],
     "moods": [
-      "elegant",
       "sweet",
+      "elegant",
       "warm",
-      "lovely"
+      "lovely",
+      "sensual"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "elegant": 2,
+      "warm": 1,
+      "lovely": 1,
+      "sensual": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -876,10 +944,17 @@
       "aromatic"
     ],
     "moods": [
+      "clean",
       "cool",
-      "fresh",
-      "clean"
+      "calm",
+      "fresh"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cool": 2,
+      "calm": 1,
+      "fresh": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -940,11 +1015,19 @@
       "aromatic"
     ],
     "moods": [
+      "clean",
       "cool",
       "calm",
       "fresh",
-      "clean"
+      "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cool": 2,
+      "calm": 1,
+      "fresh": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -1041,10 +1124,19 @@
       "citrus"
     ],
     "moods": [
-      "cool",
       "clean",
-      "fresh"
+      "cool",
+      "fresh",
+      "calm",
+      "zesty"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cool": 2,
+      "fresh": 2,
+      "calm": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -1103,10 +1195,17 @@
       "fruity"
     ],
     "moods": [
-      "fresh",
       "calm",
+      "fresh",
+      "cool",
       "soft"
     ],
+    "moodScores": {
+      "calm": 2,
+      "fresh": 2,
+      "cool": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -1179,10 +1278,17 @@
       "aqua"
     ],
     "moods": [
-      "fresh",
       "cool",
+      "fresh",
+      "calm",
       "soft"
     ],
+    "moodScores": {
+      "cool": 2,
+      "fresh": 2,
+      "calm": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -1271,8 +1377,16 @@
       "clean",
       "fresh",
       "calm",
-      "cool"
+      "cool",
+      "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "calm": 1,
+      "cool": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -1358,9 +1472,16 @@
     ],
     "moods": [
       "fresh",
-      "deep",
-      "warm"
+      "warm",
+      "clean",
+      "deep"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "warm": 2,
+      "clean": 1,
+      "deep": 1
+    },
     "avoidFlags": [
       "spicy"
     ],
@@ -1466,10 +1587,18 @@
     ],
     "moods": [
       "fresh",
-      "elegant",
       "calm",
+      "cool",
+      "elegant",
       "deep"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "calm": 1,
+      "cool": 1,
+      "elegant": 1,
+      "deep": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -1566,11 +1695,21 @@
       "spicy"
     ],
     "moods": [
-      "sweet",
       "warm",
+      "sweet",
       "sensual",
-      "cozy"
+      "cozy",
+      "fresh",
+      "deep"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "sensual": 2,
+      "cozy": 1,
+      "fresh": 1,
+      "deep": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "spicy"
@@ -1657,9 +1796,17 @@
     "moods": [
       "sweet",
       "lovely",
+      "warm",
       "elegant",
-      "warm"
+      "sensual"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "lovely": 2,
+      "warm": 1,
+      "elegant": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "heavyFloral",
       "tooSweet",
@@ -1728,11 +1875,19 @@
       "citrus"
     ],
     "moods": [
-      "soft",
       "lovely",
+      "soft",
+      "clean",
       "fresh",
       "elegant"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "soft": 2,
+      "clean": 1,
+      "fresh": 1,
+      "elegant": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -1799,11 +1954,19 @@
       "leather"
     ],
     "moods": [
-      "soft",
       "lovely",
+      "soft",
+      "warm",
       "elegant",
-      "warm"
+      "sensual"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "soft": 2,
+      "warm": 1,
+      "elegant": 1,
+      "sensual": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -1895,11 +2058,21 @@
       "woody"
     ],
     "moods": [
-      "elegant",
-      "warm",
       "lovely",
-      "fresh"
+      "elegant",
+      "fresh",
+      "zesty",
+      "warm",
+      "sensual"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "elegant": 2,
+      "fresh": 1,
+      "zesty": 1,
+      "warm": 1,
+      "sensual": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -1984,11 +2157,19 @@
       "fruity"
     ],
     "moods": [
-      "elegant",
       "lovely",
+      "elegant",
       "sweet",
+      "sensual",
       "soft"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "elegant": 2,
+      "sweet": 1,
+      "sensual": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -2043,9 +2224,16 @@
     ],
     "moods": [
       "lovely",
-      "soft",
-      "elegant"
+      "elegant",
+      "sensual",
+      "soft"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "elegant": 2,
+      "sensual": 1,
+      "soft": 1
+    },
     "avoidFlags": [
       "heavyFloral"
     ],
@@ -2123,8 +2311,16 @@
       "elegant",
       "soft",
       "calm",
-      "clean"
+      "clean",
+      "lovely"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "soft": 2,
+      "calm": 1,
+      "clean": 1,
+      "lovely": 1
+    },
     "avoidFlags": [
       "heavyFloral"
     ],
@@ -2230,10 +2426,18 @@
     ],
     "moods": [
       "elegant",
-      "clean",
       "soft",
-      "calm"
+      "calm",
+      "clean",
+      "sensual"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "soft": 2,
+      "calm": 1,
+      "clean": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "powdery",
       "heavyFloral",
@@ -2323,10 +2527,16 @@
     ],
     "moods": [
       "calm",
-      "soft",
       "clean",
+      "soft",
       "elegant"
     ],
+    "moodScores": {
+      "calm": 2,
+      "clean": 2,
+      "soft": 2,
+      "elegant": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -2405,12 +2615,21 @@
       "gourmand"
     ],
     "moods": [
-      "soft",
       "elegant",
+      "soft",
+      "calm",
       "cozy",
-      "deep",
-      "calm"
+      "sweet",
+      "deep"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "soft": 2,
+      "calm": 1,
+      "cozy": 1,
+      "sweet": 1,
+      "deep": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -2496,12 +2715,19 @@
       "floral"
     ],
     "moods": [
-      "soft",
-      "elegant",
       "lovely",
+      "soft",
+      "calm",
       "clean",
-      "calm"
+      "elegant"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "soft": 2,
+      "calm": 1,
+      "clean": 1,
+      "elegant": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -2583,8 +2809,15 @@
     "moods": [
       "clean",
       "soft",
-      "calm"
+      "calm",
+      "elegant"
     ],
+    "moodScores": {
+      "clean": 2,
+      "soft": 2,
+      "calm": 1,
+      "elegant": 1
+    },
     "avoidFlags": [
       "soapy"
     ],
@@ -2669,10 +2902,16 @@
     ],
     "moods": [
       "clean",
-      "soft",
       "cozy",
+      "soft",
       "calm"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cozy": 2,
+      "soft": 2,
+      "calm": 1
+    },
     "avoidFlags": [
       "soapy"
     ],
@@ -2755,11 +2994,19 @@
       "amber"
     ],
     "moods": [
+      "cozy",
       "sensual",
       "warm",
       "elegant",
-      "cozy"
+      "soft"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "sensual": 2,
+      "warm": 1,
+      "elegant": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -2831,11 +3078,19 @@
       "powdery"
     ],
     "moods": [
-      "soft",
-      "clean",
       "cozy",
-      "calm"
+      "soft",
+      "calm",
+      "clean",
+      "sensual"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "soft": 2,
+      "calm": 1,
+      "clean": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "powdery",
       "soapy"
@@ -2929,12 +3184,21 @@
       "citrus"
     ],
     "moods": [
-      "fresh",
-      "clean",
-      "warm",
       "sweet",
-      "soft"
+      "soft",
+      "clean",
+      "cozy",
+      "fresh",
+      "warm"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "soft": 2,
+      "clean": 1,
+      "cozy": 1,
+      "fresh": 1,
+      "warm": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -3025,11 +3289,17 @@
       "citrus"
     ],
     "moods": [
-      "deep",
       "warm",
+      "deep",
       "calm",
       "fresh"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "calm": 1,
+      "fresh": 1
+    },
     "avoidFlags": [
       "spicy"
     ],
@@ -3088,10 +3358,20 @@
     ],
     "moods": [
       "fresh",
-      "elegant",
+      "lovely",
+      "zesty",
       "warm",
-      "lovely"
+      "elegant",
+      "sensual"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "lovely": 2,
+      "zesty": 1,
+      "warm": 1,
+      "elegant": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "spicy"
     ],
@@ -3182,8 +3462,16 @@
       "warm",
       "deep",
       "calm",
-      "cozy"
+      "cozy",
+      "sensual"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "calm": 1,
+      "cozy": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "smoky"
     ],
@@ -3262,8 +3550,16 @@
       "calm",
       "warm",
       "cozy",
-      "elegant"
+      "elegant",
+      "deep"
     ],
+    "moodScores": {
+      "calm": 2,
+      "warm": 2,
+      "cozy": 1,
+      "elegant": 1,
+      "deep": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -3348,11 +3644,17 @@
       "amber"
     ],
     "moods": [
-      "elegant",
-      "deep",
       "warm",
-      "sensual"
+      "deep",
+      "sensual",
+      "elegant"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "sensual": 2,
+      "elegant": 1
+    },
     "avoidFlags": [
       "smoky"
     ],
@@ -3451,11 +3753,19 @@
       "amber"
     ],
     "moods": [
-      "calm",
       "fresh",
       "warm",
-      "cozy"
+      "calm",
+      "cozy",
+      "deep"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "warm": 2,
+      "calm": 1,
+      "cozy": 1,
+      "deep": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -3537,11 +3847,19 @@
       "whiteFloral"
     ],
     "moods": [
-      "sweet",
       "warm",
+      "sweet",
+      "cozy",
       "elegant",
-      "cozy"
+      "sensual"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "cozy": 1,
+      "elegant": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -3635,11 +3953,18 @@
     ],
     "moods": [
       "warm",
-      "sensual",
       "elegant",
       "deep",
+      "sensual",
       "sweet"
     ],
+    "moodScores": {
+      "warm": 2,
+      "elegant": 2,
+      "deep": 2,
+      "sensual": 2,
+      "sweet": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -3727,10 +4052,18 @@
     ],
     "moods": [
       "warm",
+      "sweet",
       "elegant",
-      "soft",
-      "sweet"
+      "sensual",
+      "soft"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "elegant": 1,
+      "sensual": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -3816,10 +4149,16 @@
     ],
     "moods": [
       "sweet",
+      "deep",
       "sensual",
-      "warm",
-      "deep"
+      "warm"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "deep": 2,
+      "sensual": 2,
+      "warm": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -3915,8 +4254,16 @@
       "sweet",
       "lovely",
       "cozy",
+      "warm",
       "elegant"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "lovely": 2,
+      "cozy": 1,
+      "warm": 1,
+      "elegant": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "powdery"
@@ -3999,12 +4346,19 @@
       "spicy"
     ],
     "moods": [
+      "cozy",
       "warm",
       "sweet",
-      "cozy",
-      "sensual",
-      "deep"
+      "deep",
+      "sensual"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "warm": 2,
+      "sweet": 2,
+      "deep": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -4093,8 +4447,16 @@
       "sweet",
       "deep",
       "sensual",
+      "cozy",
       "warm"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "deep": 2,
+      "sensual": 2,
+      "cozy": 1,
+      "warm": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "headache"
@@ -4178,8 +4540,16 @@
       "cozy",
       "warm",
       "deep",
-      "sweet"
+      "sweet",
+      "sensual"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "warm": 2,
+      "deep": 2,
+      "sweet": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "smoky"
     ],
@@ -4281,10 +4651,18 @@
     ],
     "moods": [
       "warm",
-      "cozy",
       "deep",
-      "sensual"
+      "sensual",
+      "cozy",
+      "sweet"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "sensual": 2,
+      "cozy": 1,
+      "sweet": 1
+    },
     "avoidFlags": [
       "smoky"
     ],
@@ -4366,11 +4744,18 @@
     ],
     "moods": [
       "warm",
-      "cozy",
-      "deep",
       "sweet",
+      "deep",
+      "cozy",
       "sensual"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "deep": 2,
+      "cozy": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "smoky"
@@ -4441,9 +4826,16 @@
     ],
     "moods": [
       "clean",
-      "soft",
-      "calm"
+      "calm",
+      "sensual",
+      "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "calm": 1,
+      "sensual": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "high",
@@ -4531,11 +4923,17 @@
       "leather"
     ],
     "moods": [
-      "elegant",
       "deep",
+      "sensual",
       "warm",
-      "sensual"
+      "elegant"
     ],
+    "moodScores": {
+      "deep": 2,
+      "sensual": 2,
+      "warm": 1,
+      "elegant": 1
+    },
     "avoidFlags": [
       "spicy",
       "smoky"
@@ -4627,8 +5025,15 @@
     "moods": [
       "calm",
       "cozy",
+      "warm",
       "deep"
     ],
+    "moodScores": {
+      "calm": 2,
+      "cozy": 1,
+      "warm": 1,
+      "deep": 1
+    },
     "avoidFlags": [
       "smoky"
     ],
@@ -4710,11 +5115,17 @@
       "musk"
     ],
     "moods": [
+      "clean",
       "fresh",
       "zesty",
-      "clean",
       "cool"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "zesty": 2,
+      "cool": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -4795,11 +5206,18 @@
     ],
     "moods": [
       "sweet",
+      "lovely",
       "soft",
       "cozy",
-      "warm",
-      "lovely"
+      "warm"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "lovely": 2,
+      "soft": 2,
+      "cozy": 1,
+      "warm": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -4882,10 +5300,17 @@
     "moods": [
       "sweet",
       "deep",
+      "cozy",
       "warm",
-      "sensual",
-      "cozy"
+      "sensual"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "deep": 2,
+      "cozy": 1,
+      "warm": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -4990,11 +5415,19 @@
       "musk"
     ],
     "moods": [
+      "deep",
       "fresh",
-      "elegant",
+      "warm",
       "sweet",
-      "deep"
+      "elegant"
     ],
+    "moodScores": {
+      "deep": 2,
+      "fresh": 1,
+      "warm": 1,
+      "sweet": 1,
+      "elegant": 1
+    },
     "avoidFlags": [
       "smoky"
     ],
@@ -5076,10 +5509,19 @@
       "aromatic"
     ],
     "moods": [
+      "clean",
       "fresh",
+      "calm",
       "cool",
-      "clean"
+      "zesty"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "calm": 1,
+      "cool": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -5153,10 +5595,17 @@
       "green"
     ],
     "moods": [
+      "clean",
       "cool",
       "fresh",
-      "clean"
+      "zesty"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cool": 2,
+      "fresh": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -5241,11 +5690,19 @@
       "citrus"
     ],
     "moods": [
-      "fresh",
       "cool",
+      "fresh",
       "clean",
+      "zesty",
       "elegant"
     ],
+    "moodScores": {
+      "cool": 2,
+      "fresh": 2,
+      "clean": 1,
+      "zesty": 1,
+      "elegant": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -5346,9 +5803,15 @@
     "moods": [
       "elegant",
       "deep",
-      "warm",
-      "sensual"
+      "sensual",
+      "warm"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "deep": 2,
+      "sensual": 2,
+      "warm": 1
+    },
     "avoidFlags": [
       "heavyFloral",
       "spicy",
@@ -5451,11 +5914,19 @@
       "gourmand"
     ],
     "moods": [
-      "warm",
       "cozy",
+      "warm",
       "sensual",
-      "deep"
+      "deep",
+      "soft"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "warm": 2,
+      "sensual": 2,
+      "deep": 1,
+      "soft": 1
+    },
     "avoidFlags": [
       "spicy"
     ],
@@ -5538,8 +6009,17 @@
     "moods": [
       "elegant",
       "sensual",
-      "warm"
+      "warm",
+      "sweet",
+      "lovely"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "sensual": 2,
+      "warm": 1,
+      "sweet": 1,
+      "lovely": 1
+    },
     "avoidFlags": [
       "heavyFloral",
       "headache"
@@ -5612,9 +6092,19 @@
     "moods": [
       "fresh",
       "soft",
+      "calm",
+      "clean",
       "cool",
-      "calm"
+      "lovely"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "soft": 2,
+      "calm": 1,
+      "clean": 1,
+      "cool": 1,
+      "lovely": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -5690,11 +6180,19 @@
       "fruity"
     ],
     "moods": [
-      "soft",
       "sweet",
       "lovely",
-      "elegant"
+      "soft",
+      "elegant",
+      "sensual"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "lovely": 2,
+      "soft": 2,
+      "elegant": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -5763,11 +6261,17 @@
       "woody"
     ],
     "moods": [
-      "zesty",
-      "fresh",
       "cool",
+      "fresh",
+      "zesty",
       "clean"
     ],
+    "moodScores": {
+      "cool": 2,
+      "fresh": 2,
+      "zesty": 2,
+      "clean": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -5838,10 +6342,16 @@
     ],
     "moods": [
       "lovely",
-      "sweet",
       "soft",
-      "fresh"
+      "fresh",
+      "sweet"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "soft": 2,
+      "fresh": 1,
+      "sweet": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -5915,6 +6425,11 @@
       "deep",
       "fresh"
     ],
+    "moodScores": {
+      "calm": 2,
+      "deep": 2,
+      "fresh": 1
+    },
     "avoidFlags": [
       "smoky"
     ],
@@ -5999,9 +6514,17 @@
     "moods": [
       "fresh",
       "zesty",
+      "calm",
       "clean",
       "cool"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "zesty": 2,
+      "calm": 1,
+      "clean": 1,
+      "cool": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -6094,11 +6617,19 @@
       "gourmand"
     ],
     "moods": [
+      "sweet",
       "lovely",
       "elegant",
-      "sweet",
+      "sensual",
       "soft"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "lovely": 2,
+      "elegant": 2,
+      "sensual": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -6197,10 +6728,18 @@
     ],
     "moods": [
       "warm",
-      "elegant",
       "sweet",
-      "deep"
+      "elegant",
+      "deep",
+      "sensual"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "elegant": 1,
+      "deep": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -6272,9 +6811,17 @@
     "moods": [
       "clean",
       "fresh",
+      "cool",
       "zesty",
-      "cool"
+      "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "cool": 1,
+      "zesty": 1,
+      "soft": 1
+    },
     "avoidFlags": [
       "soapy"
     ],
@@ -6355,11 +6902,19 @@
       "amber"
     ],
     "moods": [
-      "sensual",
       "deep",
+      "sensual",
       "warm",
+      "sweet",
       "elegant"
     ],
+    "moodScores": {
+      "deep": 2,
+      "sensual": 2,
+      "warm": 1,
+      "sweet": 1,
+      "elegant": 1
+    },
     "avoidFlags": [],
     "intensity": "strong",
     "polarizing": "mid",
@@ -6426,11 +6981,18 @@
     ],
     "moods": [
       "warm",
+      "sweet",
       "sensual",
       "cozy",
-      "deep",
-      "sweet"
+      "deep"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "sensual": 2,
+      "cozy": 1,
+      "deep": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "tooStrong"
@@ -6506,11 +7068,19 @@
       "spicy"
     ],
     "moods": [
-      "warm",
-      "soft",
       "cozy",
-      "sweet"
+      "warm",
+      "sweet",
+      "sensual",
+      "soft"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "warm": 2,
+      "sweet": 1,
+      "sensual": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -6583,11 +7153,17 @@
       "aromatic"
     ],
     "moods": [
-      "deep",
       "warm",
+      "deep",
       "sensual",
       "elegant"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "sensual": 2,
+      "elegant": 1
+    },
     "avoidFlags": [
       "tooStrong",
       "smoky",
@@ -6670,8 +7246,15 @@
     "moods": [
       "fresh",
       "zesty",
+      "calm",
       "elegant"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "zesty": 2,
+      "calm": 1,
+      "elegant": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -6751,11 +7334,19 @@
       "woody"
     ],
     "moods": [
+      "calm",
       "soft",
       "clean",
-      "calm",
-      "lovely"
+      "lovely",
+      "elegant"
     ],
+    "moodScores": {
+      "calm": 2,
+      "soft": 2,
+      "clean": 1,
+      "lovely": 1,
+      "elegant": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -6846,10 +7437,17 @@
     "moods": [
       "fresh",
       "zesty",
-      "soft",
       "clean",
-      "warm"
+      "warm",
+      "soft"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "zesty": 2,
+      "clean": 1,
+      "warm": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -6932,9 +7530,18 @@
     ],
     "moods": [
       "elegant",
+      "lovely",
       "deep",
+      "sensual",
       "soft"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "lovely": 1,
+      "deep": 1,
+      "sensual": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -7025,8 +7632,17 @@
     "moods": [
       "cozy",
       "warm",
+      "sweet",
+      "deep",
       "soft"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "warm": 2,
+      "sweet": 1,
+      "deep": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -7108,11 +7724,19 @@
       "gourmand"
     ],
     "moods": [
-      "warm",
       "cozy",
-      "soft",
-      "calm"
+      "warm",
+      "calm",
+      "sweet",
+      "soft"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "warm": 2,
+      "calm": 1,
+      "sweet": 1,
+      "soft": 1
+    },
     "avoidFlags": [
       "spicy",
       "smoky"
@@ -7183,10 +7807,18 @@
     ],
     "moods": [
       "warm",
-      "elegant",
+      "calm",
       "cozy",
-      "calm"
+      "elegant",
+      "sensual"
     ],
+    "moodScores": {
+      "warm": 2,
+      "calm": 1,
+      "cozy": 1,
+      "elegant": 1,
+      "sensual": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -7265,11 +7897,19 @@
       "floral"
     ],
     "moods": [
+      "warm",
       "sweet",
       "sensual",
-      "warm",
-      "elegant"
+      "elegant",
+      "deep"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "sensual": 2,
+      "elegant": 1,
+      "deep": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "tooStrong"
@@ -7360,8 +8000,17 @@
     "moods": [
       "warm",
       "sweet",
-      "elegant"
+      "lovely",
+      "elegant",
+      "sensual"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "lovely": 1,
+      "elegant": 1,
+      "sensual": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -7435,10 +8084,16 @@
     ],
     "moods": [
       "deep",
+      "sensual",
       "warm",
-      "elegant",
-      "sensual"
+      "elegant"
     ],
+    "moodScores": {
+      "deep": 2,
+      "sensual": 2,
+      "warm": 1,
+      "elegant": 1
+    },
     "avoidFlags": [
       "tooStrong",
       "smoky"
@@ -7526,11 +8181,19 @@
       "amber"
     ],
     "moods": [
-      "sensual",
       "deep",
-      "elegant",
-      "warm"
+      "sensual",
+      "warm",
+      "sweet",
+      "elegant"
     ],
+    "moodScores": {
+      "deep": 2,
+      "sensual": 2,
+      "warm": 1,
+      "sweet": 1,
+      "elegant": 1
+    },
     "avoidFlags": [
       "heavyFloral",
       "tooStrong",
@@ -7609,9 +8272,16 @@
     ],
     "moods": [
       "warm",
+      "deep",
       "sensual",
-      "deep"
+      "cozy"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "sensual": 2,
+      "cozy": 1
+    },
     "avoidFlags": [
       "tooStrong",
       "smoky"
@@ -7676,10 +8346,18 @@
     ],
     "moods": [
       "calm",
+      "cozy",
       "fresh",
       "warm",
       "elegant"
     ],
+    "moodScores": {
+      "calm": 2,
+      "cozy": 1,
+      "fresh": 1,
+      "warm": 1,
+      "elegant": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -7753,11 +8431,19 @@
       "fruity"
     ],
     "moods": [
-      "fresh",
-      "zesty",
       "cool",
-      "clean"
+      "fresh",
+      "calm",
+      "clean",
+      "zesty"
     ],
+    "moodScores": {
+      "cool": 2,
+      "fresh": 2,
+      "calm": 1,
+      "clean": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -7837,11 +8523,19 @@
       "woody"
     ],
     "moods": [
-      "fresh",
-      "clean",
       "cool",
-      "calm"
+      "fresh",
+      "calm",
+      "clean",
+      "zesty"
     ],
+    "moodScores": {
+      "cool": 2,
+      "fresh": 2,
+      "calm": 1,
+      "clean": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -7908,11 +8602,17 @@
       "whiteFloral"
     ],
     "moods": [
-      "zesty",
       "fresh",
-      "sweet",
-      "clean"
+      "zesty",
+      "clean",
+      "sweet"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "zesty": 2,
+      "clean": 1,
+      "sweet": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -8003,12 +8703,19 @@
       "leather"
     ],
     "moods": [
-      "sweet",
       "warm",
-      "cozy",
+      "sweet",
       "sensual",
+      "cozy",
       "deep"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "sensual": 2,
+      "cozy": 1,
+      "deep": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "tooStrong",
@@ -8053,10 +8760,17 @@
       "musk"
     ],
     "moods": [
+      "calm",
       "clean",
-      "soft",
-      "calm"
+      "cool",
+      "soft"
     ],
+    "moodScores": {
+      "calm": 2,
+      "clean": 2,
+      "cool": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -8099,6 +8813,12 @@
       "calm",
       "cozy"
     ],
+    "moodScores": {
+      "clean": 2,
+      "soft": 2,
+      "calm": 1,
+      "cozy": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -8141,6 +8861,12 @@
       "calm",
       "cozy"
     ],
+    "moodScores": {
+      "clean": 2,
+      "soft": 2,
+      "calm": 1,
+      "cozy": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -8225,11 +8951,17 @@
       "whiteFloral"
     ],
     "moods": [
-      "lovely",
       "sweet",
+      "lovely",
       "elegant",
       "soft"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "lovely": 2,
+      "elegant": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -8309,10 +9041,18 @@
     ],
     "moods": [
       "warm",
-      "cozy",
       "deep",
+      "cozy",
+      "sweet",
       "sensual"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "cozy": 1,
+      "sweet": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "spicy",
@@ -8402,11 +9142,19 @@
       "woody"
     ],
     "moods": [
-      "warm",
       "cozy",
+      "warm",
       "sweet",
-      "deep"
+      "deep",
+      "sensual"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "warm": 2,
+      "sweet": 2,
+      "deep": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "tooStrong"
@@ -8494,11 +9242,19 @@
       "musk"
     ],
     "moods": [
-      "fresh",
       "zesty",
       "lovely",
+      "clean",
+      "fresh",
       "soft"
     ],
+    "moodScores": {
+      "zesty": 2,
+      "lovely": 2,
+      "clean": 1,
+      "fresh": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -8597,8 +9353,15 @@
     "moods": [
       "fresh",
       "sweet",
-      "warm"
+      "warm",
+      "sensual"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "sweet": 2,
+      "warm": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -8697,11 +9460,17 @@
       "spicy"
     ],
     "moods": [
-      "sweet",
       "warm",
-      "sensual",
-      "deep"
+      "sweet",
+      "deep",
+      "sensual"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "deep": 2,
+      "sensual": 2
+    },
     "avoidFlags": [
       "tooSweet",
       "tooStrong",
@@ -8789,9 +9558,18 @@
     ],
     "moods": [
       "sweet",
+      "warm",
       "lovely",
-      "elegant"
+      "elegant",
+      "sensual"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "warm": 1,
+      "lovely": 1,
+      "elegant": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -8889,9 +9667,16 @@
     ],
     "moods": [
       "fresh",
-      "warm",
-      "calm"
+      "calm",
+      "zesty",
+      "warm"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "calm": 1,
+      "zesty": 1,
+      "warm": 1
+    },
     "avoidFlags": [
       "spicy"
     ],
@@ -8986,6 +9771,12 @@
       "lovely",
       "elegant"
     ],
+    "moodScores": {
+      "clean": 2,
+      "soft": 2,
+      "lovely": 1,
+      "elegant": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -9083,9 +9874,19 @@
     "moods": [
       "sweet",
       "sensual",
+      "cozy",
+      "warm",
       "elegant",
-      "warm"
+      "deep"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "sensual": 2,
+      "cozy": 1,
+      "warm": 1,
+      "elegant": 1,
+      "deep": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "tooStrong"
@@ -9184,9 +9985,16 @@
     ],
     "moods": [
       "fresh",
-      "cool",
-      "calm"
+      "calm",
+      "clean",
+      "cool"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "calm": 1,
+      "clean": 1,
+      "cool": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -9272,10 +10080,18 @@
     ],
     "moods": [
       "lovely",
-      "soft",
+      "elegant",
       "clean",
-      "elegant"
+      "sweet",
+      "soft"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "elegant": 2,
+      "clean": 1,
+      "sweet": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -9361,10 +10177,19 @@
       "leather"
     ],
     "moods": [
-      "fresh",
       "warm",
+      "calm",
+      "clean",
+      "fresh",
       "deep"
     ],
+    "moodScores": {
+      "warm": 2,
+      "calm": 1,
+      "clean": 1,
+      "fresh": 1,
+      "deep": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -9443,10 +10268,18 @@
     ],
     "moods": [
       "elegant",
-      "clean",
       "soft",
-      "lovely"
+      "clean",
+      "lovely",
+      "sensual"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "soft": 2,
+      "clean": 1,
+      "lovely": 1,
+      "sensual": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -9513,8 +10346,17 @@
     "moods": [
       "clean",
       "cool",
+      "calm",
+      "fresh",
       "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cool": 2,
+      "calm": 1,
+      "fresh": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -9590,8 +10432,16 @@
       "sweet",
       "lovely",
       "fresh",
-      "elegant"
+      "elegant",
+      "sensual"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "lovely": 2,
+      "fresh": 1,
+      "elegant": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -9654,11 +10504,19 @@
       "amber"
     ],
     "moods": [
-      "sweet",
       "cozy",
+      "sweet",
       "warm",
-      "sensual"
+      "sensual",
+      "soft"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "sweet": 2,
+      "warm": 1,
+      "sensual": 1,
+      "soft": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "powdery"
@@ -9714,11 +10572,17 @@
       "amber"
     ],
     "moods": [
-      "sensual",
+      "warm",
       "deep",
-      "elegant",
-      "warm"
+      "sensual",
+      "elegant"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "sensual": 2,
+      "elegant": 1
+    },
     "avoidFlags": [
       "heavyFloral",
       "headache"
@@ -9798,9 +10662,18 @@
     ],
     "moods": [
       "elegant",
+      "zesty",
       "warm",
-      "lovely"
+      "lovely",
+      "soft"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "zesty": 1,
+      "warm": 1,
+      "lovely": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -9878,11 +10751,19 @@
       "citrus"
     ],
     "moods": [
-      "elegant",
       "lovely",
+      "clean",
       "fresh",
-      "clean"
+      "zesty",
+      "elegant"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "clean": 1,
+      "fresh": 1,
+      "zesty": 1,
+      "elegant": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -9978,6 +10859,12 @@
       "clean",
       "cool"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "zesty": 2,
+      "clean": 1,
+      "cool": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -10056,9 +10943,18 @@
     ],
     "moods": [
       "lovely",
+      "elegant",
       "soft",
-      "elegant"
+      "clean",
+      "cozy"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "elegant": 2,
+      "soft": 2,
+      "clean": 1,
+      "cozy": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -10137,10 +11033,18 @@
     ],
     "moods": [
       "elegant",
-      "soft",
       "calm",
-      "cozy"
+      "cozy",
+      "deep",
+      "soft"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "calm": 1,
+      "cozy": 1,
+      "deep": 1,
+      "soft": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -10226,11 +11130,19 @@
       "whiteFloral"
     ],
     "moods": [
-      "sensual",
       "sweet",
-      "warm",
-      "deep"
+      "deep",
+      "sensual",
+      "cozy",
+      "warm"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "deep": 2,
+      "sensual": 2,
+      "cozy": 1,
+      "warm": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -10317,11 +11229,17 @@
       "woody"
     ],
     "moods": [
-      "deep",
       "warm",
+      "deep",
       "elegant",
       "sensual"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "elegant": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "smoky"
     ],
@@ -10395,10 +11313,17 @@
       "citrus"
     ],
     "moods": [
-      "lovely",
       "fresh",
+      "lovely",
+      "zesty",
       "elegant"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "lovely": 2,
+      "zesty": 1,
+      "elegant": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -10483,11 +11408,19 @@
       "woody"
     ],
     "moods": [
-      "fresh",
       "clean",
+      "fresh",
       "calm",
-      "cool"
+      "cool",
+      "zesty"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "calm": 1,
+      "cool": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -10566,10 +11499,19 @@
       "woody"
     ],
     "moods": [
-      "sensual",
       "warm",
+      "sensual",
+      "cozy",
+      "sweet",
       "deep"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sensual": 2,
+      "cozy": 1,
+      "sweet": 1,
+      "deep": 1
+    },
     "avoidFlags": [
       "spicy"
     ],
@@ -10657,10 +11599,18 @@
     ],
     "moods": [
       "warm",
-      "soft",
       "cozy",
-      "elegant"
+      "fresh",
+      "elegant",
+      "soft"
     ],
+    "moodScores": {
+      "warm": 2,
+      "cozy": 1,
+      "fresh": 1,
+      "elegant": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -10742,10 +11692,19 @@
       "whiteFloral"
     ],
     "moods": [
-      "fresh",
       "cool",
-      "calm"
+      "fresh",
+      "calm",
+      "clean",
+      "zesty"
     ],
+    "moodScores": {
+      "cool": 2,
+      "fresh": 2,
+      "calm": 1,
+      "clean": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -10839,10 +11798,19 @@
       "aromatic"
     ],
     "moods": [
-      "fresh",
       "clean",
-      "calm"
+      "fresh",
+      "calm",
+      "cool",
+      "zesty"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "calm": 1,
+      "cool": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -10919,10 +11887,17 @@
       "woody"
     ],
     "moods": [
-      "fresh",
       "clean",
-      "cool"
+      "calm",
+      "cool",
+      "fresh"
     ],
+    "moodScores": {
+      "clean": 2,
+      "calm": 1,
+      "cool": 1,
+      "fresh": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -11009,11 +11984,17 @@
       "aromatic"
     ],
     "moods": [
+      "cool",
       "fresh",
       "zesty",
-      "cool",
       "clean"
     ],
+    "moodScores": {
+      "cool": 2,
+      "fresh": 2,
+      "zesty": 2,
+      "clean": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -11100,11 +12081,19 @@
       "spicy"
     ],
     "moods": [
-      "sensual",
       "warm",
+      "sensual",
+      "sweet",
       "elegant",
       "deep"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sensual": 2,
+      "sweet": 1,
+      "elegant": 1,
+      "deep": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -11180,11 +12169,19 @@
       "citrus"
     ],
     "moods": [
-      "fresh",
       "clean",
+      "cool",
+      "fresh",
       "lovely",
-      "cool"
+      "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cool": 2,
+      "fresh": 2,
+      "lovely": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -11267,10 +12264,16 @@
     ],
     "moods": [
       "warm",
-      "cozy",
       "sweet",
+      "cozy",
       "sensual"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "cozy": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "spicy"
@@ -11356,10 +12359,17 @@
       "leather"
     ],
     "moods": [
-      "deep",
       "warm",
-      "sensual"
+      "deep",
+      "sensual",
+      "sweet"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "sensual": 2,
+      "sweet": 1
+    },
     "avoidFlags": [
       "smoky",
       "spicy"
@@ -11440,10 +12450,15 @@
       "aromatic"
     ],
     "moods": [
-      "fresh",
+      "clean",
       "cool",
-      "clean"
+      "fresh"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cool": 2,
+      "fresh": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -11515,10 +12530,17 @@
       "powdery"
     ],
     "moods": [
-      "soft",
       "elegant",
+      "soft",
+      "calm",
       "lovely"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "soft": 2,
+      "calm": 1,
+      "lovely": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -11600,8 +12622,19 @@
     "moods": [
       "elegant",
       "sensual",
-      "warm"
+      "cozy",
+      "warm",
+      "lovely",
+      "soft"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "sensual": 2,
+      "cozy": 1,
+      "warm": 1,
+      "lovely": 1,
+      "soft": 1
+    },
     "avoidFlags": [
       "heavyFloral"
     ],
@@ -11675,11 +12708,17 @@
       "woody"
     ],
     "moods": [
-      "cool",
       "clean",
-      "fresh",
-      "calm"
+      "cool",
+      "calm",
+      "fresh"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cool": 2,
+      "calm": 1,
+      "fresh": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -11751,9 +12790,15 @@
     "moods": [
       "clean",
       "elegant",
-      "soft",
-      "lovely"
+      "lovely",
+      "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "elegant": 2,
+      "lovely": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -11829,11 +12874,17 @@
       "woody"
     ],
     "moods": [
-      "clean",
-      "soft",
+      "calm",
       "elegant",
-      "calm"
+      "soft",
+      "clean"
     ],
+    "moodScores": {
+      "calm": 2,
+      "elegant": 2,
+      "soft": 2,
+      "clean": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -11918,10 +12969,18 @@
     ],
     "moods": [
       "lovely",
-      "soft",
       "elegant",
-      "warm"
+      "soft",
+      "warm",
+      "sweet"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "elegant": 2,
+      "soft": 2,
+      "warm": 1,
+      "sweet": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -11997,10 +13056,20 @@
     ],
     "moods": [
       "lovely",
+      "clean",
       "fresh",
-      "soft",
-      "elegant"
+      "sweet",
+      "elegant",
+      "soft"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "clean": 1,
+      "fresh": 1,
+      "sweet": 1,
+      "elegant": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -12068,9 +13137,15 @@
     "moods": [
       "calm",
       "soft",
-      "cozy",
-      "clean"
+      "clean",
+      "cozy"
     ],
+    "moodScores": {
+      "calm": 2,
+      "soft": 2,
+      "clean": 1,
+      "cozy": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -12142,11 +13217,17 @@
       "aromatic"
     ],
     "moods": [
-      "fresh",
       "clean",
+      "fresh",
       "calm",
       "warm"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "calm": 1,
+      "warm": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -12217,8 +13298,16 @@
       "warm",
       "sweet",
       "sensual",
-      "cozy"
+      "cozy",
+      "deep"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "sensual": 2,
+      "cozy": 1,
+      "deep": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -12318,10 +13407,17 @@
       "aqua"
     ],
     "moods": [
-      "fresh",
       "cool",
-      "clean"
+      "fresh",
+      "clean",
+      "zesty"
     ],
+    "moodScores": {
+      "cool": 2,
+      "fresh": 2,
+      "clean": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -12412,10 +13508,18 @@
     ],
     "moods": [
       "clean",
-      "fresh",
       "zesty",
-      "cool"
+      "cool",
+      "fresh",
+      "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "zesty": 2,
+      "cool": 1,
+      "fresh": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -12493,10 +13597,17 @@
       "whiteFloral"
     ],
     "moods": [
+      "warm",
       "sweet",
       "sensual",
-      "warm"
+      "cozy"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "sensual": 2,
+      "cozy": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -12582,10 +13693,18 @@
     ],
     "moods": [
       "sweet",
-      "warm",
       "cozy",
-      "fresh"
+      "fresh",
+      "warm",
+      "sensual"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "cozy": 1,
+      "fresh": 1,
+      "warm": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "tooSweet",
       "spicy"
@@ -12651,6 +13770,12 @@
       "cozy",
       "sensual"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "cozy": 1,
+      "sensual": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -12709,11 +13834,19 @@
       "woody"
     ],
     "moods": [
+      "lovely",
       "soft",
       "fresh",
-      "lovely",
+      "zesty",
       "sweet"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "soft": 2,
+      "fresh": 1,
+      "zesty": 1,
+      "sweet": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -12798,10 +13931,16 @@
     ],
     "moods": [
       "fresh",
-      "lovely",
       "zesty",
+      "lovely",
       "sweet"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "zesty": 2,
+      "lovely": 2,
+      "sweet": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -12875,9 +14014,17 @@
     "moods": [
       "clean",
       "calm",
-      "soft",
-      "elegant"
+      "cool",
+      "elegant",
+      "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "calm": 1,
+      "cool": 1,
+      "elegant": 1,
+      "soft": 1
+    },
     "avoidFlags": [
       "soapy"
     ],
@@ -12968,9 +14115,18 @@
     ],
     "moods": [
       "clean",
+      "cool",
+      "calm",
       "fresh",
-      "cool"
+      "zesty"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cool": 2,
+      "calm": 1,
+      "fresh": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -13043,11 +14199,19 @@
       "floral"
     ],
     "moods": [
+      "clean",
       "cool",
-      "fresh",
       "zesty",
-      "clean"
+      "fresh",
+      "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cool": 2,
+      "zesty": 2,
+      "fresh": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -13132,10 +14296,17 @@
       "woody"
     ],
     "moods": [
-      "fresh",
       "cool",
-      "clean"
+      "fresh",
+      "clean",
+      "zesty"
     ],
+    "moodScores": {
+      "cool": 2,
+      "fresh": 2,
+      "clean": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -13223,11 +14394,19 @@
       "fruity"
     ],
     "moods": [
-      "warm",
-      "sensual",
+      "sweet",
       "elegant",
-      "sweet"
+      "warm",
+      "lovely",
+      "sensual"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "elegant": 2,
+      "warm": 1,
+      "lovely": 1,
+      "sensual": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -13302,11 +14481,19 @@
       "fruity"
     ],
     "moods": [
-      "soft",
-      "fresh",
+      "calm",
       "elegant",
-      "calm"
+      "fresh",
+      "lovely",
+      "soft"
     ],
+    "moodScores": {
+      "calm": 2,
+      "elegant": 2,
+      "fresh": 1,
+      "lovely": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -13373,10 +14560,16 @@
     ],
     "moods": [
       "lovely",
-      "soft",
+      "clean",
       "elegant",
-      "clean"
+      "soft"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "clean": 1,
+      "elegant": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -13454,11 +14647,19 @@
       "citrus"
     ],
     "moods": [
-      "fresh",
       "clean",
+      "fresh",
       "calm",
-      "cool"
+      "cool",
+      "zesty"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "calm": 1,
+      "cool": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -13530,11 +14731,19 @@
       "whiteFloral"
     ],
     "moods": [
-      "soft",
       "clean",
       "cozy",
-      "calm"
+      "soft",
+      "calm",
+      "lovely"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cozy": 2,
+      "soft": 2,
+      "calm": 1,
+      "lovely": 1
+    },
     "avoidFlags": [
       "powdery",
       "soapy"
@@ -13623,10 +14832,18 @@
     ],
     "moods": [
       "calm",
-      "soft",
       "cozy",
-      "warm"
+      "warm",
+      "elegant",
+      "soft"
     ],
+    "moodScores": {
+      "calm": 2,
+      "cozy": 2,
+      "warm": 1,
+      "elegant": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -13706,11 +14923,17 @@
       "spicy"
     ],
     "moods": [
-      "warm",
       "cozy",
+      "warm",
       "calm",
       "deep"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "warm": 2,
+      "calm": 1,
+      "deep": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -13791,12 +15014,19 @@
       "woody"
     ],
     "moods": [
-      "deep",
       "warm",
+      "deep",
       "sensual",
       "cozy",
       "sweet"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "sensual": 2,
+      "cozy": 1,
+      "sweet": 1
+    },
     "avoidFlags": [
       "smoky"
     ],
@@ -13867,11 +15097,17 @@
       "citrus"
     ],
     "moods": [
-      "fresh",
-      "clean",
       "cool",
-      "calm"
+      "fresh",
+      "calm",
+      "clean"
     ],
+    "moodScores": {
+      "cool": 2,
+      "fresh": 2,
+      "calm": 1,
+      "clean": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -13939,11 +15175,17 @@
       "green"
     ],
     "moods": [
-      "zesty",
-      "fresh",
       "cool",
+      "fresh",
+      "zesty",
       "clean"
     ],
+    "moodScores": {
+      "cool": 2,
+      "fresh": 2,
+      "zesty": 2,
+      "clean": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -13998,10 +15240,16 @@
     ],
     "moods": [
       "fresh",
-      "zesty",
       "sweet",
+      "zesty",
       "lovely"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "sweet": 2,
+      "zesty": 1,
+      "lovely": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -14068,11 +15316,19 @@
       "citrus"
     ],
     "moods": [
-      "clean",
-      "fresh",
       "calm",
-      "cool"
+      "clean",
+      "cool",
+      "fresh",
+      "soft"
     ],
+    "moodScores": {
+      "calm": 2,
+      "clean": 2,
+      "cool": 1,
+      "fresh": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -14145,11 +15401,19 @@
       "floral"
     ],
     "moods": [
-      "lovely",
       "sweet",
-      "soft",
-      "fresh"
+      "lovely",
+      "fresh",
+      "zesty",
+      "soft"
     ],
+    "moodScores": {
+      "sweet": 2,
+      "lovely": 2,
+      "fresh": 1,
+      "zesty": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -14217,11 +15481,17 @@
       "spicy"
     ],
     "moods": [
+      "elegant",
       "deep",
       "sensual",
-      "warm",
-      "elegant"
+      "warm"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "deep": 2,
+      "sensual": 2,
+      "warm": 1
+    },
     "avoidFlags": [
       "smoky"
     ],
@@ -14287,8 +15557,16 @@
       "cozy",
       "warm",
       "sweet",
+      "deep",
       "sensual"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "warm": 2,
+      "sweet": 2,
+      "deep": 1,
+      "sensual": 1
+    },
     "avoidFlags": [],
     "intensity": "strong",
     "polarizing": "mid",
@@ -14342,6 +15620,12 @@
       "calm",
       "cool"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "lovely": 2,
+      "calm": 1,
+      "cool": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -14404,10 +15688,17 @@
       "fruity"
     ],
     "moods": [
-      "lovely",
       "fresh",
-      "elegant"
+      "lovely",
+      "elegant",
+      "clean"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "lovely": 2,
+      "elegant": 2,
+      "clean": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -14463,11 +15754,17 @@
       "aromatic"
     ],
     "moods": [
-      "zesty",
       "fresh",
-      "cool",
-      "clean"
+      "zesty",
+      "clean",
+      "cool"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "zesty": 2,
+      "clean": 1,
+      "cool": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -14525,10 +15822,16 @@
     ],
     "moods": [
       "fresh",
-      "soft",
       "lovely",
-      "elegant"
+      "elegant",
+      "soft"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "lovely": 2,
+      "elegant": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -14586,11 +15889,19 @@
       "green"
     ],
     "moods": [
-      "fresh",
       "calm",
+      "fresh",
+      "cool",
       "elegant",
       "deep"
     ],
+    "moodScores": {
+      "calm": 2,
+      "fresh": 2,
+      "cool": 1,
+      "elegant": 1,
+      "deep": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -14648,10 +15959,16 @@
     ],
     "moods": [
       "soft",
-      "clean",
       "calm",
+      "clean",
       "cozy"
     ],
+    "moodScores": {
+      "soft": 2,
+      "calm": 1,
+      "clean": 1,
+      "cozy": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -14715,10 +16032,16 @@
     ],
     "moods": [
       "calm",
-      "soft",
-      "warm",
-      "elegant"
+      "clean",
+      "elegant",
+      "soft"
     ],
+    "moodScores": {
+      "calm": 2,
+      "clean": 1,
+      "elegant": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -14806,12 +16129,19 @@
       "aromatic"
     ],
     "moods": [
+      "clean",
       "fresh",
       "calm",
-      "clean",
       "cool",
       "zesty"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "calm": 1,
+      "cool": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -14884,10 +16214,17 @@
     "moods": [
       "warm",
       "sensual",
-      "deep",
       "cozy",
-      "sweet"
+      "sweet",
+      "deep"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sensual": 2,
+      "cozy": 1,
+      "sweet": 1,
+      "deep": 1
+    },
     "avoidFlags": [],
     "intensity": "strong",
     "polarizing": "high",
@@ -14958,12 +16295,19 @@
       "musk"
     ],
     "moods": [
-      "zesty",
-      "fresh",
       "clean",
+      "fresh",
+      "zesty",
       "sweet",
       "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "fresh": 2,
+      "zesty": 2,
+      "sweet": 1,
+      "soft": 1
+    },
     "avoidFlags": [
       "soapy"
     ],
@@ -15043,9 +16387,15 @@
     "moods": [
       "calm",
       "fresh",
-      "soft",
-      "cozy"
+      "cozy",
+      "soft"
     ],
+    "moodScores": {
+      "calm": 2,
+      "fresh": 2,
+      "cozy": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -15125,11 +16475,21 @@
       "musk"
     ],
     "moods": [
-      "soft",
       "elegant",
+      "soft",
       "clean",
-      "lovely"
+      "cozy",
+      "lovely",
+      "sensual"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "soft": 2,
+      "clean": 1,
+      "cozy": 1,
+      "lovely": 1,
+      "sensual": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -15209,11 +16569,21 @@
       "musk"
     ],
     "moods": [
-      "elegant",
-      "soft",
       "lovely",
-      "sweet"
+      "elegant",
+      "clean",
+      "cozy",
+      "sweet",
+      "soft"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "elegant": 2,
+      "clean": 1,
+      "cozy": 1,
+      "sweet": 1,
+      "soft": 1
+    },
     "avoidFlags": [
       "heavyFloral"
     ],
@@ -15296,10 +16666,18 @@
     ],
     "moods": [
       "clean",
+      "zesty",
       "fresh",
-      "soft",
-      "zesty"
+      "elegant",
+      "soft"
     ],
+    "moodScores": {
+      "clean": 2,
+      "zesty": 2,
+      "fresh": 1,
+      "elegant": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -15387,9 +16765,15 @@
     "moods": [
       "warm",
       "deep",
-      "sweet",
-      "sensual"
+      "sensual",
+      "sweet"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "sensual": 2,
+      "sweet": 1
+    },
     "avoidFlags": [],
     "intensity": "strong",
     "polarizing": "high",
@@ -15475,11 +16859,19 @@
       "citrus"
     ],
     "moods": [
-      "fresh",
-      "soft",
       "lovely",
-      "elegant"
+      "elegant",
+      "fresh",
+      "zesty",
+      "soft"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "elegant": 2,
+      "fresh": 1,
+      "zesty": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -15553,8 +16945,15 @@
     "moods": [
       "lovely",
       "elegant",
+      "sweet",
       "soft"
     ],
+    "moodScores": {
+      "lovely": 2,
+      "elegant": 2,
+      "sweet": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -15627,10 +17026,16 @@
     ],
     "moods": [
       "cool",
-      "fresh",
       "zesty",
-      "clean"
+      "clean",
+      "fresh"
     ],
+    "moodScores": {
+      "cool": 2,
+      "zesty": 2,
+      "clean": 1,
+      "fresh": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -15704,9 +17109,15 @@
     "moods": [
       "clean",
       "soft",
-      "elegant",
-      "lovely"
+      "lovely",
+      "elegant"
     ],
+    "moodScores": {
+      "clean": 2,
+      "soft": 2,
+      "lovely": 1,
+      "elegant": 1
+    },
     "avoidFlags": [
       "soapy"
     ],
@@ -15781,9 +17192,16 @@
     ],
     "moods": [
       "elegant",
+      "deep",
       "sensual",
-      "deep"
+      "warm"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "deep": 2,
+      "sensual": 2,
+      "warm": 1
+    },
     "avoidFlags": [
       "heavyFloral",
       "spicy"
@@ -15867,10 +17285,17 @@
       "gourmand"
     ],
     "moods": [
-      "sweet",
       "warm",
-      "sensual"
+      "sweet",
+      "sensual",
+      "deep"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "sensual": 2,
+      "deep": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -15959,11 +17384,17 @@
       "amber"
     ],
     "moods": [
-      "sweet",
       "warm",
+      "deep",
       "sensual",
-      "deep"
+      "sweet"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "sensual": 2,
+      "sweet": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -16043,8 +17474,16 @@
       "elegant",
       "sensual",
       "warm",
-      "sweet"
+      "sweet",
+      "lovely"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "sensual": 2,
+      "warm": 1,
+      "sweet": 1,
+      "lovely": 1
+    },
     "avoidFlags": [
       "heavyFloral"
     ],
@@ -16124,11 +17563,17 @@
       "citrus"
     ],
     "moods": [
-      "fresh",
       "zesty",
-      "soft",
-      "sweet"
+      "sweet",
+      "fresh",
+      "soft"
     ],
+    "moodScores": {
+      "zesty": 2,
+      "sweet": 2,
+      "fresh": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -16200,11 +17645,19 @@
       "powdery"
     ],
     "moods": [
-      "soft",
       "cozy",
       "sweet",
+      "soft",
+      "clean",
       "lovely"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "sweet": 2,
+      "soft": 2,
+      "clean": 1,
+      "lovely": 1
+    },
     "avoidFlags": [
       "powdery",
       "tooSweet"
@@ -16281,9 +17734,17 @@
     "moods": [
       "fresh",
       "zesty",
+      "calm",
       "clean",
       "cool"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "zesty": 2,
+      "calm": 1,
+      "clean": 1,
+      "cool": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -16352,12 +17813,19 @@
       "floral"
     ],
     "moods": [
-      "fresh",
       "calm",
-      "soft",
       "clean",
-      "cool"
+      "cool",
+      "fresh",
+      "soft"
     ],
+    "moodScores": {
+      "calm": 2,
+      "clean": 2,
+      "cool": 1,
+      "fresh": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -16434,10 +17902,17 @@
     "moods": [
       "clean",
       "soft",
-      "fresh",
       "calm",
-      "cozy"
+      "cozy",
+      "fresh"
     ],
+    "moodScores": {
+      "clean": 2,
+      "soft": 2,
+      "calm": 1,
+      "cozy": 1,
+      "fresh": 1
+    },
     "avoidFlags": [
       "soapy"
     ],
@@ -16525,6 +18000,12 @@
       "sweet",
       "soft"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "warm": 2,
+      "sweet": 2,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -16599,10 +18080,17 @@
       "fruity"
     ],
     "moods": [
-      "lovely",
       "fresh",
+      "lovely",
+      "sweet",
       "soft"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "lovely": 2,
+      "sweet": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -16677,10 +18165,17 @@
       "aromatic"
     ],
     "moods": [
+      "clean",
       "cool",
       "fresh",
-      "clean"
+      "calm"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cool": 2,
+      "fresh": 2,
+      "calm": 1
+    },
     "avoidFlags": [],
     "intensity": "light",
     "polarizing": "low",
@@ -16771,10 +18266,18 @@
     ],
     "moods": [
       "fresh",
-      "zesty",
       "elegant",
-      "sweet"
+      "zesty",
+      "sweet",
+      "lovely"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "elegant": 2,
+      "zesty": 1,
+      "sweet": 1,
+      "lovely": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -16880,10 +18383,15 @@
       "spicy"
     ],
     "moods": [
-      "fresh",
       "warm",
+      "fresh",
       "deep"
     ],
+    "moodScores": {
+      "warm": 2,
+      "fresh": 1,
+      "deep": 1
+    },
     "avoidFlags": [
       "spicy"
     ],
@@ -16967,11 +18475,19 @@
       "fruity"
     ],
     "moods": [
-      "fresh",
-      "zesty",
       "cool",
-      "clean"
+      "fresh",
+      "clean",
+      "zesty",
+      "sweet"
     ],
+    "moodScores": {
+      "cool": 2,
+      "fresh": 2,
+      "clean": 1,
+      "zesty": 1,
+      "sweet": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -17053,11 +18569,17 @@
       "powdery"
     ],
     "moods": [
-      "soft",
       "elegant",
+      "soft",
       "clean",
       "lovely"
     ],
+    "moodScores": {
+      "elegant": 2,
+      "soft": 2,
+      "clean": 1,
+      "lovely": 1
+    },
     "avoidFlags": [
       "powdery"
     ],
@@ -17147,12 +18669,19 @@
       "aromatic"
     ],
     "moods": [
-      "warm",
-      "soft",
-      "elegant",
       "cozy",
-      "sweet"
+      "sweet",
+      "warm",
+      "elegant",
+      "soft"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "sweet": 2,
+      "warm": 1,
+      "elegant": 1,
+      "soft": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "mid",
@@ -17246,11 +18775,19 @@
       "citrus"
     ],
     "moods": [
-      "fresh",
-      "cool",
       "clean",
-      "calm"
+      "cool",
+      "fresh",
+      "calm",
+      "zesty"
     ],
+    "moodScores": {
+      "clean": 2,
+      "cool": 2,
+      "fresh": 2,
+      "calm": 1,
+      "zesty": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -17332,11 +18869,17 @@
       "spicy"
     ],
     "moods": [
+      "warm",
       "deep",
       "sensual",
-      "warm",
       "elegant"
     ],
+    "moodScores": {
+      "warm": 2,
+      "deep": 2,
+      "sensual": 2,
+      "elegant": 1
+    },
     "avoidFlags": [
       "smoky",
       "spicy"
@@ -17416,6 +18959,12 @@
       "clean",
       "cool"
     ],
+    "moodScores": {
+      "fresh": 2,
+      "calm": 1,
+      "clean": 1,
+      "cool": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",
@@ -17513,10 +19062,17 @@
     "moods": [
       "warm",
       "sweet",
+      "deep",
       "sensual",
-      "cozy",
-      "deep"
+      "cozy"
     ],
+    "moodScores": {
+      "warm": 2,
+      "sweet": 2,
+      "deep": 2,
+      "sensual": 2,
+      "cozy": 1
+    },
     "avoidFlags": [
       "tooSweet"
     ],
@@ -17593,11 +19149,19 @@
       "woody"
     ],
     "moods": [
-      "soft",
       "cozy",
+      "soft",
       "calm",
-      "warm"
+      "warm",
+      "sensual"
     ],
+    "moodScores": {
+      "cozy": 2,
+      "soft": 2,
+      "calm": 1,
+      "warm": 1,
+      "sensual": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "high",
@@ -17671,10 +19235,16 @@
     ],
     "moods": [
       "clean",
-      "fresh",
       "soft",
-      "calm"
+      "calm",
+      "fresh"
     ],
+    "moodScores": {
+      "clean": 2,
+      "soft": 2,
+      "calm": 1,
+      "fresh": 1
+    },
     "avoidFlags": [],
     "intensity": "medium",
     "polarizing": "low",

@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Notes from './pages/Notes'
 import Result from './pages/Result'
 import Select from './pages/Select'
+import Similar from './pages/Similar'
 import Start from './pages/Start'
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/start" element={<Start />} />
             <Route path="/select" element={<Select />} />
+            <Route path="/similar" element={<Similar />} />
             <Route path="/result" element={<Result />} />
             <Route path="/notes" element={<Notes />} />
           </Route>

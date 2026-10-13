@@ -11,6 +11,8 @@ interface SelectionValue {
   setUnsure: (unsure: boolean) => void
   /** 분위기·향기를 한꺼번에 채운다 (장면 고르기). 나를 위한 향수 모드로 시작 */
   applyPreset: (moods: string[], objects: string[]) => void
+  /** 좋아하는 향수로 찾기: 이 향수와 닮은 향을 찾는다 */
+  setLiked: (likedId: string, mode: Mode) => void
   reset: () => void
 }
 
@@ -42,11 +44,15 @@ export function SelectionProvider({ children }: { children: ReactNode }) {
     setSelection({ ...INITIAL, mode: 'self', moods, objects })
   }, [])
 
+  const setLiked = useCallback((likedId: string, mode: Mode) => {
+    setSelection({ ...INITIAL, mode, likedId })
+  }, [])
+
   const reset = useCallback(() => setSelection(INITIAL), [])
 
   const value = useMemo(
-    () => ({ selection, setMode, toggle, clear, setUnsure, applyPreset, reset }),
-    [selection, setMode, toggle, clear, setUnsure, applyPreset, reset],
+    () => ({ selection, setMode, toggle, clear, setUnsure, applyPreset, setLiked, reset }),
+    [selection, setMode, toggle, clear, setUnsure, applyPreset, setLiked, reset],
   )
   return <SelectionContext.Provider value={value}>{children}</SelectionContext.Provider>
 }

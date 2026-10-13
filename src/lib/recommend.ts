@@ -10,6 +10,12 @@ export interface Recommendation {
   moodMatch: { matched: number; total: number }
   /** 고른 향기 중 이 향수의 계열(또는 서브 계열)과 맞는 개수 */
   scentMatch: { matched: number; total: number }
+  /** 고른 분위기마다 이 향수의 정도: 2 = 대표, 1 = 은은함, 0 = 해당 없음 (카드의 분위기 점 표시) */
+  moodDetail: { id: string; label: string; weight: 0 | 1 | 2 }[]
+  /** 고른 향기 중 이 향수와 맞는 향기 칩 이름 */
+  scentLabels: string[]
+  /** 좋아하는 향수로 찾기: 어떤 향수와 어떤 점이 닮았는지 */
+  similarTo?: { likedName: string; sameFamily: boolean; familyName: string; sharedMoods: string[]; sharedNotes: string[] }
 }
 
 export interface RecommendResult {
@@ -78,10 +84,11 @@ export function scorePerfume(
   p: Perfume,
   chips: Chips,
   selection: Selection,
-): { score: number; reasons: string[]; moodMatch: Recommendation['moodMatch']; scentMatch: Recommendation['scentMatch'] } {
+): Pick<Recommendation, 'score' | 'reasons' | 'moodMatch' | 'scentMatch' | 'moodDetail' | 'scentLabels'> {
   let score = 0
   const moodReasons: string[] = []
   const objectReasons: string[] = []
+  const moodDetail: Recommendation['moodDetail'] = []
 
   for (const id of selection.objects) {
     const chip = chips.objects.find((o) => o.id === id)
@@ -97,8 +104,11 @@ export function scorePerfume(
   for (const id of selection.moods) {
     const chip = chips.moods.find((m) => m.id === id)
     if (!chip) continue
-    if (p.moods.includes(id)) {
-      score += 2
+    // 분위기 정도: 대표 분위기(2점) +2, 은은한 분위기(1점) +1. 점수가 없는 데이터는 태그가 있으면 2점으로 본다
+    const weight = (p.moodScores?.[id] ?? (p.moods.includes(id) ? 2 : 0)) as 0 | 1 | 2
+    moodDetail.push({ id, label: chip.label, weight })
+    if (weight > 0) {
+      score += weight
       moodReasons.push(chip.label)
     } else if (chip.affinity.includes(p.family)) {
       score += 1
@@ -115,6 +125,8 @@ export function scorePerfume(
     reasons: [...moodReasons, ...objectReasons],
     moodMatch: { matched: moodReasons.length, total: selection.moods.length },
     scentMatch: { matched: objectReasons.length, total: selection.objects.length },
+    moodDetail,
+    scentLabels: objectReasons,
   }
 }
 

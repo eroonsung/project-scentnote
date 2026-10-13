@@ -38,7 +38,10 @@ export interface Perfume {
   notes: { top: NoteItem[]; middle: NoteItem[]; base: NoteItem[] }
   family: FamilyId
   subFamilies: FamilyId[]
+  /** 분위기가 1점 이상인 칩 id (점수 높은 순) */
   moods: string[]
+  /** 분위기 정도: 2 = 대표 분위기, 1 = 은은한 분위기 (0은 생략) */
+  moodScores?: Record<string, 1 | 2>
   avoidFlags: string[]
   intensity: Intensity
   polarizing: Polarizing
@@ -54,6 +57,8 @@ export interface Perfume {
 }
 
 export interface Selection {
+  /** 좋아하는 향수로 찾기: 이 향수와 닮은 향을 찾는다 (있으면 분위기·향기 칩은 쓰지 않는다) */
+  likedId?: string
   mode: Mode
   moods: string[]
   objects: string[]
