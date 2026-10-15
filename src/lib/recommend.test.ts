@@ -325,7 +325,7 @@ describe('분위기 정도 점수(moodScores)', () => {
     }
   })
 
-  it('서로 반대인 분위기(시원한↔따뜻한·포근한)는 한 향수에 함께 있지 않다', () => {
+  it('서로 반대인 분위기(시원한↔따뜻한)는 한 향수에 함께 있지 않다', () => {
     for (const p of perfumes) for (const [a, b] of chips.conflicts) expect(p.moods.includes(a) && p.moods.includes(b)).toBe(false)
   })
 

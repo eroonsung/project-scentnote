@@ -4,7 +4,7 @@
 동작:
   - perfumes 시트에 mood_scores("calm:2,clean:1"), moods_v1(이전 태그) 열을 더하고,
   - moods 열을 점수가 1 이상인 분위기(점수 높은 순)로 바꾼다.
-  - 서로 반대인 분위기(시원한↔따뜻한·포근한)는 한쪽만 남긴다.
+  - 서로 반대인 분위기(시원한↔따뜻한)는 한쪽만 남긴다. (처음에는 시원한↔포근한도 막았으나 D-54에서 풀었다. 이미 매긴 점수에는 시원한+포근한이 함께 있는 향수가 없다.)
 실행: python3 scripts/apply-mood-scores.py out0.json out1.json ...   (openpyxl 필요) -> 그다음 xlsx-to-json.py
 """
 import json
@@ -15,7 +15,7 @@ from openpyxl import load_workbook
 
 XLSX = Path(__file__).resolve().parent.parent / "docs" / "perfumes-draft.xlsx"
 MOODS = ["calm", "clean", "cool", "cozy", "fresh", "zesty", "warm", "sweet", "lovely", "elegant", "deep", "sensual", "soft"]
-OPPOSITE = [("cool", "warm"), ("cool", "cozy")]
+OPPOSITE = [("cool", "warm")]
 
 results = {}
 for f in sys.argv[1:]:
