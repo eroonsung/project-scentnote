@@ -78,6 +78,44 @@ export function avoidedCount(perfumes: Perfume[], avoidId: string, wanted: reado
   return perfumes.filter((p) => isAvoided(p, [avoidId], wanted)).length
 }
 
+/**
+ * 고른 분위기를 가진 향수가 피하고 싶은 칩 때문에 절반 아래로 줄어들면 알려 준다 (화면 안내용, D-56).
+ * 예: 묵직한 + 너무 진한 향 제외 → 묵직한 향수 60개 중 19개만 남는다. 규칙을 바꾸는 것이 아니라 후보가 줄어든다는 사실을 알린다.
+ */
+export const SHRINK_RATIO = 0.45
+
+export function moodShrinkNotes(
+  perfumes: Perfume[],
+  moodIds: string[],
+  avoidIds: string[],
+  objectIds: string[] = [],
+): { mood: string; avoid: string; pool: number; left: number }[] {
+  const wanted = chosenFamilies(objectIds)
+  const notes: { mood: string; avoid: string; pool: number; left: number }[] = []
+  for (const m of moodIds) {
+    const pool = perfumes.filter((p) => p.moods.includes(m))
+    if (pool.length < 10) continue
+    for (const a of avoidIds) {
+      const left = pool.filter((p) => !isAvoided(p, [a], wanted)).length
+      if (left / pool.length < SHRINK_RATIO) {
+        notes.push({
+          mood: CHIPS.moods.find((x) => x.id === m)?.label ?? m,
+          avoid: CHIPS.avoids.find((x) => x.id === a)?.label ?? a,
+          pool: pool.length,
+          left,
+        })
+      }
+    }
+  }
+  return notes
+}
+
+/** 단어 끝에 받침이 있으면 '을', 없거나 한글이 아니면 '를' */
+export function eulReul(word: string): '을' | '를' {
+  const code = word.charCodeAt(word.length - 1) - 0xac00
+  return code >= 0 && code <= 11171 && code % 28 !== 0 ? '을' : '를'
+}
+
 /** 단어 끝에 받침이 있으면 '은', 없거나 한글이 아니면 '는' */
 export function eunNeun(word: string): '은' | '는' {
   const code = word.charCodeAt(word.length - 1) - 0xac00

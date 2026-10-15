@@ -3,7 +3,7 @@ import filterNote from '../../assets/icons/select/filter-note.svg'
 import noteBook from '../../assets/icons/select/note-book.svg'
 import moodForest from '../../assets/images/mood-forest.jpg'
 import moodLinen from '../../assets/images/mood-linen.jpg'
-import { avoidedCount, chosenFamilies, eunNeun, likedAvoidNotes } from '../../lib/avoid'
+import { avoidedCount, chosenFamilies, eunNeun, eulReul, likedAvoidNotes, moodShrinkNotes } from '../../lib/avoid'
 import { CHIPS, getFamily, PERFUMES } from '../../lib/perfumes'
 import type { Selection } from '../../types'
 import { conflictNotice, conflictReason } from '../../lib/chipConflicts'
@@ -117,6 +117,7 @@ export function AvoidStep({ selection, onToggle, gift }: Props & { gift?: boolea
   const full = selection.avoids.length >= 3
   // 좋아하는 향기와 같은 계열을 피하고 싶다고 고르면, 그 계열은 진한 향만 제외된다는 것을 알려 준다
   const notes = likedAvoidNotes(PERFUMES, selection.avoids, selection.objects)
+  const shrink = moodShrinkNotes(PERFUMES, selection.moods, selection.avoids, selection.objects)
   return (
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-2">
@@ -137,7 +138,7 @@ export function AvoidStep({ selection, onToggle, gift }: Props & { gift?: boolea
             <AvoidChip key={a.id} label={a.label} selected={selection.avoids.includes(a.id)} disabled={full} count={avoidedCount(PERFUMES, a.id, chosenFamilies(selection.objects))} onClick={() => onToggle('avoids', a.id)} />
           ))}
         </div>
-        {notes.length > 0 && (
+        {(notes.length > 0 || shrink.length > 0) && (
           <ul className="flex flex-col gap-1.5 rounded-xl bg-mist px-4 py-3 text-sm leading-[22px] text-ink" aria-live="polite">
             {notes.map((n) => (
               <li key={`${n.scent}-${n.avoid}`}>
@@ -145,6 +146,11 @@ export function AvoidStep({ selection, onToggle, gift }: Props & { gift?: boolea
                 <span className="text-slate">
                   {n.removed > 0 ? `(${n.pool}개 중 ${n.removed}개가 빠져요)` : '이 향기에는 진한 향이 없어 빠지는 향수는 없어요.'}
                 </span>
+              </li>
+            ))}
+            {shrink.map((n) => (
+              <li key={`${n.mood}-${n.avoid}-shrink`}>
+                ‘{n.mood}’ 분위기를 골랐는데 ‘{n.avoid}’{eulReul(n.avoid)} 제외해서, <span className="text-slate">{n.mood} 분위기의 향수 {n.pool}개 중 {n.left}개만 남아요.</span>
               </li>
             ))}
           </ul>

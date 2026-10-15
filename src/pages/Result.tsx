@@ -16,7 +16,7 @@ import { useSelection } from '../context/SelectionContext'
 import { CHIPS, FAMILIES, PERFUMES, TIPS } from '../lib/perfumes'
 import { recommend } from '../lib/recommend'
 import { recommendSimilar } from '../lib/similar'
-import { eunNeun, likedAvoidNotes } from '../lib/avoid'
+import { eulReul, eunNeun, likedAvoidNotes, moodShrinkNotes } from '../lib/avoid'
 import { syncFeedback } from '../lib/feedback'
 import { loadMemos, saveMemo, syncMemos, useMemos } from '../lib/storage'
 import type { Memo, Selection } from '../types'
@@ -92,6 +92,7 @@ export default function Result() {
 
   const items = result.items
   const likedNotes = selection.likedId ? [] : likedAvoidNotes(PERFUMES, selection.avoids, selection.objects)
+  const shrinkNotes = selection.likedId ? [] : moodShrinkNotes(PERFUMES, selection.moods, selection.avoids, selection.objects)
   const target = memoTarget !== null ? items[memoTarget] : null
 
   const onSaveMemo = (rating: number, text: string) => {
@@ -140,6 +141,11 @@ export default function Result() {
           {likedNotes.map((n) => (
             <p key={`${n.scent}-${n.avoid}`} className="text-sm text-slate">
               선호하는 향으로 ‘{n.scent}’ 향기를 골라서, ‘{n.avoid}’{eunNeun(n.avoid)} 진한 향만 제외했어요.
+            </p>
+          ))}
+          {shrinkNotes.map((n) => (
+            <p key={`${n.mood}-${n.avoid}`} className="text-sm text-slate">
+              ‘{n.mood}’ 분위기를 골랐는데 ‘{n.avoid}’{eulReul(n.avoid)} 제외해서, {n.mood} 분위기의 향수 {n.pool}개 중 {n.left}개만 남아요.
             </p>
           ))}
           {result.relaxed ? (

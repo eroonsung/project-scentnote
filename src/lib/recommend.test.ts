@@ -371,6 +371,16 @@ describe('좋아하는 향기와 같은 계열을 피하고 싶을 때 (D-55)', 
     expect(seen.size).toBeGreaterThan(3)
   })
 
+  it('분위기 + 제외로 후보가 절반 아래로 줄면 알려 준다 (묵직한 + 너무 진한 향)', async () => {
+    const { moodShrinkNotes } = await import('./avoid')
+    const notes = moodShrinkNotes(perfumes, ['deep'], ['tooStrong'])
+    expect(notes).toHaveLength(1)
+    expect(notes[0].left / notes[0].pool).toBeLessThan(0.45)
+    // 줄어들지 않는 조합은 안내하지 않는다
+    expect(moodShrinkNotes(perfumes, ['calm'], ['tooSweet'])).toHaveLength(0)
+    expect(moodShrinkNotes(perfumes, [], ['tooStrong'])).toHaveLength(0)
+  })
+
   it('화면 안내용 계산: 같은 계열이면 빠지는 수를 알려 주고, 다른 계열이면 안내하지 않는다', async () => {
     const { likedAvoidNotes } = await import('./avoid')
     const notes = likedAvoidNotes(perfumes, ['smoky'], ['smoky'])
