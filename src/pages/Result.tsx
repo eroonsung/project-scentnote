@@ -16,6 +16,7 @@ import { useSelection } from '../context/SelectionContext'
 import { CHIPS, FAMILIES, PERFUMES, TIPS } from '../lib/perfumes'
 import { recommend } from '../lib/recommend'
 import { recommendSimilar } from '../lib/similar'
+import { eunNeun, likedAvoidNotes } from '../lib/avoid'
 import { syncFeedback } from '../lib/feedback'
 import { loadMemos, saveMemo, syncMemos, useMemos } from '../lib/storage'
 import type { Memo, Selection } from '../types'
@@ -90,6 +91,7 @@ export default function Result() {
   }
 
   const items = result.items
+  const likedNotes = selection.likedId ? [] : likedAvoidNotes(PERFUMES, selection.avoids, selection.objects)
   const target = memoTarget !== null ? items[memoTarget] : null
 
   const onSaveMemo = (rating: number, text: string) => {
@@ -135,6 +137,11 @@ export default function Result() {
             <img src={summaryPill} alt="" width={15} height={15} />
             가벼운 향부터 진한 향 순서예요
           </p>
+          {likedNotes.map((n) => (
+            <p key={`${n.scent}-${n.avoid}`} className="text-sm text-slate">
+              선호하는 향으로 ‘{n.scent}’ 향기를 골라서, ‘{n.avoid}’{eunNeun(n.avoid)} 진한 향만 제외했어요.
+            </p>
+          ))}
           {result.relaxed ? (
             <p className="text-sm text-slate">조건에 딱 맞는 향이 적어 비슷한 향을 함께 보여드려요.</p>
           ) : (

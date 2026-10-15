@@ -344,3 +344,39 @@ describe('분위기 정도 점수(moodScores)', () => {
     expect(scorePerfume(strong, chips, sel).score).toBeGreaterThan(scorePerfume(weak!, chips, sel).score)
   })
 })
+
+describe('좋아하는 향기와 같은 계열을 피하고 싶을 때 (D-55)', () => {
+  it('스모키를 좋아하면서 스모키를 제외하면 진한 향수만 빠지고, 보조 계열·태그만 붙은 향수는 남는다', () => {
+    const leatherFamily = (p: Perfume) => p.family === 'leather' || p.subFamilies.includes('leather')
+    const pool = perfumes.filter(leatherFamily)
+    for (const p of pool) expect(isAvoided(p, ['smoky'], ['leather'])).toBe(p.intensity === 'strong')
+    // 태그가 붙은 향수도 진하지 않으면 남는다
+    expect(pool.some((p) => p.avoidFlags.includes('smoky') && p.intensity !== 'strong' && !isAvoided(p, ['smoky'], ['leather']))).toBe(true)
+  })
+
+  it('향기를 고르지 않았으면 예전처럼 그 계열 전체를 거른다', () => {
+    for (const p of perfumes.filter((p) => p.family === 'leather')) expect(isAvoided(p, ['smoky'], [])).toBe(true)
+  })
+
+  it('스모키 + 스모키 제외로도 분위기를 바꾸면 결과가 달라진다 (예전에는 늘 같은 3개)', () => {
+    const seen = new Set<string>()
+    for (const m of chips.moods) {
+      const { items } = recommend(perfumes, chips, familiesList, { ...base, moods: [m.id], objects: ['smoky'], avoids: ['smoky'] })
+      expect(items).toHaveLength(3)
+      for (const r of items) {
+        seen.add(r.perfume.id)
+        expect(r.perfume.intensity === 'strong' && (r.perfume.family === 'leather' || r.perfume.subFamilies.includes('leather'))).toBe(false)
+      }
+    }
+    expect(seen.size).toBeGreaterThan(3)
+  })
+
+  it('화면 안내용 계산: 같은 계열이면 빠지는 수를 알려 주고, 다른 계열이면 안내하지 않는다', async () => {
+    const { likedAvoidNotes } = await import('./avoid')
+    const notes = likedAvoidNotes(perfumes, ['smoky'], ['smoky'])
+    expect(notes).toHaveLength(1)
+    expect(notes[0].removed).toBeGreaterThan(0)
+    expect(notes[0].removed).toBeLessThan(notes[0].pool)
+    expect(likedAvoidNotes(perfumes, ['smoky'], ['spice'])).toHaveLength(0)
+  })
+})

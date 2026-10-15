@@ -6,7 +6,7 @@ import { CHIPS } from './perfumes'
  * 향수에 붙은 태그(avoidFlags)에 더해, 데이터의 강도·계열로도 걸러서 태그가 빠진 향수가 섞여 나오지 않게 한다.
  *
  * 계열 전체를 뜻하는 칩(예: '스모키한 향' = 레더 계열)은, 사용자가 그 계열의 향기를 직접 골랐다면
- * (예: '스모키'를 골랐다면) 그 계열 안에서 '진한' 향수와 태그가 붙은 향수만 거른다.
+ * (예: '스모키'를 골랐다면) 대표·보조 계열이나 태그와 상관없이 '진한' 향수만 거른다(D-42, D-55).
  * "꽃은 좋은데 꽃향이 너무 강한 건 싫다"처럼 같은 향을 좋아하면서도 지나친 것만 피할 수 있게 하기 위해서다.
  */
 interface Rule {
@@ -34,14 +34,38 @@ export function chosenFamilies(objectIds: string[]): string[] {
   return objectIds.map((id) => CHIPS.objects.find((o) => o.id === id)?.family).filter((f): f is NonNullable<typeof f> => !!f)
 }
 
+/**
+ * 이 칩이 뜻하는 향 계열. 사용자가 그 계열의 향기를 직접 골랐다면 "좋아하지만 지나친 건 싫다"로 보고
+ * 그 계열은 진한 향수만 거른다(D-42, D-55). 계열과 상관없는 칩(너무 진한 향)은 비워 둔다.
+ */
+const LIKED_FAMILIES: Record<string, string[]> = {
+  tooSweet: ['gourmand'],
+  smoky: ['leather'],
+  powdery: ['powdery'],
+  spicy: ['spicy'],
+  heavyFloral: ['whiteFloral', 'floral'],
+  headache: ['floral', 'whiteFloral', 'amber', 'gourmand'],
+  soapy: ['musk'],
+}
+
+/** 사용자가 이 칩이 뜻하는 계열의 향기를 직접 골랐는지 */
+export function likesAvoidedFamily(avoidId: string, wanted: readonly string[]): boolean {
+  return (LIKED_FAMILIES[avoidId] ?? []).some((f) => wanted.includes(f))
+}
+
 function matches(p: Perfume, avoidId: string, wanted: readonly string[]): boolean {
   const rule = AVOID_RULES[avoidId]
   if (!rule) return p.avoidFlags.includes(avoidId)
-  // 사용자가 이 칩이 뜻하는 계열의 향기를 직접 골랐다면, 그 계열 향수는 진한 것만 거른다
-  // (그 계열 향수에는 태그가 거의 다 붙어 있어서 태그를 그대로 쓰면 하나도 남지 않는다)
-  if (rule.families?.includes(p.family) && wanted.includes(p.family)) return p.intensity === 'strong' || !!rule.extra?.(p)
-  if (p.avoidFlags.includes(rule.flag) || rule.extra?.(p)) return true
-  return !!rule.families && (rule.families.includes(p.family) || p.subFamilies.some((f) => rule.families!.includes(f)))
+  // 이 칩에 해당하는지: 태그, 강도·계열 조건, 계열(대표 또는 보조)
+  const hit =
+    p.avoidFlags.includes(rule.flag) ||
+    !!rule.extra?.(p) ||
+    (!!rule.families && (rule.families.includes(p.family) || p.subFamilies.some((f) => rule.families!.includes(f))))
+  if (!hit) return false
+  // 그 계열의 향기를 직접 골랐다면, 대표 계열이든 보조 계열이든 태그만 붙은 향수든 진한 것만 거른다
+  // ("꽃은 좋은데 꽃향이 너무 강한 건 싫다"처럼 같은 향을 좋아하면서 지나친 것만 피할 수 있게 하기 위해서다)
+  if (likesAvoidedFamily(avoidId, wanted)) return p.intensity === 'strong' || !!rule.extra?.(p)
+  return true
 }
 
 /** 고른 칩 중 하나라도 해당하면 거른다. wanted: 사용자가 고른 향기 칩의 계열 */
@@ -52,4 +76,38 @@ export function isAvoided(p: Perfume, avoids: string[], wanted: readonly string[
 /** 이 칩을 고르면 몇 종이 빠지는지 (고른 향기를 반영) */
 export function avoidedCount(perfumes: Perfume[], avoidId: string, wanted: readonly string[] = []): number {
   return perfumes.filter((p) => isAvoided(p, [avoidId], wanted)).length
+}
+
+/** 단어 끝에 받침이 있으면 '은', 없거나 한글이 아니면 '는' */
+export function eunNeun(word: string): '은' | '는' {
+  const code = word.charCodeAt(word.length - 1) - 0xac00
+  return code >= 0 && code <= 11171 && code % 28 !== 0 ? '은' : '는'
+}
+
+/**
+ * 좋아하는 향기와 피하고 싶은 칩이 같은 계열이면, 그 향기 안에서 몇 개가 빠지는지 알려 준다 (화면 안내용).
+ * 예: 스모키 향기 + 스모키한 향 제외 → { scent: '스모키', avoid: '스모키한 향', removed: 13, pool: 19 }
+ */
+export function likedAvoidNotes(
+  perfumes: Perfume[],
+  avoidIds: string[],
+  objectIds: string[],
+): { scent: string; avoid: string; removed: number; pool: number }[] {
+  const wanted = chosenFamilies(objectIds)
+  const notes: { scent: string; avoid: string; removed: number; pool: number }[] = []
+  for (const a of avoidIds) {
+    const hits = objectIds
+      .map((id) => CHIPS.objects.find((o) => o.id === id))
+      .filter((o): o is NonNullable<typeof o> => !!o && (LIKED_FAMILIES[a] ?? []).includes(o.family))
+    if (hits.length === 0) continue
+    const fams = hits.map((h) => h.family)
+    const pool = perfumes.filter((p) => fams.includes(p.family) || p.subFamilies.some((f) => fams.includes(f)))
+    notes.push({
+      scent: hits.map((h) => h.label).join('·'),
+      avoid: CHIPS.avoids.find((x) => x.id === a)?.label ?? a,
+      removed: pool.filter((p) => isAvoided(p, [a], wanted)).length,
+      pool: pool.length,
+    })
+  }
+  return notes
 }
